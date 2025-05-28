@@ -12,7 +12,7 @@ import time
 import logging
 import openai
 import google.generativeai as genai # 新增 Gemini 导入
-from google.generativeai.types import HarmCategory, HarmBlockThreshold # 新增导入，用于安全设置
+from google.generativeai.types import HarmCategory, HarmBlockThreshold # 新增导入，用于安全设置 (保留以方便调试安全设置)
 import json
 from datetime import datetime
 
@@ -280,7 +280,7 @@ def health_check():
     return jsonify({
         'status': 'ok',
         'message': 'AI题库服务运行正常',
-        'version': '1.0.0',
+        'version': '1.1.0',
         'cache_enabled': Config.ENABLE_CACHE,
         'ai_provider': Config.AI_PROVIDER,
         'model': Config.OPENAI_MODEL if Config.AI_PROVIDER == 'openai' else Config.GEMINI_MODEL
@@ -319,7 +319,7 @@ def get_stats():
         }), 403
     
     stats = {
-        'version': '1.0.0',
+        'version': '1.1.0',
         'uptime': time.time() - start_time,
         'ai_provider': Config.AI_PROVIDER,
         'model': Config.OPENAI_MODEL if Config.AI_PROVIDER == 'openai' else Config.GEMINI_MODEL,

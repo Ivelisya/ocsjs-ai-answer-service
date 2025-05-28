@@ -24,6 +24,11 @@ class Config:
     # AI 提供商配置 (openai 或 gemini)
     AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").lower()
 
+    # 验证 AI 提供商
+    SUPPORTED_AI_PROVIDERS = ["openai", "gemini"]
+    if AI_PROVIDER not in SUPPORTED_AI_PROVIDERS:
+        raise ValueError(f"不支持的 AI 提供商: '{AI_PROVIDER}'. 支持的提供商包括: {SUPPORTED_AI_PROVIDERS}")
+
     # Gemini 配置
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
     GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-001")
