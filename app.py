@@ -11,6 +11,8 @@ import os
 import time
 import logging
 import openai
+import google.generativeai as genai # 新增 Gemini 导入
+from google.generativeai.types import HarmCategory, HarmBlockThreshold # 新增导入，用于安全设置
 import json
 from datetime import datetime
 
@@ -31,16 +33,28 @@ CORS(app)  # 启用CORS支持
 # 初始化缓存
 cache = SimpleCache(Config.CACHE_EXPIRATION) if Config.ENABLE_CACHE else None
 
-# 验证OpenAI API密钥
-if not Config.OPENAI_API_KEY:
-    logger.critical("未设置OpenAI API密钥，请在.env文件中配置OPENAI_API_KEY")
-    raise ValueError("请设置环境变量OPENAI_API_KEY")
-
-# 初始化OpenAI客户端
-client = openai.OpenAI(
-    api_key=Config.OPENAI_API_KEY,
-    base_url=Config.OPENAI_API_BASE
-)
+# 验证 API 密钥
+if Config.AI_PROVIDER == 'openai':
+    if not Config.OPENAI_API_KEY:
+        logger.critical("AI_PROVIDER 设置为 openai，但未设置 OpenAI API 密钥。请在 .env 文件中配置 OPENAI_API_KEY。")
+        raise ValueError("请设置环境变量 OPENAI_API_KEY")
+    # 初始化OpenAI客户端
+    client = openai.OpenAI(
+        api_key=Config.OPENAI_API_KEY,
+        base_url=Config.OPENAI_API_BASE
+    )
+    logger.info(f"AI 提供商设置为: OpenAI (模型: {Config.OPENAI_MODEL})")
+elif Config.AI_PROVIDER == 'gemini':
+    if not Config.GEMINI_API_KEY:
+        logger.critical("AI_PROVIDER 设置为 gemini，但未设置 Gemini API 密钥。请在 .env 文件中配置 GEMINI_API_KEY。")
+        raise ValueError("请设置环境变量 GEMINI_API_KEY")
+    # 配置Gemini客户端
+    genai.configure(api_key=Config.GEMINI_API_KEY)
+    # Gemini 模型实例将在需要时创建
+    logger.info(f"AI 提供商设置为: Gemini (模型: {Config.GEMINI_MODEL})")
+else:
+    logger.critical(f"无效的 AI_PROVIDER 配置: {Config.AI_PROVIDER}。请设置为 'openai' 或 'gemini'。")
+    raise ValueError(f"无效的 AI_PROVIDER: {Config.AI_PROVIDER}")
 
 # 问答记录存储（实际应用中可以使用数据库）
 qa_records = []
@@ -120,21 +134,109 @@ def search():
         
         # 构建发送给OpenAI的提示
         prompt = parse_question_and_options(question, options, question_type)
-        
-        # 调用OpenAI API
-        response = client.chat.completions.create(
-            model=Config.OPENAI_MODEL,
-            temperature=Config.TEMPERATURE,
-            max_tokens=Config.MAX_TOKENS,
-            messages=[
-                {"role": "system", "content": "你是一个专业的考试答题助手。请直接回答答案，不要解释。选择题只回答选项的内容(如：地球)；多选题用#号分隔答案,只回答选项的内容(如中国#世界#地球)；判断题只回答: 正确/对/true/√ 或 错误/错/false/×；填空题直接给出答案。"},
-                {"role": "user", "content": prompt}
+        ai_answer = ""
+
+        if Config.AI_PROVIDER == 'openai':
+            # 调用OpenAI API
+            response = client.chat.completions.create(
+                model=Config.OPENAI_MODEL,
+                temperature=Config.TEMPERATURE,
+                max_tokens=Config.MAX_TOKENS,
+                messages=[
+                    {"role": "system", "content": "你是一个专业的考试答题助手。请直接回答答案，不要解释。选择题只回答选项的内容(如：地球)；多选题用#号分隔答案,只回答选项的内容(如中国#世界#地球)；判断题只回答: 正确/对/true/√ 或 错误/错/false/×；填空题直接给出答案。"},
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            ai_answer = response.choices[0].message.content.strip()
+
+        elif Config.AI_PROVIDER == 'gemini':
+            # 调用Gemini API
+            model = genai.GenerativeModel(Config.GEMINI_MODEL)
+            
+            # 构建更结构化的 Prompt for Gemini
+            prompt_parts = [
+                "角色：你是一个专业的AI考试答题助手。",
+                "核心任务：根据提供的问题和选项，直接给出最准确的答案。",
+                "通用输出格式：请不要包含任何解释、分析或额外说明，只输出答案本身。",
+                "---",
+                "特定题型输出格式指南：",
+                "- 单选题：直接回答选项的文本内容 (例如：如果正确答案是B选项“地球”，则回答“地球”)。",
+                "- 多选题：务必使用#号分隔每个正确选项的文本内容 (例如：中国#世界#地球)。确保每个部分都是选项的实际文本。",
+                "- 判断题：仅回答“正确”或“错误”。（也可以是“对”/“错”，“true”/“false”，“√”/“×”中的一种，但优先使用“正确”或“错误”）",
+                "- 填空题：直接给出填空的内容，多个空用#号分隔。",
+                "---",
+                "现在，请回答以下问题：",
             ]
-        )
-        
-        # 获取AI生成的答案
-        ai_answer = response.choices[0].message.content.strip()
-        
+
+            question_type_description_map = {
+                "single": "单选题",
+                "multiple": "多选题",
+                "judgement": "判断题",
+                "completion": "填空题",
+                "": "未指定类型" # 处理空类型的情况
+            }
+            q_type_desc = question_type_description_map.get(question_type, "未指定类型")
+
+            prompt_parts.append(f"题目类型: {q_type_desc}")
+            prompt_parts.append(f"问题: {question}") # 使用从request获取的原始question
+
+            if options: # 使用从request获取的原始options
+                prompt_parts.append(f"选项:\n{options}")
+            
+            prompt_parts.append("---")
+            prompt_parts.append("答案：") # 引导模型直接输出答案
+
+            full_prompt = "\n".join(prompt_parts)
+            logger.debug(f"Gemini full_prompt: {full_prompt}") # 记录完整的prompt用于调试
+
+            # Gemini API 的 generation_config 对应 OpenAI 的 temperature, max_tokens 等
+            generation_config = genai.types.GenerationConfig(
+                max_output_tokens=Config.MAX_TOKENS,
+                temperature=Config.TEMPERATURE
+            )
+            
+            # --- 调试用的安全设置：全部允许 ---
+            # safety_settings_for_debugging = {
+            #     HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+            #     HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+            #     HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+            #     HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+            # }
+            
+            response = model.generate_content(
+                full_prompt,
+                generation_config=generation_config
+                # safety_settings=safety_settings_for_debugging # 如果需要测试宽松安全设置，取消此行注释
+            )
+            # 检查是否有候选答案，并处理可能的安全阻止等情况
+            if response.candidates and response.candidates[0].content.parts:
+                ai_answer = "".join(part.text for part in response.candidates[0].content.parts).strip()
+            elif response.prompt_feedback and response.prompt_feedback.block_reason:
+                 logger.warning(f"Gemini API 请求因 prompt feedback 被阻止。原因: {response.prompt_feedback.block_reason_message}. Feedback: {response.prompt_feedback}")
+                 return jsonify({'code': 0, 'msg': f'Gemini API 请求被阻止: {response.prompt_feedback.block_reason_message}. 请检查应用日志获取详细反馈。'})
+            else:
+                # 详细记录为何没有得到有效答案
+                logger.warning("Gemini API 未返回有效答案。")
+                if hasattr(response, 'prompt_feedback') and response.prompt_feedback:
+                    logger.warning(f"Gemini API Prompt Feedback: {response.prompt_feedback}")
+                if hasattr(response, 'candidates') and response.candidates:
+                    logger.warning(f"Gemini API Candidates (可能为空或内容被过滤): {response.candidates}")
+                else:
+                    logger.warning("Gemini API Response 不包含 candidates 属性或 candidates 为空。")
+                
+                # 尝试从 response.text 获取原始文本，如果存在的话 (某些情况下错误信息可能在这里)
+                try:
+                    raw_text = response.text
+                    logger.warning(f"Gemini API raw response text: {raw_text[:500]}...") # 只记录前500字符
+                except AttributeError:
+                    logger.warning("Gemini API response 对象没有 text 属性。")
+
+                ai_answer = "抱歉，AI未能生成有效答案。请检查应用日志获取详细信息。" # 更新了默认错误信息
+
+        else:
+            logger.error(f"未知的 AI_PROVIDER: {Config.AI_PROVIDER}")
+            return jsonify({'code': 0, 'msg': 'AI服务配置错误'})
+
         # 处理答案格式
         processed_answer = extract_answer(ai_answer, question_type)
         
@@ -180,7 +282,8 @@ def health_check():
         'message': 'AI题库服务运行正常',
         'version': '1.0.0',
         'cache_enabled': Config.ENABLE_CACHE,
-        'model': Config.OPENAI_MODEL
+        'ai_provider': Config.AI_PROVIDER,
+        'model': Config.OPENAI_MODEL if Config.AI_PROVIDER == 'openai' else Config.GEMINI_MODEL
     })
 
 @app.route('/api/cache/clear', methods=['POST'])
@@ -218,7 +321,8 @@ def get_stats():
     stats = {
         'version': '1.0.0',
         'uptime': time.time() - start_time,
-        'model': Config.OPENAI_MODEL,
+        'ai_provider': Config.AI_PROVIDER,
+        'model': Config.OPENAI_MODEL if Config.AI_PROVIDER == 'openai' else Config.GEMINI_MODEL,
         'cache_enabled': Config.ENABLE_CACHE,
         'cache_size': len(cache.cache) if Config.ENABLE_CACHE else 0,
         'qa_records_count': len(qa_records)
@@ -240,7 +344,8 @@ def dashboard():
         version="1.1.0",
         cache_enabled=Config.ENABLE_CACHE,
         cache_size=len(cache.cache) if Config.ENABLE_CACHE else 0,
-        model=Config.OPENAI_MODEL,
+        ai_provider=Config.AI_PROVIDER,
+        model=Config.OPENAI_MODEL if Config.AI_PROVIDER == 'openai' else Config.GEMINI_MODEL,
         uptime=uptime_str,
         records=qa_records
     )

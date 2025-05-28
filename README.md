@@ -1,19 +1,21 @@
 # EduBrain AI - 智能题库系统
 
-这是一个基于Python和OpenAI API的新一代智能题库服务，专为[OCS (Online Course Script)](https://github.com/ocsjs/ocsjs)设计，可以通过AI自动回答题目。此服务实现了与OCS AnswererWrapper兼容的API接口，方便用户将AI能力整合到OCS题库搜索中。
+这是一个基于Python和大型语言模型（LLM）的新一代智能题库服务，目前支持 **OpenAI API** 和 **Google Gemini API**。它专为[OCS (Online Course Script)](https://github.com/ocsjs/ocsjs)设计，可以通过AI自动回答题目。此服务实现了与OCS AnswererWrapper兼容的API接口，方便用户将AI能力整合到OCS题库搜索中。
 
 ## ⚠️ 重要提示
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > - 本项目仅供个人学习使用，不保证稳定性，且不提供任何技术支持。
-> - 使用者必须在遵循 OpenAI 的[使用条款](https://openai.com/policies/terms-of-use)以及**法律法规**的情况下使用，不得用于非法用途。
+> - 使用者必须在遵循所选AI提供商（OpenAI 或 Google Gemini）的**使用条款**以及**相关法律法规**的情况下使用，不得用于非法用途。
+>   - OpenAI 使用条款: [OpenAI Policies](https://openai.com/policies)
+>   - Google AI 使用条款: [Google AI Terms of Service](https://policies.google.com/terms) (请查阅适用于 Gemini API 的具体条款)
 > - 根据[《生成式人工智能服务管理暂行办法》](http://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm)的要求，请勿对中国地区公众提供一切未经备案的生成式人工智能服务。
 > - 使用者应当遵守相关法律法规，承担相应的法律责任
 > - 服务不对AI生成内容的准确性做出保证
 
 ## 功能特点
 
-- 💡 **AI驱动**：使用OpenAI API生成智能回答
+- 💡 **多AI引擎驱动**：支持 OpenAI API 和 Google Gemini API，可灵活切换。
 - 🔄 **OCS兼容**：完全兼容OCS的AnswererWrapper题库接口
 - 🚀 **高性能**：内存缓存优化，快速响应请求
 - 🔒 **安全可靠**：支持访问令牌验证，保护API调用
@@ -25,7 +27,7 @@
 ## 系统要求
 
 - Python 3.7+
-- OpenAI API密钥（需要单独申请）
+- OpenAI API 密钥 或 Google Gemini API 密钥（需要根据选择的AI提供商申请）
 
 ## 快速开始
 
@@ -50,11 +52,23 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-编辑`.env`文件，至少需要填写OpenAI API密钥：
+编辑`.env`文件。核心配置如下：
 
-```
-OPENAI_API_KEY=your_api_key_here
-```
+-   `AI_PROVIDER`: 指定AI提供商。
+    -   `AI_PROVIDER=openai` (默认)
+    -   `AI_PROVIDER=gemini`
+-   如果使用 **OpenAI** (`AI_PROVIDER=openai`):
+    ```env
+    OPENAI_API_KEY=your_openai_api_key_here
+    OPENAI_MODEL=gpt-3.5-turbo # 可选, 默认 gpt-3.5-turbo
+    # OPENAI_API_BASE=your_openai_proxy_if_needed # 可选
+    ```
+-   如果使用 **Google Gemini** (`AI_PROVIDER=gemini`):
+    ```env
+    GEMINI_API_KEY=your_gemini_api_key_here
+    GEMINI_MODEL=gemini-pro # 可选, 默认 gemini-pro
+    ```
+-   其他配置如 `HOST`, `PORT`, `ACCESS_TOKEN` 等请参考 `.env.example`。
 
 ### 4. 启动服务
 
@@ -132,11 +146,13 @@ python app.py
 {
   "status": "ok",
   "message": "AI题库服务运行正常",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "cache_enabled": true,
+  "ai_provider": "openai",
   "model": "gpt-3.5-turbo"
 }
 ```
+*注意: `ai_provider` 和 `model` 字段会根据您的配置动态显示。*
 
 ### 缓存清理接口
 
@@ -163,13 +179,16 @@ python app.py
 
 ```json
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "uptime": 1621234567.89,
+  "ai_provider": "openai",
   "model": "gpt-3.5-turbo",
   "cache_enabled": true,
-  "cache_size": 123
+  "cache_size": 123,
+  "qa_records_count": 50
 }
 ```
+*注意: `ai_provider` 和 `model` 字段会根据您的配置动态显示。*
 
 ## 安全设置
 
@@ -236,13 +255,16 @@ AI生成的答案可能存在以下情况：
 
 ### 2. 多选题答案格式
 
-对于多选题，OCS期望的答案格式是用`#`分隔的选项，例如`A#B#C`。本服务已经处理了这个格式，会自动将OpenAI返回的多选答案转换为此格式。
+对于多选题，OCS期望的答案格式是用`#`分隔的选项内容，例如`中国#世界#地球`。本服务已提示AI模型按此格式返回，并在后端进行了相应的处理以尽可能确保格式正确。
 
-### 2. API请求限制
+### 3. API请求限制与费用
 
-注意OpenAI API有使用限制和费用。确保你的账户有足够的额度来处理预期的请求量。
+无论是使用OpenAI还是Gemini，请注意各自API的使用限制和可能的费用。确保您的账户有足够的额度或已正确配置付费。
 
-### 3. 网络连接问题
+### 4. 网络连接问题
 
-确保部署此服务的服务器能够访问OpenAI API（api.openai.com）。某些地区可能需要代理服务。
+确保部署此服务的服务器能够访问所选AI提供商的API端点（例如 `api.openai.com` 或 `generativelanguage.googleapis.com`）。某些地区可能需要代理服务。
+
+### 5. 模型选择
+不同的模型在性能、成本和能力上有所不同。请根据您的需求选择合适的模型，并在 `.env` 文件中配置。
 

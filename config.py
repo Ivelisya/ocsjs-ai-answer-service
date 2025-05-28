@@ -20,6 +20,13 @@ class Config:
     OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
     # OpenAI API Base URL，如果不设置则使用默认值
     OPENAI_API_BASE = os.getenv('OPENAI_API_BASE', 'https://api.openai.com/v1')
+
+    # AI 提供商配置 (openai 或 gemini)
+    AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").lower()
+
+    # Gemini 配置
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-001")
     
     # 日志配置
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")

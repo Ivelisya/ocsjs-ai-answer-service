@@ -142,33 +142,52 @@ def parse_question_and_options(question: str, options: str, question_type: str) 
     if options:
         prompt += f"选项:\n{options}\n"
     
-    prompt += "请直接给出答案，不要解释。"
-    return prompt
+    # 移除通用的“请直接给出答案，不要解释。”指令，它将在app.py中统一处理
+    return prompt.strip() # strip()确保末尾没有多余的换行符
 
 
 def extract_answer(ai_response: str, question_type: str) -> str:
     """
-    从AI响应中提取答案
+    从AI响应中提取并初步格式化答案。
+    主要针对多选题，尝试将常见分隔符统一为 '#'。
     
     Args:
         ai_response: AI生成的完整响应
         question_type: 问题类型
         
     Returns:
-        str: 提取的答案部分
+        str: 提取并格式化后的答案部分
     """
-    # 对于多选题，确保答案格式正确（使用#分隔）
+    cleaned_response = ai_response.strip()
+
     if question_type == "multiple":
-        # 尝试从响应中找出选项部分
-        lines = ai_response.split('\n')
-        for line in lines:
-            # 寻找可能的答案行（包含选项标识如A、B、C、D）
-            if any(opt in line.upper() for opt in ['A', 'B', 'C', 'D']) and '#' not in line:
-                # 提取所有出现的选项
-                options = [opt for opt in ['A', 'B', 'C', 'D', 'E', 'F'] if opt in line.upper()]
-                # 将它们用#连接
-                answer = '#'.join(options)
-                return answer
-    
-    # 默认返回完整响应
-    return ai_response
+        # 如果响应中已经包含 #, 假设格式正确
+        if "#" in cleaned_response:
+            return cleaned_response
+        
+        # 尝试替换常见的其他分隔符为 #
+        # 顺序很重要，先替换更长的分隔符
+        # 替换多个空格为单个空格，便于后续处理
+        processed_response = ' '.join(cleaned_response.split())
+        
+        # 替换 "A, B, C" 或 "A B C" 形式为 "A#B#C"
+        # 这里的逻辑是，如果选项是单个字符或短词，并且用空格或逗号分隔
+        # 注意：这个替换逻辑可能需要根据实际模型输出进行调整，以避免错误替换
+        # 例如，如果答案本身是 "选项 A 和 选项 B"，这个逻辑可能会错误地变成 "选项#A#和#选项#B"
+        # 一个更安全的做法是，如果prompt要求模型返回选项内容，那么模型应该返回类似 "内容1#内容2"
+        # 如果模型返回的是 "内容1, 内容2" 或 "内容1 内容2"，这里的替换才比较安全。
+        
+        # 简单的替换：将逗号和空格都视作潜在分隔符
+        # 替换逗号为空格，然后统一用#替换空格
+        # 这假设选项内容本身不包含逗号或不重要的空格
+        temp_response = processed_response.replace(",", " ")
+        # 将多个空格合并为一个
+        temp_response = ' '.join(temp_response.split())
+        # 如果处理后仍有空格（之前不是#分隔），则替换为空格
+        if " " in temp_response and "#" not in temp_response : # 只有在没有#且有空格时才替换
+             return temp_response.replace(" ", "#")
+        
+        return processed_response # 如果没有明显的分隔符可以安全替换，返回清理过的响应
+
+    # 对于其他题型，直接返回清理后的响应
+    return cleaned_response
