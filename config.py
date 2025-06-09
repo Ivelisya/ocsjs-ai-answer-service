@@ -40,7 +40,7 @@ class Config:
     ACCESS_TOKEN = os.getenv("ACCESS_TOKEN", None)
     
     # 响应配置
-    MAX_TOKENS = int(os.getenv("MAX_TOKENS", 500))
+    MAX_TOKENS = int(os.getenv("MAX_TOKENS", 100000))
     TEMPERATURE = float(os.getenv("TEMPERATURE", 0.7))
     
     # 缓存配置

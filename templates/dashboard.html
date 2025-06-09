@@ -19,13 +19,16 @@
         <link rel="stylesheet" href="/static/style.css" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="/">EduBrain AI</a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">统计面板</a>
+                            <a class="nav-link active" href="/dashboard">统计面板</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/docs">API文档</a>
@@ -35,103 +38,66 @@
             </div>
         </nav>
 
-        <div class="container mt-4">
+        <div class="container mt-5">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="card-header">
                             <h5 class="card-title mb-0">系统信息</h5>
                         </div>
                         <div class="card-body">
-                            <p><strong>版本：</strong>{{ version }}</p>
-                            <p>
-                                <strong>缓存状态：</strong>{{ "已启用" if
-                                cache_enabled else "未启用" }}
-                            </p>
-                            <p><strong>缓存数量：</strong>{{ cache_size }}条</p>
-                            <p>
-                                <strong>AI 提供商：</strong>{{ ai_provider |
-                                capitalize }}
-                            </p>
-                            <p><strong>使用模型：</strong>{{ model }}</p>
-                            <p><strong>运行时长：</strong>{{ uptime }}</p>
+                            <div class="row">
+                                <div class="col-md-4"><p><strong>版本:</strong> {{ version }}</p></div>
+                                <div class="col-md-4"><p><strong>缓存状态:</strong> {{ "已启用" if cache_enabled else "未启用" }} ({{ cache_size }} 条)</p></div>
+                                <div class="col-md-4"><p><strong>运行时长:</strong> {{ uptime }}</p></div>
+                                <div class="col-md-4"><p><strong>AI 提供商:</strong> {{ ai_provider | capitalize }}</p></div>
+                                <div class="col-md-8"><p><strong>使用模型:</strong> {{ model }}</p></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row mt-4">
-                <div class="col-md-12">
+            <div class="row">
+                <div class="col-12">
                     <div class="card">
-                        <div
-                            class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
-                        >
+                        <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">最近问答记录</h5>
-                            <button
-                                class="btn btn-light btn-sm"
-                                onclick="clearCache()"
-                            >
+                            {% if cache_enabled %}
+                            <button class="btn btn-sm btn-outline-danger" onclick="clearCache()">
                                 清除缓存
                             </button>
+                            {% endif %}
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table
-                                    id="qa-records"
-                                    class="table table-striped table-hover dt-responsive nowrap"
-                                    style="width: 100%"
-                                >
-                                    <thead>
+                                <table id="qa-records" class="table table-hover" style="width:100%">
+                                     <thead>
                                         <tr>
                                             <th>时间</th>
-                                            <th>问题类型</th>
-                                            <th>问题内容</th>
-                                            <th>选项</th>
-                                            <th>AI答案</th>
+                                            <th>类型</th>
+                                            <th>问题</th>
+                                            <th>答案</th>
                                             <th>操作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {% for record in records %}
                                         <tr>
-                                            <td
-                                                data-order="{{ record.timestamp }}"
-                                            >
-                                                {{ record.time }}
-                                            </td>
-                                            <td>{{ record.type }}</td>
+                                            <td data-order="{{ record.timestamp }}">{{ record.time }}</td>
+                                            <td><span class="badge bg-secondary">{{ record.type or 'N/A' }}</span></td>
                                             <td>
-                                                <div
-                                                    class="text-truncate"
-                                                    style="max-width: 300px"
-                                                    title="{{ record.question }}"
-                                                >
+                                                <div class="text-truncate" title="{{ record.question }}">
                                                     {{ record.question }}
                                                 </div>
                                             </td>
                                             <td>
-                                                <div
-                                                    class="text-truncate"
-                                                    style="max-width: 200px"
-                                                    title="{{ record.options }}"
-                                                >
-                                                    {{ record.options }}
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div
-                                                    class="text-truncate"
-                                                    style="max-width: 200px"
-                                                    title="{{ record.answer }}"
-                                                >
+                                                <div class="text-truncate" title="{{ record.answer }}">
                                                     {{ record.answer }}
                                                 </div>
                                             </td>
                                             <td>
-                                                <button
-                                                    class="btn btn-sm btn-info"
-                                                    onclick="showDetail('{{ record.question|tojson|safe }}', '{{ record.options|tojson|safe }}', '{{ record.answer|tojson|safe }}')"
-                                                >
+                                                <button class="btn btn-sm btn-info" onclick="showDetail('{{ record.question|tojson|safe }}', '{{ record.options|tojson|safe }}', '{{ record.answer|tojson|safe }}')">
                                                     详情
                                                 </button>
                                             </td>
@@ -149,7 +115,7 @@
         <footer class="footer mt-5 py-3 bg-light">
             <div class="container text-center">
                 <p>EduBrain AI - 智能题库系统 v{{ version }}</p>
-                <p>Powered by AI Technology | 作者：LynnGuo666</p>
+                <p>Powered by AI Technology | 作者：ivekasy</p>
                 <p><small>© 2024-2025 All Rights Reserved</small></p>
             </div>
         </footer>

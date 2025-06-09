@@ -2,7 +2,7 @@
 """
 EduBrain AI - 智能题库系统
 基于 OpenAI API 的智能题库服务，提供兼容 OCS 接口的智能答题功能
-作者：Lynn
+作者：ivekasy
 版本：1.1.0
 """
 from flask import Flask, request, jsonify, make_response, render_template
@@ -143,7 +143,40 @@ def search():
                 temperature=Config.TEMPERATURE,
                 max_tokens=Config.MAX_TOKENS,
                 messages=[
-                    {"role": "system", "content": "你是一个专业的考试答题助手。请直接回答答案，不要解释。选择题只回答选项的内容(如：地球)；多选题用#号分隔答案,只回答选项的内容(如中国#世界#地球)；判断题只回答: 正确/对/true/√ 或 错误/错/false/×；填空题直接给出答案。"},
+                    {"role": "system", "content": """
+# 角色
+你是一个高级AI推理引擎，专门解决各种考试题目。
+
+# 核心指令
+你的任务是生成一个包含思考过程和最终答案的结构化响应。
+即使信息不完整，你也必须根据上下文和你的知识库，给出你认为最有可能的答案。**永远不要拒绝回答**。
+
+# 输出结构
+你必须严格按照以下XML格式输出，不得包含任何在此结构之外的文本：
+<thinking>
+在这里逐步展示你的推理过程。
+1.  **分析题干**: 拆解问题，理解其核心要求。
+2.  **评估选项/知识**: 分析每个选项的正确性，或者调动你的知识库来寻找答案。
+3.  **得出结论**: 基于分析，确定最可能的答案。
+</thinking>
+<answer>
+在这里放置最终答案，并严格遵守下方针对不同题型的格式要求。
+</answer>
+
+---
+# 最终答案格式指南 (在 <answer> 标签内使用)
+
+-   **单选题 (single)**: 直接返回正确选项的文本。
+    *   *示例*: `苹果`
+-   **多选题 (multiple)**: 返回所有正确选项的文本，用井号 `#` 分隔。
+    *   *示例*: `中国#日本`
+-   **判断题 (judgement)**: 仅返回 "正确" 或 "错误"。
+    *   *示例*: `错误`
+-   **填空题 (completion)**: 直接返回需要填写的**完整、连续**的内容。除非题目中明确有多个分离的填空处（例如 `___和___`），否则不要使用 `#` 分隔。
+    *   *示例 (单个答案)*: 问题是 "新中国成立于何时？"，答案应为 `1949年10月1日`。
+    *   *示例 (多个空)*: 问题是 "中国的首都是___，最大的城市是___。"，答案应为 `北京#上海`。
+---
+"""},
                     {"role": "user", "content": prompt}
                 ]
             )
@@ -154,39 +187,85 @@ def search():
             model = genai.GenerativeModel(Config.GEMINI_MODEL)
             
             # 构建更结构化的 Prompt for Gemini
-            prompt_parts = [
-                "角色：你是一个专业的AI考试答题助手。",
-                "核心任务：根据提供的问题和选项，直接给出最准确的答案。",
-                "通用输出格式：请不要包含任何解释、分析或额外说明，只输出答案本身。",
-                "---",
-                "特定题型输出格式指南：",
-                "- 单选题：直接回答选项的文本内容 (例如：如果正确答案是B选项“地球”，则回答“地球”)。",
-                "- 多选题：务必使用#号分隔每个正确选项的文本内容 (例如：中国#世界#地球)。确保每个部分都是选项的实际文本。",
-                "- 判断题：仅回答“正确”或“错误”。（也可以是“对”/“错”，“true”/“false”，“√”/“×”中的一种，但优先使用“正确”或“错误”）",
-                "- 填空题：直接给出填空的内容，多个空用#号分隔。",
-                "---",
-                "现在，请回答以下问题：",
-            ]
+            # --- 全面优化的 Gemini Prompt ---
+            # 1. 角色定义：清晰定义AI的角色和能力。
+            # 2. 核心指令：明确任务目标和行为准则。
+            # 3. 格式总览：提供一个所有题型通用的格式总结。
+            # 4. Few-Shot示例：为每种题型提供清晰的输入输出示例，这是提升准确率的关键。
+            # 5. 异常处理：指导模型在遇到不确定问题时的行为。
+            # 6. 动态内容注入：将实际问题动态插入到结构化模板中。
+            # 新的 Gemini 提示词，强制输出 <thinking> 和 <answer>
+            prompt_template = """# 任务：严格按照XML格式输出思考过程和答案
+
+# 指令
+1.  **思考**: 在 `<thinking>` 标签内，展示你的推理步骤。
+2.  **回答**: 在 `<answer>` 标签内，提供最终答案。
+3.  **不确定性**: 即使不完全确定，也要给出最可能的答案。**永远不要拒绝回答**。
+4.  **格式**: `<answer>` 标签内的内容必须严格遵守题型格式指南。
+
+# 答案格式指南
+-   **单选题**: `选项文本`
+-   **多选题**: `文本1#文本2`
+-   **判断题**: `正确` 或 `错误`
+-   **填空题**: 返回**完整、连续**的内容。仅当题目中有多个分离的填空处时才使用 `#` 分隔。
+    *   *示例 (单个答案)*: `1949年10月1日`
+    *   *示例 (多个空)*: `北京#上海`
+
+---
+# 开始处理
+
+<thinking>
+1.  **识别题型**: 这是一个 {type}。
+2.  **分析题干**: 我需要分析问题“{question}”。
+3.  **评估选项/知识**: {options_analysis}
+4.  **得出结论**: 基于以上分析，我认为最可能的答案是...
+</thinking>
+<answer>
+</answer>"""
 
             question_type_description_map = {
                 "single": "单选题",
                 "multiple": "多选题",
                 "judgement": "判断题",
                 "completion": "填空题",
-                "": "未指定类型" # 处理空类型的情况
+                "": "未指定类型"
             }
             q_type_desc = question_type_description_map.get(question_type, "未指定类型")
 
-            prompt_parts.append(f"题目类型: {q_type_desc}")
-            prompt_parts.append(f"问题: {question}") # 使用从request获取的原始question
+            # 为 Gemini 构建更具体的思考指令
+            options_analysis_prompt = "我将运用我的知识库来寻找答案。"
+            if options:
+                options_analysis_prompt = f"我将评估以下选项：\n{options}"
 
-            if options: # 使用从request获取的原始options
-                prompt_parts.append(f"选项:\n{options}")
-            
-            prompt_parts.append("---")
-            prompt_parts.append("答案：") # 引导模型直接输出答案
+            # 动态填充模板
+            filled_prompt = prompt_template.format(
+                type=q_type_desc,
+                question=question,
+                options_analysis=options_analysis_prompt
+            )
 
-            full_prompt = "\n".join(prompt_parts)
+            # 最终呈现给模型的完整 prompt
+            full_prompt = f"""# 任务：严格按照XML格式输出思考过程和答案
+
+# 指令
+1.  **思考**: 在 `<thinking>` 标签内，展示你的推理步骤。
+2.  **回答**: 在 `<answer>` 标签内，提供最终答案。
+3.  **不确定性**: 即使不完全确定，也要给出最可能的答案。**永远不要拒绝回答**。
+4.  **格式**: `<answer>` 标签内的内容必须严格遵守题型格式指南。
+
+# 答案格式指南
+-   **单选题**: `选项文本`
+-   **多选题**: `文本1#文本2`
+-   **判断题**: `正确` 或 `错误`
+-   **填空题**: 返回**完整、连续**的内容。仅当题目中有多个分离的填空处时才使用 `#` 分隔。
+    *   *示例 (单个答案)*: `1949年10月1日`
+    *   *示例 (多个空)*: `北京#上海`
+
+---
+# 开始处理
+
+{filled_prompt}
+"""
             logger.debug(f"Gemini full_prompt: {full_prompt}") # 记录完整的prompt用于调试
 
             # Gemini API 的 generation_config 对应 OpenAI 的 temperature, max_tokens 等
@@ -208,30 +287,42 @@ def search():
                 generation_config=generation_config
                 # safety_settings=safety_settings_for_debugging # 如果需要测试宽松安全设置，取消此行注释
             )
-            # 检查是否有候选答案，并处理可能的安全阻止等情况
-            if response.candidates and response.candidates[0].content.parts:
-                ai_answer = "".join(part.text for part in response.candidates[0].content.parts).strip()
-            elif response.prompt_feedback and response.prompt_feedback.block_reason:
-                 logger.warning(f"Gemini API 请求因 prompt feedback 被阻止。原因: {response.prompt_feedback.block_reason_message}. Feedback: {response.prompt_feedback}")
-                 return jsonify({'code': 0, 'msg': f'Gemini API 请求被阻止: {response.prompt_feedback.block_reason_message}. 请检查应用日志获取详细反馈。'})
-            else:
-                # 详细记录为何没有得到有效答案
-                logger.warning("Gemini API 未返回有效答案。")
-                if hasattr(response, 'prompt_feedback') and response.prompt_feedback:
-                    logger.warning(f"Gemini API Prompt Feedback: {response.prompt_feedback}")
-                if hasattr(response, 'candidates') and response.candidates:
-                    logger.warning(f"Gemini API Candidates (可能为空或内容被过滤): {response.candidates}")
-                else:
-                    logger.warning("Gemini API Response 不包含 candidates 属性或 candidates 为空。")
+            # --- 增强的 Gemini 响应处理 ---
+            try:
+                # 检查是否有有效的候选内容
+                if response.candidates and response.candidates[0].content.parts:
+                    ai_answer = "".join(part.text for part in response.candidates[0].content.parts).strip()
                 
-                # 尝试从 response.text 获取原始文本，如果存在的话 (某些情况下错误信息可能在这里)
-                try:
-                    raw_text = response.text
-                    logger.warning(f"Gemini API raw response text: {raw_text[:500]}...") # 只记录前500字符
-                except AttributeError:
-                    logger.warning("Gemini API response 对象没有 text 属性。")
+                # 检查是否有其他终止原因
+                else:
+                    finish_reason = "UNKNOWN"
+                    if response.candidates:
+                        finish_reason = response.candidates[0].finish_reason.name
+                    
+                    if finish_reason == "MAX_TOKENS":
+                        msg = "AI响应因达到最大令牌数而被截断。已增加默认值，如仍出现此问题，请尝试在 .env 文件中进一步增加 MAX_TOKENS。"
+                        logger.warning(msg)
+                        # 即使被截断，也尝试从 response.text 中获取部分内容，因为它可能包含部分答案
+                        try:
+                            ai_answer = response.text
+                        except ValueError:
+                            ai_answer = "响应被截断，且无有效内容返回。"
+                    
+                    elif response.prompt_feedback and response.prompt_feedback.block_reason:
+                        msg = f"Gemini API 请求因 prompt feedback 被阻止: {response.prompt_feedback.block_reason_message}"
+                        logger.warning(f"{msg}. Feedback: {response.prompt_feedback}")
+                        return jsonify({'code': 0, 'msg': msg})
+                    
+                    else:
+                        msg = "Gemini API 未返回有效答案。"
+                        logger.warning(f"{msg} Finish Reason: {finish_reason}. Candidates: {response.candidates}")
+                        ai_answer = f"抱歉，AI未能生成有效答案 (原因: {finish_reason})。"
 
-                ai_answer = "抱歉，AI未能生成有效答案。请检查应用日志获取详细信息。" # 更新了默认错误信息
+            except Exception as e:
+                # 捕获所有可能的响应解析错误，包括 response.text 的 ValueError
+                logger.error(f"解析Gemini响应时发生未知错误: {e}", exc_info=True)
+                logger.error(f"原始响应对象: {response}")
+                ai_answer = "抱歉，解析AI响应时发生内部错误。"
 
         else:
             logger.error(f"未知的 AI_PROVIDER: {Config.AI_PROVIDER}")

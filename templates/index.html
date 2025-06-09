@@ -9,11 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="/">EduBrain AI</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/dashboard">统计面板</a>
                     </li>
@@ -25,66 +28,68 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
                 <div class="text-center mb-5">
-                    <h1 class="display-4 mb-3">EduBrain AI</h1>
+                    <h1 class="display-4 fw-bold">EduBrain AI</h1>
                     <p class="lead text-muted">新一代智能题库服务，兼容 OCS 题库接口</p>
                 </div>
         
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <div class="form-group mb-4">
+                <div class="card">
+                    <div class="card-body p-lg-5">
+                        <div class="mb-4">
                             <label class="form-label" for="question">问题内容</label>
-                            <textarea class="form-control" id="question" rows="3" placeholder="请输入问题内容"></textarea>
+                            <textarea class="form-control" id="question" rows="4" placeholder="在此输入您的问题..."></textarea>
                         </div>
                         
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="question-type">问题类型</label>
-                            <select class="form-select" id="question-type">
-                                <option value="">未指定</option>
-                                <option value="single">单选题</option>
-                                <option value="multiple">多选题</option>
-                                <option value="judgement">判断题</option>
-                                <option value="completion">填空题</option>
-                            </select>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label" for="question-type">问题类型</label>
+                                <select class="form-select" id="question-type">
+                                    <option value="">未指定</option>
+                                    <option value="single">单选题</option>
+                                    <option value="multiple">多选题</option>
+                                    <option value="judgement">判断题</option>
+                                    <option value="completion">填空题</option>
+                                </select>
+                            </div>
                         </div>
                         
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="options">选项内容</label>
-                            <textarea class="form-control" id="options" rows="4" 
-                                placeholder="请输入选项内容，每行一个选项。例如：&#10;A. 选项1&#10;B. 选项2&#10;C. 选项3&#10;D. 选项4"></textarea>
+                        <div class="mb-4">
+                            <label class="form-label" for="options">选项内容 (可选)</label>
+                            <textarea class="form-control" id="options" rows="5"
+                                placeholder="请输入选项，每行一个。例如：&#10;A. 选项1&#10;B. 选项2"></textarea>
                         </div>
                         
-                        <div class="text-center">
-                            <button id="search-btn" class="btn btn-primary btn-lg px-4">获取答案</button>
+                        <div class="d-grid">
+                            <button id="search-btn" class="btn btn-primary btn-lg">获取答案</button>
                         </div>
                     </div>
                 </div>
         
-        <button id="search-btn">获取答案</button>
-        
-                    <div id="loading" class="text-center mt-4" style="display: none;">
-                    <div class="spinner-border text-primary" role="status">
+                <div id="loading" class="text-center mt-4" style="display: none;">
+                    <div class="spinner-border" role="status">
                         <span class="visually-hidden">加载中...</span>
                     </div>
-                    <p class="mt-2 text-muted">AI正在思考，请稍候...</p>
+                    <p class="mt-2 text-muted">AI 正在思考，请稍候...</p>
                 </div>
                 
-                <div id="result" class="card shadow-sm mt-4" style="display: none;">
+                <div id="result" class="card mt-4" style="display: none;">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">AI 回答结果</h5>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title mb-3">AI回答结果</h5>
-                        <div id="answer-content" class="p-3 bg-light rounded"></div>
+                        <div id="answer-content"></div>
                     </div>
                 </div>
                 
-                <div class="card shadow-sm mt-5">
-                    <div class="card-header bg-light">
-                        <h5 class="mb-0">OCS配置示例</h5>
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h5 class="mb-0">OCS 配置示例</h5>
                     </div>
                     <div class="card-body">
-                        <pre class="mb-0 bg-light p-3 rounded"><code>[
+                        <pre><code>[
   {
     "name": "AI智能题库",
     "homepage": "自定义主页地址",
@@ -168,7 +173,7 @@
     <footer class="footer mt-5 py-3 bg-light">
         <div class="container text-center">
             <p>EduBrain AI - 智能题库系统 v1.1.0</p>
-            <p>Powered by LynnGuo666</p>
+            <p>Powered by ivekasy</p>
             <p><small>© 2024-2025 All Rights Reserved</small></p>
         </div>
     </footer>
