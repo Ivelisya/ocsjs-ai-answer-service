@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000}
+.r2 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r3 {color: #008080; text-decoration-color: #008080}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #7f7f7f; text-decoration-color: #7f7f7f}
+.r7 {color: #808000; text-decoration-color: #808000; font-weight: bold}
+.r8 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+.r9 {color: #00ff00; text-decoration-color: #00ff00}
+.r10 {font-weight: bold}
+.r11 {font-style: italic}
+.r12 {color: #800080; text-decoration-color: #800080}
+.r13 {color: #800000; text-decoration-color: #800000}
+.r14 {color: #808000; text-decoration-color: #808000}
+.r15 {color: #800000; text-decoration-color: #800000; font-weight: bold}
+.r16 {color: #e3e3dd; text-decoration-color: #e3e3dd; background-color: #272822; font-weight: bold}
+.r17 {color: #656660; text-decoration-color: #656660; background-color: #272822}
+.r18 {color: #f8f8f2; text-decoration-color: #f8f8f2; background-color: #272822}
+.r19 {background-color: #272822}
+.r20 {color: #ff4689; text-decoration-color: #ff4689; background-color: #272822}
+.r21 {color: #e6db74; text-decoration-color: #e6db74; background-color: #272822}
+.r22 {color: #ae81ff; text-decoration-color: #ae81ff; background-color: #272822}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮</span>
+<span class="r1">│</span> <span class="r2">开始并发评估 AI 答题服务 (并发数: 40)</span>                                                                                                                                                           <span class="r1">│</span>
+<span class="r1">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r3">───────────────────────────────────────────────────────────────────────────────────── </span><span class="r4">AI 答题服务并发评估报告</span><span class="r3"> ─────────────────────────────────────────────────────────────────────────────────────</span>
+<span class="r5"> 评估时间:         </span> 2025-06-18 05:57:20               
+<span class="r5"> 评估集:           </span> <span class="r3">evaluation/golden_set_expert.json</span> 
+<span class="r5"> 目标服务:         </span> <a class="r6" href="http://localhost:5000">http://localhost:5000</a>             
+<span class="r5"> 并发数:           </span> <span class="r7">40</span>                                
+<span class="r5"> 总耗时:           </span> <span class="r2">83.34 秒</span>                          
+<span class="r5"> QPS (每秒查询数): </span> <span class="r8">0.40</span>                              
+<span class="r9">──────────────────────────────────────────────────────────────────────────────────────────── </span><span class="r10">总体结果</span><span class="r9"> ─────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class="r11">       评估摘要       </span>
+┏━━━━━━━━━━━┳━━━━━━━━┓
+┃<span class="r10">      指标 </span>┃<span class="r10">  数值  </span>┃
+┡━━━━━━━━━━━╇━━━━━━━━┩
+│<span class="r3">    总题数 </span>│<span class="r12">   33   </span>│
+│<span class="r3">    正确数 </span>│<span class="r12">   </span><span class="r1">28</span><span class="r12">   </span>│
+│<span class="r3">    错误数 </span>│<span class="r12">   </span><span class="r13">5</span><span class="r12">    </span>│
+│<span class="r3"> API失败数 </span>│<span class="r12">   </span><span class="r14">0</span><span class="r12">    </span>│
+│<span class="r3">  </span><span class="r4">总准确率</span><span class="r3"> </span>│<span class="r12"> </span><span class="r4">84.85%</span><span class="r12"> </span>│
+└───────────┴────────┘
+<span class="r9">────────────────────────────────────────────────────────────────────────────────────────── </span><span class="r10">各题型准确率</span><span class="r9"> ───────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class="r11">               各题型准确率               </span>
+┏━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┓
+┃<span class="r10"> 题型       </span>┃<span class="r10"> 总题数 </span>┃<span class="r10"> 正确数 </span>┃<span class="r10">  准确率 </span>┃
+┡━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━━┩
+│<span class="r3"> completion </span>│   7    │   6    │<span class="r10">  </span><span class="r7">85.71%</span><span class="r10"> </span>│
+│<span class="r3"> judgement  </span>│   8    │   8    │<span class="r10"> </span><span class="r2">100.00%</span><span class="r10"> </span>│
+│<span class="r3"> multiple   </span>│   4    │   3    │<span class="r10">  </span><span class="r15">75.00%</span><span class="r10"> </span>│
+│<span class="r3"> single     </span>│   14   │   11   │<span class="r10">  </span><span class="r15">78.57%</span><span class="r10"> </span>│
+└────────────┴────────┴────────┴─────────┘
+<span class="r9">────────────────────────────────────────────────────────────────────────────────────────── </span><span class="r15">失败案例分析</span><span class="r9"> ───────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class="r13">╭─────────────────────────────────────────────────────────────────────────── </span><span class="r7">题目 ID: exp_extra_003 (类型: completion)</span><span class="r13"> ───────────────────────────────────────────────────────────────────────────╮</span>
+<span class="r13">│</span> <span class="r10">问题:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> 著名的“图灵测试”是由____提出的，其目的是测试机器是否能表现出与人类无法区分的____。                                                                                                              <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">标准答案:</span> <span class="r1">艾伦·图灵#智能行为</span>                                                                                                                                                                    <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">AI  答案:</span> <span class="r13">艾伦·图灵#智能</span>                                                                                                                                                                        <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">API 响应:</span>                                                                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r16">  </span><span class="r17">1 </span><span class="r18">{</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r16">  </span><span class="r17">2 </span><span class="r18">  </span><span class="r20">&quot;answer&quot;</span><span class="r18">: </span><span class="r21">&quot;艾伦·图灵#智能&quot;</span><span class="r18">,</span><span class="r19">                                                                                                                                                                  </span>
+<span class="r16">  </span><span class="r17">3 </span><span class="r18">  </span><span class="r20">&quot;code&quot;</span><span class="r18">: </span><span class="r22">1</span><span class="r18">,</span><span class="r19">                                                                                                                                                                                   </span>
+<span class="r16">  </span><span class="r17">4 </span><span class="r18">  </span><span class="r20">&quot;question&quot;</span><span class="r18">: </span><span class="r21">&quot;著名的“图灵测试”是由____提出的，其目的是测试机器是否能表现出与人类无法区分的____。&quot;</span><span class="r19">                                                                                             </span>
+<span class="r16">  </span><span class="r17">5 </span><span class="r18">}</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r13">╭────────────────────────────────────────────────────────────────────────── </span><span class="r7">题目 ID: exp_multiple_001 (类型: multiple)</span><span class="r13"> ───────────────────────────────────────────────────────────────────────────╮</span>
+<span class="r13">│</span> <span class="r10">问题:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> 以下哪些技术或模式可用于应对“缓存雪崩”问题？                                                                                                                                                    <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">选项:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> A. 缓存预热                                                                                                                                                                                     <span class="r13">│</span>
+<span class="r13">│</span> B. 使用布隆过滤器                                                                                                                                                                               <span class="r13">│</span>
+<span class="r13">│</span> C. Redis主从复制                                                                                                                                                                                <span class="r13">│</span>
+<span class="r13">│</span> D. 服务降级与熔断                                                                                                                                                                               <span class="r13">│</span>
+<span class="r13">│</span> E. 缓存数据设置随机过期时间                                                                                                                                                                     <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">标准答案:</span> <span class="r1">服务降级与熔断#缓存数据设置随机过期时间</span>                                                                                                                                               <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">AI  答案:</span> <span class="r13">Redis主从复制#服务降级与熔断#缓存数据设置随机过期时间</span>                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">API 响应:</span>                                                                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r16">  </span><span class="r17">1 </span><span class="r18">{</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r16">  </span><span class="r17">2 </span><span class="r18">  </span><span class="r20">&quot;answer&quot;</span><span class="r18">: </span><span class="r21">&quot;Redis主从复制#服务降级与熔断#缓存数据设置随机过期时间&quot;</span><span class="r18">,</span><span class="r19">                                                                                                                           </span>
+<span class="r16">  </span><span class="r17">3 </span><span class="r18">  </span><span class="r20">&quot;code&quot;</span><span class="r18">: </span><span class="r22">1</span><span class="r18">,</span><span class="r19">                                                                                                                                                                                   </span>
+<span class="r16">  </span><span class="r17">4 </span><span class="r18">  </span><span class="r20">&quot;question&quot;</span><span class="r18">: </span><span class="r21">&quot;以下哪些技术或模式可用于应对“缓存雪崩”问题？&quot;</span><span class="r19">                                                                                                                                   </span>
+<span class="r16">  </span><span class="r17">5 </span><span class="r18">}</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r13">╭───────────────────────────────────────────────────────────────────── </span><span class="r7">题目 ID: exp_reading_comprehension_005 (类型: single)</span><span class="r13"> ─────────────────────────────────────────────────────────────────────╮</span>
+<span class="r13">│</span> <span class="r10">问题:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> (Reading Comprehension) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements... (text omitted for brevity)... What feature of The Starry Night reflects    <span class="r13">│</span>
+<span class="r13">│</span> technological advancements of Van Gogh’s time?                                                                                                                                                  <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">选项:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> A. The bright crescent moon’s scientific accuracy.                                                                                                                                              <span class="r13">│</span>
+<span class="r13">│</span> B. The artificial light from Arles reflected in the river.                                                                                                                                      <span class="r13">│</span>
+<span class="r13">│</span> C. The use of synthetic pigments(合成颜料) for the stars.                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span> D. The geometric precision of the town’s buildings.                                                                                                                                             <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">标准答案:</span> <span class="r1">The artificial light from Arles reflected in the river.</span>                                                                                                                               <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">AI  答案:</span> <span class="r13">The use of synthetic pigments(合成颜料) for the stars.</span>                                                                                                                                <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">API 响应:</span>                                                                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r16">  </span><span class="r17">1 </span><span class="r18">{</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r16">  </span><span class="r17">2 </span><span class="r18">  </span><span class="r20">&quot;answer&quot;</span><span class="r18">: </span><span class="r21">&quot;The use of synthetic pigments(合成颜料) for the stars.&quot;</span><span class="r18">,</span><span class="r19">                                                                                                                          </span>
+<span class="r16">  </span><span class="r17">3 </span><span class="r18">  </span><span class="r20">&quot;code&quot;</span><span class="r18">: </span><span class="r22">1</span><span class="r18">,</span><span class="r19">                                                                                                                                                                                   </span>
+<span class="r16">  </span><span class="r17">4 </span><span class="r18">  </span><span class="r20">&quot;question&quot;</span><span class="r18">: </span><span class="r21">&quot;(Reading Comprehension) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements... (text omitted for brevity)... What feature of The Starry Ni</span>
+<span class="r16">  </span><span class="r17">5 </span><span class="r18">}</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r13">╭─────────────────────────────────────────────────────────────────────── </span><span class="r7">题目 ID: java_feedback_single_001 (类型: single)</span><span class="r13"> ────────────────────────────────────────────────────────────────────────╮</span>
+<span class="r13">│</span> <span class="r10">问题:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> 下面关于接口的描述，错误的是（ ）。                                                                                                                                                             <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">选项:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> A. 一个类可以实现多个接口                                                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span> B. 继承接口可以用implements                                                                                                                                                                     <span class="r13">│</span>
+<span class="r13">│</span> C. 接口实现了类的多继承功能                                                                                                                                                                     <span class="r13">│</span>
+<span class="r13">│</span> D. 任何类实现接口，都必须实现接口的所有方法                                                                                                                                                     <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">标准答案:</span> <span class="r1">任何类实现接口，都必须实现接口的所有方法</span>                                                                                                                                              <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">AI  答案:</span> <span class="r13">继承接口可以用implements</span>                                                                                                                                                              <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">API 响应:</span>                                                                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r16">  </span><span class="r17">1 </span><span class="r18">{</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r16">  </span><span class="r17">2 </span><span class="r18">  </span><span class="r20">&quot;answer&quot;</span><span class="r18">: </span><span class="r21">&quot;继承接口可以用implements&quot;</span><span class="r18">,</span><span class="r19">                                                                                                                                                        </span>
+<span class="r16">  </span><span class="r17">3 </span><span class="r18">  </span><span class="r20">&quot;code&quot;</span><span class="r18">: </span><span class="r22">1</span><span class="r18">,</span><span class="r19">                                                                                                                                                                                   </span>
+<span class="r16">  </span><span class="r17">4 </span><span class="r18">  </span><span class="r20">&quot;question&quot;</span><span class="r18">: </span><span class="r21">&quot;下面关于接口的描述，错误的是（ ）。&quot;</span><span class="r19">                                                                                                                                            </span>
+<span class="r16">  </span><span class="r17">5 </span><span class="r18">}</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r13">╭─────────────────────────────────────────────────────────────────────── </span><span class="r7">题目 ID: user_feedback_single_001 (类型: single)</span><span class="r13"> ────────────────────────────────────────────────────────────────────────╮</span>
+<span class="r13">│</span> <span class="r10">问题:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> 社会主义建设道路初步探索时期，解决人民内部矛盾的总方针是( )。                                                                                                                                   <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">选项:</span>                                                                                                                                                                                           <span class="r13">│</span>
+<span class="r13">│</span> A. 采用专政和民主两种方法                                                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span> B. “团结—批评—团结”                                                                                                                                                                             <span class="r13">│</span>
+<span class="r13">│</span> C. 用民主的方法                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> D. 用专政的方法                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">标准答案:</span> <span class="r1">用民主的方法</span>                                                                                                                                                                          <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">AI  答案:</span> <span class="r13">“团结—批评—团结”</span>                                                                                                                                                                      <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">│</span> <span class="r10">API 响应:</span>                                                                                                                                                                                       <span class="r13">│</span>
+<span class="r13">│</span>                                                                                                                                                                                                 <span class="r13">│</span>
+<span class="r13">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r16">  </span><span class="r17">1 </span><span class="r18">{</span><span class="r19">                                                                                                                                                                                              </span>
+<span class="r16">  </span><span class="r17">2 </span><span class="r18">  </span><span class="r20">&quot;answer&quot;</span><span class="r18">: </span><span class="r21">&quot;“团结—批评—团结”&quot;</span><span class="r18">,</span><span class="r19">                                                                                                                                                                </span>
+<span class="r16">  </span><span class="r17">3 </span><span class="r18">  </span><span class="r20">&quot;code&quot;</span><span class="r18">: </span><span class="r22">1</span><span class="r18">,</span><span class="r19">                                                                                                                                                                                   </span>
+<span class="r16">  </span><span class="r17">4 </span><span class="r18">  </span><span class="r20">&quot;question&quot;</span><span class="r18">: </span><span class="r21">&quot;社会主义建设道路初步探索时期，解决人民内部矛盾的总方针是( )。&quot;</span><span class="r19">                                                                                                                  </span>
+<span class="r16">  </span><span class="r17">5 </span><span class="r18">}</span><span class="r19">                                                                                                                                                                                              </span>
+</code></pre>
+</body>
+</html>

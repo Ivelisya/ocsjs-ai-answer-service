@@ -147,6 +147,19 @@ def parse_question_and_options(question: str, options: str, question_type: str) 
 
 
 import re
+import unicodedata
+
+def normalize_text(text: str) -> str:
+    """
+    对文本进行标准化，处理各种奇怪的空格和Unicode字符。
+    """
+    if not text:
+        return ""
+    # NFKC 兼容性规范化，可以将全角字符、特殊空格等转换为标准形式
+    text = unicodedata.normalize('NFKC', text)
+    # 将所有连续的空白字符（包括换行、制表符等）替换为单个标准空格
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
 
 def extract_answer(ai_response: str, question_type: str) -> str:
     """
@@ -163,8 +176,11 @@ def extract_answer(ai_response: str, question_type: str) -> str:
     # 1. 优先使用正则表达式精确提取 <answer> 标签内的内容
     match = re.search(r'<answer>(.*?)</answer>', ai_response, re.DOTALL)
     if match:
-        # 提取并去除首尾的空白字符
-        return match.group(1).strip()
+        answer = match.group(1).strip()
+        # 后处理：修复常见的分隔符错误
+        if '#' in answer or '；' in answer or ';' in answer:
+             answer = answer.replace('；', '#').replace(';', '#')
+        return answer
 
     # 2. 降级处理：如果找不到 <answer> 标签，尝试寻找 "答案：" 等关键词
     # 这可以增加对未严格遵循格式的模型的兼容性

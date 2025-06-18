@@ -1,0 +1,223 @@
+[
+  {
+    "id": "exp_single_001",
+    "type": "single",
+    "question": "在分布式系统中，用于解决拜占庭将军问题的核心算法，且是许多现代区块链共识机制基础的是？",
+    "options": "A. Paxos\nB. Raft\nC. PBFT (Practical Byzantine Fault Tolerance)\nD. 2PC (Two-Phase Commit)",
+    "standard_answer": "PBFT (Practical Byzantine Fault Tolerance)"
+  },
+  {
+    "id": "exp_single_002",
+    "type": "single",
+    "question": "哪一种排序算法在最坏情况下的时间复杂度是 O(n log n)，并且是原地排序（In-place）？",
+    "options": "A. 归并排序 (Merge Sort)\nB. 快速排序 (Quick Sort)\nC. 堆排序 (Heap Sort)\nD. 冒泡排序 (Bubble Sort)",
+    "standard_answer": "堆排序 (Heap Sort)"
+  },
+  {
+    "id": "exp_single_003",
+    "type": "single",
+    "question": "在Linux内核中，负责在硬件和文件系统之间提供统一接口，使得各种文件系统能被内核识别和使用的是哪个子系统？",
+    "options": "A. 进程调度器 (Process Scheduler)\nB. 虚拟文件系统 (Virtual File System, VFS)\nC. 内存管理单元 (Memory Management Unit, MMU)\nD. 块设备驱动 (Block Device Driver)",
+    "standard_answer": "虚拟文件系统 (Virtual File System, VFS)"
+  },
+  {
+    "id": "exp_multiple_001",
+    "type": "multiple",
+    "question": "以下哪些技术或模式可用于应对“缓存雪崩”问题？",
+    "options": "A. 缓存预热\nB. 使用布隆过滤器\nC. Redis主从复制\nD. 服务降级与熔断\nE. 缓存数据设置随机过期时间",
+    "standard_answer": "服务降级与熔断#缓存数据设置随机过期时间"
+  },
+  {
+    "id": "exp_multiple_002",
+    "type": "multiple",
+    "question": "在函数式编程范式中，以下哪些是其核心特性或概念？",
+    "options": "A. 纯函数 (Pure Functions)\nB. 不可变状态 (Immutability)\nC. 继承与多态 (Inheritance and Polymorphism)\nD. 高阶函数 (Higher-Order Functions)",
+    "standard_answer": "纯函数 (Pure Functions)#不可变状态 (Immutability)#高阶函数 (Higher-Order Functions)"
+  },
+  {
+    "id": "exp_multiple_003",
+    "type": "multiple",
+    "question": "关于HTTP/2协议相较于HTTP/1.1的改进，以下说法正确的有哪些？",
+    "options": "A. 引入头部压缩 (Header Compression)\nB. 采用二进制分帧 (Binary Framing)\nC. 支持服务器推送 (Server Push)\nD. 彻底废除了Cookie机制",
+    "standard_answer": "引入头部压缩 (Header Compression)#采用二进制分帧 (Binary Framing)#支持服务器推送 (Server Push)"
+  },
+  {
+    "id": "exp_judgement_001",
+    "type": "judgement",
+    "question": "快速排序算法的平均时间复杂度是O(n log n)，但在最坏情况下（例如，当输入数组已经有序时），其时间复杂度会退化到O(n^2)。",
+    "standard_answer": "正确"
+  },
+  {
+    "id": "exp_judgement_002",
+    "type": "judgement",
+    "question": "在数据库设计中，符合第三范式（3NF）的关系模式必定也符合第二范式（2NF）。",
+    "standard_answer": "正确"
+  },
+  {
+    "id": "exp_judgement_003",
+    "type": "judgement",
+    "question": "Docker容器与虚拟机（VM）的主要区别在于，容器共享宿主机的操作系统内核，而虚拟机拥有自己独立的操作系统内核。",
+    "standard_answer": "正确"
+  },
+  {
+    "id": "exp_completion_001",
+    "type": "completion",
+    "question": "在计算机网络中，用于将域名解析为IP地址的协议是____协议，它通常使用____端口进行通信。",
+    "standard_answer": "DNS#53"
+  },
+  {
+    "id": "exp_completion_002",
+    "type": "completion",
+    "question": "在Git版本控制系统中，用于将一个分支的修改合并到另一个分支，但会创建一个新的合并提交记录的命令是____；而将一个分支的提交历史在另一个分支上重放的命令是____。",
+    "standard_answer": "git merge#git rebase"
+  },
+  {
+    "id": "exp_completion_003",
+    "type": "completion",
+    "question": "现代CPU为了解决高速CPU与慢速主存之间的速度不匹配问题，引入了多级缓存结构。通常分为L1、L2和____三级缓存。",
+    "standard_answer": "L3"
+  },
+  {
+    "id": "exp_extra_001",
+    "type": "single",
+    "question": "在C++11标准中，引入的用于实现“完美转发”的关键技术是？",
+    "options": "A. 智能指针 (Smart Pointers)\nB. Lambda表达式\nC. 右值引用与引用折叠 (Rvalue References & Reference Collapsing)\nD. auto关键字",
+    "standard_answer": "右值引用与引用折叠 (Rvalue References & Reference Collapsing)"
+  },
+  {
+    "id": "exp_extra_002",
+    "type": "multiple",
+    "question": "以下哪些属于关系型数据库事务的ACID特性？",
+    "options": "A. 原子性 (Atomicity)\nB. 一致性 (Consistency)\nC. 隔离性 (Isolation)\nD. 持久性 (Durability)\nE. 可用性 (Availability)",
+    "standard_answer": "原子性 (Atomicity)#一致性 (Consistency)#隔离性 (Isolation)#持久性 (Durability)"
+  },
+  {
+    "id": "exp_extra_003",
+    "type": "completion",
+    "question": "著名的“图灵测试”是由____提出的，其目的是测试机器是否能表现出与人类无法区分的____。",
+    "standard_answer": "艾伦·图灵#智能行为"
+  },
+  {
+    "id": "user_feedback_single_001",
+    "type": "single",
+    "question": "社会主义建设道路初步探索时期，解决人民内部矛盾的总方针是( )。",
+    "options": "A. 采用专政和民主两种方法\nB. “团结—批评—团结”\nC. 用民主的方法\nD. 用专政的方法",
+    "standard_answer": "用民主的方法"
+  },
+  {
+    "id": "user_feedback_judgement_001",
+    "type": "judgement",
+    "question": "《关于正确处理人民内部矛盾的问题》的报告，初步总结了我国社会主义建设的经验，明确提出了以苏为鉴，独立自主地探索适合中国情况的社会主义建设道路。( )",
+    "options": "A. 对\nB. 错",
+    "standard_answer": "错误"
+  },
+  {
+    "id": "user_feedback_judgement_002",
+    "type": "judgement",
+    "question": "对于工人阶级和社会主义革命来说，民族资产阶级作为一个剥削阶级，是被消灭的对象。( )",
+    "options": "A. 对\nB. 错",
+    "standard_answer": "正确"
+  },
+  {
+    "id": "user_feedback_judgement_003",
+    "type": "judgement",
+    "question": "个别行业公私合营后，企业的生产关系已经发生了根本的变化，基本上成为社会主义国营性质的企业。( )",
+    "options": "A. 对\nB. 错",
+    "standard_answer": "错误"
+  },
+  {
+    "id": "user_feedback_judgement_004",
+    "type": "judgement",
+    "question": "“三个代表”重要思想坚持把先进生产力作为出发点和归宿。( )",
+    "options": "A. 对\nB. 错",
+    "standard_answer": "错误"
+  },
+  {
+    "id": "user_feedback_single_002",
+    "type": "single",
+    "question": "在探索中国工业化道路的过程中，毛泽东指出要( )。",
+    "options": "A. 以工业为主导\nB. 以农业为重点\nC. 优先发展轻工业\nD. 以农业为辅助",
+    "standard_answer": "以工业为主导"
+  },
+  {
+    "id": "user_feedback_judgement_005",
+    "type": "judgement",
+    "question": "新民主主义社会是属于社会主义体系的，是逐步过渡到社会主义社会的过渡性质的社会。( )",
+    "options": "A. 对\nB. 错",
+    "standard_answer": "正确"
+  },
+  {
+    "id": "java_feedback_single_001",
+    "type": "single",
+    "question": "下面关于接口的描述，错误的是（ ）。",
+    "options": "A. 一个类可以实现多个接口\nB. 继承接口可以用implements\nC. 接口实现了类的多继承功能\nD. 任何类实现接口，都必须实现接口的所有方法",
+    "standard_answer": "任何类实现接口，都必须实现接口的所有方法"
+  },
+  {
+    "id": "java_feedback_single_002",
+    "type": "single",
+    "question": "下列代码的执行结果是什么？ （ ）\n\nString s1 = \"aaa\";\ns1.concat(\"bbb\");\nSystem.out.println(s1);",
+    "options": "A. The string \"aaa\".\nB. The string \"aaabbb\".\nC. The string \"bbbaaa\".\nD. The string \"bbb\".",
+    "standard_answer": "The string \"aaa\"."
+  },
+  {
+    "id": "java_feedback_single_003",
+    "type": "single",
+    "question": "下列关于对象的类型转换的描述，说法错误的是（ ）。",
+    "options": "A. 对象的类型转换可通过自动转换或强制转换进行\nB. 无继承关系的两个类的对象之间试图转换会出现编译错误\nC. 由new语句创建的父类对象可以强制转换为子类的对象\nD. 子类的对象转换为父类类型后,父类对象不能调用子类的特有方法",
+    "standard_answer": "由new语句创建的父类对象可以强制转换为子类的对象"
+  },
+  {
+    "id": "java_feedback_completion_001",
+    "type": "completion",
+    "question": "String str = \"Hello, World!\";\nString newStr = str.replace('o', 'a');\nSystem.out.println(newStr);\n输出的值为？",
+    "standard_answer": "Hella, Warld!"
+  },
+  {
+    "id": "java_feedback_completion_002",
+    "type": "completion",
+    "question": "同一个类中出现多个同名方法的情况称为________",
+    "standard_answer": "方法重载"
+  },
+  {
+    "id": "java_feedback_completion_003",
+    "type": "completion",
+    "question": "Java源程序文件的扩展名为 ___________",
+    "standard_answer": ".java"
+  },
+  {
+    "id": "exp_reading_comprehension_001",
+    "type": "single",
+    "question": "(Reading Comprehension) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements... (text omitted for brevity)... What makes The Starry Night’s sky visually engaging?",
+    "options": "A. The accurate depiction of constellations(星座).\nB. The swirling clouds and luminous stars that guide the viewer’s eyes.\nC. The absence of the moon to emphasize darkness.\nD. The use of straight lines to create order.",
+    "standard_answer": "The swirling clouds and luminous stars that guide the viewer’s eyes."
+  },
+  {
+    "id": "exp_reading_comprehension_002",
+    "type": "single",
+    "question": "(Reading Comprehension) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements... (text omitted for brevity)... How does the church steeple in the painting affect the viewer’s perception(认知)?",
+    "options": "A. It symbolizes(象征) chaos and instability.\nB. It creates a sense of warmth and childhood nostalgia(怀旧).\nC. It provides stability and a feeling of seclusion.\nD. It distracts from the natural elements in the scene.",
+    "standard_answer": "It provides stability and a feeling of seclusion."
+  },
+  {
+    "id": "exp_reading_comprehension_003",
+    "type": "single",
+    "question": "(Reading Comprehension) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements... (text omitted for brevity)... What is suggested about the “massive dark structure” on the left of the painting?",
+    "options": "A. It is universally interpreted as a mountain.\nB. Its scale and curving lines enhance the painting’s depth.\nC. It was added by another artist after Van Gogh’s death.\nD. It represents the artist’s dislike of nature.",
+    "standard_answer": "Its scale and curving lines enhance the painting’s depth."
+  },
+  {
+    "id": "exp_reading_comprehension_004",
+    "type": "single",
+    "question": "(Reading Comprehension) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements... (text omitted for brevity)... Why might the “eleven stars” in the painting hold religious significance?",
+    "options": "A. They refer to a biblical(圣经的) story from Genesis about dreams.\nB. They symbolize the eleven paintings Van Gogh sold in his lifetime.\nC. They represent the months Van Gogh spent in the mental hospital.\nD. They were a common motif in 19th-century secular art.",
+    "standard_answer": "They refer to a biblical(圣经的) story from Genesis about dreams."
+  },
+  {
+    "id": "exp_reading_comprehension_005",
+    "type": "single",
+    "question": "(Reading Comprehension) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements... (text omitted for brevity)... What feature of The Starry Night reflects technological advancements of Van Gogh’s time?",
+    "options": "A. The bright crescent moon’s scientific accuracy.\nB. The artificial light from Arles reflected in the river.\nC. The use of synthetic pigments(合成颜料) for the stars.\nD. The geometric precision of the town’s buildings.",
+    "standard_answer": "The artificial light from Arles reflected in the river."
+  }
+]

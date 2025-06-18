@@ -31,7 +31,8 @@ class Config:
 
     # Gemini 配置
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-001")
+    # 硬编码为已知的最佳性能模型，以消除不确定性
+    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash-preview-05-20")
     
     # 日志配置
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
@@ -46,3 +47,6 @@ class Config:
     # 缓存配置
     ENABLE_CACHE = os.getenv("ENABLE_CACHE", "True").lower() == "true"
     CACHE_EXPIRATION = int(os.getenv("CACHE_EXPIRATION", 86400))  # 默认缓存24小时
+
+    # 数据库配置
+    DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///db/dev.db") # 默认使用SQLite方便开发
