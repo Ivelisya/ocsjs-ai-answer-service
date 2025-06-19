@@ -13,8 +13,8 @@ import google.generativeai as genai
 from datetime import datetime
 
 from config import Config
-from utils import SimpleCache, format_answer_for_ocs, parse_question_and_options, extract_answer, normalize_text
-from prompts import build_prompt, build_correction_prompt, JUDGEMENT_PROMPT_TEMPLATE
+from utils import SimpleCache, format_answer_for_ocs, parse_question_and_options, extract_answer, normalize_text, parse_reading_comprehension
+from prompts import build_prompt, JUDGEMENT_PROMPT_TEMPLATE
 from models import Base, QARecord, engine, SessionLocal
 
 # --- 配置 ---
@@ -107,13 +107,22 @@ def search():
         else: # GET
             data = request.args
 
-        question = normalize_text(data.get('title', ''))
+        raw_question = data.get('title', '')
         question_type = data.get('type', '')
         options = normalize_text(data.get('options', ''))
         context = normalize_text(data.get('context'))
 
-        if not question:
+        if not raw_question:
             return jsonify({'code': 0, 'msg': '未提供问题内容'})
+
+        # 新增：阅读理解题处理逻辑
+        if 'reading comprehension' in raw_question.lower() or '阅读题' in raw_question:
+            logger.info("检测到阅读理解题，启用专用解析器。")
+            context, question, options = parse_reading_comprehension(raw_question)
+            question_type = 'single' # 假设阅读理解题都是单选，可以根据需要调整
+            logger.info(f"阅读理解解析结果 -> 文章长度: {len(context)}, 问题: '{question[:30]}...', 选项: '{options[:30]}...'")
+        else:
+            question = normalize_text(raw_question)
 
         # V6.0 弹性适应逻辑：如果options为空，则将question本身作为context，以应对OCS等客户端的特殊情况
         if not options and question_type in ['single', 'multiple']:

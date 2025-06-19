@@ -95,9 +95,24 @@ def main():
     
     # 测试填空题
     test_search(
-        "《红楼梦》的作者是_______。", 
+        "《红楼梦》的作者是_______。",
         "completion"
     )
+
+    # 新增：测试阅读理解题
+    reading_comprehension_question = """1. (Reading Comprehension, 20.0 points) The Starry Night by Vincent van Gogh has risen to the peak(顶峰) of artistic achievements. Although Van Gogh sold only one painting in his life, the aftermath of his work is enormous. The Starry Night is one of the most well-known images in modern culture as well as being one of the most replicated and sought-after prints. From Don McLean’s song “Vincent” (Starry Starry Night), to the endless number of merchandise products sporting this image, it is nearly impossible to shy away from this amazing painting.
+One may begin to ask what features within the painting are responsible for its ever growing popularity. There are actually several main aspects that intrigue those who view this image, and each factor affects each individual differently.
+There is the night sky filled with swirling clouds, stars ablaze with their own luminescence, and a bright crescent moon. Although the features are exaggerated, this is a scene we can all relate to, and also one that most individuals feel comfortable and at ease with. This sky keeps the viewer’s eyes moving about the painting, following the curves and creating a visual dot to dot with the stars. This movement keeps the onlooker involved in the painting while the other factors take hold.
+Below the rolling hills of the horizon lies a small town. There is a peaceful essence flowing from the structures. Perhaps the cool dark colours and the fiery windows spark(激起) memories of our own warm childhood years filled with imagination of what exists in the night and dark starry skies. The center point of the town is the tall steeple(尖塔) of the church, reigning largely over the smaller buildings. This steeple casts down a sense of stability onto the town, and also creates a sense of size and seclusion.
+To the left of the painting there is a massive dark structure that develops an even greater sense of size and isolation. This structure is magnificent when compared to the scale of other objects in the painting. The curving lines mirror that of the sky and create the sensation of depth in the painting. This structure also allows the viewer to interpret what it is. From a mountain to a leafy bush, the analysis of this formation is wide and full of variety(多样性).
+Van Gogh painted The Starry Night while in a mental hospital at Saint-Remy in 1889. During Van Gogh’s younger years (1876–1880) he wanted to dedicate his life to helping the poor people develop an intimate relationship with God. Many believe that this religious endeavour may be reflected in the eleven stars of the painting. In Genesis 37:9, the following statement is made: “And he dreamed yet another dream, and told it his brethren, and said, Behold, I have dreamed a dream more; and, behold, the sun and the moon and the eleven stars made homage to me.”
+Whether or not this religious inspiration is true, many features of The Starry Night have made it a popular painting. For instance, the stars in the night sky are surrounded with their own sphere of light. The reflection of artificial light (new to the time period) from Arles in the river makes one’s eyes move around the painting, thus keeping the viewer visually involved. There are structures in the distant lit up in a warm glow of light. Although we may never know how Vincent himself truly felt about this painting, mankind still embraces(拥护) its greatness.
+(1) (Single Choice 4.0points) What makes The Starry Night’s sky visually engaging?( )
+A. The accurate depiction of constellations(星座).
+B. The swirling clouds and luminous stars that guide the viewer’s eyes.
+C. The absence of the moon to emphasize darkness.
+D. The use of straight lines to create order."""
+    test_search(reading_comprehension_question)
     
     print("=" * 50)
     print("测试完成！")
