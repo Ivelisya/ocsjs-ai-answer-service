@@ -1,181 +1,290 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduBrain AI - 智能题库系统</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="EduBrain AI - 智能题库系统，支持外部题库与AI双重保障"
+        />
+        <meta name="keywords" content="AI, 题库, 智能问答, 教育, 人工智能" />
+        <title>EduBrain AI - 智能题库系统</title>
+        <link rel="stylesheet" href="/static/style.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
         <div class="container">
-            <a class="navbar-brand" href="/">EduBrain AI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">统计面板</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/docs">API文档</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-                <div class="text-center mb-5">
-                    <h1 class="display-4 fw-bold">EduBrain AI</h1>
-                    <p class="lead text-muted">新一代智能题库服务，兼容 OCS 题库接口</p>
+            <header class="header">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>EduBrain AI</h1>
                 </div>
-        
-                <div class="card">
-                    <div class="card-body p-lg-5">
-                        <div class="mb-4">
-                            <label class="form-label" for="question">问题内容</label>
-                            <textarea class="form-control" id="question" rows="4" placeholder="在此输入您的问题..."></textarea>
+                <p class="subtitle">智能题库系统 - 支持外部题库与AI双重保障</p>
+                <div class="integration-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <span
+                        >可集成到OCS网课助手使用 -
+                        <a href="/docs" class="notice-link"
+                            >查看集成指南</a
+                        ></span
+                    >
+                </div>
+            </header>
+
+            <main class="main-content">
+                <div class="search-card">
+                    <div class="card-header">
+                        <i class="fas fa-search"></i>
+                        <h2>智能问答</h2>
+                    </div>
+
+                    <div class="feature-notice">
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="notice-content">
+                            <strong>提示：</strong> 支持外部题库查询，可在
+                            <code>external_databases.json</code>
+                            中配置更多题库源
                         </div>
-                        
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label class="form-label" for="question-type">问题类型</label>
-                                <select class="form-select" id="question-type">
-                                    <option value="">未指定</option>
+                    </div>
+
+                    <form id="searchForm" class="search-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="title">
+                                    <i class="fas fa-question-circle"></i>
+                                    题目内容
+                                </label>
+                                <textarea
+                                    id="title"
+                                    name="title"
+                                    required
+                                    placeholder="请输入题目内容..."
+                                    rows="3"
+                                    maxlength="1000"
+                                ></textarea>
+                                <div class="character-counter">
+                                    <span id="titleCounter">0</span>/1000
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="type">
+                                    <i class="fas fa-list"></i>
+                                    题型
+                                </label>
+                                <select id="type" name="type">
                                     <option value="single">单选题</option>
                                     <option value="multiple">多选题</option>
                                     <option value="judgement">判断题</option>
                                     <option value="completion">填空题</option>
                                 </select>
                             </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label class="form-label" for="options">选项内容 (可选)</label>
-                            <textarea class="form-control" id="options" rows="5"
-                                placeholder="请输入选项，每行一个。例如：&#10;A. 选项1&#10;B. 选项2"></textarea>
-                        </div>
-                        
-                        <div class="d-grid">
-                            <button id="search-btn" class="btn btn-primary btn-lg">获取答案</button>
-                        </div>
-                    </div>
-                </div>
-        
-                <div id="loading" class="text-center mt-4" style="display: none;">
-                    <div class="spinner-border" role="status">
-                        <span class="visually-hidden">加载中...</span>
-                    </div>
-                    <p class="mt-2 text-muted">AI 正在思考，请稍候...</p>
-                </div>
-                
-                <div id="result" class="card mt-4" style="display: none;">
-                    <div class="card-header">
-                        <h5 class="card-title mb-0">AI 回答结果</h5>
-                    </div>
-                    <div class="card-body">
-                        <div id="answer-content"></div>
-                    </div>
-                </div>
-                
-                <div class="card mt-5">
-                    <div class="card-header">
-                        <h5 class="mb-0">OCS 配置示例</h5>
-                    </div>
-                    <div class="card-body">
-                        <pre><code>[
-  {
-    "name": "AI智能题库",
-    "homepage": "自定义主页地址",
-    "url": "http://localhost:5000/api/search",
-    "method": "get",
-    "contentType": "json",
-    "data": {
-      "title": "${title}",
-      "type": "${type}",
-      "options": "${options}"
-    },
-    "handler": "return (res)=> res.code === 1 ? [res.question, res.answer] : [res.msg, undefined]"
-  }
-]</pre>
-        </div>
-    </div>
 
-    <script>
-        document.getElementById('search-btn').addEventListener('click', async function() {
-            const question = document.getElementById('question').value.trim();
-            const questionType = document.getElementById('question-type').value;
-            const options = document.getElementById('options').value.trim();
-            
-            if (!question) {
-                alert('请输入问题内容');
-                return;
-            }
-            
-            // 显示加载中
-            document.getElementById('loading').style.display = 'block';
-            document.getElementById('result').style.display = 'none';
-            
-            try {
-                const response = await axios.get('/api/search', {
-                    params: {
-                        title: question,
-                        type: questionType,
-                        options: options
+                            <div class="form-group">
+                                <label for="options">
+                                    <i class="fas fa-tasks"></i>
+                                    选项内容
+                                </label>
+                                <textarea
+                                    id="options"
+                                    name="options"
+                                    placeholder="请输入选项内容（可选）"
+                                    rows="3"
+                                    maxlength="500"
+                                ></textarea>
+                                <div class="character-counter">
+                                    <span id="optionsCounter">0</span>/500
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="context">
+                                    <i class="fas fa-file-alt"></i>
+                                    上下文信息
+                                </label>
+                                <textarea
+                                    id="context"
+                                    name="context"
+                                    placeholder="请输入上下文信息（可选）"
+                                    rows="2"
+                                    maxlength="300"
+                                ></textarea>
+                                <div class="character-counter">
+                                    <span id="contextCounter">0</span>/300
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                            <span>搜索答案</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="result" class="result-card" style="display: none">
+                    <div class="card-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>搜索结果</h3>
+                    </div>
+                    <div id="resultContent" class="result-content"></div>
+                </div>
+
+                <div id="loading" class="loading-card" style="display: none">
+                    <div class="loading-spinner">
+                        <i class="fas fa-brain"></i>
+                        <p>
+                            正在智能分析中<span class="loading-dots"
+                                ><span></span><span></span><span></span
+                            ></span>
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="footer-links">
+                    <a href="/dashboard" class="footer-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        管理面板
+                    </a>
+                    <a href="/docs" class="footer-link">
+                        <i class="fas fa-book"></i>
+                        API文档
+                    </a>
+                </div>
+                <p class="footer-text">© 2025 EduBrain AI - 智能题库系统</p>
+            </footer>
+        </div>
+
+        <script>
+            // 字符计数器功能
+            function updateCounter(textareaId, counterId, maxLength) {
+                const textarea = document.getElementById(textareaId);
+                const counter = document.getElementById(counterId);
+                const counterElement = counter.parentElement;
+
+                textarea.addEventListener("input", function () {
+                    const count = this.value.length;
+                    counter.textContent = count;
+
+                    // 移除所有状态类
+                    counterElement.classList.remove("warning", "error");
+
+                    // 添加适当的状态类
+                    if (count > maxLength * 0.9) {
+                        counterElement.classList.add("error");
+                    } else if (count > maxLength * 0.7) {
+                        counterElement.classList.add("warning");
                     }
                 });
-                
-                const result = response.data;
-                
-                // 显示结果
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('result').style.display = 'block';
-                
-                if (result.code === 1) {
-                    // 成功获取答案
-                    document.getElementById('result').classList.remove('error');
-                    document.getElementById('answer-content').innerHTML = `<p><strong>问题：</strong>${result.question}</p><p><strong>答案：</strong>${result.answer}</p>`;
-                } else {
-                    // 获取答案失败
-                    document.getElementById('result').classList.add('error');
-                    document.getElementById('answer-content').innerHTML = `<p>${result.msg || '获取答案失败'}</p>`;
-                }
-            } catch (error) {
-                // 显示错误信息
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('result').style.display = 'block';
-                document.getElementById('result').classList.add('error');
-                document.getElementById('answer-content').innerHTML = `<p>请求失败: ${error.message}</p>`;
             }
-        });
-        
-        // 更新OCS配置中的URL
-        function updateOcsConfig() {
-            const host = window.location.host;
-            const protocol = window.location.protocol;
-            const baseUrl = `${protocol}//${host}`;
-            
-            let configText = document.getElementById('ocs-config').textContent;
-            configText = configText.replace(/http:\/\/localhost:5000/g, baseUrl);
-            document.getElementById('ocs-config').textContent = configText;
-        }
-        
-        // 页面加载完成后执行
-        window.addEventListener('load', updateOcsConfig);
-    </script>
 
-    <footer class="footer mt-5 py-3 bg-light">
-        <div class="container text-center">
-            <p>EduBrain AI - 智能题库系统 v1.1.0</p>
-            <p>Powered by ivekasy</p>
-            <p><small>© 2024-2025 All Rights Reserved</small></p>
-        </div>
-    </footer>
-</body>
+            // 初始化字符计数器
+            updateCounter("title", "titleCounter", 1000);
+            updateCounter("options", "optionsCounter", 500);
+            updateCounter("context", "contextCounter", 300);
+
+            document
+                .getElementById("searchForm")
+                .addEventListener("submit", async function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+
+                    // 显示加载状态
+                    document.getElementById("loading").style.display = "block";
+                    document.getElementById("result").style.display = "none";
+
+                    // 添加按钮加载状态
+                    const submitBtn = this.querySelector(".btn-primary");
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML =
+                        '<i class="fas fa-spinner fa-spin"></i><span>搜索中...</span>';
+
+                    try {
+                        const response = await fetch("/api/search", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type":
+                                    "application/x-www-form-urlencoded",
+                            },
+                            body: new URLSearchParams(data),
+                        });
+
+                        const result = await response.json();
+                        const resultDiv = document.getElementById("result");
+                        const resultContent =
+                            document.getElementById("resultContent");
+
+                        if (result.code === 1) {
+                            resultContent.innerHTML = `
+                        <div class="success-result">
+                            <div class="result-item">
+                                <strong>题目：</strong>
+                                <span>${result.question}</span>
+                            </div>
+                            <div class="result-item">
+                                <strong>答案：</strong>
+                                <span class="answer-highlight">${
+                                    result.answer
+                                }</span>
+                            </div>
+                            <div class="result-meta">
+                                <small><i class="fas fa-clock"></i> 处理时间: ${
+                                    result.processing_time || "N/A"
+                                }</small>
+                            </div>
+                        </div>
+                    `;
+                            resultDiv.className = "result-card success";
+                        } else {
+                            resultContent.innerHTML = `
+                        <div class="error-result">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>${result.msg}</p>
+                        </div>
+                    `;
+                            resultDiv.className = "result-card error";
+                        }
+
+                        resultDiv.style.display = "block";
+                    } catch (error) {
+                        console.error("Error:", error);
+                        const resultDiv = document.getElementById("result");
+                        const resultContent =
+                            document.getElementById("resultContent");
+                        resultContent.innerHTML = `
+                    <div class="error-result">
+                        <i class="fas fa-times-circle"></i>
+                        <p>网络错误，请检查连接后重试</p>
+                    </div>
+                `;
+                        resultDiv.className = "result-card error";
+                        resultDiv.style.display = "block";
+                    } finally {
+                        document.getElementById("loading").style.display =
+                            "none";
+                        // 恢复按钮状态
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML =
+                            '<i class="fas fa-search"></i><span>搜索答案</span>';
+                    }
+                });
+        </script>
+    </body>
 </html>

@@ -1,0 +1,54 @@
+{
+  "description": "EduBrain AI 问答系统功能测试题目",
+  "version": "1.0",
+  "questions": [
+    {
+      "title": "以下哪些是Python的合法变量名？",
+      "type": "multiple",
+      "options": "A. _name\nB. 2var\nC. my-var\nD. class_name",
+      "expected_answer": "A,D"
+    },
+    {
+      "title": "在Python中，缩进不是强制要求的",
+      "type": "judgement",
+      "options": "",
+      "expected_answer": "错误"
+    },
+    {
+      "title": "以下哪项不是Python的基本数据类型？",
+      "type": "single",
+      "options": "A. int\nB. str\nC. list\nD. function",
+      "expected_answer": "D"
+    },
+    {
+      "title": "以下哪种循环结构在Python中不存在？",
+      "type": "single",
+      "options": "A. for循环\nB. while循环\nC. do-while循环\nD. 递归",
+      "expected_answer": "C"
+    },
+    {
+      "title": "在Python中，以下哪个语句用于输出信息？",
+      "type": "single",
+      "options": "A. input()\nB. print()\nC. len()\nD. type()",
+      "expected_answer": "B"
+    },
+    {
+      "title": "Python中的变量名区分大小写",
+      "type": "judgement",
+      "options": "",
+      "expected_answer": "正确"
+    },
+    {
+      "title": "Python支持面向对象编程",
+      "type": "judgement",
+      "options": "",
+      "expected_answer": "正确"
+    },
+    {
+      "title": "在Python中，以下哪些是不可变类型？",
+      "type": "multiple",
+      "options": "A. 列表\nB. 字符串\nC. 字典\nD. 元组",
+      "expected_answer": "B,D"
+    }
+  ]
+}
