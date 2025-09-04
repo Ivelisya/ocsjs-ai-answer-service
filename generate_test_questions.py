@@ -162,10 +162,12 @@ def test_api_endpoint(base_url: str = "http://localhost:5000"):
 
             if response.status_code == 200:
                 result = response.json()
-                print("✅ 请求成功"                if result.get("code") == 0:
+                print("✅ 请求成功")
+                if result.get("code") == 0:
                     print(f"❌ 业务错误: {result.get('msg', '未知错误')}")
                 else:
-                    print("📝 AI回答:"                    print(result)
+                    print("📝 AI回答:")
+                    print(result)
             else:
                 print(f"❌ HTTP错误: {response.text}")
 

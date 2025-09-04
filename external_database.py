@@ -17,32 +17,45 @@ logger = logging.getLogger("ai_answer_service")
 class ExternalDatabase:
     """外部题库查询器"""
     
-    def __init__(self, databases_config: List[Dict]):
+    def __init__(self, databases_config: List[Dict], timeout: int = 10):
         """
         初始化外部题库配置
-        
+
         Args:
             databases_config: 题库配置列表
+            timeout: 请求超时时间（秒）
         """
         self.databases = databases_config
-        self.timeout = aiohttp.ClientTimeout(total=10)  # 10秒超时
+        self.timeout = aiohttp.ClientTimeout(total=timeout, connect=5)
+        self.session = None
     
+    async def __aenter__(self):
+        """异步上下文管理器入口"""
+        self.session = aiohttp.ClientSession(timeout=self.timeout)
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        """异步上下文管理器出口"""
+        if self.session:
+            await self.session.close()
+            self.session = None
+
     def _is_not_found_answer(self, answer: str) -> bool:
         """
         判断答案是否表示"未找到"
-        
+
         Args:
             answer: 答案字符串
-            
+
         Returns:
             是否表示未找到
         """
         if not answer:
             return True
-            
+
         # 转换为小写进行匹配
         answer_lower = answer.lower().strip()
-        
+
         # 常见的"未找到"表达
         not_found_patterns = [
             "非常抱歉",
@@ -58,9 +71,9 @@ class ExternalDatabase:
             "查询失败",
             "暂无答案"
         ]
-        
+
         return any(pattern in answer_lower for pattern in not_found_patterns)
-    
+
     async def query_all_databases(self, title: str, options: str = "", question_type: str = "") -> Tuple[bool, Optional[str], Optional[str]]:
         """
         查询所有配置的外部题库

@@ -1,15 +1,14 @@
 # EduBrain AI - 智能题库系统
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)](https://flask.palletsprojects.com/)
-[![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](使用者必须在遵循所选 AI 提供商（OpenAI 或 Google Gemini）的**使用条款**以及**相关法律法规**的情况下使用，不得用于非法用途。
 
-<div align="center">
-  <img src="https://img.shields.io/badge/版本-2.3.1-brightgreen" alt="Version"/>
-  <img src="https://img.shields.io/badge/状态-稳定运行-success" alt="Status"/>
-  <img src="https://img.shields.io/badge/界面-现代化-blue" alt="UI"/>
-</div>
+> -   OpenAI 使用条款: [OpenAI Policies](https://openai.com/policies)
+> -   Google AI 使用条款: [Google AI Terms of Service](https://policies.google.com/terms)shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+>     [![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)](https://flask.palletsprojects.com/) > [![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)](https://www.docker.com/) > [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+![Version](https://img.shields.io/badge/版本-2.3.1-brightgreen)
+![Status](https://img.shields.io/badge/状态-稳定运行-success)
+![UI](https://img.shields.io/badge/界面-现代化-blue)
 
 ## 📖 项目简介
 
@@ -200,13 +199,13 @@ docker-compose up -d
 
 如果遇到 `python` 命令无法识别的问题，请使用以下方法之一：
 
-**方法 1：使用启动脚本（推荐）**
+##### 方法 1：使用启动脚本（推荐）
 
 ```bash
 python start.py
 ```
 
-**方法 2：临时设置环境变量**
+##### 方法 2：临时设置环境变量
 
 ```powershell
 # 在PowerShell中临时设置
@@ -214,7 +213,7 @@ $env:Path = "C:\Users\20212\AppData\Local\Programs\Python\Python310;" + $env:Pat
 python app.py
 ```
 
-**方法 3：永久设置环境变量**
+##### 方法 3：永久设置环境变量
 
 1. 右键"此电脑" → "属性" → "高级系统设置"
 2. 点击"环境变量"
@@ -618,7 +617,7 @@ POST /api/cache/clear
 
 **请求头：**
 
-```
+```http
 X-Access-Token: your_token_here
 ```
 

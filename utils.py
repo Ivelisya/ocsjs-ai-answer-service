@@ -4,13 +4,11 @@
 包含缓存管理、答案处理和OpenAI API调用等辅助功能
 """
 import hashlib
-import json
-import os
 import re
 import time
 import threading
 import unicodedata
-from typing import Any, Dict, Optional, Tuple, Union
+from typing import Any, Dict, Optional, Tuple
 
 import redis
 
@@ -110,10 +108,20 @@ def parse_question_and_options(question: str, options: str, question_type: str) 
 
 
 def normalize_text(text: str) -> str:
+    """
+    文本标准化函数
+    优化Unicode处理和性能
+    """
     if not text:
         return ""
+
+    # 使用更高效的Unicode标准化
     text = unicodedata.normalize("NFKC", text)
+
+    # 合并连续空白字符
     text = re.sub(r"\s+", " ", text)
+
+    # 去除首尾空白
     return text.strip()
 
 
@@ -199,7 +207,8 @@ def parse_reading_comprehension(text: str) -> Tuple[str, str, str]:
             context = text[:context_end_index].strip()
             question_part = text[context_end_index:].strip()
 
-        context = re.sub(r".*Reading Comprehension.*?(\d+ points\)|points\))\s*", "", context, flags=re.IGNORECASE).strip()
+        context = re.sub(r".*Reading Comprehension.*?(\d+ points\)|points\))\s*",
+                        "", context, flags=re.IGNORECASE).strip()
 
         options_match = re.search(r"\sA\.", question_part)
         if options_match:
@@ -217,7 +226,7 @@ def parse_reading_comprehension(text: str) -> Tuple[str, str, str]:
         return "", text, ""
 
 
-def validate_external_answer(answer: str, question_type: str, options: str = "") -> bool:
+def validate_external_answer(answer: str, question_type: str, options: str = "", question: str = "") -> bool:
     """
     验证外部题库返回的答案是否有效
     
@@ -225,6 +234,7 @@ def validate_external_answer(answer: str, question_type: str, options: str = "")
         answer: 外部题库返回的答案
         question_type: 题目类型
         options: 选项内容
+        question: 问题内容（用于填空题验证）
         
     Returns:
         答案是否有效
@@ -240,12 +250,12 @@ def validate_external_answer(answer: str, question_type: str, options: str = "")
     
     if question_type == "judgement":
         # 判断题：只能是"对"或"错"及其变体
-        valid_answers = ["对", "错", "正确", "错误", "true", "false", "√", "×", "是", "否"]
-        return answer in valid_answers
+        valid_answers = ["对", "错", "正确", "错误", "true", "false", "√", "×", "是", "否", "yes", "no"]
+        return answer.lower() in [ans.lower() for ans in valid_answers]
     
     elif question_type in ["single", "multiple"]:
-        # 单选题和多选题：应该返回文字内容，但不能是判断题的答案
-        if not answer:
+        # 单选题和多选题：答案必须与选项中的文字匹配
+        if not answer or not options:
             return False
             
         # 排除判断题特有的答案
@@ -253,31 +263,63 @@ def validate_external_answer(answer: str, question_type: str, options: str = "")
         if answer.lower() in [ans.lower() for ans in judgement_answers]:
             return False
         
-        # 如果答案只包含字母、数字和标点，可能是无效的
-        # 但如果是完整的选项文字，则有效
-        if options:
-            # 检查答案是否与选项中的文字匹配
-            option_lines = [line.strip() for line in options.split('\n') if line.strip()]
-            for line in option_lines:
-                # 提取选项文字部分（去掉A. B. 等前缀）
-                match = re.match(r'^[A-Z]\s*[.、:]\s*(.+)$', line)
-                if match:
-                    option_text = normalize_text(match.group(1))
-                    if option_text in answer or answer in option_text:
-                        return True
+        # 检查答案是否与选项中的文字匹配
+        option_lines = [line.strip() for line in options.split('\n') if line.strip()]
+        for line in option_lines:
+            # 提取选项文字部分（去掉A. B. 等前缀）
+            match = re.match(r'^[A-Z]\s*[.、:]\s*(.+)$', line)
+            if match:
+                option_text = normalize_text(match.group(1))
+                answer_normalized = normalize_text(answer)
+                # 要求精确匹配，不能是部分匹配
+                if option_text == answer_normalized:
+                    return True
         
-        # 如果没有找到精确匹配，但答案包含中文或英文文字，则认为是有效的
-        # 排除纯字母、纯数字的情况
-        if re.search(r'[\u4e00-\u9fff]', answer):  # 包含中文
-            return True
-        if re.search(r'[a-zA-Z]{2,}', answer):  # 包含至少2个英文字符
-            return True
-            
+        # 如果没有找到匹配，则答案无效
         return False
     
     elif question_type == "completion":
-        # 填空题：任何非空文字都有效
-        return bool(answer.strip())
+        # 填空题：需要将问题和答案作为一个完整的句子，传给AI判断是否正确
+        if not answer.strip() or not question:
+            return False
+            
+        try:
+            # 构建验证提示词
+            validation_prompt = f"""请判断以下填空题的答案是否正确：
+
+问题：{question}
+答案：{answer}
+
+请回答：这个答案是否正确？只回答"正确"或"错误"。"""
+
+            # 延迟导入，避免在模块加载时就初始化应用
+            try:
+                from config import Config
+                from app import call_ai_with_retry
+                
+                validation_result = call_ai_with_retry(validation_prompt, 0.0)
+                validation_result = normalize_text(validation_result)
+                
+                # 检查AI的判断结果
+                if validation_result in ["正确", "对", "是", "true", "yes"]:
+                    return True
+                elif validation_result in ["错误", "错", "否", "false", "no"]:
+                    return False
+                else:
+                    # 如果AI判断不明确，默认认为答案有效（避免过度严格）
+                    logger.warning(f"AI验证结果不明确: {validation_result}，默认认为答案有效")
+                    return True
+                    
+            except ImportError as import_error:
+                # 如果无法导入app模块（例如在独立测试中），跳过AI验证
+                logger.warning(f"无法导入AI验证模块: {import_error}，跳过填空题AI验证")
+                # 在无法进行AI验证的情况下，默认认为答案有效
+                return True
+                
+        except Exception as e:
+            logger.error(f"填空题答案验证失败: {e}")
+            # 验证失败时，默认认为答案有效（避免因为验证错误而拒绝有效答案）
+            return True
     
     return False
 

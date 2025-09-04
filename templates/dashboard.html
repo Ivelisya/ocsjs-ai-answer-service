@@ -411,17 +411,18 @@
             document
                 .getElementById("clearRecordsBtn")
                 .addEventListener("click", async function () {
-                    const resultDiv = document.getElementById("clearRecordsResult");
+                    const resultDiv =
+                        document.getElementById("clearRecordsResult");
                     const button = this;
 
                     // 显示详细的确认对话框
                     const confirmed = confirm(
                         "⚠️ 警告：清除问答记录\n\n" +
-                        "您即将删除所有问答记录，此操作将：\n" +
-                        "• 删除所有历史问答数据\n" +
-                        "• 无法恢复已删除的记录\n" +
-                        "• 影响系统统计信息\n\n" +
-                        "确定要继续吗？"
+                            "您即将删除所有问答记录，此操作将：\n" +
+                            "• 删除所有历史问答数据\n" +
+                            "• 无法恢复已删除的记录\n" +
+                            "• 影响系统统计信息\n\n" +
+                            "确定要继续吗？"
                     );
 
                     if (!confirmed) {
@@ -429,7 +430,8 @@
                     }
 
                     // 再次确认
-                    const doubleConfirmed = confirm("最后确认：真的要清除所有问答记录吗？");
+                    const doubleConfirmed =
+                        confirm("最后确认：真的要清除所有问答记录吗？");
                     if (!doubleConfirmed) {
                         return;
                     }

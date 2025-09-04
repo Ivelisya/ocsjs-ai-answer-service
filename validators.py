@@ -71,18 +71,48 @@ class InputValidator:
     @classmethod
     def _contains_malicious_content(cls, text: str) -> bool:
         """检查是否包含恶意内容"""
-        # 简单的恶意内容检测
-        malicious_patterns = [
-            r'<script[^>]*>.*?</script>',  # XSS攻击
-            r'javascript:',
-            r'on\w+\s*=',  # 事件处理器
-            r'eval\s*\(',
-            r'exec\s*\(',
-        ]
-        
+        if not text:
+            return False
+
+        # 转换为小写进行检测
         text_lower = text.lower()
-        for pattern in malicious_patterns:
+
+        # XSS攻击模式
+        xss_patterns = [
+            r'<script[^>]*>.*?</script>',
+            r'javascript:',
+            r'vbscript:',
+            r'onload\s*=',
+            r'onerror\s*=',
+            r'onclick\s*=',
+            r'<iframe[^>]*>.*?</iframe>',
+            r'<object[^>]*>.*?</object>',
+            r'<embed[^>]*>.*?</embed>',
+        ]
+
+        # SQL注入模式
+        sql_patterns = [
+            r';\s*drop\s+table',
+            r';\s*delete\s+from',
+            r'union\s+select',
+            r'--\s*$',
+            r'/\*\*/',
+        ]
+
+        # 命令注入模式
+        command_patterns = [
+            r';\s*rm\s+',
+            r';\s*del\s+',
+            r';\s*format\s+',
+            r'&&\s*rm\s+',
+            r'&&\s*del\s+',
+        ]
+
+        # 检测所有恶意模式
+        all_patterns = xss_patterns + sql_patterns + command_patterns
+
+        for pattern in all_patterns:
             if re.search(pattern, text_lower, re.IGNORECASE | re.DOTALL):
                 return True
-        
+
         return False

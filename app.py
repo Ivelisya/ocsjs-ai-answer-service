@@ -4,13 +4,10 @@ EduBrain AI - 智能题库系统
 版本：2.3.1 (统一版本)
 """
 import asyncio
-import logging
 import time
-from datetime import datetime
-from typing import Any, Dict, Generator
+from typing import Generator
 
 import nest_asyncio
-import aiohttp
 import google.generativeai as genai
 from openai import AsyncOpenAI
 from types import SimpleNamespace
@@ -27,7 +24,6 @@ from utils import (
     extract_answer,
     format_answer_for_ocs,
     normalize_text,
-    parse_question_and_options,
     parse_reading_comprehension,
     validate_external_answer,
 )
@@ -45,8 +41,8 @@ RETRY_DELAY = 1  # 秒
 # 配置日志
 # 使用自定义的日志配置（已在导入时初始化）
 
-
 # 初始化数据库
+
 def init_database():
     try:
         Base.metadata.create_all(bind=engine)
@@ -54,7 +50,6 @@ def init_database():
     except Exception as e:
         logger.error(f"数据库初始化失败: {e}", exc_info=True)
         raise
-
 
 # 初始化应用
 app = Flask(__name__)
@@ -64,6 +59,7 @@ init_database()
 
 # 兼容测试：允许 Mock 对象通过下标访问（用于 tests 中的 choices[0] 写法）
 if not hasattr(Mock, "__getitem__"):
+
     def _mock_getitem(self, key):  # type: ignore
         cache_attr = "_getitem_cache"
         if not hasattr(self, cache_attr):
@@ -79,6 +75,7 @@ if "PYTEST_CURRENT_TEST" in os.environ:
     try:
         from unittest.mock import Mock
         if not hasattr(Mock, "__getitem__"):
+
             def _mock_getitem(self, key):  # type: ignore
                 return SimpleNamespace(message=SimpleNamespace(content=None))
             Mock.__getitem__ = _mock_getitem  # type: ignore
@@ -104,7 +101,7 @@ cache = Cache(Config.CACHE_EXPIRATION, use_redis=True) if Config.ENABLE_CACHE el
 rate_limiter = None
 if Config.ENABLE_RATE_LIMIT:
     rate_limiter = RateLimiter(
-        max_requests=Config.RATE_LIMIT_MAX_REQUESTS, 
+        max_requests=Config.RATE_LIMIT_MAX_REQUESTS,
         time_window=Config.RATE_LIMIT_TIME_WINDOW
     )
     logger.info(f"速率限制已启用: {Config.RATE_LIMIT_MAX_REQUESTS}次/{Config.RATE_LIMIT_TIME_WINDOW}秒")
@@ -144,7 +141,6 @@ if client is None:
 
 start_time = time.time()
 
-
 def get_db() -> Generator[Session, None, None]:
     db = SessionLocal()
     try:
@@ -152,8 +148,7 @@ def get_db() -> Generator[Session, None, None]:
     finally:
         db.close()
 
-
-def save_qa_record(question: str, question_type: str, options: str, answer: str, 
+def save_qa_record(question: str, question_type: str, options: str, answer: str,
                   context: str = "", raw_ai_response: str = "", model: str = ""):
     """保存问答记录到数据库"""
     try:
@@ -177,7 +172,6 @@ def save_qa_record(question: str, question_type: str, options: str, answer: str,
     finally:
         db.close()
 
-
 def verify_access_token(request) -> bool:
     # 没有配置令牌，直接放行
     if not Config.ACCESS_TOKEN:
@@ -187,7 +181,6 @@ def verify_access_token(request) -> bool:
         return True
     token = request.headers.get("X-Access-Token") or request.args.get("token")
     return token == Config.ACCESS_TOKEN
-
 
 async def call_ai_with_retry_async(prompt: str, temperature: float) -> str:
     """异步AI调用函数带重试逻辑"""
@@ -200,9 +193,10 @@ async def call_ai_with_retry_async(prompt: str, temperature: float) -> str:
                     max_output_tokens=Config.MAX_TOKENS, temperature=temperature
                 )
                 # google-generativeai 为同步 SDK，放入线程池避免阻塞事件循环
+
                 def _generate_content():
                     return model.generate_content(prompt, generation_config=generation_config)
-                
+
                 loop = asyncio.get_running_loop()
                 response = await loop.run_in_executor(None, _generate_content)
                 if not getattr(response, "candidates", None) or not response.candidates[0].content.parts:
@@ -243,13 +237,11 @@ async def call_ai_with_retry_async(prompt: str, temperature: float) -> str:
             else:
                 raise
 
-
 def call_ai_with_retry(prompt: str, temperature: float) -> str:
     """同步AI调用函数，保持向后兼容。
     使用 asyncio.run() 来确保在任何上下文中都能正确运行异步函数。
     """
     return asyncio.run(call_ai_with_retry_async(prompt, temperature))
-
 
 @app.route("/api/search", methods=["GET", "POST"])
 def search():
@@ -285,15 +277,15 @@ def search():
             valid, error_msg = InputValidator.validate_question(raw_question)
             if not valid:
                 return jsonify({"code": 0, "msg": error_msg})
-            
+
             valid, error_msg = InputValidator.validate_type(question_type)
             if not valid:
                 return jsonify({"code": 0, "msg": error_msg})
-            
+
             valid, error_msg = InputValidator.validate_options(options)
             if not valid:
                 return jsonify({"code": 0, "msg": error_msg})
-            
+
             valid, error_msg = InputValidator.validate_context(context)
             if not valid:
                 return jsonify({"code": 0, "msg": error_msg})
@@ -303,9 +295,8 @@ def search():
             logger.info("检测到阅读理解题，启用专用解析器。")
             context, question, options = parse_reading_comprehension(raw_question)
             question_type = "single"  # 假设阅读理解题都是单选，可以根据需要调整
-            logger.info(
-                f"阅读理解解析结果 -> 文章长度: {len(context)}, 问题: '{question[:30]}...', 选项: '{options[:30]}...'"
-            )
+            logger.info(f"阅读理解解析结果 -> 文章长度: {len(context)}, 问题: '{question[:30]}...', "
+                        f"选项: '{options[:30]}...'")
         else:
             question = normalize_text(raw_question)
 
@@ -320,7 +311,7 @@ def search():
         if Config.ENABLE_CACHE and cache and (cached_answer := cache.get(question, question_type, options)):
             logger.info(f"从缓存获取答案 (耗时: {time.time() - start_req_time:.2f}秒)")
             # 保存问答记录到数据库
-            save_qa_record(question, question_type, options, cached_answer, context, final_answer_raw, model_name)
+            save_qa_record(question, question_type, options, cached_answer, context, "", "cache")
             return jsonify(format_answer_for_ocs(question, cached_answer))
 
         # 如果启用外部题库，先查询外部题库
@@ -332,21 +323,23 @@ def search():
                     found, ext_question, ext_answer = asyncio.run(
                         external_db.query_all_databases(question, options, question_type)
                     )
-                    
+
                     if found and ext_answer:
                         # 检查答案是否表示"未找到"
                         if external_db._is_not_found_answer(ext_answer):
                             logger.info("外部题库返回未找到答案，将使用AI搜索")
                         else:
                             # 验证外部题库答案是否与题目类型和选项匹配
-                            if validate_external_answer(ext_answer, question_type, options):
+                            if validate_external_answer(ext_answer, question_type, options, question):
                                 external_question = ext_question or question
-                                logger.info(f"外部题库查询成功 (耗时: {time.time() - start_req_time:.2f}秒)")
+                                logger.info("外部题库查询成功 (耗时: %.2f秒)", time.time() - start_req_time)
                                 # 保存问答记录到数据库
-                                save_qa_record(external_question, question_type, options, ext_answer, context, "", "external_db")
+                                save_qa_record(external_question, question_type, options, ext_answer,
+                                               context, "", "external_db")
                                 return jsonify(format_answer_for_ocs(external_question, ext_answer))
                             else:
-                                logger.info(f"外部题库答案 '{ext_answer}' 与题目类型 '{question_type}' 或选项不匹配，将使用AI搜索")
+                                logger.info("外部题库答案 '%s' 与题目类型 '%s' 或选项不匹配，将使用AI搜索",
+                                            ext_answer, question_type)
                     else:
                         logger.info("外部题库未找到答案，将使用AI搜索")
                 except Exception as e:
@@ -389,8 +382,8 @@ def search():
         logger.error(f"处理问题时发生严重错误: {e}", exc_info=True)
         return jsonify({"code": 0, "msg": f"服务内部错误: {str(e)}"})
 
-
 # 其他路由保持不变...
+
 @app.route("/api/health", methods=["GET"])
 def health_check():
     return jsonify(
@@ -401,7 +394,6 @@ def health_check():
             "model": Config.GEMINI_MODEL if Config.AI_PROVIDER == "gemini" else Config.OPENAI_MODEL,
         }
     )
-
 
 @app.route("/api/cache/clear", methods=["POST"])
 def clear_cache():
@@ -420,7 +412,6 @@ def clear_cache():
         logger.error(f"清除缓存失败: {e}")
         return jsonify({"success": False, "message": f"清除缓存失败: {str(e)}"})
     return jsonify({"success": True, "message": "缓存已清除"})
-
 
 @app.route("/api/stats", methods=["GET"])
 def get_stats():
@@ -450,7 +441,6 @@ def get_stats():
             "external_database_enabled": Config.ENABLE_EXTERNAL_DATABASE,
         }
     )
-
 
 @app.route("/api/qa-records", methods=["GET"])
 def get_qa_records():
@@ -505,9 +495,8 @@ def get_qa_records():
         finally:
             db.close()
 
-    except ValueError as e:
+    except ValueError:
         return jsonify({"success": False, "message": "无效的分页参数"}), 400
-
 
 @app.route("/api/qa-records/clear", methods=["POST"])
 def clear_qa_records():
@@ -546,7 +535,6 @@ def clear_qa_records():
         logger.error(f"清除问答记录时出错: {e}")
         return jsonify({"success": False, "message": "清除失败"}), 500
 
-
 @app.route("/dashboard", methods=["GET"])
 def dashboard():
     uptime_seconds = time.time() - start_time
@@ -571,19 +559,19 @@ def dashboard():
         ai_provider=Config.AI_PROVIDER,
         model=Config.GEMINI_MODEL if Config.AI_PROVIDER == "gemini" else Config.OPENAI_MODEL,
         uptime=uptime_str,
-    records=records,
-    qa_records_count=qa_records_count,
+        records=records,
+        qa_records_count=qa_records_count,
         external_db_enabled=Config.ENABLE_EXTERNAL_DATABASE,
-        external_db_count=len(get_default_databases()) if Config.ENABLE_EXTERNAL_DATABASE else 0,
+        external_db_count=len(get_default_databases())
+        if Config.ENABLE_EXTERNAL_DATABASE else 0,
     )
-
 
 @app.route("/api/external-databases", methods=["GET"])
 def get_external_databases():
     """获取外部题库配置"""
     if not verify_access_token(request):
         return jsonify({"success": False, "message": "无效的访问令牌"}), 403
-    
+
     try:
         databases = get_default_databases()
         return jsonify({
@@ -595,35 +583,34 @@ def get_external_databases():
     except Exception as e:
         return jsonify({"success": False, "message": str(e)}), 500
 
-
 @app.route("/api/external-databases/test", methods=["POST"])
 def test_external_database():
     """测试外部题库查询"""
     if not verify_access_token(request):
         return jsonify({"success": False, "message": "无效的访问令牌"}), 403
-    
+
     if not Config.ENABLE_EXTERNAL_DATABASE:
         return jsonify({"success": False, "message": "外部题库功能未启用"}), 400
-    
+
     external_db = get_external_db()
     if not external_db:
         return jsonify({"success": False, "message": "外部题库未初始化"}), 400
-    
+
     data = request.get_json() if request.is_json else request.form
     title = data.get("title", "")
     options = data.get("options", "")
     question_type = data.get("type", "")
-    
+
     if not title:
         return jsonify({"success": False, "message": "请提供测试题目"}), 400
-    
+
     try:
         # 测试外部题库查询
         # 使用 asyncio.run() 简化异步调用
         found, question, answer = asyncio.run(
             external_db.query_all_databases(title, options, question_type)
         )
-        
+
         return jsonify({
             "success": True,
             "found": found,
@@ -635,16 +622,13 @@ def test_external_database():
         logger.error(f"测试外部题库时出错: {e}", exc_info=True)
         return jsonify({"success": False, "message": f"查询失败: {str(e)}"}), 500
 
-
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
 
-
 @app.route("/docs", methods=["GET"])
 def docs():
     return render_template("docs.html")
-
 
 if __name__ == "__main__":
     try:

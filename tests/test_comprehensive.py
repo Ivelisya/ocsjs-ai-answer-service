@@ -115,23 +115,26 @@ class TestQuestionTypeHandling:
 class TestFrontendIntegration:
     """测试前端集成场景"""
 
-    def test_frontend_form_submission_empty_type(self, client):
+    @patch('app.call_ai_with_retry')
+    def test_frontend_form_submission_empty_type(self, mock_ai_call, client):
         """测试前端表单提交空类型（自动识别）"""
         # 模拟前端发送的请求
+        mock_ai_call.return_value = "<answer>我是AI助手</answer>"
         response = client.post('/api/search', data={
             'title': '你是谁',
             'type': '',  # 前端自动识别选项
             'options': '',
             'context': ''
         })
-        # 即使AI调用失败，也应该返回适当的错误响应
         assert response.status_code == 200
         data = json.loads(response.data)
-        # 应该返回错误而不是崩溃
-        assert 'code' in data
+        assert data['code'] == 1
+        assert 'answer' in data
 
-    def test_frontend_form_with_options(self, client):
+    @patch('app.call_ai_with_retry')
+    def test_frontend_form_with_options(self, mock_ai_call, client):
         """测试前端表单带选项的提交"""
+        mock_ai_call.return_value = "<answer>A. 选项1</answer>"
         response = client.post('/api/search', data={
             'title': '选择正确的答案',
             'type': 'single',
@@ -140,7 +143,8 @@ class TestFrontendIntegration:
         })
         assert response.status_code == 200
         data = json.loads(response.data)
-        assert 'code' in data
+        assert data['code'] == 1
+        assert 'answer' in data
 
 
 class TestErrorHandling:
@@ -350,21 +354,48 @@ class TestInputValidation:
 
     def test_validate_question_too_long(self, client):
         """测试问题内容过长的情况"""
-        long_question = "测试问题" * 1000  # 创建超长问题
-        response = client.get(f'/api/search?title={long_question}&type=single')
-        assert response.status_code == 200
-        data = json.loads(response.data)
-        assert data['code'] == 0
-        assert '超过最大长度限制' in data['msg']
+        # 启用输入验证
+        from config import Config
+        original_validation = Config.ENABLE_INPUT_VALIDATION
+        Config.ENABLE_INPUT_VALIDATION = True
+        
+        try:
+            long_question = "测试问题" * 1000  # 创建超长问题
+            # 使用POST请求避免URL长度限制
+            response = client.post('/api/search', data={
+                'title': long_question,
+                'type': 'single'
+            })
+            assert response.status_code == 200
+            data = json.loads(response.data)
+            assert data['code'] == 0
+            assert '超过最大长度限制' in data['msg']
+        finally:
+            # 恢复原始设置
+            Config.ENABLE_INPUT_VALIDATION = original_validation
 
     def test_validate_options_malicious(self, client):
         """测试选项包含恶意内容的情况"""
-        malicious_options = "A. 正常选项<script>alert('xss')</script>"
-        response = client.get(f'/api/search?title=测试问题&type=single&options={malicious_options}')
-        assert response.status_code == 200
-        data = json.loads(response.data)
-        assert data['code'] == 0
-        assert '包含不当内容' in data['msg']
+        # 启用输入验证
+        from config import Config
+        original_validation = Config.ENABLE_INPUT_VALIDATION
+        Config.ENABLE_INPUT_VALIDATION = True
+        
+        try:
+            malicious_options = "A. 正常选项<script>alert('xss')</script>"
+            # 使用POST请求避免URL长度限制
+            response = client.post('/api/search', data={
+                'title': '测试问题',
+                'type': 'single',
+                'options': malicious_options
+            })
+            assert response.status_code == 200
+            data = json.loads(response.data)
+            assert data['code'] == 0
+            assert '包含不当内容' in data['msg']
+        finally:
+            # 恢复原始设置
+            Config.ENABLE_INPUT_VALIDATION = original_validation
 
 
 if __name__ == '__main__':

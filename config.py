@@ -39,10 +39,42 @@ class Config:
     @classmethod
     def validate_config(cls):
         """验证配置的有效性"""
+        errors = []
+
+        # 检查AI提供商配置
+        if cls.AI_PROVIDER not in cls.SUPPORTED_AI_PROVIDERS:
+            errors.append(f"不支持的AI提供商: '{cls.AI_PROVIDER}'，支持的提供商: {cls.SUPPORTED_AI_PROVIDERS}")
+
+        # 检查API密钥配置
         if cls.AI_PROVIDER == "openai" and not cls.OPENAI_API_KEY:
-            raise ValueError("使用OpenAI时必须设置 OPENAI_API_KEY")
-        if cls.AI_PROVIDER == "gemini" and not cls.GEMINI_API_KEY:
-            raise ValueError("使用Gemini时必须设置 GEMINI_API_KEY")
+            errors.append("使用OpenAI时必须设置OPENAI_API_KEY环境变量")
+        elif cls.AI_PROVIDER == "gemini" and not cls.GEMINI_API_KEY:
+            errors.append("使用Gemini时必须设置GEMINI_API_KEY环境变量")
+
+        # 检查端口范围
+        if not (1 <= cls.PORT <= 65535):
+            errors.append(f"端口号必须在1-65535之间，当前值: {cls.PORT}")
+
+        # 检查缓存过期时间
+        if cls.CACHE_EXPIRATION < 0:
+            errors.append(f"缓存过期时间不能为负数，当前值: {cls.CACHE_EXPIRATION}")
+
+        # 检查速率限制参数
+        if cls.ENABLE_RATE_LIMIT:
+            if cls.RATE_LIMIT_MAX_REQUESTS <= 0:
+                errors.append(f"速率限制最大请求数必须大于0，当前值: {cls.RATE_LIMIT_MAX_REQUESTS}")
+            if cls.RATE_LIMIT_TIME_WINDOW <= 0:
+                errors.append(f"速率限制时间窗口必须大于0，当前值: {cls.RATE_LIMIT_TIME_WINDOW}")
+
+        # 检查外部数据库超时时间
+        if cls.EXTERNAL_DATABASE_TIMEOUT <= 0:
+            errors.append(f"外部数据库超时时间必须大于0，当前值: {cls.EXTERNAL_DATABASE_TIMEOUT}")
+
+        if errors:
+            error_msg = "配置验证失败:\n" + "\n".join(f"  - {error}" for error in errors)
+            raise ValueError(error_msg)
+
+        return True
 
     # 日志配置
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
