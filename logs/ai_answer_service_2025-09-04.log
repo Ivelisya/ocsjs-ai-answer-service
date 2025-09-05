@@ -464,3 +464,27 @@ TypeError: expected string or bytes-like object
 2025-09-04 18:38:26,937 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
 2025-09-04 18:38:31,837 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.70秒)
 2025-09-04 18:38:31,841 - ai_answer_service - INFO - 问答记录已保存 (ID: 30)
+2025-09-04 18:44:26,025 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-04 18:44:26,025 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-04 18:44:26,025 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-04 18:44:26,025 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-04 18:44:28,081 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-04 18:44:28,083 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-04 18:44:28,083 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-04 18:44:30,094 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-04 18:44:30,094 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-04 18:44:30,094 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-04 18:44:30,095 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-04 18:44:32,136 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-04 18:44:32,136 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-04 18:44:32,136 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-04 18:44:44,494 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-04 18:44:44,495 - ai_answer_service - INFO - 接收到问题: '武汉市在中国的地位...' (类型: single)
+2025-09-04 18:44:44,495 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-04 18:44:44,496 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-04 18:44:44,920 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-04 18:44:45,243 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-04 18:44:45,243 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-04 18:44:45,243 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-04 18:45:21,331 - ai_answer_service - INFO - 问题处理完成 (耗时: 36.84秒)
+2025-09-04 18:45:21,338 - ai_answer_service - INFO - 问答记录已保存 (ID: 31)
