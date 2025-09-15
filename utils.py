@@ -283,12 +283,29 @@ def validate_external_answer(answer: str, question_type: str, options: str = "",
         if not answer.strip() or not question:
             return False
             
+        # 预处理外部题库返回的答案：如果答案是JSON格式的数组，提取第一个元素
+        processed_answer = answer
+        try:
+            import json
+            # 尝试解析JSON格式的答案
+            parsed_answer = json.loads(answer)
+            if isinstance(parsed_answer, list) and len(parsed_answer) > 0:
+                # 如果是数组，取第一个元素作为答案
+                processed_answer = str(parsed_answer[0])
+                logger.info(f"解析外部题库JSON答案: '{answer}' -> '{processed_answer}'")
+            elif isinstance(parsed_answer, str):
+                # 如果是字符串，直接使用
+                processed_answer = parsed_answer
+        except (json.JSONDecodeError, ValueError, TypeError):
+            # 如果不是JSON格式，使用原始答案
+            pass
+            
         try:
             # 构建验证提示词
             validation_prompt = f"""请判断以下填空题的答案是否正确：
 
 问题：{question}
-答案：{answer}
+答案：{processed_answer}
 
 请回答：这个答案是否正确？只回答"正确"或"错误"。"""
 

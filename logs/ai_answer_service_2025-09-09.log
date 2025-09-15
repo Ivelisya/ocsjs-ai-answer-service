@@ -1,0 +1,248 @@
+2025-09-09 16:23:16,914 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-09 16:23:16,914 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-09 16:23:16,914 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-09 16:23:16,914 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-09 16:23:18,962 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-09 16:23:18,962 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-09 16:23:18,962 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-09 16:23:24,976 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-09 16:23:24,977 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-09 16:23:24,978 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-09 16:23:24,978 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-09 16:23:27,009 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-09 16:23:27,009 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-09 16:23:27,009 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-09 16:23:45,019 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-09 16:23:45,020 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪...' (类型: single)
+2025-09-09 16:23:45,021 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-09 16:23:45,022 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:23:46,260 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-09 16:23:46,658 - ai_answer_service - INFO - 从外部题库 '网课小工具题库（GO题）' 找到有效答案
+2025-09-09 16:23:46,659 - ai_answer_service - INFO - 外部题库答案 '北京' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:23:46,659 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:23:51,243 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.23秒)
+2025-09-09 16:23:51,249 - ai_answer_service - INFO - 问答记录已保存 (ID: 33)
+2025-09-09 16:24:59,201 - ai_answer_service - INFO - 接收到问题: '在Servlet开发中,当我们要自定义一个Servlet时,可以继承____或HttpServlet...' (类型: completion)
+2025-09-09 16:24:59,202 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:25:01,455 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:25:01,458 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-09 16:25:01,458 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-09 16:25:01,458 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-09 16:25:01,458 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-09 16:25:03,500 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-09 16:25:03,502 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-09 16:25:03,502 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-09 16:25:11,377 - ai_answer_service - INFO - 外部题库答案 '["GenericSerlvet"]
+ 
+' 与题目类型 'completion' 或选项不匹配，将使用AI搜索
+2025-09-09 16:25:11,377 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-09 16:25:17,695 - ai_answer_service - INFO - 问题处理完成 (耗时: 18.49秒)
+2025-09-09 16:25:17,699 - ai_answer_service - INFO - 问答记录已保存 (ID: 34)
+2025-09-09 16:25:17,707 - ai_answer_service - INFO - 接收到问题: '在Servlet开发中,当我们要自定义一个Servlet时,可以继承____或HttpServlet...' (类型: completion)
+2025-09-09 16:25:17,708 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:25:18,026 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:25:21,057 - ai_answer_service - INFO - 外部题库答案 '["GenericSerlvet"]
+ 
+' 与题目类型 'completion' 或选项不匹配，将使用AI搜索
+2025-09-09 16:25:21,058 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-09 16:25:25,058 - ai_answer_service - INFO - 问题处理完成 (耗时: 7.35秒)
+2025-09-09 16:25:25,061 - ai_answer_service - INFO - 问答记录已保存 (ID: 35)
+2025-09-09 16:25:28,180 - ai_answer_service - INFO - 接收到问题: 'Servlet的配置主要有两种方式,分别是使用web.xml文件来完成配置和使用____注解的方式完...' (类型: completion)
+2025-09-09 16:25:28,181 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:25:28,889 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:25:30,583 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 2.40秒)
+2025-09-09 16:25:30,587 - ai_answer_service - INFO - 问答记录已保存 (ID: 36)
+2025-09-09 16:25:33,718 - ai_answer_service - INFO - 接收到问题: 'Servlet的生命周期大致可以分为三个阶段,分别是初始化阶段、运行阶段和____...' (类型: completion)
+2025-09-09 16:25:33,718 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:25:34,337 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:25:35,946 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 2.23秒)
+2025-09-09 16:25:35,949 - ai_answer_service - INFO - 问答记录已保存 (ID: 37)
+2025-09-09 16:25:39,072 - ai_answer_service - INFO - 接收到问题: '如果当前Web资源不想处理请求,RequestDispatcher接口提供了一个forward()方...' (类型: completion)
+2025-09-09 16:25:39,072 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:25:39,472 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:25:42,978 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 3.91秒)
+2025-09-09 16:25:42,982 - ai_answer_service - INFO - 问答记录已保存 (ID: 38)
+2025-09-09 16:25:46,121 - ai_answer_service - INFO - 接收到问题: '程序中创建了一个Servlet,该Servlet重写了其父类的doGet()和doPost()方法,...' (类型: single)
+2025-09-09 16:25:46,121 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:25:46,504 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:25:46,504 - ai_answer_service - INFO - 外部题库答案 'HttpServlet' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:25:46,505 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:25:51,616 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.49秒)
+2025-09-09 16:25:51,620 - ai_answer_service - INFO - 问答记录已保存 (ID: 39)
+2025-09-09 16:25:54,746 - ai_answer_service - INFO - 接收到问题: 'LoginServlet是一个Servlet类,代码如下: public class LoginSe...' (类型: single)
+2025-09-09 16:25:54,746 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:25:55,014 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:25:55,014 - ai_answer_service - INFO - 外部题库答案 'HttpServlet' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:25:55,014 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:26:02,521 - ai_answer_service - INFO - 问题处理完成 (耗时: 7.77秒)
+2025-09-09 16:26:02,526 - ai_answer_service - INFO - 问答记录已保存 (ID: 40)
+2025-09-09 16:26:05,642 - ai_answer_service - INFO - 接收到问题: 'HttpServlet类中,用来处理POST请求的方法是()...' (类型: single)
+2025-09-09 16:26:05,644 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:26:06,012 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:26:06,012 - ai_answer_service - INFO - 外部题库答案 'doPost' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:26:06,012 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:26:13,377 - ai_answer_service - INFO - 问题处理完成 (耗时: 7.73秒)
+2025-09-09 16:26:13,380 - ai_answer_service - INFO - 问答记录已保存 (ID: 41)
+2025-09-09 16:26:16,509 - ai_answer_service - INFO - 接收到问题: '请列举出至少三个HttpServletResponse常用的响应状态码,并说出它们的意义。...' (类型: completion)
+2025-09-09 16:26:16,509 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:26:17,222 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-09 16:26:17,529 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-09 16:26:17,531 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-09 16:26:17,531 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-09 16:26:24,640 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.13秒)
+2025-09-09 16:26:24,643 - ai_answer_service - INFO - 问答记录已保存 (ID: 42)
+2025-09-09 16:26:27,763 - ai_answer_service - INFO - 接收到问题: '简述请求转发与重定向的异同?(至少写3点)...' (类型: completion)
+2025-09-09 16:26:27,764 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:26:28,414 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:26:35,685 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 7.92秒)
+2025-09-09 16:26:35,688 - ai_answer_service - INFO - 问答记录已保存 (ID: 43)
+2025-09-09 16:34:14,719 - ai_answer_service - INFO - 接收到问题: '( )是我们坚持立党为公、执政为民的本质要求。...' (类型: single)
+2025-09-09 16:34:14,720 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:34:15,032 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:34:15,033 - ai_answer_service - INFO - 外部题库答案 '增进民生福祉' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:34:15,033 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:34:23,375 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.66秒)
+2025-09-09 16:34:23,378 - ai_answer_service - INFO - 问答记录已保存 (ID: 44)
+2025-09-09 16:34:26,493 - ai_answer_service - INFO - 接收到问题: '( )是我们一切工作的出发点和落脚点。...' (类型: single)
+2025-09-09 16:34:26,493 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:34:26,838 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:34:26,838 - ai_answer_service - INFO - 外部题库答案 '竭诚服务青年
+
+' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:34:26,838 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:34:32,969 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.48秒)
+2025-09-09 16:34:32,972 - ai_answer_service - INFO - 问答记录已保存 (ID: 45)
+2025-09-09 16:34:36,093 - ai_answer_service - INFO - 接收到问题: '( )是政府联系群众的最终一公里。...' (类型: single)
+2025-09-09 16:34:36,093 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:34:36,321 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:34:36,322 - ai_answer_service - INFO - 外部题库答案 '城乡社区' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:34:36,322 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:34:45,789 - ai_answer_service - INFO - 问题处理完成 (耗时: 9.70秒)
+2025-09-09 16:34:45,793 - ai_answer_service - INFO - 问答记录已保存 (ID: 46)
+2025-09-09 16:34:48,909 - ai_answer_service - INFO - 接收到问题: '要坚持( )为主体,提高劳动报酬在初次分配中的比重,完善按要素分配政策。...' (类型: single)
+2025-09-09 16:34:48,909 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:34:49,334 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:34:49,335 - ai_answer_service - INFO - 外部题库答案 '按劳分配' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:34:49,335 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:34:56,948 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.04秒)
+2025-09-09 16:34:56,951 - ai_answer_service - INFO - 问答记录已保存 (ID: 47)
+2025-09-09 16:35:00,064 - ai_answer_service - INFO - 接收到问题: '坚持以人民为中心的发展思想,在高质量发展中促进共同富裕,正确处理()的关系,构建初次分配、再分配、三...' (类型: single)
+2025-09-09 16:35:00,064 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:35:00,499 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:35:00,499 - ai_answer_service - INFO - 外部题库答案 '效率和公平' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:35:00,499 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:35:08,112 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.05秒)
+2025-09-09 16:35:08,115 - ai_answer_service - INFO - 问答记录已保存 (ID: 48)
+2025-09-09 16:35:11,223 - ai_answer_service - INFO - 接收到问题: '( )是最大的民生工程、民心工程、根基工程,是社会稳定的重要保障。...' (类型: single)
+2025-09-09 16:35:11,224 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:35:11,775 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:35:11,776 - ai_answer_service - INFO - 外部题库答案 '就业' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:35:11,776 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:35:19,302 - ai_answer_service - WARNING - AI 调用失败 (尝试 1/3): API 返回空内容
+2025-09-09 16:35:25,688 - ai_answer_service - INFO - 问题处理完成 (耗时: 14.47秒)
+2025-09-09 16:35:25,691 - ai_answer_service - INFO - 问答记录已保存 (ID: 49)
+2025-09-09 16:35:28,828 - ai_answer_service - INFO - 接收到问题: '保障和改善民生的重要原则是只要尽力而为,不要量力而行。( )...' (类型: judgement)
+2025-09-09 16:35:28,828 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:35:29,441 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:35:29,441 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.61秒)
+2025-09-09 16:35:29,444 - ai_answer_service - INFO - 问答记录已保存 (ID: 50)
+2025-09-09 16:35:32,556 - ai_answer_service - INFO - 接收到问题: '推进社会治理现代化的目标是建设人人有责、人人尽责、人人享有的社会治理共同体。( )...' (类型: judgement)
+2025-09-09 16:35:32,557 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:35:33,070 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:35:33,070 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.51秒)
+2025-09-09 16:35:33,074 - ai_answer_service - INFO - 问答记录已保存 (ID: 51)
+2025-09-09 16:35:36,192 - ai_answer_service - INFO - 接收到问题: '发展是解决民生问题的“总钥匙”,民生是发展的“指南针”。要在发展过程中始终注重民生、保障民生、改善民...' (类型: judgement)
+2025-09-09 16:35:36,193 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:35:36,898 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:35:36,898 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.71秒)
+2025-09-09 16:35:36,902 - ai_answer_service - INFO - 问答记录已保存 (ID: 52)
+2025-09-09 16:36:14,570 - ai_answer_service - INFO - 接收到问题: '( )提出:“要像保护眼睛一样保护生态环境,像对待生命一样对待生态环境,”...' (类型: single)
+2025-09-09 16:36:14,570 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:14,570 - ai_answer_service - INFO - 接收到问题: '( )是工业文明发展到一定阶段的产物。...' (类型: single)
+2025-09-09 16:36:14,571 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:15,030 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:15,030 - ai_answer_service - INFO - 外部题库答案 '暂未收录该题目答案
+ 
+' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:15,031 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:15,137 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:15,138 - ai_answer_service - INFO - 外部题库答案 '生态文明' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:15,138 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:18,180 - ai_answer_service - INFO - 问题处理完成 (耗时: 3.61秒)
+2025-09-09 16:36:18,183 - ai_answer_service - INFO - 问答记录已保存 (ID: 53)
+2025-09-09 16:36:19,135 - ai_answer_service - WARNING - AI 调用失败 (尝试 1/3): API 返回空内容
+2025-09-09 16:36:21,296 - ai_answer_service - INFO - 接收到问题: '处理好绿水青山和金山银山的关系,关键在人,关键在( )。...' (类型: single)
+2025-09-09 16:36:21,296 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:21,697 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:21,698 - ai_answer_service - INFO - 外部题库答案 '思路' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:21,698 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:26,814 - ai_answer_service - INFO - 问题处理完成 (耗时: 12.24秒)
+2025-09-09 16:36:26,818 - ai_answer_service - INFO - 问答记录已保存 (ID: 54)
+2025-09-09 16:36:29,400 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.10秒)
+2025-09-09 16:36:29,402 - ai_answer_service - INFO - 问答记录已保存 (ID: 55)
+2025-09-09 16:36:29,928 - ai_answer_service - INFO - 接收到问题: '习近平指出:“( )是最公平的公共产品,是最普惠的民生福祉。”...' (类型: single)
+2025-09-09 16:36:29,929 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:30,665 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:30,667 - ai_answer_service - INFO - 外部题库答案 '良好的生态环境' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:30,667 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:32,518 - ai_answer_service - INFO - 接收到问题: '( )是全面建设社会主义现代化国家的重要目标,也是满足人民日益增长的优美生态环境需要的必然要求。...' (类型: single)
+2025-09-09 16:36:32,519 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:32,904 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:32,905 - ai_answer_service - INFO - 外部题库答案 '建设美丽中国' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:32,905 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:36,456 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.53秒)
+2025-09-09 16:36:36,460 - ai_answer_service - INFO - 问答记录已保存 (ID: 56)
+2025-09-09 16:36:36,816 - ai_answer_service - WARNING - AI 调用失败 (尝试 1/3): API 返回空内容
+2025-09-09 16:36:39,575 - ai_answer_service - INFO - 接收到问题: '要树立尊重自然、顺应自然、保护自然的生态文明理念,增强( )的意识。...' (类型: single)
+2025-09-09 16:36:39,575 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:39,925 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:39,925 - ai_answer_service - INFO - 外部题库答案 '绿水青山就是金山银山' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:39,925 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:44,412 - ai_answer_service - INFO - 问题处理完成 (耗时: 11.89秒)
+2025-09-09 16:36:44,415 - ai_answer_service - INFO - 问答记录已保存 (ID: 57)
+2025-09-09 16:36:46,505 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.93秒)
+2025-09-09 16:36:46,508 - ai_answer_service - INFO - 问答记录已保存 (ID: 58)
+2025-09-09 16:36:47,537 - ai_answer_service - INFO - 接收到问题: '加快构建生态文明体系,确保到( )美丽中国目标基本实现。...' (类型: single)
+2025-09-09 16:36:47,538 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:47,956 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:47,956 - ai_answer_service - INFO - 外部题库答案 '2035年' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:47,956 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:49,649 - ai_answer_service - INFO - 接收到问题: '人因自然而生,人与自然是一种( )。...' (类型: single)
+2025-09-09 16:36:49,649 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:50,186 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:50,186 - ai_answer_service - INFO - 外部题库答案 '共生关系' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:50,186 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:36:52,466 - ai_answer_service - INFO - 问题处理完成 (耗时: 4.93秒)
+2025-09-09 16:36:52,470 - ai_answer_service - INFO - 问答记录已保存 (ID: 59)
+2025-09-09 16:36:55,040 - ai_answer_service - WARNING - AI 调用失败 (尝试 1/3): API 返回空内容
+2025-09-09 16:36:55,593 - ai_answer_service - INFO - 接收到问题: '习近平“两山论”的突出贡献是( )。...' (类型: single)
+2025-09-09 16:36:55,593 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-09 16:36:56,445 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-09 16:36:56,445 - ai_answer_service - INFO - 外部题库答案 '马克思主义生产力观的新成果' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-09 16:36:56,445 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-09 16:37:03,043 - ai_answer_service - INFO - 问题处理完成 (耗时: 13.40秒)
+2025-09-09 16:37:03,047 - ai_answer_service - INFO - 问答记录已保存 (ID: 60)
+2025-09-09 16:37:04,384 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.79秒)
+2025-09-09 16:37:04,386 - ai_answer_service - INFO - 问答记录已保存 (ID: 61)
+2025-09-09 16:42:01,230 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-09 16:42:01,231 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-09 16:42:01,231 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-09 16:42:01,231 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-09 16:42:03,261 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-09 16:42:03,261 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-09 16:42:03,261 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-09 16:42:39,119 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-09 16:42:39,836 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-09 16:42:39,836 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-09 16:42:39,836 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-09 16:42:39,836 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-09 16:42:41,855 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-09 16:42:41,856 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-09 16:42:41,856 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-09 16:43:20,354 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-09 16:43:20,354 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-09 16:43:20,354 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-09 16:43:20,354 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-09 16:43:22,384 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-09 16:43:22,384 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-09 16:43:22,385 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
