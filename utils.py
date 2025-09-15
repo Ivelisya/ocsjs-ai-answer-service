@@ -88,8 +88,11 @@ class Cache:
                 return len(self.memory_cache)
 
 
-def format_answer_for_ocs(question: str, answer: str) -> Dict[str, Any]:
-    return {"code": 1, "question": question, "answer": answer}
+def format_answer_for_ocs(question: str, answer: str, processing_time: Optional[float] = None) -> Dict[str, Any]:
+    response = {"code": 1, "question": question, "answer": answer}
+    if processing_time is not None:
+        response["processing_time"] = f"{processing_time:.2f}秒"
+    return response
 
 
 def parse_question_and_options(question: str, options: str, question_type: str) -> str:

@@ -312,7 +312,7 @@ def search():
             logger.info(f"从缓存获取答案 (耗时: {time.time() - start_req_time:.2f}秒)")
             # 保存问答记录到数据库
             save_qa_record(question, question_type, options, cached_answer, context, "", "cache")
-            return jsonify(format_answer_for_ocs(question, cached_answer))
+            return jsonify(format_answer_for_ocs(question, cached_answer, time.time() - start_req_time))
 
         # 如果启用外部题库，先查询外部题库
         if Config.ENABLE_EXTERNAL_DATABASE:
@@ -336,7 +336,7 @@ def search():
                                 # 保存问答记录到数据库
                                 save_qa_record(external_question, question_type, options, ext_answer,
                                                context, "", "external_db")
-                                return jsonify(format_answer_for_ocs(external_question, ext_answer))
+                                return jsonify(format_answer_for_ocs(external_question, ext_answer, time.time() - start_req_time))
                             else:
                                 logger.info("外部题库答案 '%s' 与题目类型 '%s' 或选项不匹配，将使用AI搜索",
                                             ext_answer, question_type)
@@ -376,7 +376,7 @@ def search():
         logger.info(f"问题处理完成 (耗时: {time.time() - start_req_time:.2f}秒)")
         # 保存问答记录到数据库
         save_qa_record(question, question_type, options, processed_answer, context, final_answer_raw, model_name)
-        return jsonify(format_answer_for_ocs(question, processed_answer))
+        return jsonify(format_answer_for_ocs(question, processed_answer, time.time() - start_req_time))
 
     except Exception as e:
         logger.error(f"处理问题时发生严重错误: {e}", exc_info=True)
@@ -629,6 +629,11 @@ def index():
 @app.route("/docs", methods=["GET"])
 def docs():
     return render_template("docs.html")
+
+@app.route("/favicon.ico", methods=["GET"])
+def favicon():
+    # 返回204 No Content来避免404错误
+    return "", 204
 
 if __name__ == "__main__":
     try:
