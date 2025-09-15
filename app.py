@@ -47,6 +47,9 @@ def init_database():
     try:
         Base.metadata.create_all(bind=engine)
         logger.info("数据库表创建成功。")
+    except (ImportError, ModuleNotFoundError) as e:
+        logger.error(f"数据库模块导入失败: {e}", exc_info=True)
+        raise
     except Exception as e:
         logger.error(f"数据库初始化失败: {e}", exc_info=True)
         raise
@@ -86,6 +89,9 @@ if "PYTEST_CURRENT_TEST" in os.environ:
 AI_CONFIG_OK = True
 try:
     Config.validate_config()
+except (ValueError, TypeError) as e:
+    AI_CONFIG_OK = False
+    logger.warning(f"AI 配置验证失败: {e}")
 except Exception as e:
     AI_CONFIG_OK = False
     logger.warning(f"AI 配置未完成: {e}")
@@ -166,6 +172,9 @@ def save_qa_record(question: str, question_type: str, options: str, answer: str,
         db.commit()
         db.refresh(qa_record)
         logger.info(f"问答记录已保存 (ID: {qa_record.id})")
+    except (ConnectionError, TimeoutError) as e:
+        logger.error(f"数据库连接失败: {e}")
+        # 可以在这里实现重试逻辑或降级策略
     except Exception as e:
         logger.error(f"保存问答记录失败: {e}")
         db.rollback()
@@ -225,11 +234,33 @@ async def call_ai_with_retry_async(prompt: str, temperature: float) -> str:
                             return msg.strip()
                     except Exception:
                         pass
+                except Exception as e:
+                    if isinstance(response, str):
+                        return response.strip()
+                    # 尝试 getattr 链
+                    try:
+                        msg = response.choices[0].message.content  # type: ignore
+                        if isinstance(msg, str):
+                            return msg.strip()
+                    except (AttributeError, IndexError, TypeError):
+                        pass
                     content = getattr(response, "content", None)
                     if isinstance(content, str):
                         return content.strip()
                     # 最后返回 repr，避免返回 Mock 对象字符串
                     return ""
+        except (ConnectionError, TimeoutError) as e:
+            logger.warning(f"AI 调用网络错误 (尝试 {attempt + 1}/{MAX_RETRIES + 1}): {e}")
+            if attempt < MAX_RETRIES:
+                await asyncio.sleep(RETRY_DELAY * (attempt + 1))
+            else:
+                raise
+        except ValueError as e:
+            logger.warning(f"AI 调用参数错误 (尝试 {attempt + 1}/{MAX_RETRIES + 1}): {e}")
+            if attempt < MAX_RETRIES:
+                await asyncio.sleep(RETRY_DELAY * (attempt + 1))
+            else:
+                raise
         except Exception as e:
             logger.warning(f"AI 调用失败 (尝试 {attempt + 1}/{MAX_RETRIES + 1}): {e}")
             if attempt < MAX_RETRIES:
@@ -307,12 +338,13 @@ def search():
 
         logger.info(f"接收到问题: '{question[:50]}...' (类型: {question_type})")
 
-        # 检查缓存（但不缓存新结果）
-        if Config.ENABLE_CACHE and cache and (cached_answer := cache.get(question, question_type, options)):
-            logger.info(f"从缓存获取答案 (耗时: {time.time() - start_req_time:.2f}秒)")
-            # 保存问答记录到数据库
-            save_qa_record(question, question_type, options, cached_answer, context, "", "cache")
-            return jsonify(format_answer_for_ocs(question, cached_answer, time.time() - start_req_time))
+        # 检查缓存（存储完整的响应数据）
+        if Config.ENABLE_CACHE and cache:
+            cached_response = cache.get(question, question_type, options)
+            if cached_response:
+                logger.info(f"从缓存获取答案 (耗时: {time.time() - start_req_time:.2f}秒)")
+                # 缓存中存储的是完整的响应数据，直接返回
+                return jsonify(cached_response)
 
         # 如果启用外部题库，先查询外部题库
         if Config.ENABLE_EXTERNAL_DATABASE:
@@ -336,6 +368,12 @@ def search():
                                 # 保存问答记录到数据库
                                 save_qa_record(external_question, question_type, options, ext_answer,
                                                context, "", "external_db")
+                                
+                                # 缓存完整的响应数据
+                                if Config.ENABLE_CACHE and cache:
+                                    response_data = format_answer_for_ocs(external_question, ext_answer, time.time() - start_req_time)
+                                    cache.set(external_question, response_data, question_type, options)
+                                
                                 return jsonify(format_answer_for_ocs(external_question, ext_answer, time.time() - start_req_time))
                             else:
                                 logger.info("外部题库答案 '%s' 与题目类型 '%s' 或选项不匹配，将使用AI搜索",
@@ -376,11 +414,23 @@ def search():
         logger.info(f"问题处理完成 (耗时: {time.time() - start_req_time:.2f}秒)")
         # 保存问答记录到数据库
         save_qa_record(question, question_type, options, processed_answer, context, final_answer_raw, model_name)
+        
+        # 缓存完整的响应数据
+        if Config.ENABLE_CACHE and cache:
+            response_data = format_answer_for_ocs(question, processed_answer, time.time() - start_req_time)
+            cache.set(question, response_data, question_type, options)
+        
         return jsonify(format_answer_for_ocs(question, processed_answer, time.time() - start_req_time))
 
+    except (ValueError, TypeError) as e:
+        logger.error(f"请求参数错误: {e}")
+        return jsonify({"code": 0, "msg": "请求参数格式错误"})
+    except ConnectionError as e:
+        logger.error(f"数据库连接错误: {e}")
+        return jsonify({"code": 0, "msg": "服务暂时不可用，请稍后重试"})
     except Exception as e:
         logger.error(f"处理问题时发生严重错误: {e}", exc_info=True)
-        return jsonify({"code": 0, "msg": f"服务内部错误: {str(e)}"})
+        return jsonify({"code": 0, "msg": "服务内部错误，请稍后重试"})
 
 # 其他路由保持不变...
 
@@ -395,23 +445,21 @@ def health_check():
         }
     )
 
-@app.route("/api/cache/clear", methods=["POST"])
-def clear_cache():
-    # 允许测试/开发环境跳过令牌，便于前端按钮和单元测试
+@app.route("/api/cache/stats", methods=["GET"])
+def get_cache_stats():
+    """获取缓存统计信息"""
     if not verify_access_token(request):
-        if not (app.config.get("TESTING") or Config.DEBUG):
-            return jsonify({"success": False, "message": "无效的访问令牌"}), 403
-    if not Config.ENABLE_CACHE:
-        return jsonify({"success": False, "message": "缓存未启用"})
-    if cache is None:
-        return jsonify({"success": False, "message": "缓存对象未初始化"})
+        return jsonify({"success": False, "message": "无效的访问令牌"}), 403
+    
+    if not Config.ENABLE_CACHE or cache is None:
+        return jsonify({"success": False, "message": "缓存未启用或未初始化"})
+    
     try:
-        cache.clear()
-        logger.info("缓存已清除")
+        stats = cache.get_stats()
+        return jsonify({"success": True, "stats": stats})
     except Exception as e:
-        logger.error(f"清除缓存失败: {e}")
-        return jsonify({"success": False, "message": f"清除缓存失败: {str(e)}"})
-    return jsonify({"success": True, "message": "缓存已清除"})
+        logger.error(f"获取缓存统计信息失败: {e}")
+        return jsonify({"success": False, "message": "获取统计信息失败"}), 500
 
 @app.route("/api/stats", methods=["GET"])
 def get_stats():
@@ -421,6 +469,9 @@ def get_stats():
     db = next(get_db())
     try:
         qa_records_count = db.query(QARecord).count()
+    except (ConnectionError, TimeoutError) as e:
+        logger.error(f"数据库连接失败: {e}")
+        qa_records_count = 0
     except Exception as e:
         logger.error(f"查询数据库失败: {e}")
         qa_records_count = 0
@@ -434,7 +485,7 @@ def get_stats():
             "ai_provider": Config.AI_PROVIDER,
             "model": Config.GEMINI_MODEL if Config.AI_PROVIDER == "gemini" else Config.OPENAI_MODEL,
             "cache_enabled": Config.ENABLE_CACHE,
-            "cache_size": cache.get_size() if Config.ENABLE_CACHE else 0,
+            "cache_size": cache.get_size() if Config.ENABLE_CACHE and cache else 0,
             "qa_records_count": qa_records_count,
             "rate_limit_enabled": Config.ENABLE_RATE_LIMIT,
             "input_validation_enabled": Config.ENABLE_INPUT_VALIDATION,
@@ -475,7 +526,7 @@ def get_qa_records():
                     "question": record.question,
                     "answer": record.answer,
                     "question_type": record.type,
-                    "timestamp": record.time.isoformat() if record.time else None,
+                    "timestamp": record.time.isoformat() if record.time is not None else None,
                     "ai_provider": "unknown",  # 模型中没有这个字段
                     "model": record.model
                 })
@@ -544,6 +595,10 @@ def dashboard():
     try:
         records = db.query(QARecord).order_by(QARecord.id.desc()).limit(100).all()
         qa_records_count = db.query(QARecord).count()
+    except (ConnectionError, TimeoutError) as e:
+        logger.error(f"数据库连接失败: {e}")
+        records = []
+        qa_records_count = 0
     except Exception as e:
         logger.error(f"查询数据库失败: {e}")
         records = []
@@ -638,6 +693,9 @@ def favicon():
 if __name__ == "__main__":
     try:
         app.run(host=Config.HOST, port=Config.PORT, debug=Config.DEBUG)
+    except (OSError, ConnectionError) as e:
+        logger.error(f"网络或端口错误: {e}", exc_info=True)
+        print(f"网络或端口错误: {e}")
     except Exception as e:
         logger.error(f"应用启动失败: {e}", exc_info=True)
         print(f"应用启动失败: {e}")

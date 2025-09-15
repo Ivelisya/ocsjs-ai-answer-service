@@ -1,69 +1,102 @@
-2025-09-16 04:06:02,824 - ai_answer_service - INFO - 数据库表创建成功。
-2025-09-16 04:06:02,825 - ai_answer_service - INFO - 输入验证: 禁用
-2025-09-16 04:06:02,825 - ai_answer_service - INFO - 速率限制: 禁用
-2025-09-16 04:06:02,825 - ai_answer_service - INFO - 外部题库: 启用
-2025-09-16 04:06:04,867 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
-2025-09-16 04:06:04,868 - ai_answer_service - INFO - 速率限制已禁用
-2025-09-16 04:06:04,868 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
-2025-09-16 04:06:11,258 - ai_answer_service - INFO - 数据库表创建成功。
-2025-09-16 04:06:11,259 - ai_answer_service - INFO - 输入验证: 禁用
-2025-09-16 04:06:11,259 - ai_answer_service - INFO - 速率限制: 禁用
-2025-09-16 04:06:11,259 - ai_answer_service - INFO - 外部题库: 启用
-2025-09-16 04:06:13,302 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
-2025-09-16 04:06:13,302 - ai_answer_service - INFO - 速率限制已禁用
-2025-09-16 04:06:13,303 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
-2025-09-16 04:06:30,008 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
-2025-09-16 04:06:30,008 - ai_answer_service - INFO - 接收到问题: '河北省的省会是哪...' (类型: single)
-2025-09-16 04:06:30,008 - ai_answer_service - INFO - 外部题库查询已启用
-2025-09-16 04:06:30,008 - ai_answer_service - INFO - 正在查询外部题库...
-2025-09-16 04:06:30,404 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
-2025-09-16 04:06:30,915 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
-2025-09-16 04:06:30,915 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
-2025-09-16 04:06:30,916 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
-2025-09-16 04:06:37,782 - ai_answer_service - INFO - 问题处理完成 (耗时: 7.77秒)
-2025-09-16 04:06:37,789 - ai_answer_service - INFO - 问答记录已保存 (ID: 62)
-2025-09-16 04:08:33,718 - ai_answer_service - INFO - 数据库表创建成功。
-2025-09-16 04:08:33,718 - ai_answer_service - INFO - 输入验证: 禁用
-2025-09-16 04:08:33,719 - ai_answer_service - INFO - 速率限制: 禁用
-2025-09-16 04:08:33,719 - ai_answer_service - INFO - 外部题库: 启用
-2025-09-16 04:08:35,762 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
-2025-09-16 04:08:35,763 - ai_answer_service - INFO - 速率限制已禁用
-2025-09-16 04:08:35,763 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
-2025-09-16 04:08:42,196 - ai_answer_service - INFO - 数据库表创建成功。
-2025-09-16 04:08:42,196 - ai_answer_service - INFO - 输入验证: 禁用
-2025-09-16 04:08:42,197 - ai_answer_service - INFO - 速率限制: 禁用
-2025-09-16 04:08:42,197 - ai_answer_service - INFO - 外部题库: 启用
-2025-09-16 04:08:44,250 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
-2025-09-16 04:08:44,250 - ai_answer_service - INFO - 速率限制已禁用
-2025-09-16 04:08:44,251 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
-2025-09-16 04:09:07,823 - ai_answer_service - INFO - 数据库表创建成功。
-2025-09-16 04:09:07,824 - ai_answer_service - INFO - 输入验证: 禁用
-2025-09-16 04:09:07,824 - ai_answer_service - INFO - 速率限制: 禁用
-2025-09-16 04:09:07,824 - ai_answer_service - INFO - 外部题库: 启用
-2025-09-16 04:09:09,873 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
-2025-09-16 04:09:09,873 - ai_answer_service - INFO - 速率限制已禁用
-2025-09-16 04:09:09,873 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
-2025-09-16 04:09:24,393 - ai_answer_service - INFO - 数据库表创建成功。
-2025-09-16 04:09:24,394 - ai_answer_service - INFO - 输入验证: 禁用
-2025-09-16 04:09:24,394 - ai_answer_service - INFO - 速率限制: 禁用
-2025-09-16 04:09:24,394 - ai_answer_service - INFO - 外部题库: 启用
-2025-09-16 04:09:26,438 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
-2025-09-16 04:09:26,438 - ai_answer_service - INFO - 速率限制已禁用
-2025-09-16 04:09:26,439 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
-2025-09-16 04:09:51,981 - ai_answer_service - INFO - 数据库表创建成功。
-2025-09-16 04:09:51,982 - ai_answer_service - INFO - 输入验证: 禁用
-2025-09-16 04:09:51,982 - ai_answer_service - INFO - 速率限制: 禁用
-2025-09-16 04:09:51,982 - ai_answer_service - INFO - 外部题库: 启用
-2025-09-16 04:09:54,026 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
-2025-09-16 04:09:54,026 - ai_answer_service - INFO - 速率限制已禁用
-2025-09-16 04:09:54,027 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
-2025-09-16 04:10:19,234 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
-2025-09-16 04:10:19,234 - ai_answer_service - INFO - 接收到问题: '中国最美城市是哪...' (类型: single)
-2025-09-16 04:10:19,235 - ai_answer_service - INFO - 外部题库查询已启用
-2025-09-16 04:10:19,235 - ai_answer_service - INFO - 正在查询外部题库...
-2025-09-16 04:10:19,845 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
-2025-09-16 04:10:20,007 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
-2025-09-16 04:10:20,007 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
-2025-09-16 04:10:20,008 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
-2025-09-16 04:10:51,547 - ai_answer_service - INFO - 问题处理完成 (耗时: 32.31秒)
-2025-09-16 04:10:51,554 - ai_answer_service - INFO - 问答记录已保存 (ID: 63)
+2025-09-16 04:35:41,515 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:35:41,516 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:35:41,516 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:35:41,516 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:35:43,552 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:35:43,553 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:35:43,553 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:35:49,938 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:35:49,938 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:35:49,939 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:35:49,939 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:35:51,990 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:35:51,991 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:35:51,991 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:36:00,670 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-16 04:36:00,671 - ai_answer_service - INFO - 接收到问题: '中国的首都在哪...' (类型: single)
+2025-09-16 04:36:00,672 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 04:36:00,672 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 04:36:01,093 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 04:36:01,340 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 04:36:01,340 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 04:36:01,340 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-16 04:36:07,148 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.48秒)
+2025-09-16 04:36:07,154 - ai_answer_service - INFO - 问答记录已保存 (ID: 1)
+2025-09-16 04:37:27,758 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:37:27,759 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:37:27,759 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:37:27,759 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:37:29,802 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:37:29,802 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:37:29,802 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:37:36,240 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:37:36,240 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:37:36,240 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:37:36,240 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:37:38,276 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:37:38,277 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:37:38,277 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:38:22,010 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:38:22,010 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:38:22,010 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:38:22,011 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:38:24,050 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:38:24,052 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:38:24,052 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:39:39,804 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:39:39,804 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:39:39,804 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:39:39,804 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:39:41,855 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:39:41,855 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:39:41,855 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:39:47,890 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:39:47,890 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:39:47,890 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:39:47,891 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:39:49,945 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:39:49,946 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:39:49,946 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:40:15,101 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:40:15,102 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:40:15,102 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:40:15,102 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:40:17,152 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:40:17,153 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:40:17,153 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:40:23,181 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:40:23,182 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:40:23,182 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:40:23,182 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:40:25,202 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:40:25,202 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:40:25,202 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:41:16,208 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:41:16,209 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:41:16,209 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:41:16,209 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:41:18,261 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:41:18,261 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:41:18,261 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:41:24,298 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:41:24,298 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:41:24,298 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:41:24,298 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:41:26,351 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:41:26,351 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:41:26,352 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:41:46,089 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:41:46,089 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:41:46,089 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:41:46,089 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:41:48,132 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:41:48,132 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:41:48,132 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:41:54,278 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:41:54,278 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:41:54,278 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:41:54,278 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:41:56,301 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:41:56,301 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:41:56,301 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:42:33,744 - ai_answer_service - INFO - 已清除 1 条问答记录

@@ -952,14 +952,82 @@ pre::before {
     font-weight: 500;
 }
 
-.cache-content {
-    padding: 32px;
+.cache-stats {
+    margin-bottom: 20px;
 }
 
-.cache-description {
-    color: var(--text-secondary);
+.cache-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
     margin-bottom: 20px;
-    line-height: 1.5;
+}
+
+.cache-stat-item {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition-fast);
+}
+
+.cache-stat-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.cache-stat-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.cache-stat-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cache-stat-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+    word-break: break-word;
+}
+
+.cache-stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cache-disabled {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+}
+
+.cache-disabled i {
+    font-size: 32px;
+    margin-bottom: 8px;
+    opacity: 0.6;
+}
+
+.cache-disabled p {
+    margin: 0;
+    font-size: 14px;
 }
 
 .result-message {
@@ -2351,5 +2419,195 @@ pre::before {
     .btn-danger {
         padding: 12px 24px;
         font-size: 14px;
+    }
+}
+
+/* 增强的加载状态样式 */
+.loading-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    animation: slideInUp 0.3s ease-out;
+}
+
+.loading-brain {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.loading-brain .fas.fa-brain {
+    font-size: 48px;
+    color: var(--primary-color);
+    animation: pulse 2s infinite;
+}
+
+.brain-waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.wave {
+    position: absolute;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    animation: waveExpand 2s infinite ease-out;
+}
+
+.wave-1 {
+    width: 60px;
+    height: 60px;
+    top: -10px;
+    left: -10px;
+    animation-delay: 0s;
+    opacity: 0.8;
+}
+
+.wave-2 {
+    width: 80px;
+    height: 80px;
+    top: -20px;
+    left: -20px;
+    animation-delay: 0.5s;
+    opacity: 0.6;
+}
+
+.wave-3 {
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    left: -30px;
+    animation-delay: 1s;
+    opacity: 0.4;
+}
+
+.loading-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.loading-progress {
+    margin-bottom: 24px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.loading-steps {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.step.completed {
+    opacity: 0.8;
+}
+
+.step i {
+    font-size: 20px;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.step.active i {
+    color: var(--primary-color);
+    animation: bounce 1s infinite;
+}
+
+.step.completed i {
+    color: var(--success-color);
+}
+
+.step span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.step.active span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.step.completed span {
+    color: var(--success-color);
+}
+
+/* 动画定义 */
+@keyframes waveExpand {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
     }
 }

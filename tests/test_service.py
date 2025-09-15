@@ -7,30 +7,38 @@ import requests
 import json
 import sys
 import os
+import logging
 from dotenv import load_dotenv
 
 # 加载环境变量
 load_dotenv()
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # 服务URL
 SERVICE_URL = os.getenv("SERVICE_URL", "http://localhost:5000")
 
 def test_health():
     """测试健康检查接口"""
-    print("测试健康检查接口...")
+    logger.info("测试健康检查接口...")
     try:
         response = requests.get(f"{SERVICE_URL}/api/health")
-        print(f"状态码: {response.status_code}")
-        print(f"响应内容: {json.dumps(response.json(), indent=2, ensure_ascii=False)}")
-        print("健康检查接口测试成功！\n")
+        logger.info(f"状态码: {response.status_code}")
+        logger.info(f"响应内容: {json.dumps(response.json(), indent=2, ensure_ascii=False)}")
+        logger.info("健康检查接口测试成功！")
         return True
     except Exception as e:
-        print(f"健康检查接口测试失败: {str(e)}")
+        logger.error(f"健康检查接口测试失败: {str(e)}")
         return False
 
 def test_search(question, question_type=None, options=None):
     """测试搜索接口"""
-    print(f"测试搜索接口: {question}")
+    logger.info(f"测试搜索接口: {question}")
     
     params = {
         "title": question
@@ -43,34 +51,34 @@ def test_search(question, question_type=None, options=None):
         params["options"] = options
     
     try:
-        print("发送请求...")
-        print(f"参数: {json.dumps(params, indent=2, ensure_ascii=False)}")
+        logger.info("发送请求...")
+        logger.info(f"参数: {json.dumps(params, indent=2, ensure_ascii=False)}")
         
         response = requests.get(f"{SERVICE_URL}/api/search", params=params)
         
-        print(f"状态码: {response.status_code}")
+        logger.info(f"状态码: {response.status_code}")
         result = response.json()
-        print(f"响应内容: {json.dumps(result, indent=2, ensure_ascii=False)}")
+        logger.info(f"响应内容: {json.dumps(result, indent=2, ensure_ascii=False)}")
         
         if result.get("code") == 1:
-            print("搜索接口测试成功！\n")
+            logger.info("搜索接口测试成功！")
             return True
         else:
-            print(f"搜索接口测试失败: {result.get('msg', '未知错误')}\n")
+            logger.error(f"搜索接口测试失败: {result.get('msg', '未知错误')}")
             return False
     except Exception as e:
-        print(f"搜索接口测试失败: {str(e)}\n")
+        logger.error(f"搜索接口测试失败: {str(e)}")
         return False
 
 def main():
     """主测试函数"""
-    print("=" * 50)
-    print("AI题库服务测试脚本")
-    print("=" * 50)
+    logger.info("=" * 50)
+    logger.info("AI题库服务测试脚本")
+    logger.info("=" * 50)
     
     # 测试健康检查接口
     if not test_health():
-        print("健康检查失败，请确认服务是否正常运行。")
+        logger.error("健康检查失败，请确认服务是否正常运行。")
         sys.exit(1)
     
     # 测试单选题
@@ -114,9 +122,9 @@ C. The absence of the moon to emphasize darkness.
 D. The use of straight lines to create order."""
     test_search(reading_comprehension_question)
     
-    print("=" * 50)
-    print("测试完成！")
-    print("=" * 50)
+    logger.info("=" * 50)
+    logger.info("测试完成！")
+    logger.info("=" * 50)
 
 if __name__ == "__main__":
     main()

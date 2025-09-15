@@ -4,11 +4,12 @@
 包含缓存管理、答案处理和OpenAI API调用等辅助功能
 """
 import hashlib
+import json
 import re
 import time
 import threading
 import unicodedata
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import redis
 
@@ -21,9 +22,17 @@ class Cache:
 
     def __init__(self, expiration_seconds: int = 86400, use_redis: bool = False):
         self.expiration: int = expiration_seconds
-        self.use_redis: bool = use_redis and Config.REDIS_URL
+        self.use_redis: bool = use_redis and bool(Config.REDIS_URL)
         self._lock = threading.RLock()  # 添加线程锁
-        
+
+        # 缓存统计信息
+        self.stats = {
+            "hits": 0,
+            "misses": 0,
+            "sets": 0,
+            "total_requests": 0
+        }
+
         if self.use_redis:
             try:
                 self.redis_client: redis.Redis = redis.from_url(Config.REDIS_URL)
@@ -31,43 +40,67 @@ class Cache:
             except redis.ConnectionError:
                 logger.warning("Redis连接失败，使用内存缓存")
                 self.use_redis = False
-                self.memory_cache: Dict[str, Tuple[float, str]] = {}
+                self.memory_cache: Dict[str, Tuple[float, Dict[str, Any]]] = {}
         else:
-            self.memory_cache: Dict[str, Tuple[float, str]] = {}
+            self.memory_cache: Dict[str, Tuple[float, Dict[str, Any]]] = {}
 
     def _generate_key(self, question: str, question_type: str, options: str) -> str:
         content = f"{question}|{question_type}|{options}"
         return hashlib.md5(content.encode("utf-8")).hexdigest()
 
-    def get(self, question: str, question_type: str = "", options: str = "") -> Optional[str]:
+    def get(self, question: str, question_type: str = "", options: str = "") -> Optional[Dict[str, Any]]:
+        """获取缓存的完整响应数据"""
         key = self._generate_key(question, question_type, options)
+        self.stats["total_requests"] += 1
+
         if self.use_redis:
             try:
                 value = self.redis_client.get(key)
-                return value.decode("utf-8") if value else None
-            except redis.ConnectionError:
+                if value:
+                    self.stats["hits"] += 1
+                    # 简化处理，避免异步类型问题
+                    try:
+                        return json.loads(str(value))
+                    except json.JSONDecodeError:
+                        return None
+                else:
+                    self.stats["misses"] += 1
+                    return None
+            except Exception:
+                self.stats["misses"] += 1
                 return None
         else:
             with self._lock:
                 if key in self.memory_cache:
                     timestamp, value = self.memory_cache[key]
                     if time.time() - timestamp < self.expiration:
+                        self.stats["hits"] += 1
                         return value
-                    del self.memory_cache[key]
-                return None
+                    else:
+                        # 过期删除
+                        del self.memory_cache[key]
+                        self.stats["misses"] += 1
+                        return None
+                else:
+                    self.stats["misses"] += 1
+                    return None
 
-    def set(self, question: str, answer: str, question_type: str = "", options: str = "") -> None:
+    def set(self, question: str, response_data: Dict[str, Any], question_type: str = "", options: str = "") -> None:
+        """存储完整的响应数据到缓存"""
         key = self._generate_key(question, question_type, options)
+        self.stats["sets"] += 1
+
         if self.use_redis:
             try:
-                self.redis_client.setex(key, self.expiration, answer)
+                self.redis_client.setex(key, self.expiration, json.dumps(response_data))
             except redis.ConnectionError:
                 pass
         else:
             with self._lock:
-                self.memory_cache[key] = (time.time(), answer)
+                self.memory_cache[key] = (time.time(), response_data)
 
     def clear(self) -> None:
+        """清空缓存"""
         if self.use_redis:
             try:
                 self.redis_client.flushdb()
@@ -78,14 +111,47 @@ class Cache:
                 self.memory_cache.clear()
 
     def get_size(self) -> int:
+        """获取缓存大小"""
         if self.use_redis:
             try:
-                return self.redis_client.dbsize()
-            except redis.ConnectionError:
+                size = self.redis_client.dbsize()
+                return size if isinstance(size, int) else 0
+            except Exception:
                 return 0
         else:
             with self._lock:
                 return len(self.memory_cache)
+
+    def get_hit_rate(self) -> float:
+        """获取缓存命中率"""
+        total = self.stats["total_requests"]
+        if total == 0:
+            return 0.0
+        return (self.stats["hits"] / total) * 100
+
+    def get_stats(self) -> Dict[str, Any]:
+        """获取缓存统计信息"""
+        return {
+            "size": self.get_size(),
+            "hit_rate": self.get_hit_rate(),
+            "hits": self.stats["hits"],
+            "misses": self.stats["misses"],
+            "sets": self.stats["sets"],
+            "total_requests": self.stats["total_requests"],
+            "cache_type": "redis" if self.use_redis else "memory"
+        }
+
+    def warmup(self, common_questions: List[Tuple[str, str, str]]) -> None:
+        """缓存预热"""
+        logger.info(f"开始缓存预热，共 {len(common_questions)} 个问题")
+        for question, question_type, options in common_questions:
+            key = self._generate_key(question, question_type, options)
+            if not self.get(question, question_type, options):
+                logger.info(f"预热缓存: {question[:50]}...")
+                # 这里可以调用实际的AI处理逻辑
+                # 为了演示，我们只记录预热操作
+                pass
+        logger.info("缓存预热完成")
 
 
 def format_answer_for_ocs(question: str, answer: str, processing_time: Optional[float] = None) -> Dict[str, Any]:
@@ -225,7 +291,8 @@ def parse_reading_comprehension(text: str) -> Tuple[str, str, str]:
         question = re.sub(r"\s*\(Single Choice.*?\)\s*", "", question).strip()
 
         return context, question, options
-    except Exception:
+    except (ValueError, TypeError, AttributeError) as e:
+        logger.warning(f"解析阅读理解题失败: {e}")
         return "", text, ""
 
 
@@ -289,7 +356,6 @@ def validate_external_answer(answer: str, question_type: str, options: str = "",
         # 预处理外部题库返回的答案：如果答案是JSON格式的数组，提取第一个元素
         processed_answer = answer
         try:
-            import json
             # 尝试解析JSON格式的答案
             parsed_answer = json.loads(answer)
             if isinstance(parsed_answer, list) and len(parsed_answer) > 0:

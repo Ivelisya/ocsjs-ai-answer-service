@@ -6,6 +6,14 @@ EduBrain AI API 测试脚本
 import requests
 import json
 import time
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 def test_api_endpoint(base_url: str = "http://localhost:5000"):
     """测试API端点"""
@@ -28,13 +36,13 @@ def test_api_endpoint(base_url: str = "http://localhost:5000"):
         }
     ]
 
-    print("🚀 开始测试 EduBrain AI API...")
-    print(f"📡 目标地址: {base_url}")
-    print("=" * 50)
+    logger.info("🚀 开始测试 EduBrain AI API...")
+    logger.info(f"📡 目标地址: {base_url}")
+    logger.info("=" * 50)
 
     for i, question in enumerate(test_questions, 1):
-        print(f"\n🔍 测试题目 {i}:")
-        print(f"题目: {question['title']}")
+        logger.info(f"🔍 测试题目 {i}:")
+        logger.info(f"题目: {question['title']}")
 
         try:
             # 发送请求
@@ -45,27 +53,27 @@ def test_api_endpoint(base_url: str = "http://localhost:5000"):
                 timeout=30
             )
 
-            print(f"状态码: {response.status_code}")
+            logger.info(f"状态码: {response.status_code}")
 
             if response.status_code == 200:
                 result = response.json()
-                print("✅ 请求成功")
+                logger.info("✅ 请求成功")
                 if result.get("code") == 0:
-                    print(f"❌ 业务错误: {result.get('msg', '未知错误')}")
+                    logger.error(f"❌ 业务错误: {result.get('msg', '未知错误')}")
                 else:
-                    print("📝 AI回答:")
-                    print(result)
+                    logger.info("📝 AI回答:")
+                    logger.info(json.dumps(result, ensure_ascii=False, indent=2))
             else:
-                print(f"❌ HTTP错误: {response.text}")
+                logger.error(f"❌ HTTP错误: {response.text}")
 
         except requests.exceptions.RequestException as e:
-            print(f"❌ 网络错误: {str(e)}")
+            logger.error(f"❌ 网络错误: {str(e)}")
         except Exception as e:
-            print(f"❌ 其他错误: {str(e)}")
+            logger.error(f"❌ 其他错误: {str(e)}")
 
         time.sleep(1)  # 避免请求过于频繁
 
-    print("\n🎉 API测试完成!")
+    logger.info("🎉 API测试完成!")
 
 if __name__ == "__main__":
     test_api_endpoint()

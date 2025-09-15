@@ -61,6 +61,12 @@
                         <h2>缓存管理</h2>
                     </div>
                     <div class="cache-content">
+                        <div id="cacheStatsContent" class="cache-stats">
+                            <div class="loading-spinner">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <p>正在加载缓存统计...</p>
+                            </div>
+                        </div>
                         <p class="cache-description">
                             清除系统缓存可以释放内存并确保获取最新数据。
                         </p>
@@ -155,9 +161,9 @@
             // 加载统计信息
             async function loadStats() {
                 try {
-                    const response = await fetch("/api/stats");
-                    const stats = await response.json();
-                    const statsDiv = document.getElementById("statsContent");
+                    const response = await fetch('/api/stats')
+                    const stats = await response.json()
+                    const statsDiv = document.getElementById('statsContent')
 
                     statsDiv.innerHTML = `
                         <div class="stats-grid">
@@ -211,7 +217,7 @@
                                 </div>
                                 <div class="stat-info">
                                     <div class="stat-value">${
-                                        stats.cache_enabled ? "启用" : "禁用"
+                                        stats.cache_enabled ? '启用' : '禁用'
                                     }</div>
                                     <div class="stat-label">缓存状态</div>
                                 </div>
@@ -245,46 +251,145 @@
                                 <div class="stat-info">
                                     <div class="stat-value">${
                                         stats.external_database_enabled
-                                            ? "启用"
-                                            : "禁用"
+                                            ? '启用'
+                                            : '禁用'
                                     }</div>
                                     <div class="stat-label">外部题库</div>
                                 </div>
                             </div>
                         </div>
-                    `;
+                    `
                 } catch (error) {
-                    console.error("Error loading stats:", error);
-                    document.getElementById("statsContent").innerHTML = `
+                    console.error('Error loading stats:', error)
+                    document.getElementById('statsContent').innerHTML = `
                         <div class="error-result">
                             <i class="fas fa-exclamation-triangle"></i>
                             <p>加载统计信息失败</p>
                         </div>
-                    `;
+                    `
+                }
+            }
+
+            // 加载缓存统计信息
+            async function loadCacheStats() {
+                try {
+                    const response = await fetch('/api/cache/stats')
+                    const result = await response.json()
+                    const statsDiv =
+                        document.getElementById('cacheStatsContent')
+
+                    if (result.success) {
+                        const stats = result.stats
+                        statsDiv.innerHTML = `
+                            <div class="cache-stats-grid">
+                                <div class="cache-stat-item">
+                                    <div class="cache-stat-icon">
+                                        <i class="fas fa-server"></i>
+                                    </div>
+                                    <div class="cache-stat-info">
+                                        <div class="cache-stat-value">${
+                                            stats.cache_type
+                                        }</div>
+                                        <div class="cache-stat-label">缓存类型</div>
+                                    </div>
+                                </div>
+                                <div class="cache-stat-item">
+                                    <div class="cache-stat-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="cache-stat-info">
+                                        <div class="cache-stat-value">${
+                                            stats.size
+                                        }</div>
+                                        <div class="cache-stat-label">缓存大小</div>
+                                    </div>
+                                </div>
+                                <div class="cache-stat-item">
+                                    <div class="cache-stat-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="cache-stat-info">
+                                        <div class="cache-stat-value">${stats.hit_rate.toFixed(
+                                            1
+                                        )}%</div>
+                                        <div class="cache-stat-label">命中率</div>
+                                    </div>
+                                </div>
+                                <div class="cache-stat-item">
+                                    <div class="cache-stat-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="cache-stat-info">
+                                        <div class="cache-stat-value">${
+                                            stats.hits
+                                        }</div>
+                                        <div class="cache-stat-label">命中次数</div>
+                                    </div>
+                                </div>
+                                <div class="cache-stat-item">
+                                    <div class="cache-stat-icon">
+                                        <i class="fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="cache-stat-info">
+                                        <div class="cache-stat-value">${
+                                            stats.misses
+                                        }</div>
+                                        <div class="cache-stat-label">未命中次数</div>
+                                    </div>
+                                </div>
+                                <div class="cache-stat-item">
+                                    <div class="cache-stat-icon">
+                                        <i class="fas fa-save"></i>
+                                    </div>
+                                    <div class="cache-stat-info">
+                                        <div class="cache-stat-value">${
+                                            stats.sets
+                                        }</div>
+                                        <div class="cache-stat-label">存储次数</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `
+                    } else {
+                        statsDiv.innerHTML = `
+                            <div class="cache-disabled">
+                                <i class="fas fa-ban"></i>
+                                <p>缓存未启用或统计信息不可用</p>
+                            </div>
+                        `
+                    }
+                } catch (error) {
+                    console.error('Error loading cache stats:', error)
+                    document.getElementById('cacheStatsContent').innerHTML = `
+                        <div class="error-result">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>加载缓存统计失败</p>
+                        </div>
+                    `
                 }
             }
 
             // 清除缓存
             document
-                .getElementById("clearCacheBtn")
-                .addEventListener("click", async function () {
-                    const resultDiv = document.getElementById("cacheResult");
-                    const button = this;
+                .getElementById('clearCacheBtn')
+                .addEventListener('click', async function () {
+                    const resultDiv = document.getElementById('cacheResult')
+                    const button = this
 
                     // 显示加载状态
-                    button.disabled = true;
+                    button.disabled = true
                     button.innerHTML =
-                        '<i class="fas fa-spinner fa-spin"></i><span>清除中...</span>';
+                        '<i class="fas fa-spinner fa-spin"></i><span>清除中...</span>'
 
                     try {
-                        const response = await fetch("/api/cache/clear", {
-                            method: "POST",
+                        const response = await fetch('/api/cache/clear', {
+                            method: 'POST',
                             headers: {
-                                "Content-Type": "application/json",
+                                'Content-Type': 'application/json',
                             },
-                        });
+                        })
 
-                        const result = await response.json();
+                        const result = await response.json()
 
                         if (result.success) {
                             resultDiv.innerHTML = `
@@ -292,56 +397,58 @@
                                     <i class="fas fa-check-circle"></i>
                                     ${result.message}
                                 </div>
-                            `;
-                            resultDiv.className = "result-message success";
-                            // 重新加载统计信息
-                            loadStats();
+                            `
+                            resultDiv.className = 'result-message success'
+                            // 重新加载统计信息和缓存统计
+                            loadStats()
+                            loadCacheStats()
                         } else {
                             resultDiv.innerHTML = `
                                 <div class="error-message">
                                     <i class="fas fa-times-circle"></i>
                                     ${result.message}
                                 </div>
-                            `;
-                            resultDiv.className = "result-message error";
+                            `
+                            resultDiv.className = 'result-message error'
                         }
                     } catch (error) {
-                        console.error("Error clearing cache:", error);
+                        console.error('Error clearing cache:', error)
                         resultDiv.innerHTML = `
                             <div class="error-message">
                                 <i class="fas fa-times-circle"></i>
                                 清除缓存失败
                             </div>
-                        `;
-                        resultDiv.className = "result-message error";
+                        `
+                        resultDiv.className = 'result-message error'
                     } finally {
-                        button.disabled = false;
+                        button.disabled = false
                         button.innerHTML =
-                            '<i class="fas fa-trash"></i><span>清除缓存</span>';
-                        resultDiv.style.display = "block";
+                            '<i class="fas fa-trash"></i><span>清除缓存</span>'
+                        resultDiv.style.display = 'block'
                     }
-                });
+                })
 
             // 页面加载时获取统计信息
-            loadStats();
+            loadStats()
+            loadCacheStats()
 
             // 问答记录相关变量
-            let currentPage = 1;
-            const recordsPerPage = 10;
+            let currentPage = 1
+            const recordsPerPage = 10
 
             // 加载问答记录
             async function loadQARecords(page = 1) {
                 const recordsContent =
-                    document.getElementById("qaRecordsContent");
-                const prevBtn = document.getElementById("prevPageBtn");
-                const nextBtn = document.getElementById("nextPageBtn");
-                const pageInfo = document.getElementById("pageInfo");
+                    document.getElementById('qaRecordsContent')
+                const prevBtn = document.getElementById('prevPageBtn')
+                const nextBtn = document.getElementById('nextPageBtn')
+                const pageInfo = document.getElementById('pageInfo')
 
                 try {
                     const response = await fetch(
                         `/api/qa-records?page=${page}&per_page=${recordsPerPage}`
-                    );
-                    const result = await response.json();
+                    )
+                    const result = await response.json()
 
                     if (result.success && result.records.length > 0) {
                         const recordsHtml = result.records
@@ -358,98 +465,98 @@
                                     <span class="qa-record-timestamp">
                                         ${new Date(
                                             record.timestamp
-                                        ).toLocaleString("zh-CN")}
+                                        ).toLocaleString('zh-CN')}
                                     </span>
                                     <span class="qa-record-type">${
-                                        record.question_type || "未知类型"
+                                        record.question_type || '未知类型'
                                     }</span>
                                 </div>
                             </div>
                         `
                             )
-                            .join("");
+                            .join('')
 
-                        recordsContent.innerHTML = recordsHtml;
+                        recordsContent.innerHTML = recordsHtml
 
                         // 更新分页信息
-                        currentPage = page;
-                        pageInfo.textContent = `第 ${page} 页`;
+                        currentPage = page
+                        pageInfo.textContent = `第 ${page} 页`
 
                         // 更新分页按钮状态
-                        prevBtn.disabled = page <= 1;
+                        prevBtn.disabled = page <= 1
                         nextBtn.disabled =
-                            result.records.length < recordsPerPage;
+                            result.records.length < recordsPerPage
                     } else {
                         recordsContent.innerHTML = `
                             <div class="no-records">
                                 <i class="fas fa-inbox"></i>
                                 <p>暂无问答记录</p>
                             </div>
-                        `;
-                        prevBtn.disabled = true;
-                        nextBtn.disabled = true;
+                        `
+                        prevBtn.disabled = true
+                        nextBtn.disabled = true
                     }
                 } catch (error) {
-                    console.error("Error loading QA records:", error);
+                    console.error('Error loading QA records:', error)
                     recordsContent.innerHTML = `
                         <div class="error-result">
                             <i class="fas fa-exclamation-triangle"></i>
                             <p>加载问答记录失败</p>
                         </div>
-                    `;
+                    `
                 }
             }
 
             // 刷新记录按钮事件
             document
-                .getElementById("refreshRecordsBtn")
-                .addEventListener("click", function () {
-                    loadQARecords(currentPage);
-                });
+                .getElementById('refreshRecordsBtn')
+                .addEventListener('click', function () {
+                    loadQARecords(currentPage)
+                })
 
             // 清除记录按钮事件
             document
-                .getElementById("clearRecordsBtn")
-                .addEventListener("click", async function () {
+                .getElementById('clearRecordsBtn')
+                .addEventListener('click', async function () {
                     const resultDiv =
-                        document.getElementById("clearRecordsResult");
-                    const button = this;
+                        document.getElementById('clearRecordsResult')
+                    const button = this
 
                     // 显示详细的确认对话框
                     const confirmed = confirm(
-                        "⚠️ 警告：清除问答记录\n\n" +
-                            "您即将删除所有问答记录，此操作将：\n" +
-                            "• 删除所有历史问答数据\n" +
-                            "• 无法恢复已删除的记录\n" +
-                            "• 影响系统统计信息\n\n" +
-                            "确定要继续吗？"
-                    );
+                        '⚠️ 警告：清除问答记录\n\n' +
+                            '您即将删除所有问答记录，此操作将：\n' +
+                            '• 删除所有历史问答数据\n' +
+                            '• 无法恢复已删除的记录\n' +
+                            '• 影响系统统计信息\n\n' +
+                            '确定要继续吗？'
+                    )
 
                     if (!confirmed) {
-                        return;
+                        return
                     }
 
                     // 再次确认
                     const doubleConfirmed =
-                        confirm("最后确认：真的要清除所有问答记录吗？");
+                        confirm('最后确认：真的要清除所有问答记录吗？')
                     if (!doubleConfirmed) {
-                        return;
+                        return
                     }
 
                     // 显示加载状态
-                    button.disabled = true;
+                    button.disabled = true
                     button.innerHTML =
-                        '<i class="fas fa-spinner fa-spin"></i><span>清除中...</span>';
+                        '<i class="fas fa-spinner fa-spin"></i><span>清除中...</span>'
 
                     try {
-                        const response = await fetch("/api/qa-records/clear", {
-                            method: "POST",
+                        const response = await fetch('/api/qa-records/clear', {
+                            method: 'POST',
                             headers: {
-                                "Content-Type": "application/json",
+                                'Content-Type': 'application/json',
                             },
-                        });
+                        })
 
-                        const result = await response.json();
+                        const result = await response.json()
 
                         if (result.success) {
                             resultDiv.innerHTML = `
@@ -457,54 +564,54 @@
                                     <i class="fas fa-check-circle"></i>
                                     ${result.message}
                                 </div>
-                            `;
-                            resultDiv.className = "result-message success";
+                            `
+                            resultDiv.className = 'result-message success'
                             // 重新加载统计信息和问答记录
-                            loadStats();
-                            loadQARecords(1);
+                            loadStats()
+                            loadQARecords(1)
                         } else {
                             resultDiv.innerHTML = `
                                 <div class="error-message">
                                     <i class="fas fa-times-circle"></i>
                                     ${result.message}
                                 </div>
-                            `;
-                            resultDiv.className = "result-message error";
+                            `
+                            resultDiv.className = 'result-message error'
                         }
                     } catch (error) {
-                        console.error("Error clearing QA records:", error);
+                        console.error('Error clearing QA records:', error)
                         resultDiv.innerHTML = `
                             <div class="error-message">
                                 <i class="fas fa-times-circle"></i>
                                 清除问答记录失败
                             </div>
-                        `;
-                        resultDiv.className = "result-message error";
+                        `
+                        resultDiv.className = 'result-message error'
                     } finally {
-                        button.disabled = false;
+                        button.disabled = false
                         button.innerHTML =
-                            '<i class="fas fa-trash-alt"></i><span>清除记录</span>';
-                        resultDiv.style.display = "block";
+                            '<i class="fas fa-trash-alt"></i><span>清除记录</span>'
+                        resultDiv.style.display = 'block'
                     }
-                });
+                })
 
             // 分页按钮事件
             document
-                .getElementById("prevPageBtn")
-                .addEventListener("click", function () {
+                .getElementById('prevPageBtn')
+                .addEventListener('click', function () {
                     if (currentPage > 1) {
-                        loadQARecords(currentPage - 1);
+                        loadQARecords(currentPage - 1)
                     }
-                });
+                })
 
             document
-                .getElementById("nextPageBtn")
-                .addEventListener("click", function () {
-                    loadQARecords(currentPage + 1);
-                });
+                .getElementById('nextPageBtn')
+                .addEventListener('click', function () {
+                    loadQARecords(currentPage + 1)
+                })
 
             // 页面加载时获取问答记录
-            loadQARecords();
+            loadQARecords()
         </script>
     </body>
 </html>
