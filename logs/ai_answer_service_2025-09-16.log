@@ -100,3 +100,1939 @@
 2025-09-16 04:41:56,301 - ai_answer_service - INFO - 速率限制已禁用
 2025-09-16 04:41:56,301 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
 2025-09-16 04:42:33,744 - ai_answer_service - INFO - 已清除 1 条问答记录
+2025-09-16 04:43:01,868 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:43:01,869 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:43:01,869 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:43:01,869 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:43:03,917 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:43:03,917 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:43:03,917 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:44:12,441 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:44:12,441 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:44:12,441 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:44:12,441 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:44:14,495 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:44:14,495 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:44:14,496 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:44:20,868 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:44:20,869 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:44:20,869 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:44:20,869 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:44:22,909 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:44:22,909 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:44:22,909 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:45:10,491 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 04:45:10,491 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 04:45:10,491 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 04:45:10,491 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 04:45:12,522 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 04:45:12,523 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 04:45:12,523 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 04:45:49,916 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪...' (类型: undefined)
+2025-09-16 04:45:49,917 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 04:45:49,917 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 04:45:50,398 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 04:45:50,900 - ai_answer_service - INFO - 从外部题库 '网课小工具题库（GO题）' 找到有效答案
+2025-09-16 04:45:50,902 - ai_answer_service - INFO - 外部题库答案 '北京' 与题目类型 'undefined' 或选项不匹配，将使用AI搜索
+2025-09-16 04:45:50,903 - ai_answer_service - INFO - 策略: 单阶段标准 (undefined)
+2025-09-16 04:45:56,828 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.91秒)
+2025-09-16 04:45:56,834 - ai_answer_service - INFO - 问答记录已保存 (ID: 1)
+2025-09-16 04:46:07,803 - ai_answer_service - INFO - 接收到问题: '武汉是在哪...' (类型: undefined)
+2025-09-16 04:46:07,803 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 04:46:08,191 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 04:46:08,321 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 04:46:08,321 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 04:46:08,321 - ai_answer_service - INFO - 策略: 单阶段标准 (undefined)
+2025-09-16 04:46:16,343 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.54秒)
+2025-09-16 04:46:16,347 - ai_answer_service - INFO - 问答记录已保存 (ID: 2)
+2025-09-16 16:13:05,844 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:13:05,845 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:13:05,845 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:13:05,845 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:13:07,895 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:13:07,896 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:13:07,896 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:13:14,380 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:13:14,380 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:13:14,380 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:13:14,380 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:13:16,434 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:13:16,434 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:13:16,434 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:15:13,476 - ai_answer_service - INFO - 接收到问题: '这里有一段代码 // LoginServlet.java import javax.servlet....' (类型: completion)
+2025-09-16 16:15:13,478 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 16:15:13,478 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:15:14,060 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 16:15:14,339 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:15:14,339 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:15:14,340 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:15:35,355 - ai_answer_service - INFO - 接收到问题: '这里有一段代码 // LoginServlet.java import javax.servlet....' (类型: completion)
+2025-09-16 16:15:35,356 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:15:35,481 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 16:15:36,458 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:15:36,458 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:15:36,458 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:15:44,614 - ai_answer_service - INFO - 问题处理完成 (耗时: 31.14秒)
+2025-09-16 16:15:44,621 - ai_answer_service - INFO - 问答记录已保存 (ID: 3)
+2025-09-16 16:15:59,601 - ai_answer_service - INFO - 问题处理完成 (耗时: 24.25秒)
+2025-09-16 16:15:59,604 - ai_answer_service - INFO - 问答记录已保存 (ID: 4)
+2025-09-16 16:16:22,647 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:16:22,647 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:16:22,647 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:16:22,647 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:16:24,681 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:16:24,681 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:16:24,681 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:16:27,652 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:16:27,653 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:16:27,653 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:16:27,653 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:16:29,682 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:16:29,682 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:16:29,683 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:18:51,544 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:18:51,545 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:18:51,545 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:18:51,545 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:18:53,580 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:18:53,580 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:18:53,580 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:19:01,288 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:19:01,288 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:19:01,288 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:19:01,289 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:19:03,331 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:19:03,332 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:19:03,333 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:19:16,034 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:19:16,035 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:19:16,035 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:19:16,035 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:19:18,067 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:19:18,067 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:19:18,067 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:19:28,783 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:19:28,783 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:19:28,783 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:19:28,783 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:19:30,811 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:19:30,812 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:19:30,812 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:19:43,580 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:19:43,580 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:19:43,580 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:19:43,581 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:19:45,611 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:19:45,611 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:19:45,611 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:20:22,571 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:20:22,572 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:20:22,572 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:20:22,572 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:20:24,605 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:20:24,605 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:20:24,606 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:21:06,605 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:21:06,605 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:21:06,606 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:21:06,606 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:21:08,638 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:21:08,638 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:21:08,638 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:21:24,417 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:21:24,417 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:21:24,417 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:21:24,417 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:21:26,446 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:21:26,447 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:21:26,447 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:21:36,134 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:21:36,135 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:21:36,135 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:21:36,135 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:21:38,167 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:21:38,167 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:21:38,167 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:22:49,444 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:22:49,444 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:22:49,444 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:22:49,445 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:22:51,471 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:22:51,471 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:22:51,471 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:22:59,143 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:22:59,143 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:22:59,143 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:22:59,143 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:23:01,170 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:23:01,171 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:23:01,171 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:23:30,018 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:23:30,018 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:23:30,018 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:23:30,018 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:23:32,059 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:23:32,060 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:23:32,060 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:23:34,783 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:23:34,784 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:23:34,784 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:23:34,784 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:23:36,813 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:23:36,813 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:23:36,813 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:24:08,678 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:24:08,678 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:24:08,678 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:24:08,679 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:24:10,716 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:24:10,716 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:24:10,716 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:24:34,568 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:24:34,569 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:24:34,569 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:24:34,569 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:24:36,597 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:24:36,597 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:24:36,597 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:24:47,311 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:24:47,311 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:24:47,311 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:24:47,312 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:24:49,354 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:24:49,354 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:24:49,355 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:25:07,144 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:25:07,145 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:25:07,145 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:25:07,145 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:25:09,176 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:25:09,176 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:25:09,176 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:25:14,823 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:25:14,823 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:25:14,823 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:25:14,823 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:25:16,844 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:25:16,845 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:25:16,845 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:25:40,659 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:25:40,659 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:25:40,659 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:25:40,659 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:25:42,693 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:25:42,693 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:25:42,693 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:26:14,766 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:26:14,766 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:26:14,766 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:26:14,767 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:26:16,798 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:26:16,798 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:26:16,798 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:26:24,560 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:26:24,561 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:26:24,561 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:26:24,561 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:26:26,577 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:26:26,577 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:26:26,577 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:26:38,755 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:26:38,756 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:26:38,756 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:26:38,756 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:26:40,796 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:26:40,797 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:26:40,797 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:26:40,815 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-16 16:26:40,815 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-16 16:26:40,815 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-16 16:26:40,815 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-16 16:26:40,822 - ai_answer_service - INFO - 问答记录已保存 (ID: 5)
+2025-09-16 16:27:19,014 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:27:19,014 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:27:19,014 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:27:19,014 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:27:21,035 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:27:21,035 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:27:21,035 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:28:29,169 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:28:29,170 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:28:29,170 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:28:29,170 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:28:31,205 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:28:31,205 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:28:31,205 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:28:33,820 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:28:33,820 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:28:33,820 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:28:33,820 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:28:35,857 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:28:35,857 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:28:35,857 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:28:50,639 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:28:50,640 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:28:50,640 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:28:50,640 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:28:52,679 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:28:52,680 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:28:52,680 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:29:02,749 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:29:02,749 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:29:02,749 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:29:02,749 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:29:04,783 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:29:04,783 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:29:04,783 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:29:11,151 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:29:11,151 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:29:11,152 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:29:11,152 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:29:13,187 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:29:13,187 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:29:13,187 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:29:20,560 - ai_answer_service - INFO - 已清除 5 条问答记录
+2025-09-16 16:31:31,405 - ai_answer_service - INFO - 接收到问题: '这里有一段代码 // LoginServlet.java import javax.servlet....' (类型: completion)
+2025-09-16 16:31:31,406 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 16:31:31,406 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:31:31,810 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 16:31:32,084 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:31:32,085 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:31:32,085 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:31:55,908 - ai_answer_service - INFO - 问题处理完成 (耗时: 24.50秒)
+2025-09-16 16:31:55,913 - ai_answer_service - INFO - 问答记录已保存 (ID: 1)
+2025-09-16 16:32:42,381 - ai_answer_service - INFO - 已清除 1 条问答记录
+2025-09-16 16:32:44,349 - ai_answer_service - INFO - 接收到问题: '这里有一段代码 // LoginServlet.java import javax.servlet....' (类型: completion)
+2025-09-16 16:32:44,349 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-16 16:33:12,443 - ai_answer_service - INFO - 已清除 0 条问答记录
+2025-09-16 16:36:29,955 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:36:29,955 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:36:29,955 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:36:29,955 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:36:31,986 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:36:31,986 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:36:31,986 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:36:38,371 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:36:38,371 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:36:38,371 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:36:38,372 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:36:40,404 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:36:40,404 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:36:40,405 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:36:42,978 - ai_answer_service - INFO - 接收到问题: '这里有一段代码 // LoginServlet.java import javax.servlet....' (类型: completion)
+2025-09-16 16:36:42,978 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 16:36:42,978 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:36:47,996 - ai_answer_service - WARNING - 查询 言溪题库 超时
+2025-09-16 16:36:48,187 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:36:48,187 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:36:48,188 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:37:10,445 - ai_answer_service - INFO - 问题处理完成 (耗时: 27.47秒)
+2025-09-16 16:37:10,452 - ai_answer_service - INFO - 问答记录已保存 (ID: 1)
+2025-09-16 16:39:51,416 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:39:51,416 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:39:51,416 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:39:51,416 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:41:28,785 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:41:28,785 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:41:28,785 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:41:28,785 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:41:30,810 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:41:30,811 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:41:30,811 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:41:30,827 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-16 16:41:30,828 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-16 16:41:30,828 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-16 16:41:30,828 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-16 16:41:30,834 - ai_answer_service - INFO - 问答记录已保存 (ID: 2)
+2025-09-16 16:41:49,911 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:41:49,911 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:41:49,911 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:41:49,911 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:41:51,949 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:41:51,949 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:41:51,949 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:41:58,326 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:41:58,326 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:41:58,326 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:41:58,327 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:42:00,356 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:42:00,356 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:42:00,356 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:42:08,327 - ai_answer_service - INFO - 已清除 2 条问答记录
+2025-09-16 16:42:21,416 - ai_answer_service - INFO - 接收到问题: '这里有一段代码 // LoginServlet.java import javax.servlet....' (类型: completion)
+2025-09-16 16:42:21,416 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 16:42:21,417 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:42:21,931 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 16:42:23,095 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:42:23,095 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:42:23,096 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:42:52,784 - ai_answer_service - INFO - 问题处理完成 (耗时: 31.37秒)
+2025-09-16 16:42:52,791 - ai_answer_service - INFO - 问答记录已保存 (ID: 1)
+2025-09-16 16:43:13,515 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:43:13,515 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:43:13,516 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:43:13,516 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:43:25,147 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:43:25,148 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:43:25,148 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:43:25,148 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:43:27,176 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:43:27,176 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:43:27,176 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:43:33,548 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:43:33,548 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:43:33,549 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:43:33,549 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:43:35,579 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:43:35,579 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:43:35,579 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:43:41,766 - ai_answer_service - INFO - 已清除 1 条问答记录
+2025-09-16 16:43:48,465 - ai_answer_service - INFO - 接收到问题: '这里有一段代码 // LoginServlet.java import javax.servlet....' (类型: completion)
+2025-09-16 16:43:48,466 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 16:43:48,466 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:43:50,146 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 16:43:51,271 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:43:51,271 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:43:51,271 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:44:17,608 - ai_answer_service - INFO - 问题处理完成 (耗时: 29.14秒)
+2025-09-16 16:44:17,613 - ai_answer_service - INFO - 问答记录已保存 (ID: 1)
+2025-09-16 16:45:03,917 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:45:03,917 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:45:03,917 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:45:03,917 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:45:05,952 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:45:05,953 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:45:05,954 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:47:16,576 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:47:16,576 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:47:16,576 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:47:16,577 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:47:18,608 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:47:18,609 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:47:18,609 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:48:11,612 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:48:11,612 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:48:11,612 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:48:11,613 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:48:13,649 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:48:13,649 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:48:13,650 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:48:18,570 - ai_answer_service - INFO - 接收到问题: '1. HttpSession session = req.getSession(); 这一行代码实现...' (类型: completion)
+2025-09-16 16:48:18,570 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 16:48:18,571 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:48:19,176 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 16:48:19,544 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:48:19,544 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:48:19,544 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:48:46,011 - ai_answer_service - INFO - 问题处理完成 (耗时: 27.44秒)
+2025-09-16 16:48:46,018 - ai_answer_service - INFO - 问答记录已保存 (ID: 2)
+2025-09-16 16:49:23,801 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:49:23,801 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:49:23,801 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:49:23,801 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:49:25,839 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:49:25,839 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:49:25,839 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 16:49:26,154 - ai_answer_service - INFO - 接收到问题: '1. HttpSession session = req.getSession(); 这一行代码实现...' (类型: completion)
+2025-09-16 16:49:26,155 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-16 16:49:26,155 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-16 16:49:26,548 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-16 16:49:26,647 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-16 16:49:26,648 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-16 16:49:26,648 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-16 16:49:53,155 - ai_answer_service - INFO - 问题处理完成 (耗时: 27.00秒)
+2025-09-16 16:49:53,168 - ai_answer_service - INFO - 问答记录已保存 (ID: 3)
+2025-09-16 16:49:53,491 - ai_answer_service - INFO - 接收到问题: '1. HttpSession session = req.getSession(); 这一行代码实现...' (类型: completion)
+2025-09-16 16:49:53,491 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-16 16:50:11,126 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 16:50:11,127 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 16:50:11,127 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 16:50:11,127 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 16:50:13,163 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 16:50:13,163 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 16:50:13,163 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:09:48,551 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:09:48,552 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:09:48,552 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:09:48,552 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:09:52,640 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:09:52,640 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:09:52,640 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:09:53,967 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:09:53,968 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:09:53,968 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:09:53,968 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:09:58,043 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:09:58,043 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:09:58,043 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:11:37,048 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:11:37,049 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:11:37,049 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:11:37,049 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:11:41,126 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:11:41,126 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:11:41,126 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:11:42,493 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:11:42,493 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:11:42,493 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:11:42,493 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:11:43,566 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:11:43,566 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:11:43,567 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:11:43,567 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:11:47,634 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:11:47,634 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:11:47,634 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:11:48,974 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:11:48,974 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:11:48,975 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:11:48,975 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:11:53,066 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:11:53,067 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:11:53,067 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:12:43,453 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:12:43,453 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:12:43,453 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:12:43,454 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:12:47,528 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:12:47,528 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:12:47,529 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:12:48,853 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:12:48,853 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:12:48,853 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:12:48,853 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:12:52,954 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:12:52,954 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:12:52,954 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:13:16,523 - ai_answer_service - INFO - 多子问题检测: 题目包含5个子问题
+2025-09-16 17:13:16,523 - ai_answer_service - INFO - 清理后的回答: 获取当前请求的会话对象，如果会话不存在则创建一个新的会话。#获取客户端随当前请求发送过来的所有Cookie对象。#将一个Cookie对象添加到响应中，以便发送给客户端浏览器。#将客户端重定向到指定的URL（"cart.jsp"）。#这段代码主要实现会话管理、Cookie处理（例如设置用户语言偏好）以及页面重定向到购物车页面。...
+2025-09-16 17:13:16,523 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:13:16,523 - ai_answer_service - INFO - 分割后的答案数量: 5
+2025-09-16 17:13:16,523 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:13:16,523 - ai_answer_service - INFO - 格式化结果: 1.获取当前请求的会话对象，如果会话不存在则创建一个新的会话。
+2.获取客户端随当前请求发送过来的所有Cookie对象。
+3.将一个Cookie对象添加到响应中，以便发送给客户端浏览器。
+4.将客户端重定向到指定的URL（"cart.jsp"）。
+5.这段代码主要实现会话管理、Cookie处理（例如设置用户语言偏好）以及页面重定向到购物车页面。
+2025-09-16 17:13:22,319 - ai_answer_service - INFO - 多子问题检测: 题目包含5个子问题
+2025-09-16 17:13:22,324 - ai_answer_service - INFO - 清理后的回答: 获取当前请求的会话对象（HttpSession），如果不存在则创建一个新的会话。 获取所有随当前请求从客户端发送到服务器的Cookie对象数组。 将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器。 将HTTP响应重定向到指定的URL（cart.jsp），浏览器将加载新的页面。 这段代码实现了一个简单的用户登录验证功能，成功登录后会设置用户会话、处理语言偏好Cookie并重定向到...
+2025-09-16 17:13:22,325 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:13:24,233 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:13:24,234 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:13:24,234 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:13:24,234 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:13:28,312 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:13:28,312 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:13:28,312 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:14:26,092 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:14:26,092 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:14:26,092 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:14:26,093 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:14:30,178 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:14:30,178 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:14:30,178 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:14:35,955 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:14:35,955 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:14:35,955 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:14:35,955 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:14:36,891 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,893 - ai_answer_service - INFO - 清理后的回答: 答案1#答案2#答案3...
+2025-09-16 17:14:36,894 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,895 - ai_answer_service - INFO - 分割后的答案数量: 3
+2025-09-16 17:14:36,895 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,896 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:14:36,897 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,898 - ai_answer_service - INFO - 清理后的回答: 答案1。答案2。答案3。...
+2025-09-16 17:14:36,899 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:14:36,905 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,905 - ai_answer_service - INFO - 清理后的回答: 答案1 答案2 答案3...
+2025-09-16 17:14:36,906 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:14:36,912 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,913 - ai_answer_service - INFO - 清理后的回答: 答案1；答案2；答案3...
+2025-09-16 17:14:36,913 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:14:36,918 - ai_answer_service - INFO - 多子问题检测: 题目包含5个子问题
+2025-09-16 17:14:36,919 - ai_answer_service - INFO - 清理后的回答: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:14:36,920 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,920 - ai_answer_service - INFO - 分割后的答案数量: 5
+2025-09-16 17:14:36,921 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,921 - ai_answer_service - INFO - 格式化结果: 1.获取当前HTTP会话对象，如果不存在则创建一个新的会话
+2.获取客户端随请求发送的所有Cookie对象数组
+3.将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储
+4.将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转
+5.这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:14:36,923 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,924 - ai_answer_service - INFO - 清理后的回答: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:14:36,924 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,925 - ai_answer_service - INFO - 分割后的答案数量: 6
+2025-09-16 17:14:36,925 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,926 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3；答案4；答案5；答案6
+2025-09-16 17:14:36,931 - ai_answer_service - INFO - 多子问题检测: 题目包含5个子问题
+2025-09-16 17:14:36,932 - ai_answer_service - INFO - 清理后的回答: 答案1#答案2...
+2025-09-16 17:14:36,933 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,933 - ai_answer_service - INFO - 分割后的答案数量: 2
+2025-09-16 17:14:36,934 - ai_answer_service - WARNING - 答案数量不匹配: 期望5个，得到2个
+2025-09-16 17:14:36,938 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,939 - ai_answer_service - INFO - 清理后的回答: 答案1#答案2#答案3...
+2025-09-16 17:14:36,939 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,940 - ai_answer_service - INFO - 分割后的答案数量: 3
+2025-09-16 17:14:36,940 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,941 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:14:36,943 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,943 - ai_answer_service - INFO - 清理后的回答: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:14:36,944 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,945 - ai_answer_service - INFO - 分割后的答案数量: 3
+2025-09-16 17:14:36,945 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,946 - ai_answer_service - INFO - 格式化结果: 1.经过分析，我认为答案是：答案1
+2.答案2
+3.答案3
+2025-09-16 17:14:36,951 - ai_answer_service - INFO - 多子问题检测: 题目包含2个子问题
+2025-09-16 17:14:36,952 - ai_answer_service - INFO - 清理后的回答: ...
+2025-09-16 17:14:36,953 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:14:36,954 - ai_answer_service - INFO - 多子问题检测: 题目包含2个子问题
+2025-09-16 17:14:36,955 - ai_answer_service - INFO - 清理后的回答: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:14:36,956 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:14:36,957 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,958 - ai_answer_service - INFO - 清理后的回答: 1#2#3...
+2025-09-16 17:14:36,959 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,960 - ai_answer_service - INFO - 分割后的答案数量: 3
+2025-09-16 17:14:36,960 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,961 - ai_answer_service - INFO - 格式化结果: 1.1
+2.2
+3.3
+2025-09-16 17:14:36,962 - ai_answer_service - INFO - 多子问题检测: 题目包含5个子问题
+2025-09-16 17:14:36,963 - ai_answer_service - INFO - 清理后的回答: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码...
+2025-09-16 17:14:36,964 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:14:36,965 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,966 - ai_answer_service - INFO - 清理后的回答: 答案1#答案2#答案3...
+2025-09-16 17:14:36,966 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,967 - ai_answer_service - INFO - 分割后的答案数量: 3
+2025-09-16 17:14:36,967 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,968 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:14:36,969 - ai_answer_service - INFO - 多子问题检测: 题目包含3个子问题
+2025-09-16 17:14:36,970 - ai_answer_service - INFO - 清理后的回答: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:14:36,971 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,971 - ai_answer_service - INFO - 分割后的答案数量: 3
+2025-09-16 17:14:36,972 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,973 - ai_answer_service - INFO - 格式化结果: 1.使用def关键字定义函数，后跟函数名和参数列表
+2.使用函数名加括号调用函数，可以传递参数
+3.函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:14:36,978 - ai_answer_service - INFO - 多子问题检测: 题目包含2个子问题
+2025-09-16 17:14:36,979 - ai_answer_service - INFO - 清理后的回答: <invalid>答案</invalid>...
+2025-09-16 17:14:36,979 - ai_answer_service - INFO - 未检测到#分隔符，尝试其他方法
+2025-09-16 17:14:36,984 - ai_answer_service - INFO - 多子问题检测: 题目包含4个子问题
+2025-09-16 17:14:36,985 - ai_answer_service - INFO - 清理后的回答: 答案1#答案2；答案3。答案4...
+2025-09-16 17:14:36,986 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,986 - ai_answer_service - INFO - 分割后的答案数量: 2
+2025-09-16 17:14:36,987 - ai_answer_service - WARNING - 答案数量不匹配: 期望4个，得到2个
+2025-09-16 17:14:36,992 - ai_answer_service - INFO - 多子问题检测: 题目包含20个子问题
+2025-09-16 17:14:36,993 - ai_answer_service - INFO - 清理后的回答: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:14:36,993 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,994 - ai_answer_service - INFO - 分割后的答案数量: 20
+2025-09-16 17:14:36,994 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,995 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+4.答案4
+5.答案5
+6.答案6
+7.答案7
+8.答案8
+9.答案9
+10.答案10
+11.答案11
+12.答案12
+13.答案13
+14.答案14
+15.答案15
+16.答案16
+17.答案17
+18.答案18
+19.答案19
+20.答案20
+2025-09-16 17:14:36,996 - ai_answer_service - INFO - 多子问题检测: 题目包含5个子问题
+2025-09-16 17:14:36,997 - ai_answer_service - INFO - 清理后的回答: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:14:36,998 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:36,998 - ai_answer_service - INFO - 分割后的答案数量: 5
+2025-09-16 17:14:36,999 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:36,999 - ai_answer_service - INFO - 格式化结果: 1.答案1（包含中文括号）
+2.答案2"包含引号"
+3.答案3'包含单引号'
+4.答案4<包含尖括号>
+5.答案5&包含和号
+2025-09-16 17:14:37,001 - ai_answer_service - INFO - 多子问题检测: 题目包含5个子问题
+2025-09-16 17:14:37,002 - ai_answer_service - INFO - 清理后的回答: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:14:37,002 - ai_answer_service - INFO - 检测到#分隔的答案，开始处理
+2025-09-16 17:14:37,003 - ai_answer_service - INFO - 分割后的答案数量: 5
+2025-09-16 17:14:37,004 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:14:37,004 - ai_answer_service - INFO - 格式化结果: 1.函数定义
+2.类继承
+3.异常处理
+4.文件操作
+5.网络编程
+2025-09-16 17:14:40,038 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:14:40,038 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:14:40,039 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:15:17,483 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:15:17,483 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:15:17,484 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:15:17,484 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:15:21,582 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:15:21,584 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:15:21,584 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:15:55,933 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:15:55,933 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:15:55,934 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:15:55,934 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:16:00,020 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:16:00,020 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:16:00,020 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:16:15,922 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,922 - ai_answer_service - INFO - 原始AI响应: <answer>答案1#答案2#答案3</answer>...
+2025-09-16 17:16:15,922 - ai_answer_service - INFO - 从<answer>标签提取到答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,922 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,922 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,922 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,923 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,923 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,923 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 原始AI响应: 答案：答案1#答案2#答案3...
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 从'答案：'格式提取到答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,924 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,925 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,925 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:16:15,925 - ai_answer_service - INFO - 清理后的响应: 答案1#答案2#答案3...
+2025-09-16 17:16:15,925 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,925 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,925 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,925 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,926 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,926 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,927 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 原始AI响应: 答案1。答案2。答案3。...
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 清理后的响应: 答案1。答案2。答案3。...
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1。答案2。答案3。
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 尝试分割答案: 答案1。答案2。答案3。
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 句号分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,928 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 原始AI响应: 答案1 答案2 答案3...
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 清理后的响应: 答案1 答案2 答案3...
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1 答案2 答案3
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 尝试分割答案: 答案1 答案2 答案3
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 空格分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,934 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 原始AI响应: 答案1；答案2；答案3...
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 清理后的响应: 答案1；答案2；答案3...
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1；答案2；答案3
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 尝试分割答案: 答案1；答案2；答案3
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 分号分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,935 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,940 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,940 - ai_answer_service - INFO - 原始AI响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:16:15,940 - ai_answer_service - INFO - 清理后的响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:16:15,941 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:16:15,941 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:16:15,941 - ai_answer_service - INFO - 尝试分割答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:16:15,941 - ai_answer_service - INFO - #分隔结果: ['获取当前HTTP会话对象，如果不存在则创建一个新的会话', '获取客户端随请求发送的所有Cookie对象数组', '将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储', '将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转', '这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向']
+2025-09-16 17:16:15,941 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,941 - ai_answer_service - INFO - 格式化结果: 1.获取当前HTTP会话对象，如果不存在则创建一个新的会话
+2.获取客户端随请求发送的所有Cookie对象数组
+3.将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储
+4.将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转
+5.这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - 清理后的响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6']
+2025-09-16 17:16:15,942 - ai_answer_service - INFO - 合并结果: ['答案1', '答案2', '答案3；答案4；答案5；答案6']
+2025-09-16 17:16:15,943 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,943 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3；答案4；答案5；答案6
+2025-09-16 17:16:15,947 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,947 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2...
+2025-09-16 17:16:15,947 - ai_answer_service - INFO - 清理后的响应: 答案1#答案2...
+2025-09-16 17:16:15,947 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2
+2025-09-16 17:16:15,948 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:16:15,948 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2
+2025-09-16 17:16:15,948 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2']
+2025-09-16 17:16:15,948 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:16:15,948 - ai_answer_service - WARNING - 答案数量不匹配: 期望5个，得到1个
+2025-09-16 17:16:15,949 - ai_answer_service - INFO - 开始提取答案，问题类型: judgement
+2025-09-16 17:16:15,949 - ai_answer_service - INFO - 原始AI响应: <answer>正确</answer>...
+2025-09-16 17:16:15,949 - ai_answer_service - INFO - 从<answer>标签提取到答案: 正确
+2025-09-16 17:16:15,950 - ai_answer_service - INFO - 开始提取答案，问题类型: single
+2025-09-16 17:16:15,950 - ai_answer_service - INFO - 原始AI响应: <answer>选项A</answer>...
+2025-09-16 17:16:15,950 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A
+2025-09-16 17:16:15,951 - ai_answer_service - INFO - 开始提取答案，问题类型: multiple
+2025-09-16 17:16:15,951 - ai_answer_service - INFO - 原始AI响应: <answer>选项A#选项B</answer>...
+2025-09-16 17:16:15,951 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A#选项B
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 原始AI响应: <thinking>让我分析一下这个问题</thinking>答案1#答案2#答案3...
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 清理后的响应: 答案1#答案2#答案3...
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,952 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 原始AI响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 清理后的响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 开始格式化多子问题答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 尝试分割答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - #分隔结果: ['经过分析，我认为答案是：答案1', '答案2', '答案3']
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,953 - ai_answer_service - INFO - 格式化结果: 1.经过分析，我认为答案是：答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,958 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,959 - ai_answer_service - INFO - 原始AI响应: ...
+2025-09-16 17:16:15,959 - ai_answer_service - INFO - 清理后的响应: ...
+2025-09-16 17:16:15,959 - ai_answer_service - INFO - 开始格式化多子问题答案: 
+2025-09-16 17:16:15,959 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:16:15,959 - ai_answer_service - INFO - 尝试分割答案: 
+2025-09-16 17:16:15,959 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:16:15,959 - ai_answer_service - WARNING - 答案数量不匹配: 期望2个，得到1个
+2025-09-16 17:16:15,960 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,960 - ai_answer_service - INFO - 原始AI响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:16:15,960 - ai_answer_service - INFO - 清理后的响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:16:15,960 - ai_answer_service - INFO - 开始格式化多子问题答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:16:15,960 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:16:15,960 - ai_answer_service - INFO - 尝试分割答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:16:15,960 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:16:15,960 - ai_answer_service - WARNING - 答案数量不匹配: 期望2个，得到1个
+2025-09-16 17:16:15,961 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,961 - ai_answer_service - INFO - 原始AI响应: 1#2#3...
+2025-09-16 17:16:15,961 - ai_answer_service - INFO - 清理后的响应: 1#2#3...
+2025-09-16 17:16:15,961 - ai_answer_service - INFO - 开始格式化多子问题答案: 1#2#3
+2025-09-16 17:16:15,961 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,962 - ai_answer_service - INFO - 尝试分割答案: 1#2#3
+2025-09-16 17:16:15,962 - ai_answer_service - INFO - #分隔结果: ['1', '2', '3']
+2025-09-16 17:16:15,962 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,962 - ai_answer_service - INFO - 格式化结果: 1.1
+2.2
+3.3
+2025-09-16 17:16:15,962 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 原始AI响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 清理后的响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 尝试分割答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 句号分隔结果: ['获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的', '获取客户端（浏览器）随请求发送过来的所有Cookie对象', '将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储', '向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）', '这段代码实现了一个简单的用户登录功能', '它接收用户提交的用户名和密码，进行硬编码验证', '如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面', '如果验证失败，则向客户端输出"Login failed"']
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 合并结果: ['获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的', '获取客户端（浏览器）随请求发送过来的所有Cookie对象', '将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储', '向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）', '这段代码实现了一个简单的用户登录功能；它接收用户提交的用户名和密码，进行硬编码验证；如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面；如果验证失败，则向客户端输出"Login failed"']
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,963 - ai_answer_service - INFO - 格式化结果: 1.获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的
+2.获取客户端（浏览器）随请求发送过来的所有Cookie对象
+3.将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储
+4.向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）
+5.这段代码实现了一个简单的用户登录功能；它接收用户提交的用户名和密码，进行硬编码验证；如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面；如果验证失败，则向客户端输出"Login failed"
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 清理后的响应: 答案1#答案2#答案3...
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,964 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:16:15,965 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,965 - ai_answer_service - INFO - 原始AI响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:16:15,965 - ai_answer_service - INFO - 清理后的响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:16:15,965 - ai_answer_service - INFO - 开始格式化多子问题答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:16:15,965 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:16:15,965 - ai_answer_service - INFO - 尝试分割答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:16:15,965 - ai_answer_service - INFO - #分隔结果: ['使用def关键字定义函数，后跟函数名和参数列表', '使用函数名加括号调用函数，可以传递参数', '函数参数是函数定义时括号内的变量，用于接收调用时传递的值']
+2025-09-16 17:16:15,966 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,966 - ai_answer_service - INFO - 格式化结果: 1.使用def关键字定义函数，后跟函数名和参数列表
+2.使用函数名加括号调用函数，可以传递参数
+3.函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:16:15,970 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,970 - ai_answer_service - INFO - 原始AI响应: <invalid>答案</invalid>...
+2025-09-16 17:16:15,970 - ai_answer_service - INFO - 清理后的响应: <invalid>答案</invalid>...
+2025-09-16 17:16:15,970 - ai_answer_service - INFO - 开始格式化多子问题答案: <invalid>答案</invalid>
+2025-09-16 17:16:15,970 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:16:15,970 - ai_answer_service - INFO - 尝试分割答案: <invalid>答案</invalid>
+2025-09-16 17:16:15,970 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:16:15,970 - ai_answer_service - WARNING - 答案数量不匹配: 期望2个，得到1个
+2025-09-16 17:16:15,976 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,976 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:16:15,976 - ai_answer_service - INFO - 清理后的响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:16:15,976 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:16:15,977 - ai_answer_service - INFO - 题目包含4个子问题
+2025-09-16 17:16:15,977 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:16:15,977 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2；答案3。答案4']
+2025-09-16 17:16:15,977 - ai_answer_service - INFO - 句号分隔结果: ['答案1#答案2；答案3', '答案4']
+2025-09-16 17:16:15,977 - ai_answer_service - INFO - 分号分隔结果: ['答案1#答案2', '答案3。答案4']
+2025-09-16 17:16:15,977 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:16:15,977 - ai_answer_service - WARNING - 答案数量不匹配: 期望4个，得到1个
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 清理后的响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 题目包含20个子问题
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - #分隔结果: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6', '答案7', '答案8', '答案9', '答案10', '答案11', '答案12', '答案13', '答案14', '答案15', '答案16', '答案17', '答案18', '答案19', '答案20']
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,982 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+4.答案4
+5.答案5
+6.答案6
+7.答案7
+8.答案8
+9.答案9
+10.答案10
+11.答案11
+12.答案12
+13.答案13
+14.答案14
+15.答案15
+16.答案16
+17.答案17
+18.答案18
+19.答案19
+20.答案20
+2025-09-16 17:16:15,983 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,983 - ai_answer_service - INFO - 原始AI响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:16:15,984 - ai_answer_service - INFO - 清理后的响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:16:15,984 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:16:15,984 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:16:15,984 - ai_answer_service - INFO - 尝试分割答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:16:15,984 - ai_answer_service - INFO - #分隔结果: ['答案1（包含中文括号）', '答案2"包含引号"', "答案3'包含单引号'", '答案4<包含尖括号>', '答案5&包含和号']
+2025-09-16 17:16:15,984 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,984 - ai_answer_service - INFO - 格式化结果: 1.答案1（包含中文括号）
+2.答案2"包含引号"
+3.答案3'包含单引号'
+4.答案4<包含尖括号>
+5.答案5&包含和号
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 原始AI响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 清理后的响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 开始格式化多子问题答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 尝试分割答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - #分隔结果: ['函数定义', '类继承', '异常处理', '文件操作', '网络编程']
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:16:15,985 - ai_answer_service - INFO - 格式化结果: 1.函数定义
+2.类继承
+3.异常处理
+4.文件操作
+5.网络编程
+2025-09-16 17:16:26,219 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:16:26,220 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:16:26,220 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:16:26,220 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:16:30,312 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:16:30,313 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:16:30,313 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:16:36,046 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:16:36,046 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:16:36,046 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:16:36,046 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:16:40,147 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:16:40,147 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:16:40,148 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:16:48,996 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:16:48,996 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:16:48,996 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:16:48,996 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:16:53,070 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:16:53,071 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:16:53,071 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:16:56,844 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:16:56,844 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:16:56,844 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:16:56,845 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:17:00,933 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:17:00,933 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:17:00,933 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:18:14,066 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:18:14,066 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:18:14,068 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:18:14,068 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:18:18,137 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:18:18,138 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:18:18,138 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:18:22,489 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:18:22,490 - ai_answer_service - INFO - 原始AI响应: 答案1。答案2。答案3。...
+2025-09-16 17:18:22,490 - ai_answer_service - INFO - 清理标签后响应: 答案1。答案2。答案3。...
+2025-09-16 17:18:22,490 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1。答案2。答案3。
+2025-09-16 17:18:22,490 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:18:22,490 - ai_answer_service - INFO - 尝试分割答案: 答案1。答案2。答案3。
+2025-09-16 17:18:22,490 - ai_answer_service - INFO - 混合分隔结果: ['答案1。', '答案2。', '答案3。']
+2025-09-16 17:18:22,491 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:18:22,491 - ai_answer_service - INFO - 格式化结果: 1.答案1。
+2.答案2。
+3.答案3。
+2025-09-16 17:18:26,181 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:18:26,181 - ai_answer_service - INFO - 原始AI响应: 答案1。答案2。答案3。...
+2025-09-16 17:18:26,181 - ai_answer_service - INFO - 清理标签后响应: 答案1。答案2。答案3。...
+2025-09-16 17:18:26,182 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1。答案2。答案3。
+2025-09-16 17:18:26,182 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:18:26,182 - ai_answer_service - INFO - 尝试分割答案: 答案1。答案2。答案3。
+2025-09-16 17:18:26,182 - ai_answer_service - INFO - 混合分隔结果: ['答案1。', '答案2。', '答案3。']
+2025-09-16 17:18:26,183 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:18:26,183 - ai_answer_service - INFO - 格式化结果: 1.答案1。
+2.答案2。
+3.答案3。
+2025-09-16 17:18:31,891 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:18:31,891 - ai_answer_service - INFO - 原始AI响应: 答案1；答案2；答案3...
+2025-09-16 17:18:31,891 - ai_answer_service - INFO - 清理标签后响应: 答案1；答案2；答案3...
+2025-09-16 17:18:31,892 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1；答案2；答案3
+2025-09-16 17:18:31,892 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:18:31,892 - ai_answer_service - INFO - 尝试分割答案: 答案1；答案2；答案3
+2025-09-16 17:18:31,892 - ai_answer_service - INFO - 混合分隔结果: ['答案1；', '答案2；', '答案3']
+2025-09-16 17:18:31,892 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:18:31,892 - ai_answer_service - INFO - 格式化结果: 1.答案1；
+2.答案2；
+3.答案3
+2025-09-16 17:18:31,893 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:18:31,893 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:18:31,893 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:18:31,894 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:18:31,894 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:18:31,894 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:18:31,894 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6']
+2025-09-16 17:18:31,894 - ai_answer_service - INFO - 合并结果: ['答案1', '答案2', '答案3答案4答案5答案6']
+2025-09-16 17:18:31,895 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:18:31,895 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3答案4答案5答案6
+2025-09-16 17:18:31,921 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:18:31,921 - ai_answer_service - INFO - 原始AI响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:18:31,921 - ai_answer_service - INFO - 清理标签后响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:18:31,921 - ai_answer_service - INFO - 开始格式化多子问题答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:18:31,921 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:18:31,921 - ai_answer_service - INFO - 尝试分割答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:18:31,922 - ai_answer_service - INFO - 混合分隔结果: ['经过分析，我认为答案是：答案1', '答案2', '答案3']
+2025-09-16 17:18:31,922 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:18:31,922 - ai_answer_service - INFO - 格式化结果: 1.经过分析，我认为答案是：答案1
+2.答案2
+3.答案3
+2025-09-16 17:18:41,253 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:18:41,253 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:18:41,253 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:18:41,253 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:18:45,325 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:18:45,326 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:18:45,327 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:18:49,077 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:18:49,078 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:18:49,078 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:18:49,078 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:18:51,930 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:18:51,930 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:18:51,930 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:18:51,931 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:18:51,931 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:18:51,931 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:18:51,932 - ai_answer_service - INFO - 清理前缀后: 1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:18:51,932 - ai_answer_service - INFO - 尝试分割答案: 1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:18:51,932 - ai_answer_service - INFO - 混合分隔结果: ['1', '答案2', '答案3', '答案4', '答案5', '答案6']
+2025-09-16 17:18:51,932 - ai_answer_service - INFO - 合并结果: ['1', '答案2', '答案3答案4答案5答案6']
+2025-09-16 17:18:51,932 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:18:51,932 - ai_answer_service - INFO - 格式化结果: 1.1
+2.答案2
+3.答案3答案4答案5答案6
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 原始AI响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 清理标签后响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 开始格式化多子问题答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 尝试分割答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 清理前缀后: 答案1#答案2#答案3
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 清理前缀后: 1#答案2#答案3
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 尝试分割答案: 1#答案2#答案3
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 混合分隔结果: ['1', '答案2', '答案3']
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:18:51,959 - ai_answer_service - INFO - 格式化结果: 1.1
+2.答案2
+3.答案3
+2025-09-16 17:18:53,128 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:18:53,128 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:18:53,128 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:20:47,968 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:20:47,968 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:20:47,969 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:20:47,969 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:20:52,073 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:20:52,073 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:20:52,074 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:20:53,388 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:20:53,388 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:20:53,388 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:20:53,389 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:20:57,485 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:20:57,485 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:20:57,485 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:21:52,030 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:21:52,030 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:21:52,030 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:21:52,031 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:21:52,031 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:21:52,031 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:21:52,031 - ai_answer_service - INFO - 清理前缀后: 1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:21:52,032 - ai_answer_service - INFO - 尝试分割答案: 1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:21:52,032 - ai_answer_service - INFO - 混合分隔结果: ['1', '答案2', '答案3', '答案4', '答案5', '答案6']
+2025-09-16 17:21:52,032 - ai_answer_service - INFO - 合并结果: ['1', '答案2', '答案3答案4答案5答案6']
+2025-09-16 17:21:52,032 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:21:52,032 - ai_answer_service - INFO - 格式化结果: 1.1
+2.答案2
+3.答案3答案4答案5答案6
+2025-09-16 17:22:00,361 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:22:00,361 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:22:00,362 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:22:00,362 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:22:02,762 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:02,762 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:22:02,762 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:22:02,763 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:22:02,763 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:02,763 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:22:02,763 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6']
+2025-09-16 17:22:02,763 - ai_answer_service - INFO - 合并结果: ['答案1', '答案2', '答案3答案4答案5答案6']
+2025-09-16 17:22:02,763 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:02,764 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3答案4答案5答案6
+2025-09-16 17:22:04,417 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:22:04,417 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:22:04,419 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:22:08,258 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:22:08,259 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:22:08,261 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:22:08,261 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:22:10,932 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:10,932 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:22:10,932 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:22:10,933 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:22:10,933 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:10,933 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:22:10,933 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6']
+2025-09-16 17:22:10,933 - ai_answer_service - INFO - 合并结果: ['答案1', '答案2', '答案3#答案4#答案5#答案6']
+2025-09-16 17:22:10,933 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:10,934 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3#答案4#答案5#答案6
+2025-09-16 17:22:12,329 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:22:12,330 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:22:12,330 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:22:19,151 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,151 - ai_answer_service - INFO - 原始AI响应: <answer>答案1#答案2#答案3</answer>...
+2025-09-16 17:22:19,151 - ai_answer_service - INFO - 从<answer>标签提取到答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,151 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,151 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,151 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,152 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:22:19,152 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,152 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 原始AI响应: 答案：答案1#答案2#答案3...
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 从'答案：'格式提取到答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,153 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:22:19,154 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,154 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:22:19,155 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:22:19,155 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,155 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,155 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,155 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:22:19,155 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,155 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:22:19,156 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,156 - ai_answer_service - INFO - 原始AI响应: 答案1。答案2。答案3。...
+2025-09-16 17:22:19,156 - ai_answer_service - INFO - 清理标签后响应: 答案1。答案2。答案3。...
+2025-09-16 17:22:19,156 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1。答案2。答案3。
+2025-09-16 17:22:19,156 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,156 - ai_answer_service - INFO - 尝试分割答案: 答案1。答案2。答案3。
+2025-09-16 17:22:19,157 - ai_answer_service - INFO - 混合分隔结果: ['答案1。', '答案2。', '答案3。']
+2025-09-16 17:22:19,157 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,157 - ai_answer_service - INFO - 格式化结果: 1.答案1。
+2.答案2。
+3.答案3。
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 原始AI响应: 答案1 答案2 答案3...
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 清理标签后响应: 答案1 答案2 答案3...
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1 答案2 答案3
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 尝试分割答案: 答案1 答案2 答案3
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 空格分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,158 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:22:19,159 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,159 - ai_answer_service - INFO - 原始AI响应: 答案1；答案2；答案3...
+2025-09-16 17:22:19,159 - ai_answer_service - INFO - 清理标签后响应: 答案1；答案2；答案3...
+2025-09-16 17:22:19,159 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1；答案2；答案3
+2025-09-16 17:22:19,159 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,159 - ai_answer_service - INFO - 尝试分割答案: 答案1；答案2；答案3
+2025-09-16 17:22:19,159 - ai_answer_service - INFO - 混合分隔结果: ['答案1；', '答案2；', '答案3']
+2025-09-16 17:22:19,160 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,160 - ai_answer_service - INFO - 格式化结果: 1.答案1；
+2.答案2；
+3.答案3
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 原始AI响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 清理标签后响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 尝试分割答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 混合分隔结果: ['获取当前HTTP会话对象，如果不存在则创建一个新的会话', '获取客户端随请求发送的所有Cookie对象数组', '将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储', '将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转', '这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向']
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,161 - ai_answer_service - INFO - 格式化结果: 1.获取当前HTTP会话对象，如果不存在则创建一个新的会话
+2.获取客户端随请求发送的所有Cookie对象数组
+3.将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储
+4.将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转
+5.这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6']
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 合并结果: ['答案1', '答案2', '答案3#答案4#答案5#答案6']
+2025-09-16 17:22:19,162 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,163 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3#答案4#答案5#答案6
+2025-09-16 17:22:19,163 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,164 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2...
+2025-09-16 17:22:19,164 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2...
+2025-09-16 17:22:19,164 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2
+2025-09-16 17:22:19,164 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:22:19,164 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2
+2025-09-16 17:22:19,164 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2']
+2025-09-16 17:22:19,164 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:22:19,164 - ai_answer_service - WARNING - 答案数量不匹配: 期望5个，得到1个
+2025-09-16 17:22:19,165 - ai_answer_service - INFO - 开始提取答案，问题类型: judgement
+2025-09-16 17:22:19,165 - ai_answer_service - INFO - 原始AI响应: <answer>正确</answer>...
+2025-09-16 17:22:19,165 - ai_answer_service - INFO - 从<answer>标签提取到答案: 正确
+2025-09-16 17:22:19,166 - ai_answer_service - INFO - 开始提取答案，问题类型: single
+2025-09-16 17:22:19,166 - ai_answer_service - INFO - 原始AI响应: <answer>选项A</answer>...
+2025-09-16 17:22:19,166 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A
+2025-09-16 17:22:19,167 - ai_answer_service - INFO - 开始提取答案，问题类型: multiple
+2025-09-16 17:22:19,167 - ai_answer_service - INFO - 原始AI响应: <answer>选项A#选项B</answer>...
+2025-09-16 17:22:19,167 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A#选项B
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 原始AI响应: <thinking>让我分析一下这个问题</thinking>答案1#答案2#答案3...
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,168 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:22:19,169 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,169 - ai_answer_service - INFO - 原始AI响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:22:19,169 - ai_answer_service - INFO - 清理标签后响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:22:19,169 - ai_answer_service - INFO - 开始格式化多子问题答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:22:19,170 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,170 - ai_answer_service - INFO - 尝试分割答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:22:19,170 - ai_answer_service - INFO - 清理前缀后: 答案1#答案2#答案3
+2025-09-16 17:22:19,170 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,170 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:22:19,170 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,170 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:22:19,171 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,171 - ai_answer_service - INFO - 原始AI响应: ...
+2025-09-16 17:22:19,171 - ai_answer_service - INFO - 清理标签后响应: ...
+2025-09-16 17:22:19,171 - ai_answer_service - INFO - 开始格式化多子问题答案: 
+2025-09-16 17:22:19,171 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:22:19,171 - ai_answer_service - INFO - 尝试分割答案: 
+2025-09-16 17:22:19,171 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:22:19,171 - ai_answer_service - WARNING - 答案数量不匹配: 期望2个，得到1个
+2025-09-16 17:22:19,172 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,172 - ai_answer_service - INFO - 原始AI响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:22:19,172 - ai_answer_service - INFO - 清理标签后响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:22:19,172 - ai_answer_service - INFO - 开始格式化多子问题答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:22:19,172 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:22:19,172 - ai_answer_service - INFO - 尝试分割答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:22:19,172 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:22:19,172 - ai_answer_service - WARNING - 答案数量不匹配: 期望2个，得到1个
+2025-09-16 17:22:19,173 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,173 - ai_answer_service - INFO - 原始AI响应: 1#2#3...
+2025-09-16 17:22:19,174 - ai_answer_service - INFO - 清理标签后响应: 1#2#3...
+2025-09-16 17:22:19,174 - ai_answer_service - INFO - 开始格式化多子问题答案: 1#2#3
+2025-09-16 17:22:19,174 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,174 - ai_answer_service - INFO - 尝试分割答案: 1#2#3
+2025-09-16 17:22:19,174 - ai_answer_service - INFO - 混合分隔结果: ['1', '2', '3']
+2025-09-16 17:22:19,174 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,174 - ai_answer_service - INFO - 格式化结果: 1.1
+2.2
+3.3
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 原始AI响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 清理标签后响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 尝试分割答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 混合分隔结果: ['获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。', '获取客户端（浏览器）随请求发送过来的所有Cookie对象。', '将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。', '向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。', '这段代码实现了一个简单的用户登录功能。', '它接收用户提交的用户名和密码，进行硬编码验证。', '如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。', '如果验证失败，则向客户端输出"Login failed"。']
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 合并结果: ['获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。', '获取客户端（浏览器）随请求发送过来的所有Cookie对象。', '将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。', '向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。', '这段代码实现了一个简单的用户登录功能。#它接收用户提交的用户名和密码，进行硬编码验证。#如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。#如果验证失败，则向客户端输出"Login failed"。']
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,175 - ai_answer_service - INFO - 格式化结果: 1.获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。
+2.获取客户端（浏览器）随请求发送过来的所有Cookie对象。
+3.将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。
+4.向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。
+5.这段代码实现了一个简单的用户登录功能。#它接收用户提交的用户名和密码，进行硬编码验证。#如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。#如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:22:19,176 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3']
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,177 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 原始AI响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 清理标签后响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 开始格式化多子问题答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 尝试分割答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 混合分隔结果: ['使用def关键字定义函数，后跟函数名和参数列表', '使用函数名加括号调用函数，可以传递参数', '函数参数是函数定义时括号内的变量，用于接收调用时传递的值']
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,178 - ai_answer_service - INFO - 格式化结果: 1.使用def关键字定义函数，后跟函数名和参数列表
+2.使用函数名加括号调用函数，可以传递参数
+3.函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:22:19,179 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,179 - ai_answer_service - INFO - 原始AI响应: <invalid>答案</invalid>...
+2025-09-16 17:22:19,179 - ai_answer_service - INFO - 清理标签后响应: ...
+2025-09-16 17:22:19,179 - ai_answer_service - INFO - 开始格式化多子问题答案: 
+2025-09-16 17:22:19,179 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:22:19,179 - ai_answer_service - INFO - 尝试分割答案: 
+2025-09-16 17:22:19,179 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:22:19,179 - ai_answer_service - WARNING - 答案数量不匹配: 期望2个，得到1个
+2025-09-16 17:22:19,206 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,206 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:22:19,206 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:22:19,206 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:22:19,206 - ai_answer_service - INFO - 题目包含4个子问题
+2025-09-16 17:22:19,206 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:22:19,206 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2；', '答案3。答案4']
+2025-09-16 17:22:19,206 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:22:19,206 - ai_answer_service - WARNING - 答案数量不匹配: 期望4个，得到1个
+2025-09-16 17:22:19,211 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,211 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:22:19,211 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:22:19,211 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:22:19,211 - ai_answer_service - INFO - 题目包含20个子问题
+2025-09-16 17:22:19,211 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:22:19,211 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6', '答案7', '答案8', '答案9', '答案10', '答案11', '答案12', '答案13', '答案14', '答案15', '答案16', '答案17', '答案18', '答案19', '答案20']
+2025-09-16 17:22:19,212 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,212 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+4.答案4
+5.答案5
+6.答案6
+7.答案7
+8.答案8
+9.答案9
+10.答案10
+11.答案11
+12.答案12
+13.答案13
+14.答案14
+15.答案15
+16.答案16
+17.答案17
+18.答案18
+19.答案19
+20.答案20
+2025-09-16 17:22:19,212 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 原始AI响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 清理标签后响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 尝试分割答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 混合分隔结果: ['答案1（包含中文括号）', '答案2"包含引号"', "答案3'包含单引号'", '答案4<包含尖括号>', '答案5&包含和号']
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,213 - ai_answer_service - INFO - 格式化结果: 1.答案1（包含中文括号）
+2.答案2"包含引号"
+3.答案3'包含单引号'
+4.答案4<包含尖括号>
+5.答案5&包含和号
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 原始AI响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 清理标签后响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 开始格式化多子问题答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 尝试分割答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 混合分隔结果: ['函数定义', '类继承', '异常处理', '文件操作', '网络编程']
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 答案数量匹配，开始格式化
+2025-09-16 17:22:19,214 - ai_answer_service - INFO - 格式化结果: 1.函数定义
+2.类继承
+3.异常处理
+4.文件操作
+5.网络编程
+2025-09-16 17:22:34,801 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:22:34,802 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:22:34,802 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:22:34,802 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:22:38,888 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:22:38,888 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:22:38,888 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:22:40,190 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:22:40,190 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:22:40,190 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:22:40,191 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:22:44,263 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:22:44,263 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:22:44,263 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:22:44,598 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:44,598 - ai_answer_service - INFO - 原始AI响应: <invalid>答案</invalid>...
+2025-09-16 17:22:44,599 - ai_answer_service - INFO - 清理标签后响应: 答案...
+2025-09-16 17:22:44,599 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案
+2025-09-16 17:22:44,599 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:22:44,599 - ai_answer_service - INFO - 尝试分割答案: 答案
+2025-09-16 17:22:44,599 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:22:44,600 - ai_answer_service - WARNING - 答案数量不匹配: 期望2个，得到1个
+2025-09-16 17:22:49,564 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:22:49,565 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:22:49,565 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:22:49,565 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:22:49,565 - ai_answer_service - INFO - 题目包含4个子问题
+2025-09-16 17:22:49,565 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:22:49,566 - ai_answer_service - INFO - 处理混合分隔符: 答案1#答案2；答案3。答案4
+2025-09-16 17:22:49,566 - ai_answer_service - INFO - 用#分割得到: ['答案1', '答案2；答案3。答案4']
+2025-09-16 17:22:49,566 - ai_answer_service - INFO - 混合分隔最终结果: ['答案1', '答案2', '答案3。答案4']
+2025-09-16 17:22:49,566 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3。答案4']
+2025-09-16 17:22:49,566 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:22:49,566 - ai_answer_service - WARNING - 答案数量不匹配: 期望4个，得到1个
+2025-09-16 17:23:25,764 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:23:25,765 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:23:25,765 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:23:25,765 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:23:29,862 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:23:29,862 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:23:29,862 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:23:49,981 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:23:49,981 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:23:49,981 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:23:49,981 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:23:49,981 - ai_answer_service - INFO - 题目包含4个子问题
+2025-09-16 17:23:49,981 - ai_answer_service - INFO - 尝试分割答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:23:49,982 - ai_answer_service - INFO - 处理混合分隔符: 答案1#答案2；答案3。答案4
+2025-09-16 17:23:49,982 - ai_answer_service - INFO - 用#分割得到: ['答案1', '答案2；答案3。答案4']
+2025-09-16 17:23:49,982 - ai_answer_service - INFO - 混合分隔最终结果: ['答案1', '答案2', '答案3。答案4']
+2025-09-16 17:23:49,982 - ai_answer_service - INFO - 混合分隔结果: ['答案1', '答案2', '答案3。答案4']
+2025-09-16 17:23:49,982 - ai_answer_service - WARNING - 所有分隔策略都失败，返回原始答案
+2025-09-16 17:23:49,982 - ai_answer_service - WARNING - 答案数量不匹配: 期望4个，得到1个
+2025-09-16 17:23:51,986 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:23:51,986 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:23:51,986 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:23:51,986 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:23:56,073 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:23:56,074 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:23:56,074 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:24:10,033 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:24:10,034 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:24:10,034 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:24:10,034 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:24:14,116 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:24:14,116 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:24:14,117 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:24:21,897 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:24:21,898 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:24:21,898 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:24:21,898 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:24:25,998 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:24:25,998 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:24:25,999 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:24:44,020 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:24:44,020 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:24:44,021 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:24:44,021 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:24:48,118 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:24:48,118 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:24:48,118 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:25:04,591 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:25:04,592 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:25:04,592 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:25:04,592 - ai_answer_service - INFO - 开始使用AI分析答案格式: 答案1#答案2；答案3。答案4
+2025-09-16 17:25:04,592 - ai_answer_service - INFO - 题目包含4个子问题
+2025-09-16 17:25:05,854 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-16 17:25:05,854 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-16 17:25:05,854 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-16 17:25:05,855 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-16 17:25:09,944 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-16 17:25:09,944 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-16 17:25:09,945 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-16 17:31:01,785 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,785 - ai_answer_service - INFO - 原始AI响应: <answer>答案1#答案2#答案3</answer>...
+2025-09-16 17:31:01,785 - ai_answer_service - INFO - 从<answer>标签提取到答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,785 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,785 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,785 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,829 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,829 - ai_answer_service - INFO - 原始AI响应: 答案：答案1#答案2#答案3...
+2025-09-16 17:31:01,829 - ai_answer_service - INFO - 从'答案：'格式提取到答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,829 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,829 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,830 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,849 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,849 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:31:01,850 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:31:01,850 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,850 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,850 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,868 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,868 - ai_answer_service - INFO - 原始AI响应: 答案1。答案2。答案3。...
+2025-09-16 17:31:01,868 - ai_answer_service - INFO - 清理标签后响应: 答案1。答案2。答案3。...
+2025-09-16 17:31:01,868 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1。答案2。答案3。
+2025-09-16 17:31:01,868 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,868 - ai_answer_service - INFO - 智能分割答案: 答案1。答案2。答案3。
+2025-09-16 17:31:01,886 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,886 - ai_answer_service - INFO - 原始AI响应: 答案1 答案2 答案3...
+2025-09-16 17:31:01,886 - ai_answer_service - INFO - 清理标签后响应: 答案1 答案2 答案3...
+2025-09-16 17:31:01,886 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1 答案2 答案3
+2025-09-16 17:31:01,887 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,887 - ai_answer_service - INFO - 智能分割答案: 答案1 答案2 答案3
+2025-09-16 17:31:01,905 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,905 - ai_answer_service - INFO - 原始AI响应: 答案1；答案2；答案3...
+2025-09-16 17:31:01,905 - ai_answer_service - INFO - 清理标签后响应: 答案1；答案2；答案3...
+2025-09-16 17:31:01,905 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1；答案2；答案3
+2025-09-16 17:31:01,905 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,905 - ai_answer_service - INFO - 智能分割答案: 答案1；答案2；答案3
+2025-09-16 17:31:01,923 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,924 - ai_answer_service - INFO - 原始AI响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:31:01,924 - ai_answer_service - INFO - 清理标签后响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:31:01,924 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:31:01,924 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:01,924 - ai_answer_service - INFO - 智能分割答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:31:01,942 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,942 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:31:01,942 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:31:01,942 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:31:01,943 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,943 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:31:01,961 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,961 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2...
+2025-09-16 17:31:01,961 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2...
+2025-09-16 17:31:01,962 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2
+2025-09-16 17:31:01,962 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:01,962 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2
+2025-09-16 17:31:01,980 - ai_answer_service - INFO - 开始提取答案，问题类型: judgement
+2025-09-16 17:31:01,980 - ai_answer_service - INFO - 原始AI响应: <answer>正确</answer>...
+2025-09-16 17:31:01,980 - ai_answer_service - INFO - 从<answer>标签提取到答案: 正确
+2025-09-16 17:31:01,981 - ai_answer_service - INFO - 开始提取答案，问题类型: single
+2025-09-16 17:31:01,981 - ai_answer_service - INFO - 原始AI响应: <answer>选项A</answer>...
+2025-09-16 17:31:01,981 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A
+2025-09-16 17:31:01,983 - ai_answer_service - INFO - 开始提取答案，问题类型: multiple
+2025-09-16 17:31:01,983 - ai_answer_service - INFO - 原始AI响应: <answer>选项A#选项B</answer>...
+2025-09-16 17:31:01,983 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A#选项B
+2025-09-16 17:31:01,984 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:01,984 - ai_answer_service - INFO - 原始AI响应: <thinking>让我分析一下这个问题</thinking>答案1#答案2#答案3...
+2025-09-16 17:31:01,984 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:31:01,984 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:01,984 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:01,984 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:02,004 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,004 - ai_answer_service - INFO - 原始AI响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:31:02,004 - ai_answer_service - INFO - 清理标签后响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:31:02,004 - ai_answer_service - INFO - 开始格式化多子问题答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:31:02,004 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:02,004 - ai_answer_service - INFO - 智能分割答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:31:02,022 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,022 - ai_answer_service - INFO - 原始AI响应: ...
+2025-09-16 17:31:02,023 - ai_answer_service - INFO - 清理标签后响应: ...
+2025-09-16 17:31:02,023 - ai_answer_service - INFO - 开始格式化多子问题答案: 
+2025-09-16 17:31:02,023 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:31:02,023 - ai_answer_service - INFO - 智能分割答案: 
+2025-09-16 17:31:02,041 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,041 - ai_answer_service - INFO - 原始AI响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:31:02,041 - ai_answer_service - INFO - 清理标签后响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:31:02,041 - ai_answer_service - INFO - 开始格式化多子问题答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:31:02,041 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:31:02,041 - ai_answer_service - INFO - 智能分割答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:31:02,059 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,059 - ai_answer_service - INFO - 原始AI响应: 1#2#3...
+2025-09-16 17:31:02,059 - ai_answer_service - INFO - 清理标签后响应: 1#2#3...
+2025-09-16 17:31:02,059 - ai_answer_service - INFO - 开始格式化多子问题答案: 1#2#3
+2025-09-16 17:31:02,059 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:02,059 - ai_answer_service - INFO - 智能分割答案: 1#2#3
+2025-09-16 17:31:02,078 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,078 - ai_answer_service - INFO - 原始AI响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:31:02,078 - ai_answer_service - INFO - 清理标签后响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:31:02,078 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:31:02,079 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:02,079 - ai_answer_service - INFO - 智能分割答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:31:02,096 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,097 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:31:02,097 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:31:02,097 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:02,097 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:02,097 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:02,115 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,115 - ai_answer_service - INFO - 原始AI响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:31:02,115 - ai_answer_service - INFO - 清理标签后响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:31:02,115 - ai_answer_service - INFO - 开始格式化多子问题答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:31:02,115 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:02,115 - ai_answer_service - INFO - 智能分割答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:31:02,133 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,134 - ai_answer_service - INFO - 原始AI响应: <invalid>答案</invalid>...
+2025-09-16 17:31:02,134 - ai_answer_service - INFO - 清理标签后响应: 答案...
+2025-09-16 17:31:02,134 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案
+2025-09-16 17:31:02,134 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:31:02,134 - ai_answer_service - INFO - 智能分割答案: 答案
+2025-09-16 17:31:02,151 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,152 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:31:02,152 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:31:02,152 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:31:02,152 - ai_answer_service - INFO - 题目包含4个子问题
+2025-09-16 17:31:02,152 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:31:02,170 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,170 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:31:02,170 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:31:02,171 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:31:02,171 - ai_answer_service - INFO - 题目包含20个子问题
+2025-09-16 17:31:02,171 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:31:02,190 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,190 - ai_answer_service - INFO - 原始AI响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:31:02,190 - ai_answer_service - INFO - 清理标签后响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:31:02,190 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:31:02,190 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:02,190 - ai_answer_service - INFO - 智能分割答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:31:02,208 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:02,208 - ai_answer_service - INFO - 原始AI响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:31:02,208 - ai_answer_service - INFO - 清理标签后响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:31:02,209 - ai_answer_service - INFO - 开始格式化多子问题答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:31:02,209 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:02,209 - ai_answer_service - INFO - 智能分割答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:31:50,364 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,365 - ai_answer_service - INFO - 原始AI响应: <answer>答案1#答案2#答案3</answer>...
+2025-09-16 17:31:50,365 - ai_answer_service - INFO - 从<answer>标签提取到答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,365 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,365 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,365 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,365 - ai_answer_service - INFO - 用#分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,366 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,366 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,366 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 原始AI响应: 答案：答案1#答案2#答案3...
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 从'答案：'格式提取到答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 用#分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,367 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 用#分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,368 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,369 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,370 - ai_answer_service - INFO - 原始AI响应: 答案1。答案2。答案3。...
+2025-09-16 17:31:50,370 - ai_answer_service - INFO - 清理标签后响应: 答案1。答案2。答案3。...
+2025-09-16 17:31:50,370 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1。答案2。答案3。
+2025-09-16 17:31:50,370 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,370 - ai_answer_service - INFO - 智能分割答案: 答案1。答案2。答案3。
+2025-09-16 17:31:50,371 - ai_answer_service - INFO - 用。分割成功: ['答案1', '答案2', '答案3。']
+2025-09-16 17:31:50,371 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,372 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3。
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 原始AI响应: 答案1 答案2 答案3...
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 清理标签后响应: 答案1 答案2 答案3...
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1 答案2 答案3
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 智能分割答案: 答案1 答案2 答案3
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 按空格分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,398 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 原始AI响应: 答案1；答案2；答案3...
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 清理标签后响应: 答案1；答案2；答案3...
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1；答案2；答案3
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 智能分割答案: 答案1；答案2；答案3
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 用；分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,399 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 原始AI响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 清理标签后响应: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向...
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 智能分割答案: 获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie对象数组#将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储#将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转#这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 用#分割成功: ['获取当前HTTP会话对象，如果不存在则创建一个新的会话', '获取客户端随请求发送的所有Cookie对象数组', '将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储', '将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转', '这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向']
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,405 - ai_answer_service - INFO - 格式化结果: 1.获取当前HTTP会话对象，如果不存在则创建一个新的会话
+2.获取客户端随请求发送的所有Cookie对象数组
+3.将指定的Cookie对象添加到HTTP响应中，使其发送到客户端浏览器并被存储
+4.将HTTP响应重定向到指定的URL（cart.jsp），浏览器将自动跳转
+5.这段代码实现了一个完整的用户登录验证功能，包括会话管理、Cookie处理和页面重定向
+2025-09-16 17:31:50,406 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6...
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3#答案4#答案5#答案6
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 合并结果: ['答案1', '答案2', '答案3#答案4#答案5#答案6']
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 混合分隔成功: ['答案1', '答案2', '答案3#答案4#答案5#答案6']
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,407 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3#答案4#答案5#答案6
+2025-09-16 17:31:50,408 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,408 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2...
+2025-09-16 17:31:50,408 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2...
+2025-09-16 17:31:50,408 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2
+2025-09-16 17:31:50,408 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:50,409 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2
+2025-09-16 17:31:50,409 - ai_answer_service - WARNING - 所有分割策略都失败
+2025-09-16 17:31:50,409 - ai_answer_service - WARNING - 答案分割失败: 期望5个，得到1个
+2025-09-16 17:31:50,410 - ai_answer_service - INFO - 开始提取答案，问题类型: judgement
+2025-09-16 17:31:50,410 - ai_answer_service - INFO - 原始AI响应: <answer>正确</answer>...
+2025-09-16 17:31:50,410 - ai_answer_service - INFO - 从<answer>标签提取到答案: 正确
+2025-09-16 17:31:50,411 - ai_answer_service - INFO - 开始提取答案，问题类型: single
+2025-09-16 17:31:50,411 - ai_answer_service - INFO - 原始AI响应: <answer>选项A</answer>...
+2025-09-16 17:31:50,411 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A
+2025-09-16 17:31:50,412 - ai_answer_service - INFO - 开始提取答案，问题类型: multiple
+2025-09-16 17:31:50,412 - ai_answer_service - INFO - 原始AI响应: <answer>选项A#选项B</answer>...
+2025-09-16 17:31:50,412 - ai_answer_service - INFO - 从<answer>标签提取到答案: 选项A#选项B
+2025-09-16 17:31:50,413 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,413 - ai_answer_service - INFO - 原始AI响应: <thinking>让我分析一下这个问题</thinking>答案1#答案2#答案3...
+2025-09-16 17:31:50,413 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:31:50,413 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,413 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,413 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,414 - ai_answer_service - INFO - 用#分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,414 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,414 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 原始AI响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 清理标签后响应: 经过分析，我认为答案是：答案1#答案2#答案3...
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 开始格式化多子问题答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 智能分割答案: 经过分析，我认为答案是：答案1#答案2#答案3
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 清理前缀后: 答案1#答案2#答案3
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 用#分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,415 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,416 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,416 - ai_answer_service - INFO - 原始AI响应: ...
+2025-09-16 17:31:50,417 - ai_answer_service - INFO - 清理标签后响应: ...
+2025-09-16 17:31:50,417 - ai_answer_service - INFO - 开始格式化多子问题答案: 
+2025-09-16 17:31:50,417 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:31:50,417 - ai_answer_service - INFO - 智能分割答案: 
+2025-09-16 17:31:50,417 - ai_answer_service - WARNING - 所有分割策略都失败
+2025-09-16 17:31:50,417 - ai_answer_service - WARNING - 答案分割失败: 期望2个，得到1个
+2025-09-16 17:31:50,418 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,418 - ai_answer_service - INFO - 原始AI响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:31:50,418 - ai_answer_service - INFO - 清理标签后响应: 这是一个很长的答案，没有明显的分割点，但应该被处理...
+2025-09-16 17:31:50,418 - ai_answer_service - INFO - 开始格式化多子问题答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:31:50,418 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:31:50,418 - ai_answer_service - INFO - 智能分割答案: 这是一个很长的答案，没有明显的分割点，但应该被处理
+2025-09-16 17:31:50,418 - ai_answer_service - WARNING - 所有分割策略都失败
+2025-09-16 17:31:50,418 - ai_answer_service - WARNING - 答案分割失败: 期望2个，得到1个
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 原始AI响应: 1#2#3...
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 清理标签后响应: 1#2#3...
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 开始格式化多子问题答案: 1#2#3
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 智能分割答案: 1#2#3
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 用#分割成功: ['1', '2', '3']
+2025-09-16 17:31:50,419 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,420 - ai_answer_service - INFO - 格式化结果: 1.1
+2.2
+3.3
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 原始AI响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 清理标签后响应: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。...
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 开始格式化多子问题答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 智能分割答案: 获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。 获取客户端（浏览器）随请求发送过来的所有Cookie对象。 将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。 向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。 这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 按空格分割成功: ['获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。', '获取客户端（浏览器）随请求发送过来的所有Cookie对象。', '将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。', '向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。', '这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。']
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,421 - ai_answer_service - INFO - 格式化结果: 1.获取与当前请求关联的HttpSession对象，如果不存在则创建一个新的。
+2.获取客户端（浏览器）随请求发送过来的所有Cookie对象。
+3.将一个Cookie对象（langCookie）添加到HTTP响应中，使其发送到客户端（浏览器）并被存储。
+4.向客户端发送一个重定向响应，指示浏览器跳转到指定的URL（cart.jsp）。
+5.这段代码实现了一个简单的用户登录功能。它接收用户提交的用户名和密码，进行硬编码验证。如果验证成功，则创建或获取用户会话（HttpSession），将会话属性`user`设置为用户名，并根据用户请求中的Cookie或默认值设置一个语言偏好Cookie（`userLang`），然后将用户重定向到`cart.jsp`页面。如果验证失败，则向客户端输出"Login failed"。
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3...
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3...
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 用#分割成功: ['答案1', '答案2', '答案3']
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,422 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+2025-09-16 17:31:50,423 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,423 - ai_answer_service - INFO - 原始AI响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:31:50,423 - ai_answer_service - INFO - 清理标签后响应: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值...
+2025-09-16 17:31:50,424 - ai_answer_service - INFO - 开始格式化多子问题答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:31:50,424 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:31:50,424 - ai_answer_service - INFO - 智能分割答案: 使用def关键字定义函数，后跟函数名和参数列表#使用函数名加括号调用函数，可以传递参数#函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:31:50,424 - ai_answer_service - INFO - 用#分割成功: ['使用def关键字定义函数，后跟函数名和参数列表', '使用函数名加括号调用函数，可以传递参数', '函数参数是函数定义时括号内的变量，用于接收调用时传递的值']
+2025-09-16 17:31:50,424 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,424 - ai_answer_service - INFO - 格式化结果: 1.使用def关键字定义函数，后跟函数名和参数列表
+2.使用函数名加括号调用函数，可以传递参数
+3.函数参数是函数定义时括号内的变量，用于接收调用时传递的值
+2025-09-16 17:31:50,425 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,425 - ai_answer_service - INFO - 原始AI响应: <invalid>答案</invalid>...
+2025-09-16 17:31:50,425 - ai_answer_service - INFO - 清理标签后响应: 答案...
+2025-09-16 17:31:50,425 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案
+2025-09-16 17:31:50,425 - ai_answer_service - INFO - 题目包含2个子问题
+2025-09-16 17:31:50,425 - ai_answer_service - INFO - 智能分割答案: 答案
+2025-09-16 17:31:50,425 - ai_answer_service - WARNING - 所有分割策略都失败
+2025-09-16 17:31:50,425 - ai_answer_service - WARNING - 答案分割失败: 期望2个，得到1个
+2025-09-16 17:31:50,426 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,426 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:31:50,426 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2；答案3。答案4...
+2025-09-16 17:31:50,426 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:31:50,426 - ai_answer_service - INFO - 题目包含4个子问题
+2025-09-16 17:31:50,426 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2；答案3。答案4
+2025-09-16 17:31:50,426 - ai_answer_service - WARNING - 所有分割策略都失败
+2025-09-16 17:31:50,427 - ai_answer_service - WARNING - 答案分割失败: 期望4个，得到1个
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 原始AI响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 清理标签后响应: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20...
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 题目包含20个子问题
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 智能分割答案: 答案1#答案2#答案3#答案4#答案5#答案6#答案7#答案8#答案9#答案10#答案11#答案12#答案13#答案14#答案15#答案16#答案17#答案18#答案19#答案20
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 用#分割成功: ['答案1', '答案2', '答案3', '答案4', '答案5', '答案6', '答案7', '答案8', '答案9', '答案10', '答案11', '答案12', '答案13', '答案14', '答案15', '答案16', '答案17', '答案18', '答案19', '答案20']
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,433 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3
+4.答案4
+5.答案5
+6.答案6
+7.答案7
+8.答案8
+9.答案9
+10.答案10
+11.答案11
+12.答案12
+13.答案13
+14.答案14
+15.答案15
+16.答案16
+17.答案17
+18.答案18
+19.答案19
+20.答案20
+2025-09-16 17:31:50,434 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 原始AI响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 清理标签后响应: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号...
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 智能分割答案: 答案1（包含中文括号）#答案2"包含引号"#答案3'包含单引号'#答案4<包含尖括号>#答案5&包含和号
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 用#分割成功: ['答案1（包含中文括号）', '答案2"包含引号"', "答案3'包含单引号'", '答案4<包含尖括号>', '答案5&包含和号']
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,435 - ai_answer_service - INFO - 格式化结果: 1.答案1（包含中文括号）
+2.答案2"包含引号"
+3.答案3'包含单引号'
+4.答案4<包含尖括号>
+5.答案5&包含和号
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 原始AI响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 清理标签后响应: 函数定义#类继承#异常处理#文件操作#网络编程...
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 开始格式化多子问题答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 题目包含5个子问题
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 智能分割答案: 函数定义#类继承#异常处理#文件操作#网络编程
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 用#分割成功: ['函数定义', '类继承', '异常处理', '文件操作', '网络编程']
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:31:50,436 - ai_answer_service - INFO - 格式化结果: 1.函数定义
+2.类继承
+3.异常处理
+4.文件操作
+5.网络编程
+2025-09-16 17:32:25,638 - ai_answer_service - INFO - 开始提取答案，问题类型: completion
+2025-09-16 17:32:25,638 - ai_answer_service - INFO - 原始AI响应: 答案1。答案2。答案3。...
+2025-09-16 17:32:25,638 - ai_answer_service - INFO - 清理标签后响应: 答案1。答案2。答案3。...
+2025-09-16 17:32:25,638 - ai_answer_service - INFO - 开始格式化多子问题答案: 答案1。答案2。答案3。
+2025-09-16 17:32:25,638 - ai_answer_service - INFO - 题目包含3个子问题
+2025-09-16 17:32:25,638 - ai_answer_service - INFO - 智能分割答案: 答案1。答案2。答案3。
+2025-09-16 17:32:25,640 - ai_answer_service - INFO - 用。分割成功: ['答案1', '答案2', '答案3。']
+2025-09-16 17:32:25,641 - ai_answer_service - INFO - 答案分割成功，格式化答案
+2025-09-16 17:32:25,641 - ai_answer_service - INFO - 格式化结果: 1.答案1
+2.答案2
+3.答案3。

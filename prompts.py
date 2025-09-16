@@ -2,6 +2,8 @@
 """
 AI 提示词模块 (v6.0 - 弹性适应版)
 """
+import re
+
 # --- 1. 基础指令模板 (System Prompt) ---
 SYSTEM_PROMPT = """# AI 角色与任务
 你是一位顶级的、全知全能的AI知识引擎与推理专家。你的核心任务是针对用户提出的任何问题，进行严谨、深入的分析，并提供一个绝对准确的答案。
@@ -22,7 +24,7 @@ SYSTEM_PROMPT = """# AI 角色与任务
 -   **单选题**: 输出选项的**完整文本**。
 -   **多选题**: 输出所有正确选项的**完整文本**，并用井号 `#` 作为唯一的分隔符。
 -   **判断题**: 只能输出 `正确` 或 `错误`。
--   **填空题**: 输出需要填入的**完整内容**。如果题目有多个独立的空，**必须且只能**用井号 `#` 作为唯一的分隔符，绝对禁止使用分号或其他任何符号。
+-   **填空题**: 输出需要填入的**完整内容**。如果题目有多个独立的空，**必须且只能**用井号 `#` 作为唯一的分隔符，绝对禁止使用分号或其他任何符号。注意：如果题目包含多个编号的子问题（如"1. xxx 2. xxx"），请用井号 `#` 分隔各个答案，系统会自动转换为换行格式。
 """
 
 # --- 2. Few-Shot 示例 ---
@@ -74,11 +76,89 @@ D. 块设备驱动 (Block Device Driver)
 </ai_response>
 </example>
 """,
+    "completion_multi_question": """
+<example>
+<user_input>
+问题: 1. HttpSession session = req.getSession(); 这一行代码实现什么功能？
+2. Cookie[] cookies = req.getCookies(); 这一行代码实现什么功能？  
+3. resp.addCookie(langCookie); 这一行代码实现什么功能？
+4. resp.sendRedirect("cart.jsp"); 这一行代码实现什么功能？
+5. 说说这段代码实现主要完成一个什么功能？
+类型: completion
+上下文:
+// LoginServlet.java
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
+        throws ServletException, IOException {
+        
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        
+        if ("admin".equals(username) && "123456".equals(password)) {
+            HttpSession session = req.getSession();
+            session.setAttribute("user", username);
+            
+            Cookie[] cookies = req.getCookies();
+            String lang = "zh";
+            if (cookies != null) {
+                for (Cookie c : cookies) {
+                    if ("userLang".equals(c.getName())) {
+                        lang = c.getValue();
+                    }
+                }
+            }
+            
+            Cookie langCookie = new Cookie("userLang", lang);
+            langCookie.setMaxAge(60*60*24*30);
+            resp.addCookie(langCookie);
+            
+            resp.sendRedirect("cart.jsp");
+        } else {
+            resp.getWriter().print("Login failed");
+        }
+    }
+}
+</user_input>
+<ai_response>
+<thinking>
+1. **问题分析**: 这是一个包含5个子问题的填空题，需要分别回答每个Java Servlet代码行的功能。
+2. **逐个分析**:
+   - HttpSession session = req.getSession(): 获取当前HTTP会话对象，如果不存在则创建一个新的会话
+   - Cookie[] cookies = req.getCookies(): 获取客户端随请求发送的所有Cookie
+   - resp.addCookie(langCookie): 将一个Cookie添加到HTTP响应中，使其发送给客户端
+   - resp.sendRedirect("cart.jsp"): 将客户端重定向到指定的URL（"cart.jsp"）
+   - 整体功能: 实现了一个简单的用户登录验证功能，成功登录后创建用户会话，处理语言偏好Cookie，并重定向到cart.jsp页面；登录失败则显示错误信息
+3. **格式要求**: 多个子问题需要用 # 分隔答案
+</thinking>
+<answer>获取当前HTTP会话对象，如果不存在则创建一个新的会话#获取客户端随请求发送的所有Cookie#将一个Cookie添加到HTTP响应中，使其发送给客户端#将客户端重定向到指定的URL（"cart.jsp"）#这段代码实现了一个简单的用户登录验证功能。成功登录后，它会创建用户会话，处理语言偏好Cookie，并将用户重定向到cart.jsp页面；登录失败则显示错误信息</answer>
+</ai_response>
+</example>
+""",
 }
 
 
 def build_prompt(question: str, question_type: str, options: str, context: str = None) -> str:
-    example = EXAMPLES.get(question_type, "")
+    # 对于填空题，检查是否是多子问题，选择合适的示例
+    if question_type == "completion":
+        # 检查是否包含多个编号的子问题
+        patterns = [
+            r'\d+\.\s*.*?\n.*?\d+\.',  # 数字编号：1. xxx 2. xxx
+            r'\d+\)\s*.*?\n.*?\d+\)',  # 括号编号：1) xxx 2) xxx
+            r'[（(]\s*\d+\s*[）)]\s*.*?\n.*?[（(]\s*\d+\s*[）)]',  # 中文括号编号：（1）xxx （2）xxx
+        ]
+        is_multi_question = any(re.search(pattern, question, re.MULTILINE | re.DOTALL) for pattern in patterns)
+        
+        if is_multi_question:
+            example = EXAMPLES.get("completion_multi_question", "")
+        else:
+            example = EXAMPLES.get(question_type, "")
+    else:
+        example = EXAMPLES.get(question_type, "")
+    
     user_input_section = f"问题: {question}\n类型: {question_type or '未指定'}\n"
     if context:
         user_input_section += f"上下文:\n{context}\n"

@@ -33,13 +33,13 @@ class TestUtils:
     def test_extract_answer_simple(self):
         """测试简单答案提取"""
         ai_response = "答案：北京"
-        result = extract_answer(ai_response, "single")
+        result = extract_answer(ai_response, "single", "")
         assert result == "北京"
 
     def test_extract_answer_with_tags(self):
         """测试带标签的答案提取"""
         ai_response = "一些思考<answer>上海</answer>其他内容"
-        result = extract_answer(ai_response, "single")
+        result = extract_answer(ai_response, "single", "")
         assert result == "上海"
 
     def test_cache_operations(self, mock_cache):

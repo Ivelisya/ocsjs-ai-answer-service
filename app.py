@@ -405,7 +405,7 @@ def search():
             prompt = build_prompt(question, question_type, options, context)
             final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
 
-        processed_answer = extract_answer(final_answer_raw, question_type)
+        processed_answer = extract_answer(final_answer_raw, question_type, question)
 
         if not processed_answer:
             logger.warning("AI 返回的答案为空")
