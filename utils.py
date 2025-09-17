@@ -194,6 +194,79 @@ def normalize_text(text: str) -> str:
     return text.strip()
 
 
+def extract_options_from_question(question_text: str) -> List[str]:
+    """从题目文本中智能抽取选项列表。
+
+    支持格式示例：
+    1. A. xxx B. yyy C. zzz D. www
+    2. A、xxx B、yyy C、zzz D、www
+    3. （A）xxx （B）yyy （C）zzz （D）www
+    4. A) xxx B) yyy C) zzz D) www
+    5. 以换行分隔的 A. / B. / C.
+    6. 没有标签，空格分隔的 4~6 个短语（最后作为兜底策略）
+
+    返回：去重后的标准化文本列表（不含标签）。
+    """
+    if not question_text:
+        return []
+
+    text = normalize_text(question_text).replace('（', '(').replace('）', ')')
+
+    # 优先：全局内联标签提取 (A. xxx B. yyy ...) / (A)xxx / A) xxx / A、xxx
+    inline_pattern = re.compile(
+        r'(?:^|[^A-Za-z0-9])\(?([A-Z])\)?\s*[).、．。:：]?\s*([^A-Z].*?)(?=(?:\s\(?[A-Z]\)?\s*[).、．。:：]|$))'
+    )
+    candidates: List[Tuple[str, str]] = []
+    for m in inline_pattern.finditer(text):
+        body = normalize_text(m.group(2))
+        if 0 < len(body) <= 120:
+            candidates.append((m.group(1), body))
+    if len(candidates) >= 2:
+        seen = set()
+        out: List[str] = []
+        for _, b in candidates:
+            if b not in seen:
+                seen.add(b)
+                out.append(b)
+        return out
+
+    # 次级：按换行行首标签
+    lines = [l.strip() for l in text.split('\n') if l.strip()]
+    line_pattern = re.compile(r'^\(?([A-Z])\)?\s*[).、．。:：-]?\s*(.+)$')
+    extracted: List[str] = []
+    for line in lines:
+        m = line_pattern.match(line)
+        if m:
+            body = normalize_text(m.group(2))
+            if 0 < len(body) <= 120:
+                extracted.append(body)
+    if len(extracted) >= 2:
+        seen2 = set(); res: List[str] = []
+        for b in extracted:
+            if b not in seen2:
+                seen2.add(b); res.append(b)
+        return res
+
+    # 兜底：空格分隔短语
+    if 20 < len(text) < 400 and ' ' in text and '\n' not in text:
+        # 尝试找到题干与选项分界：句号/问号/括号后紧跟空格+词序列
+        split_idx = -1
+        m = re.search(r'[。.?？)]\s+([\u4e00-\u9fa5A-Za-z0-9].+)', text)
+        candidate_tail = None
+        if m:
+            candidate_tail = m.group(1).strip()
+        if candidate_tail:
+            segs = [s for s in candidate_tail.split(' ') if s]
+        else:
+            segs = [s for s in text.split(' ') if s]
+        if 3 <= len(segs) <= 12 and all(1 <= len(s) <= 16 for s in segs):
+            avg = sum(len(s) for s in segs) / len(segs)
+            if all(abs(len(s) - avg) <= 10 for s in segs):
+                return segs
+
+    return []
+
+
 def extract_answer(ai_response: str, question_type: str) -> str:
     match = re.search(r"<answer>(.*?)</answer>", ai_response, re.DOTALL)
     if match:
@@ -324,28 +397,103 @@ def validate_external_answer(answer: str, question_type: str, options: str = "",
         return answer.lower() in [ans.lower() for ans in valid_answers]
     
     elif question_type in ["single", "multiple"]:
-        # 单选题和多选题：答案必须与选项中的文字匹配
-        if not answer or not options:
+        # 选择题：需要答案与选项匹配；多选题可以包含多个选项
+        if not answer:
             return False
-            
-        # 排除判断题特有的答案
+
+        # 如果缺少或疑似无效 options，尝试从 question 中抽取
+        original_options = options
+        if (not options) or ("\n" not in options and len(options.strip().split()) <= 1):
+            auto_opts = extract_options_from_question(question or "")
+            if auto_opts:
+                options = "\n".join([f"{chr(65+i)}. {opt}" for i, opt in enumerate(auto_opts)])
+                logger.info(f"自动从题干提取选项: {auto_opts}")
+
+        if not options:
+            return False
+
+        # 排除判断题特有的答案（外部题库误分类的情况）
         judgement_answers = ["对", "错", "正确", "错误", "true", "false", "√", "×", "是", "否", "yes", "no"]
         if answer.lower() in [ans.lower() for ans in judgement_answers]:
             return False
-        
-        # 检查答案是否与选项中的文字匹配
+
         option_lines = [line.strip() for line in options.split('\n') if line.strip()]
+
+        # 提取选项映射：标签 -> 文本，及文本集合
+        label_to_text: Dict[str, str] = {}
+        option_texts: List[str] = []
+        option_pattern = re.compile(r'^([A-Z])\s*[).、．。:：-]?\s*(.+)$')  # 允许多种分隔符
         for line in option_lines:
-            # 提取选项文字部分（去掉A. B. 等前缀）
-            match = re.match(r'^[A-Z]\s*[.、:]\s*(.+)$', line)
-            if match:
-                option_text = normalize_text(match.group(1))
-                answer_normalized = normalize_text(answer)
-                # 要求精确匹配，不能是部分匹配
-                if option_text == answer_normalized:
-                    return True
-        
-        # 如果没有找到匹配，则答案无效
+            m = option_pattern.match(line)
+            if m:
+                label = m.group(1)
+                text_part = normalize_text(m.group(2))
+                label_to_text[label] = text_part
+                option_texts.append(text_part)
+            else:
+                # 如果无法匹配，尝试把整行作为一个选项（兼容无前缀格式）
+                option_texts.append(normalize_text(line))
+
+        # 兼容：整串选项使用空格分隔且没有换行/标签的情况
+        # 例如: "第一次世界大战 清朝灭亡 第一次鸦片战争 八国联军侵华战争"
+        if (
+            len(option_texts) == 1
+            and option_texts[0]
+            and " " in options.strip()
+            and "\n" not in options.strip()
+        ):
+            # 按空格切分（连续空格已在 normalize 里压缩）
+            space_split = [seg.strip() for seg in option_texts[0].split(" ") if seg.strip()]
+            # 只有在切分后得到多个段落才认为真的是多个选项
+            if len(space_split) >= 2:
+                option_texts = space_split
+                # 没有标签，label_to_text 维持空；后续仅按文本匹配
+
+        answer_normalized = normalize_text(answer)
+
+        # 如果是单选题，允许：
+        # 1. 直接是选项文本
+        # 2. 只有字母（A/B/...) 代表选项标签
+        if question_type == "single":
+            if answer_normalized in option_texts:
+                return True
+            if len(answer_normalized) == 1 and answer_normalized.upper() in label_to_text:
+                return True
+            # 额外：如果答案拆分后多个片段全部属于选项，也允许（防止外部题库多余空格）
+            if " " in answer_normalized and all(p in option_texts for p in answer_normalized.split()):
+                return True
+            return False
+
+        # 多选题：允许多种分隔符（#, 空格, 逗号, 中文逗号, 分号, /, |），以及紧凑字母串如"ABD"
+        # 先处理紧凑字母串
+        if re.fullmatch(r'[A-Za-z]{2,}', answer_normalized) and all(ch.upper() in label_to_text for ch in answer_normalized):
+            parts = [label_to_text[ch.upper()] for ch in answer_normalized]
+        else:
+            # 替换常见分隔符为统一的 '#'
+            temp = re.sub(r'[，,;/\\|；;]', '#', answer_normalized)
+            # 将多个空白视为分隔符
+            temp = re.sub(r'\s+', '#', temp)
+            parts = [p for p in temp.split('#') if p]
+
+            # 如果部分是单个字母标签，替换为对应文本
+            resolved_parts = []
+            for p in parts:
+                if len(p) == 1 and p.upper() in label_to_text:
+                    resolved_parts.append(label_to_text[p.upper()])
+                else:
+                    resolved_parts.append(p)
+            parts = resolved_parts
+
+        # 去重保持集合逻辑
+        parts = [normalize_text(p) for p in parts if p]
+        if not parts:
+            return False
+
+        # 所有部分都必须是合法选项文本
+        option_text_set = set(option_texts)
+        if all(p in option_text_set for p in parts):
+            # 额外：多选题至少包含2个不同选项（可根据需要放宽）
+            return True
         return False
     
     elif question_type == "completion":
