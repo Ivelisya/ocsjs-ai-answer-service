@@ -281,3 +281,472 @@
 2025-09-18 05:26:35,971 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
 2025-09-18 05:26:35,973 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.19秒)
 2025-09-18 05:26:35,978 - ai_answer_service - INFO - 问答记录已保存 (ID: 9)
+2025-09-18 05:28:28,226 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 05:28:28,227 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 05:28:28,227 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 05:28:28,227 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 05:28:30,270 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 05:28:30,270 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 05:28:30,270 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 05:29:01,433 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 05:29:01,433 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 05:29:01,433 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 05:29:01,433 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 05:29:03,457 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 05:29:03,457 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 05:29:03,458 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 05:29:22,519 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 05:29:22,519 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 05:29:22,519 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 05:29:22,519 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 05:29:24,554 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 05:29:24,554 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 05:29:24,555 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 05:29:39,609 - ai_answer_service - INFO - 自动从题干提取选项: ['第一次世界大战', '清朝灭亡', '第一次鸦片战争', '八国联军侵华战争']
+2025-09-18 05:29:39,611 - ai_answer_service - INFO - 自动从题干提取选项: ['第一次世界大战', '清朝灭亡', '第一次鸦片战争', '八国联军侵华战争']
+2025-09-18 05:29:39,612 - ai_answer_service - INFO - 自动从题干提取选项: ['京师兵', '郡县兵', '贵族卫队', '边兵']
+2025-09-18 05:29:39,613 - ai_answer_service - INFO - 自动从题干提取选项: ['京师兵', '郡县兵', '贵族卫队', '边兵']
+2025-09-18 05:29:39,613 - ai_answer_service - INFO - 自动从题干提取选项: ['京师兵', '郡县兵', '贵族卫队', '边兵']
+2025-09-18 05:30:03,898 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 05:30:03,898 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 05:30:03,898 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 05:30:03,898 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 05:30:05,946 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 05:30:05,947 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 05:30:05,947 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 05:31:06,678 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 05:31:06,679 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 05:31:06,679 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 05:31:06,679 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 05:31:08,714 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 05:31:08,714 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 05:31:08,714 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 05:31:16,564 - ai_answer_service - INFO - 接收到问题: '1915年日本提出灭亡中国的“二十一条”之时,()则在策划外蒙古自治。...' (类型: single)
+2025-09-18 05:31:16,564 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-18 05:31:16,564 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:16,910 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:16,910 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.35秒)
+2025-09-18 05:31:16,916 - ai_answer_service - INFO - 问答记录已保存 (ID: 10)
+2025-09-18 05:31:20,041 - ai_answer_service - INFO - 接收到问题: '()年7月,中国共产党诞生,也将中国人民的救亡图存斗争推向了一个新的阶段。...' (类型: single)
+2025-09-18 05:31:20,042 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:20,264 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:20,264 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.22秒)
+2025-09-18 05:31:20,267 - ai_answer_service - INFO - 问答记录已保存 (ID: 11)
+2025-09-18 05:31:23,379 - ai_answer_service - INFO - 接收到问题: '卢沟桥事变是日本帝国主义侵华战争的开端。...' (类型: judgement)
+2025-09-18 05:31:23,379 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:23,553 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:23,553 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.17秒)
+2025-09-18 05:31:23,556 - ai_answer_service - INFO - 问答记录已保存 (ID: 12)
+2025-09-18 05:31:34,986 - ai_answer_service - INFO - 接收到问题: '台湾是在()中国战败后被割让出去的。...' (类型: single)
+2025-09-18 05:31:34,987 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:35,187 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:35,188 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.20秒)
+2025-09-18 05:31:35,190 - ai_answer_service - INFO - 问答记录已保存 (ID: 13)
+2025-09-18 05:31:38,302 - ai_answer_service - INFO - 接收到问题: '()世称“三宝太监”,曾七下西洋,是明朝著名的航海家、外交家。...' (类型: single)
+2025-09-18 05:31:38,302 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:38,526 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:38,526 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.22秒)
+2025-09-18 05:31:38,529 - ai_answer_service - INFO - 问答记录已保存 (ID: 14)
+2025-09-18 05:31:41,634 - ai_answer_service - INFO - 接收到问题: '被毁之前的圆明园内有1000多幢建筑,基本没有重复的。...' (类型: judgement)
+2025-09-18 05:31:41,634 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:41,839 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:41,840 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.21秒)
+2025-09-18 05:31:41,842 - ai_answer_service - INFO - 问答记录已保存 (ID: 15)
+2025-09-18 05:31:55,034 - ai_answer_service - INFO - 接收到问题: '1919年7月和1920年9月,第一个社会主义国家领导人()向全世界宣布,沙俄时期同中国签订的不平等...' (类型: single)
+2025-09-18 05:31:55,034 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:55,215 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:55,215 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-18 05:31:55,218 - ai_answer_service - INFO - 问答记录已保存 (ID: 16)
+2025-09-18 05:31:58,328 - ai_answer_service - INFO - 接收到问题: '2008年北京奥运会,有()个国家的领导人来到中国参加开幕式。...' (类型: single)
+2025-09-18 05:31:58,329 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:31:58,514 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:31:58,514 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.19秒)
+2025-09-18 05:31:58,517 - ai_answer_service - INFO - 问答记录已保存 (ID: 17)
+2025-09-18 05:32:01,624 - ai_answer_service - INFO - 接收到问题: '清代,沙皇俄国曾侵占了我国150多万平方公里的土地。...' (类型: judgement)
+2025-09-18 05:32:01,624 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:32:01,814 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:32:01,814 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.19秒)
+2025-09-18 05:32:01,816 - ai_answer_service - INFO - 问答记录已保存 (ID: 18)
+2025-09-18 05:32:13,203 - ai_answer_service - INFO - 接收到问题: '春秋时期的军事家()提出了“兵不强则不可以催敌,国不富不可以养兵”的富国强兵思想。...' (类型: single)
+2025-09-18 05:32:13,204 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:32:13,379 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:32:13,379 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-18 05:32:13,382 - ai_answer_service - INFO - 问答记录已保存 (ID: 19)
+2025-09-18 05:32:16,505 - ai_answer_service - INFO - 接收到问题: '()是国防巩固的根本。...' (类型: single)
+2025-09-18 05:32:16,505 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:32:16,757 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:32:16,758 - ai_answer_service - INFO - 外部题库答案 '政治昌明' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-18 05:32:16,759 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-18 05:32:32,581 - ai_answer_service - INFO - 问题处理完成 (耗时: 16.08秒)
+2025-09-18 05:32:32,585 - ai_answer_service - INFO - 问答记录已保存 (ID: 20)
+2025-09-18 05:32:35,703 - ai_answer_service - INFO - 接收到问题: '春秋时期齐国的政治家管仲提出了富国强兵的思想。...' (类型: judgement)
+2025-09-18 05:32:35,703 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:32:35,948 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:32:35,948 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.25秒)
+2025-09-18 05:32:35,952 - ai_answer_service - INFO - 问答记录已保存 (ID: 21)
+2025-09-18 05:32:56,133 - ai_answer_service - INFO - 接收到问题: '甲午海战期间,由60余座炮台和要塞构成的()防御体系地势险要,堪称“东方的直布罗陀”。...' (类型: single)
+2025-09-18 05:32:56,133 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:32:56,320 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:32:56,321 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.19秒)
+2025-09-18 05:32:56,323 - ai_answer_service - INFO - 问答记录已保存 (ID: 22)
+2025-09-18 05:32:59,436 - ai_answer_service - INFO - 接收到问题: '意大利政治哲学家()说过,造就最强大国家的首要条件不在于枪炮,而是在于能够制造其国民的坚定的信仰。...' (类型: single)
+2025-09-18 05:32:59,437 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:32:59,610 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:32:59,611 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.17秒)
+2025-09-18 05:32:59,614 - ai_answer_service - INFO - 问答记录已保存 (ID: 23)
+2025-09-18 05:33:02,754 - ai_answer_service - INFO - 接收到问题: '国防意识包括居安思危的国防警觉,和一旦强虏压境我们全民族同仇敌忾战胜敌人的精神准备。...' (类型: judgement)
+2025-09-18 05:33:02,754 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:33:02,929 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:33:02,929 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-18 05:33:02,933 - ai_answer_service - INFO - 问答记录已保存 (ID: 24)
+2025-09-18 05:33:15,549 - ai_answer_service - INFO - 接收到问题: '构成军事战略的主要要素有()。...' (类型: multiple)
+2025-09-18 05:33:15,550 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:33:15,730 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:33:15,730 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-18 05:33:15,733 - ai_answer_service - INFO - 问答记录已保存 (ID: 25)
+2025-09-18 05:33:18,866 - ai_answer_service - INFO - 接收到问题: '制定军事战略的基本原则有()。...' (类型: multiple)
+2025-09-18 05:33:18,867 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:33:19,042 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:33:19,042 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-18 05:33:19,045 - ai_answer_service - INFO - 问答记录已保存 (ID: 26)
+2025-09-18 05:33:22,167 - ai_answer_service - INFO - 接收到问题: '战略目标不仅规定了军事力量建设发展的方向,同时也受到了拥有手段的制约。...' (类型: judgement)
+2025-09-18 05:33:22,167 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:33:22,331 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:33:22,331 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.16秒)
+2025-09-18 05:33:22,334 - ai_answer_service - INFO - 问答记录已保存 (ID: 27)
+2025-09-18 05:33:35,628 - ai_answer_service - INFO - 接收到问题: '宋朝政府颁布的《武经七书》中,把()列为七书之首,进而肯定了该书的兵学经典的地位。...' (类型: single)
+2025-09-18 05:33:35,628 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:33:35,917 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:33:35,917 - ai_answer_service - INFO - 外部题库答案 '孙子兵法' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-18 05:33:35,917 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-18 05:33:44,428 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.80秒)
+2025-09-18 05:33:44,433 - ai_answer_service - INFO - 问答记录已保存 (ID: 28)
+2025-09-18 05:33:47,558 - ai_answer_service - INFO - 接收到问题: '《孙子兵法》不仅被军事学家所重视,也受到文学家、哲学家、管理学家等专家的重视。()...' (类型: judgement)
+2025-09-18 05:33:47,558 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 05:33:47,782 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 05:33:47,783 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.23秒)
+2025-09-18 05:33:47,786 - ai_answer_service - INFO - 问答记录已保存 (ID: 29)
+2025-09-18 06:32:53,511 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 06:32:53,511 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 06:32:53,511 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 06:32:53,512 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 06:32:55,566 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 06:32:55,566 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 06:32:55,566 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 07:32:50,890 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 07:32:50,890 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 07:32:50,890 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 07:32:50,891 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 07:32:52,933 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 07:32:52,934 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 07:32:52,934 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 08:32:51,716 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 08:32:51,718 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 08:32:51,722 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 08:32:51,725 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 08:32:53,756 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 08:32:53,756 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 08:32:53,757 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 09:32:52,166 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 09:32:52,166 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 09:32:52,166 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 09:32:52,166 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 09:32:54,204 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 09:32:54,204 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 09:32:54,204 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 10:32:51,931 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 10:32:51,932 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 10:32:51,933 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 10:32:51,933 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 10:32:53,987 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 10:32:53,988 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 10:32:53,988 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 11:32:52,741 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 11:32:52,742 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 11:32:52,742 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 11:32:52,742 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 11:32:54,786 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 11:32:54,788 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 11:32:54,795 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 12:32:53,150 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 12:32:53,150 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 12:32:53,150 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 12:32:53,150 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 12:32:55,189 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 12:32:55,190 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 12:32:55,190 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 12:40:52,115 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 12:40:52,115 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 12:40:52,116 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 12:40:52,116 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 12:40:54,148 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 12:40:54,149 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 12:40:54,149 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 13:38:52,666 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 13:38:52,666 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 13:38:52,666 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 13:38:52,667 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 13:38:54,709 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 13:38:54,710 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 13:38:54,710 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 14:38:53,239 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 14:38:53,239 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 14:38:53,239 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 14:38:53,239 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 14:38:55,283 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 14:38:55,283 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 14:38:55,283 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 15:38:52,904 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 15:38:52,905 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 15:38:52,906 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 15:38:52,906 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 15:38:54,951 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 15:38:54,953 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 15:38:54,953 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 16:38:54,020 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 16:38:54,021 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 16:38:54,021 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 16:38:54,021 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 16:38:56,069 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 16:38:56,070 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 16:38:56,070 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 17:38:54,158 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 17:38:54,158 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 17:38:54,159 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 17:38:54,159 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 17:38:56,199 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 17:38:56,200 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 17:38:56,202 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 18:38:54,216 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 18:38:54,216 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 18:38:54,216 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 18:38:54,216 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 18:38:56,248 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 18:38:56,249 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 18:38:56,249 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 19:38:54,407 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 19:38:54,407 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 19:38:54,407 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 19:38:54,407 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 19:38:56,448 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 19:38:56,449 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 19:38:56,449 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 20:38:54,816 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 20:38:54,817 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 20:38:54,818 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 20:38:54,818 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 20:38:56,853 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 20:38:56,853 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 20:38:56,853 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 20:55:49,659 - ai_answer_service - INFO - 接收到问题: '下列说法正确的是()。...' (类型: multiple)
+2025-09-18 20:55:49,661 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-18 20:55:49,661 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 20:55:50,200 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-18 20:55:50,568 - ai_answer_service - INFO - 从外部题库 '网课小工具题库（GO题）' 找到有效答案
+2025-09-18 20:55:50,571 - ai_answer_service - INFO - 外部题库答案 '房屋建筑工程划分为地基与基础、主体结构、建筑装饰装修、建筑屋面、建筑给水、排水及采暖、建筑电气、智能建筑、通风与空调、电梯等分部工程' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-18 20:55:50,571 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-18 20:56:24,231 - ai_answer_service - INFO - 问题处理完成 (耗时: 34.57秒)
+2025-09-18 20:56:24,237 - ai_answer_service - INFO - 问答记录已保存 (ID: 30)
+2025-09-18 20:56:28,647 - ai_answer_service - INFO - 接收到问题: '我国宪法第二十九条提出,中华人民共和国的武装力量属于中央军委。...' (类型: judgement)
+2025-09-18 20:56:28,650 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 20:56:28,958 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 20:56:28,958 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.31秒)
+2025-09-18 20:56:28,961 - ai_answer_service - INFO - 问答记录已保存 (ID: 31)
+2025-09-18 20:56:33,646 - ai_answer_service - INFO - 接收到问题: '地理位置、地理环境等自然要素与国防并没有直接联系,在考虑国防构成的要素时可以忽略不计。...' (类型: judgement)
+2025-09-18 20:56:33,648 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 20:56:34,064 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 20:56:34,064 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.42秒)
+2025-09-18 20:56:34,067 - ai_answer_service - INFO - 问答记录已保存 (ID: 32)
+2025-09-18 21:14:43,678 - ai_answer_service - INFO - 接收到问题: '国家防卫仅限于地域,如陆地、海洋、空域等的防卫。...' (类型: judgement)
+2025-09-18 21:14:43,679 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:14:44,294 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:14:44,295 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.62秒)
+2025-09-18 21:14:44,298 - ai_answer_service - INFO - 问答记录已保存 (ID: 33)
+2025-09-18 21:14:48,644 - ai_answer_service - INFO - 接收到问题: '《日内瓦公约》提出,战俘在任何时间均须受人道的待遇和保护。...' (类型: judgement)
+2025-09-18 21:14:48,646 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:14:48,862 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:14:48,863 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.22秒)
+2025-09-18 21:14:48,866 - ai_answer_service - INFO - 问答记录已保存 (ID: 34)
+2025-09-18 21:14:53,654 - ai_answer_service - INFO - 接收到问题: '现代国防斗争是以军事力量对抗为主,也是运用多种非武装斗争形势融为一体的综合角逐。...' (类型: judgement)
+2025-09-18 21:14:53,655 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:14:53,968 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:14:53,968 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.31秒)
+2025-09-18 21:14:53,971 - ai_answer_service - INFO - 问答记录已保存 (ID: 35)
+2025-09-18 21:29:29,645 - ai_answer_service - INFO - 接收到问题: '蒙哥马利将军曾表示要把进攻()列为世界的一大禁忌,认为打进去就出不来了。...' (类型: single)
+2025-09-18 21:29:29,646 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:29:30,175 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:29:30,175 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.53秒)
+2025-09-18 21:29:30,178 - ai_answer_service - INFO - 问答记录已保存 (ID: 36)
+2025-09-18 21:29:34,650 - ai_answer_service - INFO - 接收到问题: '()构成了我国国力的基本要素。...' (类型: multiple)
+2025-09-18 21:29:34,651 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:29:35,174 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:29:35,175 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.52秒)
+2025-09-18 21:29:35,178 - ai_answer_service - INFO - 问答记录已保存 (ID: 37)
+2025-09-18 21:29:39,651 - ai_answer_service - INFO - 接收到问题: '现代国防只是军队和政府的事情,普通百姓没有权力也没有能力涉足其中。...' (类型: judgement)
+2025-09-18 21:29:39,652 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:29:39,996 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:29:39,996 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.35秒)
+2025-09-18 21:29:39,999 - ai_answer_service - INFO - 问答记录已保存 (ID: 38)
+2025-09-18 21:38:56,967 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 21:38:56,967 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 21:38:56,967 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 21:38:56,967 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 21:38:59,005 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 21:38:59,006 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 21:38:59,006 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 21:49:00,650 - ai_answer_service - INFO - 接收到问题: '2003年美国总统布什亲自驾驶战斗机降落在林肯号航空母舰上,宣布()战争的主要军事行动结束。...' (类型: single)
+2025-09-18 21:49:00,651 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-18 21:49:00,651 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:49:01,101 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:49:01,103 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.45秒)
+2025-09-18 21:49:01,110 - ai_answer_service - INFO - 问答记录已保存 (ID: 39)
+2025-09-18 21:49:05,654 - ai_answer_service - INFO - 接收到问题: '()曾表示,如果60年代以来中国没有制造出原子弹、发射卫星等,我们中国就不会叫有重要影响的大国,就没...' (类型: single)
+2025-09-18 21:49:05,654 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:49:05,942 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:49:05,943 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.29秒)
+2025-09-18 21:49:05,946 - ai_answer_service - INFO - 问答记录已保存 (ID: 40)
+2025-09-18 21:49:09,664 - ai_answer_service - INFO - 接收到问题: '现代国防既是一种国家的行为又是一种国际行为。...' (类型: judgement)
+2025-09-18 21:49:09,665 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 21:49:10,158 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 21:49:10,158 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.49秒)
+2025-09-18 21:49:10,162 - ai_answer_service - INFO - 问答记录已保存 (ID: 41)
+2025-09-18 22:10:17,643 - ai_answer_service - INFO - 接收到问题: '我国国防法规按照立法权限可分为不同的层次,其中第一层次是由()所制定的国防和武装力量建设的法律。...' (类型: single)
+2025-09-18 22:10:17,644 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:10:18,189 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:10:18,189 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.55秒)
+2025-09-18 22:10:18,192 - ai_answer_service - INFO - 问答记录已保存 (ID: 42)
+2025-09-18 22:10:22,648 - ai_answer_service - INFO - 接收到问题: '我国国防法规所具有的特殊性质有()。...' (类型: multiple)
+2025-09-18 22:10:22,649 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:10:25,757 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:10:25,757 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 3.11秒)
+2025-09-18 22:10:25,760 - ai_answer_service - INFO - 问答记录已保存 (ID: 43)
+2025-09-18 22:10:30,647 - ai_answer_service - INFO - 接收到问题: '国防法属于特别法,其施行比普通法更严格。...' (类型: judgement)
+2025-09-18 22:10:30,648 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:10:31,572 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:10:31,574 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.93秒)
+2025-09-18 22:10:31,577 - ai_answer_service - INFO - 问答记录已保存 (ID: 44)
+2025-09-18 22:28:20,532 - ai_answer_service - INFO - 接收到问题: '1815年在维也纳会议上,()被称为永久的中立国。...' (类型: single)
+2025-09-18 22:28:20,532 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:28:20,979 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:28:20,979 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.45秒)
+2025-09-18 22:28:20,982 - ai_answer_service - INFO - 问答记录已保存 (ID: 45)
+2025-09-18 22:28:24,089 - ai_answer_service - INFO - 接收到问题: '服现役的途径有()。...' (类型: multiple)
+2025-09-18 22:28:24,090 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:28:24,375 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:28:24,376 - ai_answer_service - INFO - 外部题库答案 '每年征兵时报名参军,应征服现役 考入军事院校,成功入伍 应招为国防生' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-18 22:28:24,376 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-18 22:28:59,327 - ai_answer_service - INFO - 问题处理完成 (耗时: 35.24秒)
+2025-09-18 22:28:59,331 - ai_answer_service - INFO - 问答记录已保存 (ID: 46)
+2025-09-18 22:29:02,455 - ai_answer_service - INFO - 接收到问题: '依法服兵役、参加民兵组织是中华人民共和国公民的一个光荣的义务。...' (类型: judgement)
+2025-09-18 22:29:02,456 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:29:02,907 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:29:02,907 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.45秒)
+2025-09-18 22:29:02,911 - ai_answer_service - INFO - 问答记录已保存 (ID: 47)
+2025-09-18 22:34:14,877 - ai_answer_service - INFO - 接收到问题: '1954年9月,第一届全国人民代表大会第一次会议通过的宪法规定,中华人民共和国()统帅全国的武装力量...' (类型: single)
+2025-09-18 22:34:14,877 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:34:15,368 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:34:15,369 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.49秒)
+2025-09-18 22:34:15,372 - ai_answer_service - INFO - 问答记录已保存 (ID: 48)
+2025-09-18 22:34:18,479 - ai_answer_service - INFO - 接收到问题: '中国的国防领导体制是固定不变的,自1954年确立由中华人民共和国主席统帅全国武装力量后便沿用至今。...' (类型: judgement)
+2025-09-18 22:34:18,480 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:34:20,164 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:34:20,165 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 1.69秒)
+2025-09-18 22:34:20,167 - ai_answer_service - INFO - 问答记录已保存 (ID: 49)
+2025-09-18 22:38:56,418 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 22:38:56,418 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 22:38:56,419 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 22:38:56,419 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 22:38:58,448 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 22:38:58,449 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 22:38:58,449 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 22:47:44,665 - ai_answer_service - INFO - 接收到问题: '我国制定国防政策的根本依据是()。...' (类型: single)
+2025-09-18 22:47:44,666 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-18 22:47:44,667 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:47:45,254 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:47:45,255 - ai_answer_service - INFO - 外部题库答案 '国家利益' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-18 22:47:45,255 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-18 22:48:50,653 - ai_answer_service - INFO - 接收到问题: '中国梦就是强军梦,也是强国梦。...' (类型: judgement)
+2025-09-18 22:48:50,653 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:48:51,240 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:48:51,240 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.59秒)
+2025-09-18 22:48:51,247 - ai_answer_service - INFO - 问答记录已保存 (ID: 50)
+2025-09-18 22:48:55,653 - ai_answer_service - INFO - 接收到问题: '抢险救灾、安保警戒等人民社会生活方面的问题不属于中国军队的战略任务。...' (类型: judgement)
+2025-09-18 22:48:55,653 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 22:48:55,921 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 22:48:55,921 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.27秒)
+2025-09-18 22:48:55,925 - ai_answer_service - INFO - 问答记录已保存 (ID: 51)
+2025-09-18 22:49:21,965 - ai_answer_service - INFO - 问题处理完成 (耗时: 97.30秒)
+2025-09-18 22:49:21,969 - ai_answer_service - INFO - 问答记录已保存 (ID: 52)
+2025-09-18 23:17:08,648 - ai_answer_service - INFO - 接收到问题: '()冲突已成为各国军事战略重要的趋向和显著特征。...' (类型: single)
+2025-09-18 23:17:08,649 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:17:09,117 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:17:09,118 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.47秒)
+2025-09-18 23:17:09,122 - ai_answer_service - INFO - 问答记录已保存 (ID: 53)
+2025-09-18 23:17:13,649 - ai_answer_service - INFO - 接收到问题: '现代军事战略的特点是()。...' (类型: multiple)
+2025-09-18 23:17:13,650 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:17:13,942 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:17:13,942 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.29秒)
+2025-09-18 23:17:13,945 - ai_answer_service - INFO - 问答记录已保存 (ID: 54)
+2025-09-18 23:17:17,695 - ai_answer_service - INFO - 接收到问题: '战略指导对于国防的强弱、战争的胜败乃至国家的存亡和民族的兴衰都具有非常重要的作用。...' (类型: judgement)
+2025-09-18 23:17:17,707 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:17:18,046 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:17:18,047 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.35秒)
+2025-09-18 23:17:18,050 - ai_answer_service - INFO - 问答记录已保存 (ID: 55)
+2025-09-18 23:34:23,642 - ai_answer_service - INFO - 接收到问题: '二战期间,()结成了法西斯军事政治联盟的轴心,并将战火迅速扩大到欧洲。...' (类型: multiple)
+2025-09-18 23:34:23,642 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:34:24,561 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:34:24,561 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.92秒)
+2025-09-18 23:34:24,564 - ai_answer_service - INFO - 问答记录已保存 (ID: 56)
+2025-09-18 23:34:29,652 - ai_answer_service - INFO - 接收到问题: '关于战略与战略环境的辩证关系说法正确的是()....' (类型: multiple)
+2025-09-18 23:34:29,655 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:34:30,277 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:34:30,277 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.63秒)
+2025-09-18 23:34:30,281 - ai_answer_service - INFO - 问答记录已保存 (ID: 57)
+2025-09-18 23:34:33,646 - ai_answer_service - INFO - 接收到问题: '战略环境是制定战略的客观基础。...' (类型: judgement)
+2025-09-18 23:34:33,648 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:34:34,231 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:34:34,232 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.59秒)
+2025-09-18 23:34:34,235 - ai_answer_service - INFO - 问答记录已保存 (ID: 58)
+2025-09-18 23:38:57,356 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-18 23:38:57,357 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-18 23:38:57,357 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-18 23:38:57,357 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-18 23:38:59,392 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-18 23:38:59,392 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-18 23:38:59,392 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-18 23:42:53,429 - ai_answer_service - INFO - 接收到问题: '我国制定国防政策的根本依据是()。...' (类型: single)
+2025-09-18 23:42:53,430 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-18 23:42:53,430 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:42:54,372 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:42:54,372 - ai_answer_service - INFO - 外部题库答案 '国家利益' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-18 23:42:54,372 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-18 23:43:06,450 - ai_answer_service - INFO - 问题处理完成 (耗时: 13.02秒)
+2025-09-18 23:43:06,459 - ai_answer_service - INFO - 问答记录已保存 (ID: 59)
+2025-09-18 23:43:09,569 - ai_answer_service - INFO - 接收到问题: '中国梦就是强军梦,也是强国梦。...' (类型: judgement)
+2025-09-18 23:43:09,569 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:43:09,889 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:43:09,889 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.32秒)
+2025-09-18 23:43:09,892 - ai_answer_service - INFO - 问答记录已保存 (ID: 60)
+2025-09-18 23:43:13,015 - ai_answer_service - INFO - 接收到问题: '抢险救灾、安保警戒等人民社会生活方面的问题不属于中国军队的战略任务。...' (类型: judgement)
+2025-09-18 23:43:13,015 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:43:13,331 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:43:13,331 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.32秒)
+2025-09-18 23:43:13,334 - ai_answer_service - INFO - 问答记录已保存 (ID: 61)
+2025-09-18 23:43:25,792 - ai_answer_service - INFO - 接收到问题: '下列说法正确的是()。...' (类型: multiple)
+2025-09-18 23:43:25,793 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:43:26,044 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-18 23:43:26,690 - ai_answer_service - INFO - 从外部题库 '网课小工具题库（GO题）' 找到有效答案
+2025-09-18 23:43:26,690 - ai_answer_service - INFO - 外部题库答案 '房屋建筑工程划分为地基与基础、主体结构、建筑装饰装修、建筑屋面、建筑给水、排水及采暖、建筑电气、智能建筑、通风与空调、电梯等分部工程' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-18 23:43:26,690 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-18 23:43:43,426 - ai_answer_service - INFO - 问题处理完成 (耗时: 17.63秒)
+2025-09-18 23:43:43,429 - ai_answer_service - INFO - 问答记录已保存 (ID: 62)
+2025-09-18 23:43:46,553 - ai_answer_service - INFO - 接收到问题: '我国宪法第二十九条提出,中华人民共和国的武装力量属于中央军委。...' (类型: judgement)
+2025-09-18 23:43:46,553 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:43:46,919 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:43:46,923 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.37秒)
+2025-09-18 23:43:46,926 - ai_answer_service - INFO - 问答记录已保存 (ID: 63)
+2025-09-18 23:43:50,034 - ai_answer_service - INFO - 接收到问题: '地理位置、地理环境等自然要素与国防并没有直接联系,在考虑国防构成的要素时可以忽略不计。...' (类型: judgement)
+2025-09-18 23:43:50,034 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-18 23:43:50,461 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-18 23:43:50,462 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.43秒)
+2025-09-18 23:43:50,465 - ai_answer_service - INFO - 问答记录已保存 (ID: 64)

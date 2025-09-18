@@ -6,6 +6,7 @@
 import hashlib
 import json
 import re
+from functools import lru_cache
 import time
 import threading
 import unicodedata
@@ -194,6 +195,16 @@ def normalize_text(text: str) -> str:
     return text.strip()
 
 
+def _log_extraction(stage: str, details: Dict[str, Any]):
+    try:
+        from config import Config
+        if getattr(Config, 'ENABLE_EXTRACTION_DEBUG_LOG', False):
+            logger.info(f"[EXTRACT][{stage}] {details}")
+    except Exception:
+        pass
+
+
+@lru_cache(maxsize=512)
 def extract_options_from_question(question_text: str) -> List[str]:
     """从题目文本中智能抽取选项列表。
 
@@ -211,6 +222,7 @@ def extract_options_from_question(question_text: str) -> List[str]:
         return []
 
     text = normalize_text(question_text).replace('（', '(').replace('）', ')')
+    original_len = len(text)
 
     # 优先：全局内联标签提取 (A. xxx B. yyy ...) / (A)xxx / A) xxx / A、xxx
     inline_pattern = re.compile(
@@ -228,6 +240,7 @@ def extract_options_from_question(question_text: str) -> List[str]:
             if b not in seen:
                 seen.add(b)
                 out.append(b)
+        _log_extraction('inline', {'count': len(out), 'text_len': original_len})
         return out
 
     # 次级：按换行行首标签
@@ -245,6 +258,7 @@ def extract_options_from_question(question_text: str) -> List[str]:
         for b in extracted:
             if b not in seen2:
                 seen2.add(b); res.append(b)
+        _log_extraction('lines', {'count': len(res)})
         return res
 
     # 兜底：空格分隔短语
@@ -262,6 +276,7 @@ def extract_options_from_question(question_text: str) -> List[str]:
         if 3 <= len(segs) <= 12 and all(1 <= len(s) <= 16 for s in segs):
             avg = sum(len(s) for s in segs) / len(segs)
             if all(abs(len(s) - avg) <= 10 for s in segs):
+                _log_extraction('space_fallback', {'count': len(segs)})
                 return segs
 
     return []
@@ -417,37 +432,32 @@ def validate_external_answer(answer: str, question_type: str, options: str = "",
         if answer.lower() in [ans.lower() for ans in judgement_answers]:
             return False
 
-        option_lines = [line.strip() for line in options.split('\n') if line.strip()]
+        def _parse_options_block(opt_str: str) -> Tuple[Dict[str, str], List[str]]:
+            option_lines_local = [line.strip() for line in opt_str.split('\n') if line.strip()]
+            label_map: Dict[str, str] = {}
+            texts: List[str] = []
+            pattern = re.compile(r'^([A-Z])\s*[).、．。:：-]?\s*(.+)$')
+            for ln in option_lines_local:
+                mm = pattern.match(ln)
+                if mm:
+                    label = mm.group(1)
+                    body = normalize_text(mm.group(2))
+                    label_map[label] = body
+                    texts.append(body)
+                else:
+                    texts.append(normalize_text(ln))
+            return label_map, texts
 
-        # 提取选项映射：标签 -> 文本，及文本集合
-        label_to_text: Dict[str, str] = {}
-        option_texts: List[str] = []
-        option_pattern = re.compile(r'^([A-Z])\s*[).、．。:：-]?\s*(.+)$')  # 允许多种分隔符
-        for line in option_lines:
-            m = option_pattern.match(line)
-            if m:
-                label = m.group(1)
-                text_part = normalize_text(m.group(2))
-                label_to_text[label] = text_part
-                option_texts.append(text_part)
-            else:
-                # 如果无法匹配，尝试把整行作为一个选项（兼容无前缀格式）
-                option_texts.append(normalize_text(line))
+        label_to_text, option_texts = _parse_options_block(options)
 
         # 兼容：整串选项使用空格分隔且没有换行/标签的情况
         # 例如: "第一次世界大战 清朝灭亡 第一次鸦片战争 八国联军侵华战争"
         if (
-            len(option_texts) == 1
-            and option_texts[0]
-            and " " in options.strip()
-            and "\n" not in options.strip()
+            len(option_texts) == 1 and option_texts[0] and " " in options.strip() and "\n" not in options.strip()
         ):
-            # 按空格切分（连续空格已在 normalize 里压缩）
             space_split = [seg.strip() for seg in option_texts[0].split(" ") if seg.strip()]
-            # 只有在切分后得到多个段落才认为真的是多个选项
             if len(space_split) >= 2:
-                option_texts = space_split
-                # 没有标签，label_to_text 维持空；后续仅按文本匹配
+                option_texts = space_split  # label_to_text 保持空
 
         answer_normalized = normalize_text(answer)
 
@@ -492,7 +502,17 @@ def validate_external_answer(answer: str, question_type: str, options: str = "",
         # 所有部分都必须是合法选项文本
         option_text_set = set(option_texts)
         if all(p in option_text_set for p in parts):
-            # 额外：多选题至少包含2个不同选项（可根据需要放宽）
+            # 严格模式：检查最少选择数
+            try:
+                from config import Config
+                if (
+                    question_type == 'multiple' and
+                    getattr(Config, 'ENABLE_STRICT_MULTIPLE_MIN', False) and
+                    len(set(parts)) < getattr(Config, 'MULTIPLE_MIN_COUNT', 2)
+                ):
+                    return False
+            except Exception:
+                pass
             return True
         return False
     

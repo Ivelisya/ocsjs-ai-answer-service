@@ -105,3 +105,10 @@ class Config:
     # 速率限制配置
     RATE_LIMIT_MAX_REQUESTS = int(os.getenv("RATE_LIMIT_MAX_REQUESTS", 100))
     RATE_LIMIT_TIME_WINDOW = int(os.getenv("RATE_LIMIT_TIME_WINDOW", 3600))
+
+    # 选项抽取与验证增强配置
+    ENABLE_OPTION_EXTRACTION_CACHE = os.getenv("ENABLE_OPTION_EXTRACTION_CACHE", "True").lower() == "true"
+    OPTION_EXTRACTION_CACHE_SIZE = int(os.getenv("OPTION_EXTRACTION_CACHE_SIZE", 512))
+    ENABLE_EXTRACTION_DEBUG_LOG = os.getenv("ENABLE_EXTRACTION_DEBUG_LOG", "False").lower() == "true"
+    ENABLE_STRICT_MULTIPLE_MIN = os.getenv("ENABLE_STRICT_MULTIPLE_MIN", "False").lower() == "true"
+    MULTIPLE_MIN_COUNT = int(os.getenv("MULTIPLE_MIN_COUNT", 2))  # 多选题最少选项数量（严格模式下生效）
