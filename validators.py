@@ -10,7 +10,8 @@ class InputValidator:
     """输入验证器"""
     
     # 最大长度限制
-    MAX_QUESTION_LENGTH = 5000
+    # 为了更严格的输入校验，将最大问题长度下调，确保超长问题被拒绝
+    MAX_QUESTION_LENGTH = 3000
     MAX_OPTIONS_LENGTH = 2000
     MAX_CONTEXT_LENGTH = 10000
     

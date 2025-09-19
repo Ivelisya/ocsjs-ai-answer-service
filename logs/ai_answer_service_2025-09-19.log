@@ -1,0 +1,2465 @@
+2025-09-19 00:05:48,349 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 00:05:48,349 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 00:05:48,349 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 00:05:48,349 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 00:05:50,397 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 00:05:50,397 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 00:05:50,398 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 00:05:56,793 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 00:05:56,793 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 00:05:56,794 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 00:05:56,794 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 00:05:58,846 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 00:05:58,846 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 00:05:58,846 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 00:21:49,364 - ai_answer_service - INFO - 接收到问题: '中国军队坚持()的安全观,秉持正确的义利观。...' (类型: multiple)
+2025-09-19 00:21:49,368 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 00:21:49,368 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 00:21:49,995 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 00:21:49,996 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.63秒)
+2025-09-19 00:21:50,003 - ai_answer_service - INFO - 问答记录已保存 (ID: 65)
+2025-09-19 00:21:54,348 - ai_answer_service - INFO - 接收到问题: '新时代我国的国防坚决捍卫国家()利益。...' (类型: multiple)
+2025-09-19 00:21:54,348 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 00:21:54,638 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 00:21:54,638 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.29秒)
+2025-09-19 00:21:54,641 - ai_answer_service - INFO - 问答记录已保存 (ID: 66)
+2025-09-19 00:21:59,357 - ai_answer_service - INFO - 接收到问题: '中国的国防政策要求我们在必要条件下可与其他国家或国家集团结盟,或加入其他军事集团以保障我国安全。...' (类型: judgement)
+2025-09-19 00:21:59,360 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 00:21:59,723 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 00:21:59,724 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.37秒)
+2025-09-19 00:21:59,727 - ai_answer_service - INFO - 问答记录已保存 (ID: 67)
+2025-09-19 00:44:04,370 - ai_answer_service - INFO - 接收到问题: '在第一次全国政治协商会议上,()表示我国国防将得到巩固,决不允许任何帝国主义者再来侵犯我们的国家。...' (类型: single)
+2025-09-19 00:44:04,371 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 00:44:05,003 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 00:44:05,004 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.63秒)
+2025-09-19 00:44:05,008 - ai_answer_service - INFO - 问答记录已保存 (ID: 68)
+2025-09-19 00:44:09,347 - ai_answer_service - INFO - 接收到问题: '抗美援朝的胜利可以称得上是1949-1953年间最大的国防建设成就之一。...' (类型: judgement)
+2025-09-19 00:44:09,348 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 00:44:09,778 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 00:44:09,778 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.43秒)
+2025-09-19 00:44:09,782 - ai_answer_service - INFO - 问答记录已保存 (ID: 69)
+2025-09-19 00:44:14,344 - ai_answer_service - INFO - 接收到问题: '我国在1949-1953年间胜利地完成了单一陆军向诸军兵种全面建设的过渡。...' (类型: judgement)
+2025-09-19 00:44:14,344 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 00:44:14,940 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 00:44:14,942 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.60秒)
+2025-09-19 00:44:14,945 - ai_answer_service - INFO - 问答记录已保存 (ID: 70)
+2025-09-19 01:06:59,360 - ai_answer_service - INFO - 接收到问题: '()年,中国第一枚导弹试射成功。...' (类型: single)
+2025-09-19 01:06:59,362 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:06:59,921 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:06:59,921 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.56秒)
+2025-09-19 01:06:59,925 - ai_answer_service - INFO - 问答记录已保存 (ID: 71)
+2025-09-19 01:07:04,345 - ai_answer_service - INFO - 接收到问题: '1954年颁布的《宪法》中首次提出了()的现代化奋斗的目标。...' (类型: multiple)
+2025-09-19 01:07:04,346 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:07:04,896 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:07:04,898 - ai_answer_service - INFO - 外部题库答案 '工业#农业#国防#科学技术' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 01:07:04,898 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 01:07:24,822 - ai_answer_service - INFO - 问题处理完成 (耗时: 20.48秒)
+2025-09-19 01:07:24,826 - ai_answer_service - INFO - 问答记录已保存 (ID: 72)
+2025-09-19 01:07:29,347 - ai_answer_service - INFO - 接收到问题: '1978年改革开放时提出了建设中国“四个现代化”的奋斗目标。...' (类型: judgement)
+2025-09-19 01:07:29,350 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:07:29,927 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:07:29,927 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.58秒)
+2025-09-19 01:07:29,931 - ai_answer_service - INFO - 问答记录已保存 (ID: 73)
+2025-09-19 01:37:56,367 - ai_answer_service - INFO - 接收到问题: '1966年7月1日,中国人民解放军战略导弹部队领导机关在北京宣告成立,周恩来总理亲自命名为()。...' (类型: single)
+2025-09-19 01:37:56,368 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:37:56,966 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:37:56,966 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.60秒)
+2025-09-19 01:37:56,971 - ai_answer_service - INFO - 问答记录已保存 (ID: 74)
+2025-09-19 01:38:01,360 - ai_answer_service - INFO - 接收到问题: '1980年,以邓小平为核心的第二代领导集团确立了新的军事战略方针,即以()为主,以坚守防御为主,不放...' (类型: single)
+2025-09-19 01:38:01,363 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:38:01,667 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:38:01,667 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.31秒)
+2025-09-19 01:38:01,670 - ai_answer_service - INFO - 问答记录已保存 (ID: 75)
+2025-09-19 01:38:06,355 - ai_answer_service - INFO - 接收到问题: '20世纪80至90年代,我国在国防建设上开始走()的道路。...' (类型: multiple)
+2025-09-19 01:38:06,356 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:38:07,221 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:38:07,221 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.87秒)
+2025-09-19 01:38:07,225 - ai_answer_service - INFO - 问答记录已保存 (ID: 76)
+2025-09-19 01:52:55,347 - ai_answer_service - INFO - 接收到问题: '我国从()开始对高校大学生、高中生进行军训,为国防建设培养了一批能文能武的后备力量。...' (类型: single)
+2025-09-19 01:52:55,347 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:52:55,874 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:52:55,874 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.53秒)
+2025-09-19 01:52:55,878 - ai_answer_service - INFO - 问答记录已保存 (ID: 77)
+2025-09-19 01:53:00,354 - ai_answer_service - INFO - 接收到问题: '1984年国庆阅兵35周年时,所使用的全部是国产的新式装备。...' (类型: judgement)
+2025-09-19 01:53:00,356 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:53:00,687 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:53:00,688 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.33秒)
+2025-09-19 01:53:00,691 - ai_answer_service - INFO - 问答记录已保存 (ID: 78)
+2025-09-19 01:53:04,351 - ai_answer_service - INFO - 接收到问题: '1985年,我国提出精干的常备军和强大的后备力量相结合,是建设现代化国防的必由之路。...' (类型: judgement)
+2025-09-19 01:53:04,352 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 01:53:04,601 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 01:53:04,602 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.25秒)
+2025-09-19 01:53:04,605 - ai_answer_service - INFO - 问答记录已保存 (ID: 79)
+2025-09-19 02:20:34,358 - ai_answer_service - INFO - 接收到问题: '习近平主席指出,把()发展上升为国家战略,是我们长期探索经济建设和国防建设协调发展规律的重大成果,是...' (类型: single)
+2025-09-19 02:20:34,360 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 02:20:34,836 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 02:20:34,837 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.48秒)
+2025-09-19 02:20:34,840 - ai_answer_service - INFO - 问答记录已保存 (ID: 80)
+2025-09-19 02:20:39,348 - ai_answer_service - INFO - 接收到问题: '我国推进军民融合发展改革的努力体现在军民融合项目在国家经济社会发展中所占比例约为()。...' (类型: single)
+2025-09-19 02:20:39,348 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 02:20:39,705 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 02:20:39,706 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.36秒)
+2025-09-19 02:20:39,710 - ai_answer_service - INFO - 问答记录已保存 (ID: 81)
+2025-09-19 02:20:44,358 - ai_answer_service - INFO - 接收到问题: '自邓小平提出了()的方针后,国防科技工业开始实行这一方针,要求国防工业服从和服务于国家经济建设大局。...' (类型: multiple)
+2025-09-19 02:20:44,359 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 02:20:44,661 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 02:20:44,662 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.30秒)
+2025-09-19 02:20:44,665 - ai_answer_service - INFO - 问答记录已保存 (ID: 82)
+2025-09-19 02:52:34,356 - ai_answer_service - INFO - 接收到问题: '中华人民共和国的武装力量属于()。...' (类型: single)
+2025-09-19 02:52:34,356 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 02:52:34,829 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 02:52:34,830 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.47秒)
+2025-09-19 02:52:34,833 - ai_answer_service - INFO - 问答记录已保存 (ID: 83)
+2025-09-19 02:52:39,349 - ai_answer_service - INFO - 接收到问题: '中华人民共和国的武装力量,由()组成。...' (类型: multiple)
+2025-09-19 02:52:39,350 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 02:52:39,733 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 02:52:39,734 - ai_answer_service - INFO - 外部题库答案 '中国人民解放军中国人民武装警察部队民兵
+ 
+' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 02:52:39,734 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 02:52:53,293 - ai_answer_service - INFO - 问题处理完成 (耗时: 13.94秒)
+2025-09-19 02:52:53,297 - ai_answer_service - INFO - 问答记录已保存 (ID: 84)
+2025-09-19 02:52:58,353 - ai_answer_service - INFO - 接收到问题: '中国武装力量必须贯彻政治建军的原则。...' (类型: judgement)
+2025-09-19 02:52:58,353 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 02:52:58,586 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 02:52:58,589 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.24秒)
+2025-09-19 02:52:58,592 - ai_answer_service - INFO - 问答记录已保存 (ID: 85)
+2025-09-19 08:18:29,329 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 08:18:29,329 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 08:18:29,329 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 08:18:29,329 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 08:18:31,385 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 08:18:31,386 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 08:18:31,386 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 08:18:37,688 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 08:18:37,688 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 08:18:37,688 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 08:18:37,688 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 08:18:39,726 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 08:18:39,727 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 08:18:39,727 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 08:20:51,102 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 08:20:51,102 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 08:20:51,102 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 08:20:51,102 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 08:20:53,130 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 08:20:53,131 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 08:20:53,131 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 08:31:50,357 - ai_answer_service - INFO - 接收到问题: '现阶段全军主要作战部队实行()体制。...' (类型: single)
+2025-09-19 08:31:50,359 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 08:31:50,359 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 08:31:50,623 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 08:31:50,623 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.27秒)
+2025-09-19 08:31:50,631 - ai_answer_service - INFO - 问答记录已保存 (ID: 86)
+2025-09-19 08:31:55,350 - ai_answer_service - INFO - 接收到问题: '我国通过军事改革,构建起了“中央军委-军区-部队”的作战指挥体系。...' (类型: judgement)
+2025-09-19 08:31:55,354 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 08:31:55,511 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 08:31:55,511 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.16秒)
+2025-09-19 08:31:55,515 - ai_answer_service - INFO - 问答记录已保存 (ID: 87)
+2025-09-19 09:05:38,362 - ai_answer_service - INFO - 接收到问题: '中国人民解放军空军于()年11月11日正式成立。...' (类型: single)
+2025-09-19 09:05:38,362 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:05:38,759 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:05:38,759 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.40秒)
+2025-09-19 09:05:38,763 - ai_answer_service - INFO - 问答记录已保存 (ID: 88)
+2025-09-19 09:05:43,351 - ai_answer_service - INFO - 接收到问题: '海军是以舰艇部队为主体,主要在海洋执行作战任务的军种,具有()作战的能力。...' (类型: multiple)
+2025-09-19 09:05:43,352 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:05:44,661 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:05:44,662 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 1.31秒)
+2025-09-19 09:05:44,666 - ai_answer_service - INFO - 问答记录已保存 (ID: 89)
+2025-09-19 09:05:49,348 - ai_answer_service - INFO - 接收到问题: '中国人民解放军联勤保障部队受中央军委直属领导。...' (类型: judgement)
+2025-09-19 09:05:49,350 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:05:49,533 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:05:49,533 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.19秒)
+2025-09-19 09:05:49,537 - ai_answer_service - INFO - 问答记录已保存 (ID: 90)
+2025-09-19 09:23:36,356 - ai_answer_service - INFO - 接收到问题: '1983年4月,中国人民公安部队正式成立。...' (类型: judgement)
+2025-09-19 09:23:36,356 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:23:36,694 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:23:36,694 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.34秒)
+2025-09-19 09:23:36,697 - ai_answer_service - INFO - 问答记录已保存 (ID: 91)
+2025-09-19 09:23:40,369 - ai_answer_service - INFO - 接收到问题: '民兵是脱离生产的群众性武装力量。...' (类型: judgement)
+2025-09-19 09:23:40,370 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:23:40,504 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:23:40,505 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.14秒)
+2025-09-19 09:23:40,509 - ai_answer_service - INFO - 问答记录已保存 (ID: 92)
+2025-09-19 09:56:01,353 - ai_answer_service - INFO - 接收到问题: '1927年的()打响了武装反抗国民党反动派的第一枪,揭开了中国共产党独立领导武装斗争和创建革命军队的...' (类型: single)
+2025-09-19 09:56:01,354 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:56:01,888 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:56:01,889 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.54秒)
+2025-09-19 09:56:01,892 - ai_answer_service - INFO - 问答记录已保存 (ID: 93)
+2025-09-19 09:56:06,356 - ai_answer_service - INFO - 接收到问题: '1928年,毛泽东提出了游击战争的基本原则,即()。...' (类型: multiple)
+2025-09-19 09:56:06,357 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:56:06,558 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:56:06,558 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.20秒)
+2025-09-19 09:56:06,562 - ai_answer_service - INFO - 问答记录已保存 (ID: 94)
+2025-09-19 09:56:10,352 - ai_answer_service - INFO - 接收到问题: '井冈山革命根据地的创建点燃了“工农武装割据”的星星之火,在实践中找到了一条在农村保存、聚集和发展革命...' (类型: judgement)
+2025-09-19 09:56:10,353 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 09:56:10,559 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 09:56:10,559 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.21秒)
+2025-09-19 09:56:10,562 - ai_answer_service - INFO - 问答记录已保存 (ID: 95)
+2025-09-19 10:12:18,359 - ai_answer_service - INFO - 接收到问题: '1937年的()是全国抗战开始后中国军队取得的第一次大胜利。...' (类型: single)
+2025-09-19 10:12:18,360 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:12:18,789 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:12:18,789 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.43秒)
+2025-09-19 10:12:18,793 - ai_answer_service - INFO - 问答记录已保存 (ID: 96)
+2025-09-19 10:12:23,353 - ai_answer_service - INFO - 接收到问题: '1937年,洛川会议决定将西北工农红军转变为国民革命军第()路军,东渡黄河进入山西前线对日作战。...' (类型: single)
+2025-09-19 10:12:23,353 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:12:23,616 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:12:23,616 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.26秒)
+2025-09-19 10:12:23,620 - ai_answer_service - INFO - 问答记录已保存 (ID: 97)
+2025-09-19 10:12:27,356 - ai_answer_service - INFO - 接收到问题: '1945年,()联合发表《波茨坦公告》,促令日本无条件投降。...' (类型: multiple)
+2025-09-19 10:12:27,357 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:12:27,488 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:12:27,488 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.13秒)
+2025-09-19 10:12:27,492 - ai_answer_service - INFO - 问答记录已保存 (ID: 98)
+2025-09-19 10:27:24,366 - ai_answer_service - INFO - 接收到问题: '1949年,毛泽东与朱德发布(),命令全军“奋勇前进,坚决、干净、彻底全部消灭一切敢于抵抗的国民党反...' (类型: single)
+2025-09-19 10:27:24,367 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:27:25,950 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:27:25,950 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 1.58秒)
+2025-09-19 10:27:25,954 - ai_answer_service - INFO - 问答记录已保存 (ID: 99)
+2025-09-19 10:27:29,361 - ai_answer_service - INFO - 接收到问题: '中国人民经过22年的艰苦奋斗,成功推翻了压在中国人民头上的()三座大山。...' (类型: multiple)
+2025-09-19 10:27:29,361 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:27:29,650 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:27:29,650 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.29秒)
+2025-09-19 10:27:29,654 - ai_answer_service - INFO - 问答记录已保存 (ID: 100)
+2025-09-19 10:27:33,363 - ai_answer_service - INFO - 接收到问题: '人民解放军从1948年9月到1949年1月,取得了辽沈、淮海、平津三大战役的伟大胜利。...' (类型: judgement)
+2025-09-19 10:27:33,363 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:27:34,345 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:27:34,345 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.98秒)
+2025-09-19 10:27:34,348 - ai_answer_service - INFO - 问答记录已保存 (ID: 101)
+2025-09-19 10:46:50,362 - ai_answer_service - INFO - 接收到问题: '1950年,我军进行了渡海作战,创造了用木船打军舰的战争奇迹,解放了祖国第二大岛()。...' (类型: single)
+2025-09-19 10:46:50,363 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:46:50,694 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:46:50,694 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.33秒)
+2025-09-19 10:46:50,698 - ai_answer_service - INFO - 问答记录已保存 (ID: 102)
+2025-09-19 10:46:55,351 - ai_answer_service - INFO - 接收到问题: '1950年,我国抗美援朝志愿军队伍跨过鸭绿江,由()任司令员兼政治委员。...' (类型: single)
+2025-09-19 10:46:55,351 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:46:55,692 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:46:55,693 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.34秒)
+2025-09-19 10:46:55,696 - ai_answer_service - INFO - 问答记录已保存 (ID: 103)
+2025-09-19 10:46:59,345 - ai_answer_service - INFO - 接收到问题: '历时三年多的抗美援朝以1953年7月27日在()正式签署了停战协议而宣告结束。...' (类型: single)
+2025-09-19 10:46:59,345 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:46:59,447 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:46:59,448 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.10秒)
+2025-09-19 10:46:59,451 - ai_answer_service - INFO - 问答记录已保存 (ID: 104)
+2025-09-19 10:58:03,353 - ai_answer_service - INFO - 接收到问题: '人民解放军是一支抢险救灾的突击力量。...' (类型: judgement)
+2025-09-19 10:58:03,355 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:58:03,697 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:58:03,698 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.34秒)
+2025-09-19 10:58:03,701 - ai_answer_service - INFO - 问答记录已保存 (ID: 105)
+2025-09-19 10:58:07,360 - ai_answer_service - INFO - 接收到问题: '在开发大庆油田、胜利油田的会战中,大批指战员同石油工人并肩战斗,结束了中国只能靠洋油过日子的时代。...' (类型: judgement)
+2025-09-19 10:58:07,360 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 10:58:07,504 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 10:58:07,504 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.14秒)
+2025-09-19 10:58:07,508 - ai_answer_service - INFO - 问答记录已保存 (ID: 106)
+2025-09-19 11:18:55,357 - ai_answer_service - INFO - 接收到问题: '国防动员的要素有()。...' (类型: multiple)
+2025-09-19 11:18:55,357 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 11:18:55,713 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 11:18:55,713 - ai_answer_service - INFO - 外部题库答案 '动员的主体通常是国家 动员的对象是人力、物力和财力 动员的目的是适应战争需求,为战争服务' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 11:18:55,713 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 11:19:14,199 - ai_answer_service - INFO - 问题处理完成 (耗时: 18.84秒)
+2025-09-19 11:19:14,203 - ai_answer_service - INFO - 问答记录已保存 (ID: 107)
+2025-09-19 11:19:18,354 - ai_answer_service - INFO - 接收到问题: '国防动员的作用有()。...' (类型: multiple)
+2025-09-19 11:19:18,354 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 11:19:18,500 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 11:19:18,500 - ai_answer_service - INFO - 外部题库答案 '可以将战争潜力转换为战争实力,为赢得战争胜利奠定基础 可以为遏制危机提供强大的威慑力量,遏制战争的爆发 可以为应对突发事件提供有效措施,有利于维护社会稳定和人民群众生命财产安全 可以通过减轻国家负担,为经济和社会发展提供一定的支援' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 11:19:18,500 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 11:19:30,314 - ai_answer_service - INFO - 问题处理完成 (耗时: 11.96秒)
+2025-09-19 11:19:30,318 - ai_answer_service - INFO - 问答记录已保存 (ID: 108)
+2025-09-19 11:19:35,351 - ai_answer_service - INFO - 接收到问题: '毛泽东曾指出,革命战争是群众的战争,只有动员群众才能进行战争,只有依靠群众才能进行战争。...' (类型: judgement)
+2025-09-19 11:19:35,352 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 11:19:35,419 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 11:19:35,420 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.07秒)
+2025-09-19 11:19:35,423 - ai_answer_service - INFO - 问答记录已保存 (ID: 109)
+2025-09-19 11:35:06,352 - ai_answer_service - INFO - 接收到问题: '政治动员是战争动员的前提和保证,无论武装力量动员、国民经济动员,还是群众防卫动员,都需要以政治动员为...' (类型: judgement)
+2025-09-19 11:35:06,353 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 11:35:06,690 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 11:35:06,690 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.34秒)
+2025-09-19 11:35:06,694 - ai_answer_service - INFO - 问答记录已保存 (ID: 110)
+2025-09-19 11:35:11,355 - ai_answer_service - INFO - 接收到问题: '国家的主权、统一、领土完整和安全遭受威胁时,国家主席会依照宪法和有关法律的规定,决定全国总动员或者局...' (类型: judgement)
+2025-09-19 11:35:11,355 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 11:35:11,506 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 11:35:11,507 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.15秒)
+2025-09-19 11:35:11,510 - ai_answer_service - INFO - 问答记录已保存 (ID: 111)
+2025-09-19 11:35:16,356 - ai_answer_service - INFO - 接收到问题: '工业动员是指国家为了适应战争的需要,发动和组织人民群众防备敌人空袭,减少空袭损失,消除空袭后果所进行...' (类型: judgement)
+2025-09-19 11:35:16,356 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 11:35:16,454 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 11:35:16,455 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.10秒)
+2025-09-19 11:35:16,458 - ai_answer_service - INFO - 问答记录已保存 (ID: 112)
+2025-09-19 13:43:27,163 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:43:27,163 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:43:27,163 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:43:27,163 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:43:31,240 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:43:31,240 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:43:31,241 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:43:32,553 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:43:32,553 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:43:32,554 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:43:32,554 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:43:36,616 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:43:36,616 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:43:36,616 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:43:36,645 - ai_answer_service - INFO - 接收到问题: '1927年的()打响了武装反抗国民党反动派的第一枪,揭开了中国共产党独立领导武装斗争和创建革命军队的...' (类型: single)
+2025-09-19 13:43:36,647 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 13:43:36,648 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:43:37,309 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:43:37,309 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.67秒)
+2025-09-19 13:43:37,317 - ai_answer_service - INFO - 问答记录已保存 (ID: 113)
+2025-09-19 13:43:40,438 - ai_answer_service - INFO - 接收到问题: '1928年,毛泽东提出了游击战争的基本原则,即()。...' (类型: multiple)
+2025-09-19 13:43:40,439 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:43:40,815 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:43:40,815 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.38秒)
+2025-09-19 13:43:40,819 - ai_answer_service - INFO - 问答记录已保存 (ID: 114)
+2025-09-19 13:43:44,237 - ai_answer_service - INFO - 接收到问题: '井冈山革命根据地的创建点燃了“工农武装割据”的星星之火,在实践中找到了一条在农村保存、聚集和发展革命...' (类型: judgement)
+2025-09-19 13:43:44,238 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:43:44,606 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:43:44,606 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.37秒)
+2025-09-19 13:43:44,609 - ai_answer_service - INFO - 问答记录已保存 (ID: 115)
+2025-09-19 13:44:05,594 - ai_answer_service - INFO - 接收到问题: '国防动员的要素有()。...' (类型: multiple)
+2025-09-19 13:44:05,594 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:44:05,926 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:44:05,927 - ai_answer_service - INFO - 外部题库答案 '动员的主体通常是国家 动员的对象是人力、物力和财力 动员的目的是适应战争需求,为战争服务' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 13:44:05,927 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:45:15,396 - ai_answer_service - INFO - 接收到问题: '国防动员的要素有()。...' (类型: multiple)
+2025-09-19 13:45:15,397 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:45:15,697 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:45:15,698 - ai_answer_service - INFO - 外部题库答案 '动员的主体通常是国家 动员的对象是人力、物力和财力 动员的目的是适应战争需求,为战争服务' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 13:45:15,698 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:46:28,853 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:46:28,853 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:46:28,853 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:46:28,853 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:46:30,887 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:46:30,887 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:46:30,887 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:46:37,260 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:46:37,260 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:46:37,260 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:46:37,261 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:46:39,308 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:46:39,308 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:46:39,309 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:46:43,638 - ai_answer_service - INFO - 接收到问题: '国防动员的要素有()。...' (类型: multiple)
+2025-09-19 13:46:43,639 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 13:46:43,639 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:46:43,947 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:46:43,949 - ai_answer_service - INFO - 外部题库答案 '动员的主体通常是国家 动员的对象是人力、物力和财力 动员的目的是适应战争需求,为战争服务' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 13:46:43,950 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:46:57,402 - ai_answer_service - INFO - 问题处理完成 (耗时: 13.76秒)
+2025-09-19 13:46:57,409 - ai_answer_service - INFO - 问答记录已保存 (ID: 116)
+2025-09-19 13:47:00,520 - ai_answer_service - INFO - 接收到问题: '国防动员的作用有()。...' (类型: multiple)
+2025-09-19 13:47:00,520 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:47:00,768 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:47:00,768 - ai_answer_service - INFO - 外部题库答案 '可以将战争潜力转换为战争实力,为赢得战争胜利奠定基础 可以为遏制危机提供强大的威慑力量,遏制战争的爆发 可以为应对突发事件提供有效措施,有利于维护社会稳定和人民群众生命财产安全 可以通过减轻国家负担,为经济和社会发展提供一定的支援' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 13:47:00,770 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:47:10,578 - ai_answer_service - INFO - 问题处理完成 (耗时: 10.06秒)
+2025-09-19 13:47:10,581 - ai_answer_service - INFO - 问答记录已保存 (ID: 117)
+2025-09-19 13:47:13,692 - ai_answer_service - INFO - 接收到问题: '毛泽东曾指出,革命战争是群众的战争,只有动员群众才能进行战争,只有依靠群众才能进行战争。...' (类型: judgement)
+2025-09-19 13:47:13,692 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:47:13,919 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:47:13,920 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.23秒)
+2025-09-19 13:47:13,923 - ai_answer_service - INFO - 问答记录已保存 (ID: 118)
+2025-09-19 13:47:56,834 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:47:56,834 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:47:56,834 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:47:56,834 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:47:58,870 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:47:58,871 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:47:58,871 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:47:58,900 - ai_answer_service - INFO - 接收到问题: '政治动员是战争动员的前提和保证,无论武装力量动员、国民经济动员,还是群众防卫动员,都需要以政治动员为...' (类型: judgement)
+2025-09-19 13:47:58,901 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 13:47:58,901 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:47:59,233 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:47:59,233 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.33秒)
+2025-09-19 13:47:59,240 - ai_answer_service - INFO - 问答记录已保存 (ID: 119)
+2025-09-19 13:48:02,375 - ai_answer_service - INFO - 接收到问题: '国家的主权、统一、领土完整和安全遭受威胁时,国家主席会依照宪法和有关法律的规定,决定全国总动员或者局...' (类型: judgement)
+2025-09-19 13:48:02,376 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:48:02,687 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:48:02,687 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.31秒)
+2025-09-19 13:48:02,693 - ai_answer_service - INFO - 问答记录已保存 (ID: 120)
+2025-09-19 13:48:04,905 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:48:04,905 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:48:04,905 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:48:04,906 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:48:06,945 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:48:06,946 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:48:06,946 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:48:06,972 - ai_answer_service - INFO - 接收到问题: '工业动员是指国家为了适应战争的需要,发动和组织人民群众防备敌人空袭,减少空袭损失,消除空袭后果所进行...' (类型: judgement)
+2025-09-19 13:48:06,973 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 13:48:06,973 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:48:07,432 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:48:07,432 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.46秒)
+2025-09-19 13:48:07,441 - ai_answer_service - INFO - 问答记录已保存 (ID: 121)
+2025-09-19 13:48:09,616 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:48:09,617 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:48:09,617 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:48:09,617 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:48:11,658 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:48:11,658 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:48:11,659 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:52:44,763 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:52:44,763 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:52:44,763 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:52:44,764 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:52:46,813 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:52:46,814 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:52:46,814 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:53:13,465 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:53:13,465 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:53:13,465 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:53:13,465 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:53:13,970 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:53:13,970 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:53:13,971 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:53:13,971 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:53:15,511 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:53:15,511 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:53:15,511 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:53:16,007 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:53:16,008 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:53:16,008 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:53:16,100 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 13:53:16,101 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 13:53:16,101 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:53:16,989 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:53:16,989 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 13:53:16,989 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:21,680 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.58秒)
+2025-09-19 13:53:21,686 - ai_answer_service - INFO - 问答记录已保存 (ID: 122)
+2025-09-19 13:53:22,691 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 13:53:22,691 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:53:23,073 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:53:23,074 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 13:53:23,074 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:53:26,297 - ai_answer_service - INFO - 问题处理完成 (耗时: 3.61秒)
+2025-09-19 13:53:26,301 - ai_answer_service - INFO - 问答记录已保存 (ID: 123)
+2025-09-19 13:53:27,328 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 13:53:27,329 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:53:27,521 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 13:53:27,845 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 13:53:27,845 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 13:53:27,845 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 13:53:30,456 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 1/3): API 返回空内容
+2025-09-19 13:53:34,531 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 2/3): API 返回空内容
+2025-09-19 13:53:39,717 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 3/3): API 返回空内容
+2025-09-19 13:53:39,717 - ai_answer_service - ERROR - 请求参数错误: API 返回空内容
+2025-09-19 13:53:42,750 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 13:53:51,766 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 13:53:51,766 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,766 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:51,766 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,773 - ai_answer_service - INFO - 问答记录已保存 (ID: 124)
+2025-09-19 13:53:51,949 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 13:53:51,949 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,949 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 13:53:51,949 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,954 - ai_answer_service - INFO - 问答记录已保存 (ID: 125)
+2025-09-19 13:53:51,956 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 13:53:51,956 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,956 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 13:53:51,956 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,960 - ai_answer_service - INFO - 问答记录已保存 (ID: 126)
+2025-09-19 13:53:51,963 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 13:53:51,963 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,963 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 13:53:51,963 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,965 - ai_answer_service - INFO - 问答记录已保存 (ID: 127)
+2025-09-19 13:53:51,967 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 13:53:51,967 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,967 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:51,967 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,970 - ai_answer_service - INFO - 问答记录已保存 (ID: 128)
+2025-09-19 13:53:51,971 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 13:53:51,972 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,972 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:53:51,972 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,977 - ai_answer_service - INFO - 问答记录已保存 (ID: 129)
+2025-09-19 13:53:51,979 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 13:53:51,979 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,979 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 13:53:51,979 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,981 - ai_answer_service - INFO - 问答记录已保存 (ID: 130)
+2025-09-19 13:53:51,982 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 13:53:51,982 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:53:51,984 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 13:53:51,984 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,984 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:51,984 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:51,986 - ai_answer_service - INFO - 问答记录已保存 (ID: 131)
+2025-09-19 13:53:51,990 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:51,990 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:51,990 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,990 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:51,991 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 13:53:51,994 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:51,994 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:51,994 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:51,994 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:51,994 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 13:53:51,996 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:51,996 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:51,996 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:53:52,002 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:52,002 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:52,002 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:52,003 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:52,003 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:52,005 - ai_answer_service - INFO - 问答记录已保存 (ID: 132)
+2025-09-19 13:53:52,037 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 13:53:52,038 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 13:53:52,038 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:52,038 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 13:53:52,038 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:52,038 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:52,038 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:52,041 - ai_answer_service - INFO - 问答记录已保存 (ID: 133)
+2025-09-19 13:53:52,043 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:52,043 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:52,043 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:53:52,044 - ai_answer_service - INFO - 外部题库答案 '测试答案' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 13:53:52,044 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:52,044 - ai_answer_service - ERROR - 请求参数错误: expected string or bytes-like object, got 'MagicMock'
+2025-09-19 13:53:52,049 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:52,049 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:52,049 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:53:52,049 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 13:53:52,049 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:52,050 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:53:52,052 - ai_answer_service - INFO - 问答记录已保存 (ID: 134)
+2025-09-19 13:53:52,053 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:52,054 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:52,054 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:53:52,083 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:52,084 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:53:52,084 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:53:52,117 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:53:52,117 - ai_answer_service - INFO - 接收到问题: '测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试...' (类型: single)
+2025-09-19 13:53:52,117 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:53:52,117 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:53:56,477 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:53:56,478 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:53:56,478 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:53:56,478 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:53:58,520 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:53:58,520 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:53:58,520 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:54:56,178 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:54:56,179 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:54:56,179 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:54:56,179 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:54:58,227 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:54:58,228 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:54:58,228 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:55:15,579 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 13:55:53,628 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:55:53,628 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:55:53,628 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:55:53,628 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:55:55,677 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:55:55,678 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:55:55,678 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:56:13,031 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 13:56:23,019 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 13:56:23,020 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,020 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,020 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,028 - ai_answer_service - INFO - 问答记录已保存 (ID: 135)
+2025-09-19 13:56:23,175 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 13:56:23,176 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,176 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 13:56:23,176 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,179 - ai_answer_service - INFO - 问答记录已保存 (ID: 136)
+2025-09-19 13:56:23,180 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 13:56:23,180 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,180 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 13:56:23,180 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,183 - ai_answer_service - INFO - 问答记录已保存 (ID: 137)
+2025-09-19 13:56:23,186 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 13:56:23,186 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,186 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 13:56:23,186 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,189 - ai_answer_service - INFO - 问答记录已保存 (ID: 138)
+2025-09-19 13:56:23,191 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 13:56:23,191 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,191 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,191 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,194 - ai_answer_service - INFO - 问答记录已保存 (ID: 139)
+2025-09-19 13:56:23,195 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 13:56:23,195 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,195 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:56:23,195 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,198 - ai_answer_service - INFO - 问答记录已保存 (ID: 140)
+2025-09-19 13:56:23,200 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 13:56:23,200 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,200 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 13:56:23,200 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,203 - ai_answer_service - INFO - 问答记录已保存 (ID: 141)
+2025-09-19 13:56:23,204 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 13:56:23,205 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:56:23,206 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 13:56:23,207 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,207 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,207 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,210 - ai_answer_service - INFO - 问答记录已保存 (ID: 142)
+2025-09-19 13:56:23,213 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,213 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,213 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,213 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,213 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 13:56:23,216 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,216 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,216 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,216 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,216 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 13:56:23,217 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,217 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,217 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:56:23,223 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,223 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,223 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,224 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,224 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,227 - ai_answer_service - INFO - 问答记录已保存 (ID: 143)
+2025-09-19 13:56:23,260 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 13:56:23,260 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 13:56:23,260 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,260 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 13:56:23,260 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,260 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,260 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,264 - ai_answer_service - INFO - 问答记录已保存 (ID: 144)
+2025-09-19 13:56:23,266 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,266 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,266 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:56:23,267 - ai_answer_service - INFO - 外部题库答案 '测试答案' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 13:56:23,267 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,267 - ai_answer_service - ERROR - 请求参数错误: expected string or bytes-like object, got 'MagicMock'
+2025-09-19 13:56:23,273 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,273 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,273 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:56:23,273 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 13:56:23,273 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:23,273 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:56:23,277 - ai_answer_service - INFO - 问答记录已保存 (ID: 145)
+2025-09-19 13:56:23,279 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,279 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,279 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:56:23,309 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,309 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:56:23,309 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:56:23,343 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:56:23,343 - ai_answer_service - INFO - 接收到问题: '测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试...' (类型: single)
+2025-09-19 13:56:23,343 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:56:23,343 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:56:55,671 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:56:55,672 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:56:55,672 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:56:55,672 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:56:57,728 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:56:57,728 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:56:57,729 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:57:04,079 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:57:04,079 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:57:04,080 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:57:04,080 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:57:06,130 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:57:06,130 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:57:06,131 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:57:11,071 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 13:57:11,071 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 13:57:11,071 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 13:57:11,071 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 13:57:13,113 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 13:57:13,114 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 13:57:13,114 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 13:57:13,175 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 13:57:13,176 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 13:57:13,176 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:57:14,102 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:57:14,102 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 13:57:14,103 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:19,608 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.43秒)
+2025-09-19 13:57:19,614 - ai_answer_service - INFO - 问答记录已保存 (ID: 146)
+2025-09-19 13:57:20,617 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 13:57:20,617 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:57:21,038 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 13:57:21,039 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 13:57:21,039 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:57:26,019 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.40秒)
+2025-09-19 13:57:26,025 - ai_answer_service - INFO - 问答记录已保存 (ID: 147)
+2025-09-19 13:57:27,032 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 13:57:27,032 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:57:27,199 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 13:57:27,282 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 13:57:27,282 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 13:57:27,282 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 13:57:32,177 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.14秒)
+2025-09-19 13:57:32,180 - ai_answer_service - INFO - 问答记录已保存 (ID: 148)
+2025-09-19 13:57:35,233 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 13:57:43,902 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 13:57:43,902 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:43,902 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:43,902 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:43,908 - ai_answer_service - INFO - 问答记录已保存 (ID: 149)
+2025-09-19 13:57:44,055 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 13:57:44,055 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,055 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 13:57:44,055 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,059 - ai_answer_service - INFO - 问答记录已保存 (ID: 150)
+2025-09-19 13:57:44,061 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 13:57:44,061 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,061 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 13:57:44,061 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,064 - ai_answer_service - INFO - 问答记录已保存 (ID: 151)
+2025-09-19 13:57:44,067 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 13:57:44,067 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,067 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 13:57:44,067 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,069 - ai_answer_service - INFO - 问答记录已保存 (ID: 152)
+2025-09-19 13:57:44,072 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 13:57:44,072 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,072 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,072 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,075 - ai_answer_service - INFO - 问答记录已保存 (ID: 153)
+2025-09-19 13:57:44,077 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 13:57:44,077 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,077 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 13:57:44,078 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,080 - ai_answer_service - INFO - 问答记录已保存 (ID: 154)
+2025-09-19 13:57:44,082 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 13:57:44,082 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,082 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 13:57:44,082 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,085 - ai_answer_service - INFO - 问答记录已保存 (ID: 155)
+2025-09-19 13:57:44,087 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 13:57:44,087 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:57:44,089 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 13:57:44,089 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,089 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,089 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,092 - ai_answer_service - INFO - 问答记录已保存 (ID: 156)
+2025-09-19 13:57:44,096 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,096 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,096 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,096 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,096 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 13:57:44,099 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,099 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,099 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,099 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,099 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 13:57:44,100 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,101 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,101 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:57:44,108 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,108 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,108 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,108 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,108 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,111 - ai_answer_service - INFO - 问答记录已保存 (ID: 157)
+2025-09-19 13:57:44,147 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 13:57:44,147 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 13:57:44,147 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,147 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 13:57:44,147 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,147 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,148 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,151 - ai_answer_service - INFO - 问答记录已保存 (ID: 158)
+2025-09-19 13:57:44,153 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,153 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,153 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:57:44,154 - ai_answer_service - INFO - 外部题库答案 '测试答案' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 13:57:44,154 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,154 - ai_answer_service - ERROR - 请求参数错误: expected string or bytes-like object, got 'MagicMock'
+2025-09-19 13:57:44,159 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,159 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,159 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:57:44,159 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 13:57:44,159 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:57:44,159 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 13:57:44,162 - ai_answer_service - INFO - 问答记录已保存 (ID: 159)
+2025-09-19 13:57:44,164 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,165 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,165 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:57:44,198 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,198 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 13:57:44,198 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 13:57:44,232 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:57:44,232 - ai_answer_service - INFO - 接收到问题: '测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试问题测试...' (类型: single)
+2025-09-19 13:57:44,233 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 13:57:44,233 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 13:59:38,299 - ai_answer_service - INFO - 问题处理完成 (耗时: 114.07秒)
+2025-09-19 13:59:38,302 - ai_answer_service - INFO - 问答记录已保存 (ID: 160)
+2025-09-19 13:59:38,312 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 13:59:38,313 - ai_answer_service - INFO - 接收到问题: '测试问题1...' (类型: single)
+2025-09-19 13:59:38,313 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 13:59:38,858 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 13:59:39,094 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 13:59:39,095 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 13:59:39,095 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:00:07,004 - ai_answer_service - INFO - 问题处理完成 (耗时: 28.69秒)
+2025-09-19 14:00:10,787 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:00:10,787 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:00:10,788 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:00:10,788 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:00:12,829 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:00:12,829 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:00:12,829 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:02:59,539 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:02:59,539 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:02:59,540 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:02:59,540 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:03:01,583 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:03:01,583 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:03:01,583 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:03:09,374 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:03:09,374 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:03:09,375 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:03:09,375 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:03:11,424 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:03:11,425 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:03:11,425 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:03:19,512 - ai_answer_service - INFO - 接收到问题: '党的十八大以来,习近平总书记创造性地提出了()的系统思想,成为维护国家安全的纲领和科学指南。...' (类型: single)
+2025-09-19 14:03:19,513 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:03:19,513 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:03:19,688 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:03:19,688 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-19 14:03:19,695 - ai_answer_service - INFO - 问答记录已保存 (ID: 161)
+2025-09-19 14:03:22,807 - ai_answer_service - INFO - 接收到问题: '任何个人和组织不得有危害国家的行为,也不得向危害国家安全的个人或组织提供资助。...' (类型: judgement)
+2025-09-19 14:03:22,807 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:03:23,052 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:03:23,052 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.25秒)
+2025-09-19 14:03:23,056 - ai_answer_service - INFO - 问答记录已保存 (ID: 162)
+2025-09-19 14:03:26,167 - ai_answer_service - INFO - 接收到问题: '国家安全是个人安全的前提,没有国家安全,就不可能有个人安全。...' (类型: judgement)
+2025-09-19 14:03:26,167 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:03:26,489 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:03:26,489 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.32秒)
+2025-09-19 14:03:26,493 - ai_answer_service - INFO - 问答记录已保存 (ID: 163)
+2025-09-19 14:03:54,353 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:03:54,353 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:03:54,353 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:03:54,353 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:03:56,400 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:03:56,400 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:03:56,400 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:03:56,407 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:03:56,407 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:03:56,407 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:03:56,408 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.00秒)
+2025-09-19 14:03:56,415 - ai_answer_service - INFO - 问答记录已保存 (ID: 164)
+2025-09-19 14:04:06,566 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:04:06,566 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:04:06,566 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:04:06,566 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:04:08,589 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:04:08,590 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:04:08,590 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:04:08,597 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:04:08,597 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:04:08,597 - ai_answer_service - INFO - 外部题库未启用，将使用AI搜索
+2025-09-19 14:04:08,597 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:04:08,597 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:04:08,603 - ai_answer_service - INFO - 问答记录已保存 (ID: 165)
+2025-09-19 14:04:19,609 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:04:19,609 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:04:19,609 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:04:19,609 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:04:21,663 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:04:21,663 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:04:21,663 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:04:21,670 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:04:21,670 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:04:21,670 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:04:21,670 - ai_answer_service - INFO - 外部题库返回未找到答案，将使用AI搜索
+2025-09-19 14:04:21,670 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:04:21,670 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:04:21,677 - ai_answer_service - INFO - 问答记录已保存 (ID: 166)
+2025-09-19 14:04:31,976 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:04:31,976 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:04:31,976 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:04:31,976 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:04:34,018 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:04:34,019 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:04:34,019 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:04:45,534 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:04:45,534 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:04:45,534 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:04:45,534 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:04:47,574 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:04:47,575 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:04:47,575 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:04:47,636 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:04:47,637 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:04:48,567 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:04:48,567 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 14:04:48,567 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:04:54,852 - ai_answer_service - INFO - 问题处理完成 (耗时: 7.22秒)
+2025-09-19 14:04:54,856 - ai_answer_service - INFO - 问答记录已保存 (ID: 167)
+2025-09-19 14:04:55,859 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:04:55,859 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:04:56,218 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:04:56,218 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:04:56,218 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:05:00,260 - ai_answer_service - INFO - 问题处理完成 (耗时: 4.40秒)
+2025-09-19 14:05:00,264 - ai_answer_service - INFO - 问答记录已保存 (ID: 168)
+2025-09-19 14:05:01,284 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:05:01,284 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:05:01,577 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:05:01,796 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:05:01,797 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:05:01,797 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:05:06,370 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.09秒)
+2025-09-19 14:05:06,375 - ai_answer_service - INFO - 问答记录已保存 (ID: 169)
+2025-09-19 14:05:09,426 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:05:18,234 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:05:18,234 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,235 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:18,235 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,241 - ai_answer_service - INFO - 问答记录已保存 (ID: 170)
+2025-09-19 14:05:18,380 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:05:18,380 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,380 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:05:18,381 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,384 - ai_answer_service - INFO - 问答记录已保存 (ID: 171)
+2025-09-19 14:05:18,385 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:05:18,386 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,386 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:05:18,386 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,388 - ai_answer_service - INFO - 问答记录已保存 (ID: 172)
+2025-09-19 14:05:18,391 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:05:18,391 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,391 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:05:18,391 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,394 - ai_answer_service - INFO - 问答记录已保存 (ID: 173)
+2025-09-19 14:05:18,396 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:05:18,396 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,396 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:18,396 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,399 - ai_answer_service - INFO - 问答记录已保存 (ID: 174)
+2025-09-19 14:05:18,400 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:05:18,400 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,400 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:05:18,400 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,403 - ai_answer_service - INFO - 问答记录已保存 (ID: 175)
+2025-09-19 14:05:18,405 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:05:18,405 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,405 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:05:18,405 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,408 - ai_answer_service - INFO - 问答记录已保存 (ID: 176)
+2025-09-19 14:05:18,410 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:05:18,410 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:05:18,412 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:05:18,412 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,412 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:18,412 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,415 - ai_answer_service - INFO - 问答记录已保存 (ID: 177)
+2025-09-19 14:05:18,418 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,418 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,418 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,418 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:18,418 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:05:18,421 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,421 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,421 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,421 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:18,421 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:05:18,422 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,423 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,423 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:05:18,428 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,428 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,428 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,428 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:18,428 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,431 - ai_answer_service - INFO - 问答记录已保存 (ID: 178)
+2025-09-19 14:05:18,462 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 14:05:18,463 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 14:05:18,463 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,463 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 14:05:18,463 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:05:18,463 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:18,463 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:05:18,467 - ai_answer_service - INFO - 问答记录已保存 (ID: 179)
+2025-09-19 14:05:18,469 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,469 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,469 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:05:18,470 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.00秒)
+2025-09-19 14:05:18,472 - ai_answer_service - INFO - 问答记录已保存 (ID: 180)
+2025-09-19 14:05:18,474 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,474 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,474 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:05:18,479 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,479 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,479 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:05:18,484 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,484 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:05:18,484 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:05:18,497 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:18,497 - ai_answer_service - INFO - 接收到问题: '测试问题1...' (类型: single)
+2025-09-19 14:05:18,497 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:05:19,020 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:05:19,121 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:05:19,122 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:05:19,122 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:05:55,369 - ai_answer_service - INFO - 问题处理完成 (耗时: 36.87秒)
+2025-09-19 14:05:55,373 - ai_answer_service - INFO - 问答记录已保存 (ID: 181)
+2025-09-19 14:05:56,378 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:05:56,385 - ai_answer_service - INFO - 接收到问题: '测试问题2...' (类型: single)
+2025-09-19 14:05:56,385 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:05:56,832 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:05:56,915 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:05:56,916 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:05:56,916 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:06:20,515 - ai_answer_service - INFO - 问题处理完成 (耗时: 24.14秒)
+2025-09-19 14:06:20,518 - ai_answer_service - INFO - 问答记录已保存 (ID: 182)
+2025-09-19 14:06:21,523 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:06:21,523 - ai_answer_service - INFO - 接收到问题: '测试问题3...' (类型: single)
+2025-09-19 14:06:21,524 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:06:21,978 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:06:22,062 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:06:22,063 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:06:22,063 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:06:41,874 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 1/3): API 返回空内容
+2025-09-19 14:07:02,498 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:07:02,499 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:07:02,499 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:07:02,499 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:07:04,560 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:07:04,560 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:07:04,560 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:07:10,890 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:07:10,890 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:07:10,891 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:07:10,891 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:07:12,915 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:07:12,915 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:07:12,915 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:07:17,206 - ai_answer_service - INFO - 接收到问题: '()是国家安全的宗旨。...' (类型: single)
+2025-09-19 14:07:17,207 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:07:17,207 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:07:17,503 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:07:17,504 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.30秒)
+2025-09-19 14:07:17,513 - ai_answer_service - INFO - 问答记录已保存 (ID: 183)
+2025-09-19 14:07:20,624 - ai_answer_service - INFO - 接收到问题: '国家安全的原则有()。...' (类型: multiple)
+2025-09-19 14:07:20,624 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:07:21,356 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:07:21,356 - ai_answer_service - INFO - 外部题库答案 '坚持党的领导' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:07:21,356 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:07:33,280 - ai_answer_service - INFO - 问题处理完成 (耗时: 12.66秒)
+2025-09-19 14:07:33,284 - ai_answer_service - INFO - 问答记录已保存 (ID: 184)
+2025-09-19 14:07:36,433 - ai_answer_service - INFO - 接收到问题: '习近平总书记指出,坚持总体国家安全观,必须坚持国家利益至上,以人民安全为宗旨,以政治安全为根本。...' (类型: judgement)
+2025-09-19 14:07:36,435 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:07:36,809 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:07:36,809 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.38秒)
+2025-09-19 14:07:36,813 - ai_answer_service - INFO - 问答记录已保存 (ID: 185)
+2025-09-19 14:07:52,046 - ai_answer_service - INFO - 接收到问题: '2015年全国人大常委会通过新的国家安全法,将每年4月15日定为()。...' (类型: single)
+2025-09-19 14:07:52,046 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:07:52,249 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:07:52,249 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.20秒)
+2025-09-19 14:07:52,253 - ai_answer_service - INFO - 问答记录已保存 (ID: 186)
+2025-09-19 14:07:55,368 - ai_answer_service - INFO - 接收到问题: '()是指一国人民能够独立自主地选择自己的价值观念、文化制度、独立自主地控制和利用自己的文化资源。...' (类型: single)
+2025-09-19 14:07:55,370 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:07:55,583 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:07:55,583 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.22秒)
+2025-09-19 14:07:55,587 - ai_answer_service - INFO - 问答记录已保存 (ID: 187)
+2025-09-19 14:07:58,698 - ai_answer_service - INFO - 接收到问题: '总体国家安全体系的核心是维护国家核心利益和其他重大利益的安全。...' (类型: judgement)
+2025-09-19 14:07:58,698 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:07:59,125 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:07:59,125 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.43秒)
+2025-09-19 14:07:59,129 - ai_answer_service - INFO - 问答记录已保存 (ID: 188)
+2025-09-19 14:08:15,229 - ai_answer_service - INFO - 接收到问题: '当今世界的安全形势是()。...' (类型: multiple)
+2025-09-19 14:08:15,231 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:08:15,356 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:08:15,357 - ai_answer_service - INFO - 外部题库答案 '总体和平，局部战乱。
+#总体缓和，局部紧张。
+#总体稳定，局部动荡' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:08:15,357 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:08:23,947 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.72秒)
+2025-09-19 14:08:23,952 - ai_answer_service - INFO - 问答记录已保存 (ID: 189)
+2025-09-19 14:08:27,078 - ai_answer_service - INFO - 接收到问题: '对国家外来威胁的判断的主要依据有()。...' (类型: multiple)
+2025-09-19 14:08:27,078 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:08:27,325 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:08:27,325 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.25秒)
+2025-09-19 14:08:27,329 - ai_answer_service - INFO - 问答记录已保存 (ID: 190)
+2025-09-19 14:08:30,444 - ai_answer_service - INFO - 接收到问题: '国家利益是指一个主权国家在国际社会中根据国际惯例、历史传统、国际条约和协议所确定的为所有国家所承认的...' (类型: judgement)
+2025-09-19 14:08:30,444 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:08:30,634 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:08:30,634 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.19秒)
+2025-09-19 14:08:30,638 - ai_answer_service - INFO - 问答记录已保存 (ID: 191)
+2025-09-19 14:08:57,361 - ai_answer_service - INFO - 接收到问题: '我国与东盟五国存在着()海域的争议。...' (类型: single)
+2025-09-19 14:08:57,362 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:08:57,621 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:08:57,621 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.26秒)
+2025-09-19 14:08:57,625 - ai_answer_service - INFO - 问答记录已保存 (ID: 192)
+2025-09-19 14:09:00,750 - ai_answer_service - INFO - 接收到问题: '中国地缘环境的特殊性所带来的不利影响有()。...' (类型: multiple)
+2025-09-19 14:09:00,750 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:09:00,986 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:09:00,987 - ai_answer_service - INFO - 外部题库答案 '边界线长，易遭外敌侵入 # 强邻众多，安全压力大 # 领土海洋争端多，易发生冲突 # 周边热点多，安全面临威胁' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:09:00,987 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:09:08,773 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.02秒)
+2025-09-19 14:09:08,780 - ai_answer_service - INFO - 问答记录已保存 (ID: 193)
+2025-09-19 14:09:11,887 - ai_answer_service - INFO - 接收到问题: '中国既是一个陆地型大国,也是一个海洋型大国。...' (类型: judgement)
+2025-09-19 14:09:11,888 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:09:12,084 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:09:12,084 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.20秒)
+2025-09-19 14:09:12,087 - ai_answer_service - INFO - 问答记录已保存 (ID: 194)
+2025-09-19 14:09:31,890 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:09:31,891 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:09:31,891 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:09:31,891 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:09:33,924 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:09:33,924 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:09:33,924 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:11:12,348 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:11:12,348 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:11:12,348 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:11:12,349 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:11:14,401 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:11:14,402 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:11:14,402 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:11:28,536 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:11:28,536 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:11:28,536 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:11:28,536 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:11:30,592 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:11:30,592 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:11:30,592 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:11:30,638 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:11:30,639 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:11:30,639 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:11:31,406 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:11:31,406 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 14:11:31,406 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:11:36,410 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.77秒)
+2025-09-19 14:11:36,416 - ai_answer_service - INFO - 问答记录已保存 (ID: 195)
+2025-09-19 14:11:37,432 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:11:37,433 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:11:37,830 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:11:37,831 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:11:37,831 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:11:42,591 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.16秒)
+2025-09-19 14:11:42,595 - ai_answer_service - INFO - 问答记录已保存 (ID: 196)
+2025-09-19 14:11:43,600 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:11:43,600 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:11:43,755 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:11:44,317 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:11:44,318 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:11:44,318 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:11:47,453 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 1/3): API 返回空内容
+2025-09-19 14:11:51,292 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 2/3): API 返回空内容
+2025-09-19 14:11:56,460 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 3/3): API 返回空内容
+2025-09-19 14:11:56,461 - ai_answer_service - ERROR - 请求参数错误: API 返回空内容
+2025-09-19 14:12:03,693 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:12:03,693 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:12:03,693 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:12:03,693 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:12:05,735 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:12:05,735 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:12:05,735 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:12:05,781 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:12:05,782 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:12:06,785 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:12:06,785 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:12:07,790 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:12:07,790 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:12:08,000 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:12:08,113 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:12:08,114 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:12:08,114 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:12:12,624 - ai_answer_service - INFO - 问题处理完成 (耗时: 4.83秒)
+2025-09-19 14:12:12,627 - ai_answer_service - INFO - 问答记录已保存 (ID: 197)
+2025-09-19 14:12:15,675 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:12:24,697 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:12:24,697 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:12:24,697 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:12:24,697 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:12:24,703 - ai_answer_service - INFO - 问答记录已保存 (ID: 198)
+2025-09-19 14:13:06,989 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:13:06,989 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:13:06,990 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:13:06,990 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:13:09,045 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:13:09,045 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:13:09,045 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:13:16,590 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:13:16,591 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:13:16,591 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:13:16,591 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:13:18,626 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:13:18,626 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:13:18,626 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:13:20,622 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:13:20,623 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:13:20,623 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:13:20,623 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:13:22,657 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:13:22,657 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:13:22,657 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:13:24,712 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:13:24,712 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:13:24,712 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:13:24,712 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:13:26,744 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:13:26,745 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:13:26,745 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:13:26,806 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:13:26,807 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:13:26,807 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:13:27,681 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:13:27,682 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 14:13:27,682 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:32,007 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.20秒)
+2025-09-19 14:13:32,013 - ai_answer_service - INFO - 问答记录已保存 (ID: 199)
+2025-09-19 14:13:33,029 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:13:33,030 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:13:33,396 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:13:33,397 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:13:33,397 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:13:38,070 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.04秒)
+2025-09-19 14:13:38,074 - ai_answer_service - INFO - 问答记录已保存 (ID: 200)
+2025-09-19 14:13:39,078 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:13:39,078 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:13:39,270 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:13:39,368 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:13:39,368 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:13:39,368 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:13:43,246 - ai_answer_service - INFO - 问题处理完成 (耗时: 4.17秒)
+2025-09-19 14:13:43,249 - ai_answer_service - INFO - 问答记录已保存 (ID: 201)
+2025-09-19 14:13:46,295 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:13:52,442 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:13:52,442 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,442 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:52,442 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,449 - ai_answer_service - INFO - 问答记录已保存 (ID: 202)
+2025-09-19 14:13:52,455 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:13:52,456 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,456 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:13:52,456 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,458 - ai_answer_service - INFO - 问答记录已保存 (ID: 203)
+2025-09-19 14:13:52,460 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:13:52,460 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,460 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:13:52,460 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,463 - ai_answer_service - INFO - 问答记录已保存 (ID: 204)
+2025-09-19 14:13:52,465 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:13:52,465 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,465 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:13:52,465 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,467 - ai_answer_service - INFO - 问答记录已保存 (ID: 205)
+2025-09-19 14:13:52,469 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:13:52,469 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,469 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:52,469 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,472 - ai_answer_service - INFO - 问答记录已保存 (ID: 206)
+2025-09-19 14:13:52,473 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:13:52,473 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,473 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:13:52,473 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,476 - ai_answer_service - INFO - 问答记录已保存 (ID: 207)
+2025-09-19 14:13:52,478 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:13:52,478 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,478 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:13:52,478 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,481 - ai_answer_service - INFO - 问答记录已保存 (ID: 208)
+2025-09-19 14:13:52,483 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:13:52,483 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:13:52,484 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:13:52,484 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,484 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:52,485 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,487 - ai_answer_service - INFO - 问答记录已保存 (ID: 209)
+2025-09-19 14:13:52,490 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,490 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,490 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,491 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:52,491 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:13:52,493 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,494 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,494 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,494 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:52,494 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:13:52,495 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,496 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,496 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:13:52,639 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,640 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,640 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,640 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:52,640 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,644 - ai_answer_service - INFO - 问答记录已保存 (ID: 210)
+2025-09-19 14:13:52,678 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 14:13:52,678 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 14:13:52,678 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,678 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 14:13:52,678 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:13:52,678 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:13:52,678 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:13:52,681 - ai_answer_service - INFO - 问答记录已保存 (ID: 211)
+2025-09-19 14:13:52,683 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,683 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,683 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:13:52,683 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.00秒)
+2025-09-19 14:13:52,686 - ai_answer_service - INFO - 问答记录已保存 (ID: 212)
+2025-09-19 14:13:52,687 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,687 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,687 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:13:52,692 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,693 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,693 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:13:52,698 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,698 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:13:52,699 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:13:52,711 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:13:52,711 - ai_answer_service - INFO - 接收到问题: '测试问题1...' (类型: single)
+2025-09-19 14:13:52,712 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:13:54,379 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:13:54,563 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:13:54,563 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:13:54,563 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:14:23,988 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:14:24,993 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:14:24,993 - ai_answer_service - INFO - 接收到问题: '测试问题2...' (类型: single)
+2025-09-19 14:14:24,993 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:14:25,453 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:14:25,825 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:14:25,825 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:14:25,825 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:14:43,452 - ai_answer_service - INFO - 问题处理完成 (耗时: 18.46秒)
+2025-09-19 14:14:43,456 - ai_answer_service - INFO - 问答记录已保存 (ID: 213)
+2025-09-19 14:14:44,460 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:14:44,460 - ai_answer_service - INFO - 接收到问题: '测试问题3...' (类型: single)
+2025-09-19 14:14:44,460 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:14:45,065 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:14:46,148 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:14:46,148 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:14:46,148 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:15:13,685 - ai_answer_service - INFO - 问题处理完成 (耗时: 29.23秒)
+2025-09-19 14:15:13,689 - ai_answer_service - INFO - 问答记录已保存 (ID: 214)
+2025-09-19 14:15:33,124 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:15:33,124 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:15:33,124 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:15:33,124 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:15:35,167 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:15:35,167 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:15:35,167 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:15:35,229 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:15:35,229 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:15:36,256 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:15:36,256 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:15:37,260 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:15:37,261 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:15:40,322 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:15:49,488 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:15:49,488 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,488 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:15:49,488 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,496 - ai_answer_service - INFO - 问答记录已保存 (ID: 215)
+2025-09-19 14:15:49,502 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:15:49,502 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,502 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:15:49,502 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,505 - ai_answer_service - INFO - 问答记录已保存 (ID: 216)
+2025-09-19 14:15:49,507 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:15:49,507 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,508 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:15:49,508 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,510 - ai_answer_service - INFO - 问答记录已保存 (ID: 217)
+2025-09-19 14:15:49,512 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:15:49,512 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,512 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:15:49,512 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,514 - ai_answer_service - INFO - 问答记录已保存 (ID: 218)
+2025-09-19 14:15:49,516 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:15:49,516 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,516 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:15:49,516 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,519 - ai_answer_service - INFO - 问答记录已保存 (ID: 219)
+2025-09-19 14:15:49,521 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:15:49,521 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,521 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:15:49,521 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,524 - ai_answer_service - INFO - 问答记录已保存 (ID: 220)
+2025-09-19 14:15:49,526 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:15:49,526 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,526 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:15:49,526 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,528 - ai_answer_service - INFO - 问答记录已保存 (ID: 221)
+2025-09-19 14:15:49,530 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:15:49,530 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:15:49,531 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:15:49,531 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,531 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:15:49,531 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:15:49,534 - ai_answer_service - INFO - 问答记录已保存 (ID: 222)
+2025-09-19 14:15:49,537 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:15:49,538 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:15:49,538 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,538 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:15:49,538 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:15:49,541 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:15:49,541 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:15:49,541 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:15:49,541 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:15:49,541 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:15:49,543 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:15:49,543 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:15:49,543 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:16:17,982 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:16:17,982 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:16:17,982 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:16:17,982 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:16:20,041 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:16:20,041 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:16:20,041 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:17:38,926 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:17:38,926 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:17:38,926 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:17:38,926 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:17:40,964 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:17:40,965 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:17:40,965 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:17:40,972 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:17:40,972 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:17:40,973 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:17:49,590 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:17:49,590 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:17:49,590 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:17:49,590 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:17:51,638 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:17:51,639 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:17:51,639 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:17:51,686 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:17:51,687 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:17:51,687 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:17:52,504 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:17:52,504 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 14:17:52,504 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:17:56,905 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 1/3): API 返回空内容
+2025-09-19 14:18:01,558 - ai_answer_service - INFO - 问题处理完成 (耗时: 9.87秒)
+2025-09-19 14:18:01,562 - ai_answer_service - INFO - 问答记录已保存 (ID: 223)
+2025-09-19 14:18:02,588 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:18:02,588 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:18:02,902 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:18:02,903 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:18:02,903 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:18:06,972 - ai_answer_service - INFO - 问题处理完成 (耗时: 4.38秒)
+2025-09-19 14:18:06,977 - ai_answer_service - INFO - 问答记录已保存 (ID: 224)
+2025-09-19 14:18:08,002 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:18:08,002 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:18:08,101 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:18:08,351 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:18:08,351 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:18:08,351 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:18:12,813 - ai_answer_service - INFO - 问题处理完成 (耗时: 4.81秒)
+2025-09-19 14:18:12,816 - ai_answer_service - INFO - 问答记录已保存 (ID: 225)
+2025-09-19 14:18:15,866 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:18:24,814 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:18:24,814 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,814 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:18:24,814 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,821 - ai_answer_service - INFO - 问答记录已保存 (ID: 226)
+2025-09-19 14:18:24,827 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:18:24,827 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,828 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:18:24,828 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,831 - ai_answer_service - INFO - 问答记录已保存 (ID: 227)
+2025-09-19 14:18:24,833 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:18:24,833 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,833 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:18:24,833 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,836 - ai_answer_service - INFO - 问答记录已保存 (ID: 228)
+2025-09-19 14:18:24,838 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:18:24,838 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,838 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:18:24,838 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,840 - ai_answer_service - INFO - 问答记录已保存 (ID: 229)
+2025-09-19 14:18:24,841 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:18:24,841 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,842 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:18:24,842 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,844 - ai_answer_service - INFO - 问答记录已保存 (ID: 230)
+2025-09-19 14:18:24,846 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:18:24,846 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,846 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:18:24,846 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,849 - ai_answer_service - INFO - 问答记录已保存 (ID: 231)
+2025-09-19 14:18:24,851 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:18:24,851 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,851 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:18:24,851 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,853 - ai_answer_service - INFO - 问答记录已保存 (ID: 232)
+2025-09-19 14:18:24,855 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:18:24,855 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:18:24,856 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:18:24,856 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,856 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:18:24,856 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,859 - ai_answer_service - INFO - 问答记录已保存 (ID: 233)
+2025-09-19 14:18:24,862 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:18:24,863 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:18:24,863 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,863 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:18:24,863 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:18:24,866 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:18:24,866 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:18:24,866 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,866 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:18:24,866 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:18:24,868 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:18:24,868 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:18:24,868 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:18:24,870 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:18:24,870 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:18:24,870 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:18:24,870 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:18:24,870 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:18:24,873 - ai_answer_service - INFO - 问答记录已保存 (ID: 234)
+2025-09-19 14:18:50,322 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:18:50,322 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:18:50,322 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:18:50,322 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:18:52,368 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:18:52,368 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:18:52,368 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:19:00,491 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:19:00,491 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:19:00,491 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:19:00,491 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:19:02,532 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:19:02,532 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:19:02,532 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:19:02,540 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:02,540 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:19:02,540 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:02,540 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:02,540 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:02,549 - ai_answer_service - INFO - 问答记录已保存 (ID: 235)
+2025-09-19 14:19:11,228 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:19:11,228 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:19:11,229 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:19:11,229 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:19:13,275 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:19:13,275 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:19:13,276 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:19:13,339 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:19:13,339 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:19:13,339 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:19:14,117 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:19:14,117 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 14:19:14,117 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:18,676 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.34秒)
+2025-09-19 14:19:18,682 - ai_answer_service - INFO - 问答记录已保存 (ID: 236)
+2025-09-19 14:19:19,686 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:19:19,686 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:19:20,080 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:19:20,081 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:19:20,081 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:19:24,823 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.14秒)
+2025-09-19 14:19:24,826 - ai_answer_service - INFO - 问答记录已保存 (ID: 237)
+2025-09-19 14:19:25,853 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:19:25,853 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:19:26,068 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:19:26,144 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:19:26,144 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:19:26,144 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:19:28,835 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 1/3): API 返回空内容
+2025-09-19 14:19:34,768 - ai_answer_service - INFO - 问题处理完成 (耗时: 8.92秒)
+2025-09-19 14:19:34,772 - ai_answer_service - INFO - 问答记录已保存 (ID: 238)
+2025-09-19 14:19:37,793 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:19:46,025 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:19:46,025 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,025 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:46,025 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,033 - ai_answer_service - INFO - 问答记录已保存 (ID: 239)
+2025-09-19 14:19:46,039 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:19:46,040 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,040 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:19:46,040 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,042 - ai_answer_service - INFO - 问答记录已保存 (ID: 240)
+2025-09-19 14:19:46,044 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:19:46,044 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,044 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:19:46,044 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,046 - ai_answer_service - INFO - 问答记录已保存 (ID: 241)
+2025-09-19 14:19:46,049 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:19:46,049 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,049 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:19:46,049 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,052 - ai_answer_service - INFO - 问答记录已保存 (ID: 242)
+2025-09-19 14:19:46,053 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:19:46,053 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,053 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:46,054 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,056 - ai_answer_service - INFO - 问答记录已保存 (ID: 243)
+2025-09-19 14:19:46,057 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:19:46,057 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,057 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:19:46,057 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,060 - ai_answer_service - INFO - 问答记录已保存 (ID: 244)
+2025-09-19 14:19:46,061 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:19:46,061 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,061 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:19:46,062 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,064 - ai_answer_service - INFO - 问答记录已保存 (ID: 245)
+2025-09-19 14:19:46,066 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:19:46,066 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:19:46,068 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:19:46,068 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,068 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:46,068 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,071 - ai_answer_service - INFO - 问答记录已保存 (ID: 246)
+2025-09-19 14:19:46,074 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:46,074 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:19:46,074 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,074 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:46,074 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:19:46,077 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:46,077 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:19:46,077 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,077 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:46,077 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:19:46,078 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:46,078 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:19:46,078 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:19:46,080 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:46,080 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:19:46,080 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,080 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:46,080 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,084 - ai_answer_service - INFO - 问答记录已保存 (ID: 247)
+2025-09-19 14:19:46,086 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 14:19:46,086 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 14:19:46,086 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:46,086 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 14:19:46,087 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:19:46,087 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:19:46,087 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:19:46,089 - ai_answer_service - INFO - 问答记录已保存 (ID: 248)
+2025-09-19 14:19:46,090 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:46,091 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:19:46,091 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:19:46,091 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.00秒)
+2025-09-19 14:19:46,094 - ai_answer_service - INFO - 问答记录已保存 (ID: 249)
+2025-09-19 14:19:46,096 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:19:46,096 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:19:46,096 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:20:05,323 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:20:05,324 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:20:05,324 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:20:05,324 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:20:07,368 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:20:07,369 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:20:07,369 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:20:14,906 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:20:14,906 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:20:14,906 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:20:14,906 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:20:16,961 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:20:16,961 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:20:16,961 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:20:16,970 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:16,970 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:16,970 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:20:16,970 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:20:16,970 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:16,970 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:16,980 - ai_answer_service - INFO - 问答记录已保存 (ID: 250)
+2025-09-19 14:20:25,179 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:20:25,179 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:20:25,179 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:20:25,179 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:20:27,228 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:20:27,228 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:20:27,228 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:20:27,289 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:20:27,290 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:20:27,290 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:20:28,219 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:20:28,220 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 14:20:28,220 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:33,633 - ai_answer_service - INFO - 问题处理完成 (耗时: 6.34秒)
+2025-09-19 14:20:33,640 - ai_answer_service - INFO - 问答记录已保存 (ID: 251)
+2025-09-19 14:20:34,655 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:20:34,655 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:20:35,062 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:20:35,063 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:20:35,063 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:20:39,537 - ai_answer_service - INFO - 问题处理完成 (耗时: 4.88秒)
+2025-09-19 14:20:39,541 - ai_answer_service - INFO - 问答记录已保存 (ID: 252)
+2025-09-19 14:20:40,546 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:20:40,546 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:20:40,950 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:20:41,040 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:20:41,040 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:20:41,040 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:20:45,683 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.14秒)
+2025-09-19 14:20:45,686 - ai_answer_service - INFO - 问答记录已保存 (ID: 253)
+2025-09-19 14:20:48,741 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:20:59,514 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:20:59,514 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,515 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,515 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,521 - ai_answer_service - INFO - 问答记录已保存 (ID: 254)
+2025-09-19 14:20:59,527 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:20:59,527 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,527 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:20:59,527 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,531 - ai_answer_service - INFO - 问答记录已保存 (ID: 255)
+2025-09-19 14:20:59,533 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:20:59,533 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,533 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:20:59,533 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,536 - ai_answer_service - INFO - 问答记录已保存 (ID: 256)
+2025-09-19 14:20:59,538 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:20:59,539 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,539 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:20:59,539 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,541 - ai_answer_service - INFO - 问答记录已保存 (ID: 257)
+2025-09-19 14:20:59,543 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:20:59,544 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,544 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,544 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,546 - ai_answer_service - INFO - 问答记录已保存 (ID: 258)
+2025-09-19 14:20:59,548 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:20:59,549 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,549 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:20:59,549 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,551 - ai_answer_service - INFO - 问答记录已保存 (ID: 259)
+2025-09-19 14:20:59,553 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:20:59,553 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,553 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:20:59,553 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,555 - ai_answer_service - INFO - 问答记录已保存 (ID: 260)
+2025-09-19 14:20:59,557 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:20:59,557 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:20:59,558 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:20:59,558 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,558 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,558 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,561 - ai_answer_service - INFO - 问答记录已保存 (ID: 261)
+2025-09-19 14:20:59,565 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,565 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:59,565 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,565 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,565 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:20:59,569 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,569 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:59,569 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,569 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,569 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:20:59,570 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,570 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:59,570 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:20:59,571 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,572 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:59,572 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,572 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,572 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,575 - ai_answer_service - INFO - 问答记录已保存 (ID: 262)
+2025-09-19 14:20:59,577 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 14:20:59,577 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 14:20:59,577 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,577 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 14:20:59,577 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:20:59,577 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,578 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,581 - ai_answer_service - INFO - 问答记录已保存 (ID: 263)
+2025-09-19 14:20:59,583 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,583 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:59,583 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:20:59,584 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.00秒)
+2025-09-19 14:20:59,587 - ai_answer_service - INFO - 问答记录已保存 (ID: 264)
+2025-09-19 14:20:59,589 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,589 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:59,589 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:20:59,589 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:20:59,589 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:20:59,589 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:20:59,592 - ai_answer_service - INFO - 问答记录已保存 (ID: 265)
+2025-09-19 14:20:59,594 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:20:59,594 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:20:59,594 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:21:11,051 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:21:11,052 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:21:11,052 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:21:11,052 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:21:13,109 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:21:13,110 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:21:13,110 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:21:15,019 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:21:15,019 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:21:15,019 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:21:15,019 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:21:17,068 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:21:17,068 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:21:17,068 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:21:17,077 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:21:17,077 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:21:17,077 - ai_answer_service - INFO - 外部题库未启用，将使用AI搜索
+2025-09-19 14:21:17,078 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:21:17,078 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:21:17,086 - ai_answer_service - INFO - 问答记录已保存 (ID: 266)
+2025-09-19 14:22:21,674 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:22:21,675 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:22:21,675 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:22:21,675 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:22:23,716 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:22:23,716 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:22:23,716 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:22:23,778 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:22:23,778 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:22:23,778 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:22:24,318 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:22:24,319 - ai_answer_service - INFO - 外部题库答案 'def &lt;name&gt;（arg1，arg2，…argN）' 与题目类型 'single' 或选项不匹配，将使用AI搜索
+2025-09-19 14:22:24,319 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:28,774 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.00秒)
+2025-09-19 14:22:28,780 - ai_answer_service - INFO - 问答记录已保存 (ID: 267)
+2025-09-19 14:22:29,804 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:22:29,804 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:22:30,161 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:22:30,162 - ai_answer_service - INFO - 外部题库答案 'A、C' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:22:30,162 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:22:33,500 - ai_answer_service - INFO - 问题处理完成 (耗时: 3.70秒)
+2025-09-19 14:22:33,504 - ai_answer_service - INFO - 问答记录已保存 (ID: 268)
+2025-09-19 14:22:34,508 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:22:34,508 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:22:34,724 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:22:34,802 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:22:34,802 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:22:34,802 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:22:39,620 - ai_answer_service - INFO - 问题处理完成 (耗时: 5.11秒)
+2025-09-19 14:22:39,624 - ai_answer_service - INFO - 问答记录已保存 (ID: 269)
+2025-09-19 14:22:42,677 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:22:52,180 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:22:52,180 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,180 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,180 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,187 - ai_answer_service - INFO - 问答记录已保存 (ID: 270)
+2025-09-19 14:22:52,195 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:22:52,195 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,195 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:22:52,195 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,199 - ai_answer_service - INFO - 问答记录已保存 (ID: 271)
+2025-09-19 14:22:52,201 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:22:52,201 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,201 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:22:52,201 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,205 - ai_answer_service - INFO - 问答记录已保存 (ID: 272)
+2025-09-19 14:22:52,208 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:22:52,208 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,208 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:22:52,208 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,211 - ai_answer_service - INFO - 问答记录已保存 (ID: 273)
+2025-09-19 14:22:52,213 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:22:52,213 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,213 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,213 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,216 - ai_answer_service - INFO - 问答记录已保存 (ID: 274)
+2025-09-19 14:22:52,217 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:22:52,217 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,217 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:22:52,217 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,220 - ai_answer_service - INFO - 问答记录已保存 (ID: 275)
+2025-09-19 14:22:52,222 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:22:52,222 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,222 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:22:52,222 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,225 - ai_answer_service - INFO - 问答记录已保存 (ID: 276)
+2025-09-19 14:22:52,227 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:22:52,227 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:22:52,229 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:22:52,229 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,229 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,229 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,232 - ai_answer_service - INFO - 问答记录已保存 (ID: 277)
+2025-09-19 14:22:52,235 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,235 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,235 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,235 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,235 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:22:52,238 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,238 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,238 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,238 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,238 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:22:52,240 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,240 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,240 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:22:52,241 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,241 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,241 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,242 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,242 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,245 - ai_answer_service - INFO - 问答记录已保存 (ID: 278)
+2025-09-19 14:22:52,247 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 14:22:52,247 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 14:22:52,247 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,247 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 14:22:52,247 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:22:52,247 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,248 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,250 - ai_answer_service - INFO - 问答记录已保存 (ID: 279)
+2025-09-19 14:22:52,252 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,252 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,252 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:22:52,253 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.00秒)
+2025-09-19 14:22:52,256 - ai_answer_service - INFO - 问答记录已保存 (ID: 280)
+2025-09-19 14:22:52,258 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,258 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,258 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:22:52,258 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:22:52,258 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,258 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,261 - ai_answer_service - INFO - 问答记录已保存 (ID: 281)
+2025-09-19 14:22:52,262 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,262 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,263 - ai_answer_service - INFO - 外部题库未启用，将使用AI搜索
+2025-09-19 14:22:52,263 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:22:52,263 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:22:52,265 - ai_answer_service - INFO - 问答记录已保存 (ID: 282)
+2025-09-19 14:22:52,267 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:22:52,267 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:22:52,267 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:23:10,371 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:23:10,371 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:23:10,371 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:23:10,371 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:23:12,413 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:23:12,413 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:23:12,414 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:23:12,460 - ai_answer_service - INFO - 接收到问题: 'Python中如何定义一个函数?...' (类型: single)
+2025-09-19 14:23:12,460 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:23:13,464 - ai_answer_service - INFO - 接收到问题: '以下哪些是Python的关键字?...' (类型: multiple)
+2025-09-19 14:23:13,464 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:23:14,470 - ai_answer_service - INFO - 接收到问题: 'Python支持多线程编程...' (类型: judgement)
+2025-09-19 14:23:14,470 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:23:17,514 - ai_answer_service - INFO - 解析外部题库JSON答案: '["GenericServlet"]' -> 'GenericServlet'
+2025-09-19 14:23:27,157 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:23:27,157 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,157 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,157 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,163 - ai_answer_service - INFO - 问答记录已保存 (ID: 283)
+2025-09-19 14:23:27,168 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:23:27,168 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,168 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:23:27,168 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,172 - ai_answer_service - INFO - 问答记录已保存 (ID: 284)
+2025-09-19 14:23:27,173 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: )
+2025-09-19 14:23:27,173 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,174 - ai_answer_service - INFO - 策略: 单阶段标准 ()
+2025-09-19 14:23:27,174 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,178 - ai_answer_service - INFO - 问答记录已保存 (ID: 285)
+2025-09-19 14:23:27,181 - ai_answer_service - INFO - 接收到问题: '1 1等于2吗...' (类型: judgement)
+2025-09-19 14:23:27,181 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,181 - ai_answer_service - INFO - 策略: 单阶段极简 (判断题)
+2025-09-19 14:23:27,181 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,184 - ai_answer_service - INFO - 问答记录已保存 (ID: 286)
+2025-09-19 14:23:27,185 - ai_answer_service - INFO - 接收到问题: '中国的首都是哪里...' (类型: single)
+2025-09-19 14:23:27,185 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,185 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,185 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,188 - ai_answer_service - INFO - 问答记录已保存 (ID: 287)
+2025-09-19 14:23:27,189 - ai_answer_service - INFO - 接收到问题: '选择正确的选项...' (类型: multiple)
+2025-09-19 14:23:27,189 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,189 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:23:27,189 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,192 - ai_answer_service - INFO - 问答记录已保存 (ID: 288)
+2025-09-19 14:23:27,194 - ai_answer_service - INFO - 接收到问题: 'AI的全称是______...' (类型: completion)
+2025-09-19 14:23:27,194 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,194 - ai_answer_service - INFO - 策略: 单阶段标准 (completion)
+2025-09-19 14:23:27,194 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,197 - ai_answer_service - INFO - 问答记录已保存 (ID: 289)
+2025-09-19 14:23:27,198 - ai_answer_service - INFO - 接收到问题: '你是谁...' (类型: )
+2025-09-19 14:23:27,198 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:23:27,199 - ai_answer_service - INFO - 接收到问题: '选择正确的答案...' (类型: single)
+2025-09-19 14:23:27,199 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,199 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,199 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,202 - ai_answer_service - INFO - 问答记录已保存 (ID: 290)
+2025-09-19 14:23:27,205 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,205 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,205 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,205 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,205 - ai_answer_service - ERROR - 处理问题时发生严重错误: AI服务不可用
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: AI服务不可用
+2025-09-19 14:23:27,208 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,209 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,209 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,209 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,209 - ai_answer_service - WARNING - AI 返回的答案为空
+2025-09-19 14:23:27,210 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,211 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,211 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:23:27,212 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,213 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,213 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,213 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,213 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,216 - ai_answer_service - INFO - 问答记录已保存 (ID: 291)
+2025-09-19 14:23:27,218 - ai_answer_service - INFO - 检测到阅读理解题，启用专用解析器。
+2025-09-19 14:23:27,218 - ai_answer_service - INFO - 阅读理解解析结果 -> 文章长度: 0, 问题: 'Reading Comprehension: 这是一个阅读理...', 选项: '...'
+2025-09-19 14:23:27,218 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,218 - ai_answer_service - INFO - 接收到问题: 'Reading Comprehension: 这是一个阅读理解题目。(1) 问题内容是什么？A. 选...' (类型: single)
+2025-09-19 14:23:27,218 - ai_answer_service - INFO - 外部题库未初始化，将使用AI搜索
+2025-09-19 14:23:27,218 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,218 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,221 - ai_answer_service - INFO - 问答记录已保存 (ID: 292)
+2025-09-19 14:23:27,222 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,222 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,222 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:23:27,223 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.00秒)
+2025-09-19 14:23:27,226 - ai_answer_service - INFO - 问答记录已保存 (ID: 293)
+2025-09-19 14:23:27,228 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,228 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,228 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:23:27,228 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:23:27,228 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,228 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,231 - ai_answer_service - INFO - 问答记录已保存 (ID: 294)
+2025-09-19 14:23:27,233 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,233 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,233 - ai_answer_service - INFO - 外部题库未启用，将使用AI搜索
+2025-09-19 14:23:27,233 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:27,234 - ai_answer_service - INFO - 问题处理完成 (耗时: 0.00秒)
+2025-09-19 14:23:27,236 - ai_answer_service - INFO - 问答记录已保存 (ID: 295)
+2025-09-19 14:23:27,238 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,238 - ai_answer_service - INFO - 接收到问题: '测试问题...' (类型: single)
+2025-09-19 14:23:27,238 - ai_answer_service - INFO - 从缓存获取答案 (耗时: 0.00秒)
+2025-09-19 14:23:27,251 - ai_answer_service - INFO - 检测到选项(options)为空，启用弹性适应策略，将问题(question)作为上下文(context)。
+2025-09-19 14:23:27,252 - ai_answer_service - INFO - 接收到问题: '测试问题1...' (类型: single)
+2025-09-19 14:23:27,252 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:23:27,827 - ai_answer_service - INFO - 外部题库 '言溪题库' 返回未找到答案，继续查询其他题库
+2025-09-19 14:23:28,078 - ai_answer_service - INFO - 所有外部题库均未找到有效答案
+2025-09-19 14:23:28,079 - ai_answer_service - INFO - 外部题库未找到答案，将使用AI搜索
+2025-09-19 14:23:28,079 - ai_answer_service - INFO - 策略: 单阶段标准 (single)
+2025-09-19 14:23:42,357 - ai_answer_service - WARNING - AI 调用参数错误 (尝试 1/3): API 返回空内容
+2025-09-19 14:24:06,707 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:24:06,707 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:24:06,708 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:24:06,708 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:24:08,751 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:24:08,751 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:24:08,751 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:24:15,088 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:24:15,089 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:24:15,089 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:24:15,090 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:24:17,133 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:24:17,133 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:24:17,133 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:24:21,211 - ai_answer_service - INFO - 接收到问题: '()反潜作战能力居于世界第一位,空军装备了世界上最先进的战机,自卫队战斗力位居全球第四名,已经具备了...' (类型: single)
+2025-09-19 14:24:21,216 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:24:21,217 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:24:21,361 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:24:21,361 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.15秒)
+2025-09-19 14:24:21,369 - ai_answer_service - INFO - 问答记录已保存 (ID: 296)
+2025-09-19 14:24:24,477 - ai_answer_service - INFO - 接收到问题: '()于1994年10月签订日内瓦核框架协议,解决了核争端。...' (类型: multiple)
+2025-09-19 14:24:24,478 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:24:24,746 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:24:24,746 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.27秒)
+2025-09-19 14:24:24,750 - ai_answer_service - INFO - 问答记录已保存 (ID: 297)
+2025-09-19 14:24:27,861 - ai_answer_service - INFO - 接收到问题: '朝鲜半岛已逐渐走向和平,不再维持重兵对峙的局面。...' (类型: judgement)
+2025-09-19 14:24:27,863 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:24:28,018 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:24:28,018 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.16秒)
+2025-09-19 14:24:28,022 - ai_answer_service - INFO - 问答记录已保存 (ID: 298)
+2025-09-19 14:24:48,732 - ai_answer_service - INFO - 接收到问题: '()历史上具有扩张主义传统,曾经侵略过我国150万平方公里的领土,是历史上侵占我国领土最多的国家。...' (类型: single)
+2025-09-19 14:24:48,732 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:24:49,011 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:24:49,011 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.28秒)
+2025-09-19 14:24:49,015 - ai_answer_service - INFO - 问答记录已保存 (ID: 299)
+2025-09-19 14:24:52,151 - ai_answer_service - INFO - 接收到问题: '我国在俄罗斯、蒙古方向的安全环境总体呈乐观态势,但也存在不安全和不确定因素。...' (类型: judgement)
+2025-09-19 14:24:52,152 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:24:52,326 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:24:52,327 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-19 14:24:52,331 - ai_answer_service - INFO - 问答记录已保存 (ID: 300)
+2025-09-19 14:24:55,453 - ai_answer_service - INFO - 接收到问题: '美国和北约现在逐渐加强了与蒙古和平伙伴的关系,使他们的影响第一次扩大到我国北部的边境。...' (类型: judgement)
+2025-09-19 14:24:55,454 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:24:55,845 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:24:55,845 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.39秒)
+2025-09-19 14:24:55,848 - ai_answer_service - INFO - 问答记录已保存 (ID: 301)
+2025-09-19 14:25:10,234 - ai_answer_service - INFO - 接收到问题: '中亚的()对我国的安全有很大影响。...' (类型: multiple)
+2025-09-19 14:25:10,234 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:25:10,437 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:25:10,437 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.20秒)
+2025-09-19 14:25:10,440 - ai_answer_service - INFO - 问答记录已保存 (ID: 302)
+2025-09-19 14:25:13,564 - ai_answer_service - INFO - 接收到问题: '新疆的特点有()。...' (类型: multiple)
+2025-09-19 14:25:13,565 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:25:13,709 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:25:13,709 - ai_answer_service - INFO - 外部题库答案 '面积大#边境线长#接壤国家多#境内民族多' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-19 14:25:13,709 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-19 14:25:24,564 - ai_answer_service - INFO - 问题处理完成 (耗时: 11.00秒)
+2025-09-19 14:25:24,567 - ai_answer_service - INFO - 问答记录已保存 (ID: 303)
+2025-09-19 14:25:27,694 - ai_answer_service - INFO - 接收到问题: '就冷战后国际大气候来看,对一个国家安全的威胁往往来自于国家内部各种分裂势力。...' (类型: judgement)
+2025-09-19 14:25:27,694 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:25:27,886 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:25:27,886 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.19秒)
+2025-09-19 14:25:27,889 - ai_answer_service - INFO - 问答记录已保存 (ID: 304)
+2025-09-19 14:26:43,313 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:26:43,313 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:26:43,313 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:26:43,313 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:26:45,358 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:26:45,359 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:26:45,359 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:27:20,665 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:27:20,666 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:27:20,666 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:27:20,666 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:27:22,715 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:27:22,715 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:27:22,715 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:27:32,606 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:27:32,606 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:27:32,606 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:27:32,606 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:27:34,661 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:27:34,661 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:27:34,662 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:27:50,686 - ai_answer_service - INFO - 外部题库答案格式正确但选项不匹配，接受答案: 面积大#边境线长#接壤国家多#境内民族多
+2025-09-19 14:28:10,807 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:28:10,807 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:28:10,807 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:28:10,807 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:28:12,854 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:28:12,854 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:28:12,854 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:29:24,723 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:29:24,724 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:29:24,724 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:29:24,724 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:29:26,761 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:29:26,761 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:29:26,761 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:29:33,994 - ai_answer_service - INFO - 外部题库答案格式正确但选项不匹配，接受答案: 面积大#边境线长#接壤国家多#境内民族多
+2025-09-19 14:29:45,622 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:29:45,623 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:29:45,627 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:29:45,627 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:29:47,672 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:29:47,672 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:29:47,672 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:29:51,253 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:29:51,254 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:29:51,254 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:29:51,254 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:29:53,303 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:29:53,303 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:29:53,304 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:30:02,552 - ai_answer_service - INFO - 外部题库答案格式正确但选项不匹配，接受答案: 面积大#边境线长#接壤国家多#境内民族多
+2025-09-19 14:30:09,135 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:30:09,136 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:30:09,136 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:30:09,136 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:30:11,170 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:30:11,171 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:30:11,171 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:31:51,367 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:31:51,367 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:31:51,367 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:31:51,367 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:31:53,412 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:31:53,412 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:31:53,412 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:32:11,240 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:32:11,240 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:32:11,240 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:32:11,241 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:32:13,291 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:32:13,292 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:32:13,292 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:32:16,865 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:32:16,865 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:32:16,865 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:32:16,865 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:32:18,911 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:32:18,911 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:32:18,911 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:32:37,363 - ai_answer_service - INFO - 接收到问题: '近些年来,()谋求成为南亚霸权、亚洲盟主、世界一级,视我国为主要的对手,从而加紧了扩军备战。...' (类型: single)
+2025-09-19 14:32:37,365 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:32:37,366 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:32:38,875 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:32:38,875 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 1.51秒)
+2025-09-19 14:32:38,882 - ai_answer_service - INFO - 问答记录已保存 (ID: 305)
+2025-09-19 14:32:42,380 - ai_answer_service - INFO - 接收到问题: '中印领土争端于2004年正式解决。...' (类型: judgement)
+2025-09-19 14:32:42,381 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:32:42,839 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:32:42,840 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.46秒)
+2025-09-19 14:32:42,844 - ai_answer_service - INFO - 问答记录已保存 (ID: 306)
+2025-09-19 14:32:46,375 - ai_answer_service - INFO - 接收到问题: '印度以毫无法律效力的麦克马洪线为依据,侵占了中国领土。()...' (类型: judgement)
+2025-09-19 14:32:46,376 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:32:46,589 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:32:46,589 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.21秒)
+2025-09-19 14:32:46,593 - ai_answer_service - INFO - 问答记录已保存 (ID: 307)
+2025-09-19 14:34:26,755 - ai_answer_service - WARNING - 无法导入AI验证模块，使用宽松策略
+2025-09-19 14:43:59,538 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:43:59,539 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:43:59,539 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:43:59,539 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:44:01,590 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:44:01,590 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:44:01,590 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:44:24,527 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:44:24,528 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:44:24,528 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:44:24,528 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:44:26,578 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:44:26,578 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:44:26,579 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:44:32,804 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:44:32,805 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:44:32,805 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:44:32,805 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:44:34,836 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:44:34,845 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:44:34,845 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:44:48,737 - ai_answer_service - INFO - 接收到问题: '我国积极推行()的外交政策。...' (类型: multiple)
+2025-09-19 14:44:48,738 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:44:48,739 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:44:49,064 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:44:49,065 - ai_answer_service - ERROR - 答案验证过程中发生错误: name '_is_not_found_answer' is not defined
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\utils.py", line 431, in validate_external_answer
+    if _is_not_found_answer(answer):
+       ^^^^^^^^^^^^^^^^^^^^
+NameError: name '_is_not_found_answer' is not defined
+2025-09-19 14:44:49,065 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.33秒)
+2025-09-19 14:44:49,072 - ai_answer_service - INFO - 问答记录已保存 (ID: 308)
+2025-09-19 14:44:52,185 - ai_answer_service - INFO - 接收到问题: '我国通过签订(),以法律的形式明确规定了中俄两国长达4300多公里的边界线的走向。...' (类型: multiple)
+2025-09-19 14:44:52,185 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:44:52,347 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:44:52,348 - ai_answer_service - ERROR - 答案验证过程中发生错误: name '_is_not_found_answer' is not defined
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\utils.py", line 431, in validate_external_answer
+    if _is_not_found_answer(answer):
+       ^^^^^^^^^^^^^^^^^^^^
+NameError: name '_is_not_found_answer' is not defined
+2025-09-19 14:44:52,348 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.16秒)
+2025-09-19 14:44:52,353 - ai_answer_service - INFO - 问答记录已保存 (ID: 309)
+2025-09-19 14:45:11,351 - ai_answer_service - INFO - 接收到问题: '习近平主席曾就钓鱼岛问题表明了自己的态度,即()。...' (类型: multiple)
+2025-09-19 14:45:11,352 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:45:11,535 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:45:11,535 - ai_answer_service - ERROR - 答案验证过程中发生错误: name '_is_not_found_answer' is not defined
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\utils.py", line 431, in validate_external_answer
+    if _is_not_found_answer(answer):
+       ^^^^^^^^^^^^^^^^^^^^
+NameError: name '_is_not_found_answer' is not defined
+2025-09-19 14:45:11,536 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.18秒)
+2025-09-19 14:45:11,539 - ai_answer_service - INFO - 问答记录已保存 (ID: 310)
+2025-09-19 14:45:14,656 - ai_answer_service - INFO - 接收到问题: '面对如今我国周边的安全形势,我们需要做到()。...' (类型: multiple)
+2025-09-19 14:45:14,657 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:45:14,820 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:45:14,821 - ai_answer_service - ERROR - 答案验证过程中发生错误: name '_is_not_found_answer' is not defined
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\utils.py", line 431, in validate_external_answer
+    if _is_not_found_answer(answer):
+       ^^^^^^^^^^^^^^^^^^^^
+NameError: name '_is_not_found_answer' is not defined
+2025-09-19 14:45:14,821 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.17秒)
+2025-09-19 14:45:14,825 - ai_answer_service - INFO - 问答记录已保存 (ID: 311)
+2025-09-19 14:45:17,957 - ai_answer_service - INFO - 接收到问题: '我们必须准备好在万不得已的情况之下,采取流血的政治手段来打赢维护中国领海主权和利益的局部战争。...' (类型: judgement)
+2025-09-19 14:45:17,957 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:45:18,100 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:45:18,101 - ai_answer_service - ERROR - 答案验证过程中发生错误: name '_is_not_found_answer' is not defined
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\utils.py", line 431, in validate_external_answer
+    if _is_not_found_answer(answer):
+       ^^^^^^^^^^^^^^^^^^^^
+NameError: name '_is_not_found_answer' is not defined
+2025-09-19 14:45:18,101 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.15秒)
+2025-09-19 14:45:18,105 - ai_answer_service - INFO - 问答记录已保存 (ID: 312)
+2025-09-19 14:45:45,581 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:45:45,582 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:45:45,582 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:45:45,582 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:45:47,625 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:45:47,625 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:45:47,625 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:46:15,619 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:46:15,620 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:46:15,620 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:46:15,621 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:46:17,659 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:46:17,659 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:46:17,659 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:49:36,400 - ai_answer_service - INFO - 外部题库答案格式正确但选项不匹配，接受答案: test answer
+2025-09-19 14:49:57,658 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:49:57,659 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:49:57,659 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:49:57,659 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:49:59,705 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:49:59,706 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:49:59,706 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 14:50:11,563 - ai_answer_service - INFO - 接收到问题: '()与人民群众切身利益关系最密切,是人民群众安全感的晴雨表。...' (类型: single)
+2025-09-19 14:50:11,564 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 14:50:11,564 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:11,946 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:11,947 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.38秒)
+2025-09-19 14:50:11,954 - ai_answer_service - INFO - 问答记录已保存 (ID: 313)
+2025-09-19 14:50:15,071 - ai_answer_service - INFO - 接收到问题: '坚持中国共产党领导,坚持社会主义制度,确保党执政安全,是维护政治安全的根本任务。...' (类型: judgement)
+2025-09-19 14:50:15,072 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:15,338 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:15,338 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.27秒)
+2025-09-19 14:50:15,342 - ai_answer_service - INFO - 问答记录已保存 (ID: 314)
+2025-09-19 14:50:18,459 - ai_answer_service - INFO - 接收到问题: '网络安全已经成为我国面临的最复杂、最现实、最严峻的传统安全问题之一。...' (类型: judgement)
+2025-09-19 14:50:18,460 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:18,670 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:18,670 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.21秒)
+2025-09-19 14:50:18,674 - ai_answer_service - INFO - 问答记录已保存 (ID: 315)
+2025-09-19 14:50:32,804 - ai_answer_service - INFO - 接收到问题: '“在一场大国间的长期战争中,胜利往往属于有坚实的经济基础的一方,或属于最后仍有财源的一方”出自保罗·...' (类型: single)
+2025-09-19 14:50:32,805 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:32,947 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:32,947 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.14秒)
+2025-09-19 14:50:32,950 - ai_answer_service - INFO - 问答记录已保存 (ID: 316)
+2025-09-19 14:50:36,071 - ai_answer_service - INFO - 接收到问题: '19世纪()充当欧洲霸主与经济事务主宰,其主要因素是产业革命以后的经济实力超过其他国家。...' (类型: single)
+2025-09-19 14:50:36,072 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:36,304 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:36,307 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.24秒)
+2025-09-19 14:50:36,310 - ai_answer_service - INFO - 问答记录已保存 (ID: 317)
+2025-09-19 14:50:39,433 - ai_answer_service - INFO - 接收到问题: '在国际事务中扮演着主要角色,拥有强大军事实力和政治影响力的国家和地区,通常被称为()。...' (类型: single)
+2025-09-19 14:50:39,434 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:39,638 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:39,638 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.20秒)
+2025-09-19 14:50:39,643 - ai_answer_service - INFO - 问答记录已保存 (ID: 318)
+2025-09-19 14:50:42,793 - ai_answer_service - INFO - 接收到问题: '综合国力的大小,决定国家在国际舞台上享有的地位。...' (类型: judgement)
+2025-09-19 14:50:42,793 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:43,019 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:43,019 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.23秒)
+2025-09-19 14:50:43,023 - ai_answer_service - INFO - 问答记录已保存 (ID: 319)
+2025-09-19 14:50:46,131 - ai_answer_service - INFO - 接收到问题: '国际格局形成实际上是大国战略关系调整的结果,这种调整过程是和平融洽的,没有竞争和斗争。...' (类型: judgement)
+2025-09-19 14:50:46,131 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 14:50:46,344 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 14:50:46,344 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.21秒)
+2025-09-19 14:50:46,348 - ai_answer_service - INFO - 问答记录已保存 (ID: 320)

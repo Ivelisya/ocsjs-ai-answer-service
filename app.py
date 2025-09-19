@@ -461,6 +461,22 @@ def get_cache_stats():
         logger.error(f"获取缓存统计信息失败: {e}")
         return jsonify({"success": False, "message": "获取统计信息失败"}), 500
 
+@app.route("/api/cache/clear", methods=["POST"])
+def clear_cache():
+    """清除缓存"""
+    if not verify_access_token(request):
+        return jsonify({"success": False, "message": "无效的访问令牌"}), 403
+    
+    if not Config.ENABLE_CACHE or cache is None:
+        return jsonify({"success": False, "message": "缓存未启用或未初始化"})
+    
+    try:
+        cache.clear()
+        return jsonify({"success": True, "message": "缓存已清除"})
+    except Exception as e:
+        logger.error(f"清除缓存失败: {e}")
+        return jsonify({"success": False, "message": "清除缓存失败"}), 500
+
 @app.route("/api/stats", methods=["GET"])
 def get_stats():
     if not verify_access_token(request):

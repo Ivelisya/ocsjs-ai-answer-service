@@ -196,7 +196,9 @@ class TestCacheIntegration:
     @patch('app.call_ai_with_retry')
     def test_cache_hit(self, mock_ai_call, mock_cache, client):
         """测试缓存命中的情况"""
-        mock_cache.get.return_value = "缓存的答案"
+        # 模拟缓存中存储的完整响应数据
+        cached_response = {"code": 1, "question": "测试问题", "answer": "缓存的答案"}
+        mock_cache.get.return_value = cached_response
 
         response = client.get('/api/search?title=测试问题&type=single')
         assert response.status_code == 200
@@ -220,8 +222,8 @@ class TestCacheIntegration:
         assert data['code'] == 1
         assert data['answer'] == '新的答案'
 
-        # 缓存不应该被设置（根据用户要求）
-        mock_cache.set.assert_not_called()
+        # 缓存应该被设置（存储完整的响应数据）
+        mock_cache.set.assert_called_once()
 
 
 class TestReadingComprehension:
@@ -289,11 +291,15 @@ class TestExternalDatabase:
         mock_get_external_db.return_value = mock_external_db
         mock_ai_call.return_value = "<answer>AI答案</answer>"
 
-        response = client.get('/api/search?title=测试问题&type=single')
-        assert response.status_code == 200
-        data = json.loads(response.data)
-        assert data['code'] == 1
-        assert data['answer'] == 'AI答案'
+        # 确保缓存未命中
+        with patch('app.cache') as mock_cache:
+            mock_cache.get.return_value = None
+            
+            response = client.get('/api/search?title=测试问题&type=single')
+            assert response.status_code == 200
+            data = json.loads(response.data)
+            assert data['code'] == 1
+            assert data['answer'] == 'AI答案'
 
     @patch('app.Config.ENABLE_EXTERNAL_DATABASE', False)
     @patch('app.call_ai_with_retry')
@@ -301,14 +307,18 @@ class TestExternalDatabase:
         """测试外部题库未启用时直接使用AI的情况"""
         mock_ai_call.return_value = "<answer>AI答案</answer>"
 
-        response = client.get('/api/search?title=测试问题&type=single')
-        assert response.status_code == 200
-        data = json.loads(response.data)
-        assert data['code'] == 1
-        assert data['answer'] == 'AI答案'
+        # 确保缓存未命中
+        with patch('app.cache') as mock_cache:
+            mock_cache.get.return_value = None
+            
+            response = client.get('/api/search?title=测试问题&type=single')
+            assert response.status_code == 200
+            data = json.loads(response.data)
+            assert data['code'] == 1
+            assert data['answer'] == 'AI答案'
 
-        # AI应该被调用
-        mock_ai_call.assert_called_once()
+            # AI应该被调用
+            mock_ai_call.assert_called_once()
 
     @patch('app.get_external_db')
     @patch('app.call_ai_with_retry')
