@@ -1,0 +1,160 @@
+2025-09-20 02:48:34,400 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-20 02:48:34,401 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-20 02:48:34,401 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-20 02:48:34,401 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-20 02:48:38,476 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-20 02:48:38,479 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-20 02:48:38,479 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-20 02:48:39,659 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-20 02:48:39,659 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-20 02:48:39,660 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-20 02:48:39,660 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-20 02:48:43,741 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-20 02:48:43,744 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-20 02:48:43,744 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-20 02:48:43,769 - ai_answer_service - INFO - 接收到问题: '东南亚国家在南海采取的共同行动有()。...' (类型: multiple)
+2025-09-20 02:48:43,771 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-20 02:48:43,772 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-20 02:48:43,965 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-20 02:48:43,966 - ai_answer_service - INFO - 外部题库答案 '积极推动南海问题的“国际化”，企图借助大国的力量与中国抗衡，给解决南海问题制造了障碍 # 企图使南海问题“长期化”，以最大限度的在南海地区获取石油等利益 # 企图在南海进行“合法化”，为他们控制南沙寻找法理依据 # 在共同利益的驱使下，开始联合起来对付中国' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-20 02:48:43,966 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-20 02:49:48,557 - ai_answer_service - INFO - 接收到问题: '南海及其南海诸岛主权,历来是属于我们中国的,这在20世纪70年代以前从来没有争议。...' (类型: judgement)
+2025-09-20 02:49:48,561 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-20 02:49:48,722 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-20 02:49:48,722 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.17秒)
+2025-09-20 02:49:48,729 - ai_answer_service - INFO - 问答记录已保存 (ID: 324)
+2025-09-20 02:49:53,559 - ai_answer_service - INFO - 接收到问题: '中方对南沙部分驻守岛礁的有关建设,是中方主权范围内的事情,合情、合理、合法,不影响也不针对任何国家,...' (类型: judgement)
+2025-09-20 02:49:53,563 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-20 02:49:53,724 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-20 02:49:53,724 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.17秒)
+2025-09-20 02:49:53,730 - ai_answer_service - INFO - 问答记录已保存 (ID: 325)
+2025-09-20 02:58:42,595 - ai_answer_service - WARNING - AI 调用失败 (尝试 1/3): Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.251.215.234:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ -- 10060)
+2025-09-20 03:08:40,613 - ai_answer_service - WARNING - AI 调用失败 (尝试 2/3): Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.73.138:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ -- 10060)
+2025-09-20 03:18:36,924 - ai_answer_service - WARNING - AI 调用失败 (尝试 3/3): Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.73.138:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ -- 10060)
+2025-09-20 03:18:36,924 - ai_answer_service - ERROR - 处理问题时发生严重错误: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.73.138:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ -- 10060)
+Traceback (most recent call last):
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\grpc_helpers.py", line 76, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\grpc\_interceptor.py", line 277, in __call__
+    response, ignored_call = self._with_call(
+                             ~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\grpc\_interceptor.py", line 332, in _with_call
+    return call.result(), call
+           ~~~~~~~~~~~^^
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\grpc\_channel.py", line 440, in result
+    raise self
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\grpc\_interceptor.py", line 315, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+    ...<4 lines>...
+        compression=new_compression,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\grpc\_channel.py", line 1192, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\grpc\_channel.py", line 1006, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.73.138:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ -- 10060)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.73.138:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.\r\n -- 10060)"}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ServiceUnavailable: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.73.138:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ -- 10060)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 406, in search
+    final_answer_raw = call_ai_with_retry(prompt, Config.TEMPERATURE)
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 275, in call_ai_with_retry
+    return asyncio.run(call_ai_with_retry_async(prompt, temperature))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\site-packages\nest_asyncio.py", line 30, in run
+    return loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+           ~~~~~~~~^^
+  File "D:\ProgramData\anaconda3\Lib\asyncio\futures.py", line 199, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\ProgramData\anaconda3\Lib\asyncio\tasks.py", line 306, in __step_run_and_handle_result
+    result = coro.throw(exc)
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 210, in call_ai_with_retry_async
+    response = await loop.run_in_executor(None, _generate_content)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\asyncio\futures.py", line 286, in __await__
+    yield self  # This tells Task to wait for completion.
+    ^^^^^^^^^^
+  File "D:\ProgramData\anaconda3\Lib\asyncio\tasks.py", line 375, in __wakeup
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "D:\ProgramData\anaconda3\Lib\asyncio\futures.py", line 199, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\Github\ocsjs-ai-answer-service\app.py", line 207, in _generate_content
+    return model.generate_content(prompt, generation_config=generation_config)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "C:\Users\20212\AppData\Roaming\Python\Python313\site-packages\google\api_core\retry\retry_base.py", line 229, in _retry_error_helper
+    raise final_exc from source_exc
+google.api_core.exceptions.RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.73.138:443: ConnectEx: Connection timed out (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ -- 10060)
+2025-09-20 03:18:41,351 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-20 03:18:41,352 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-20 03:18:41,352 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-20 03:18:41,353 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-20 03:18:45,433 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-20 03:18:45,434 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-20 03:18:45,435 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)

@@ -2463,3 +2463,68 @@ NameError: name '_is_not_found_answer' is not defined
 2025-09-19 14:50:46,344 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
 2025-09-19 14:50:46,344 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.21秒)
 2025-09-19 14:50:46,348 - ai_answer_service - INFO - 问答记录已保存 (ID: 320)
+2025-09-19 14:51:05,204 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 14:51:05,205 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 14:51:05,205 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 14:51:05,205 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 14:51:07,244 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 14:51:07,244 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 14:51:07,244 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 15:19:50,943 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 15:19:50,944 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 15:19:50,944 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 15:19:50,944 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 15:19:52,977 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 15:19:52,978 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 15:19:52,978 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 15:19:56,795 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 15:19:56,795 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 15:19:56,795 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 15:19:56,796 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 15:19:58,836 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 15:19:58,838 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 15:19:58,838 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 15:31:48,438 - ai_answer_service - INFO - 接收到问题: '2006年,()通过修宪,企图使台湾达到法理“台独”的阴谋。...' (类型: single)
+2025-09-19 15:31:48,438 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-19 15:31:48,439 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 15:31:48,775 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 15:31:48,776 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.34秒)
+2025-09-19 15:31:48,784 - ai_answer_service - INFO - 问答记录已保存 (ID: 321)
+2025-09-19 15:31:51,915 - ai_answer_service - INFO - 接收到问题: '朝鲜战争时,军官麦克阿瑟表示美国可以利用()这个永不沉没的航空母舰兼作供应舰,来威胁整个南方的海运并...' (类型: single)
+2025-09-19 15:31:51,916 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 15:31:52,182 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 15:31:52,182 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.27秒)
+2025-09-19 15:31:52,185 - ai_answer_service - INFO - 问答记录已保存 (ID: 322)
+2025-09-19 15:31:55,327 - ai_answer_service - INFO - 接收到问题: '美国奉行以台湾来制华,是我们解决台湾问题一个最大的障碍。...' (类型: judgement)
+2025-09-19 15:31:55,328 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-19 15:31:55,493 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-19 15:31:55,493 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.17秒)
+2025-09-19 15:31:55,498 - ai_answer_service - INFO - 问答记录已保存 (ID: 323)
+2025-09-19 15:54:10,566 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 15:54:10,566 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 15:54:10,566 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 15:54:10,566 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 15:54:12,606 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 15:54:12,607 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 15:54:12,607 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 15:54:45,728 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 15:54:45,728 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 15:54:45,729 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 15:54:45,729 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 15:54:47,783 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 15:54:47,783 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 15:54:47,783 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 16:02:19,103 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 16:02:19,103 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 16:02:19,103 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 16:02:19,103 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 16:02:21,145 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 16:02:21,145 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 16:02:21,145 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-19 16:06:37,857 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-19 16:06:37,858 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-19 16:06:37,859 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-19 16:06:37,860 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-19 16:06:39,908 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-19 16:06:39,908 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-19 16:06:39,908 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)

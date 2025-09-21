@@ -1,0 +1,52 @@
+2025-09-21 05:17:33,891 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-21 05:17:33,891 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-21 05:17:33,891 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-21 05:17:33,891 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-21 05:17:37,952 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-21 05:17:37,952 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-21 05:17:37,953 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-21 05:17:39,231 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-21 05:17:39,231 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-21 05:17:39,231 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-21 05:17:39,231 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-21 05:17:43,305 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-21 05:17:43,305 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-21 05:17:43,305 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-21 05:17:44,469 - ai_answer_service - INFO - 接收到问题: '东南亚国家在南海采取的共同行动有()。...' (类型: multiple)
+2025-09-21 05:17:44,471 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-21 05:17:44,472 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-21 05:17:44,704 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-21 05:17:44,705 - ai_answer_service - INFO - 外部题库答案 '积极推动南海问题的“国际化”，企图借助大国的力量与中国抗衡，给解决南海问题制造了障碍 # 企图使南海问题“长期化”，以最大限度的在南海地区获取石油等利益 # 企图在南海进行“合法化”，为他们控制南沙寻找法理依据 # 在共同利益的驱使下，开始联合起来对付中国' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-21 05:17:44,705 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-21 05:18:18,075 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-21 05:18:18,075 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-21 05:18:18,075 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-21 05:18:18,075 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-21 05:18:20,122 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-21 05:18:20,123 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-21 05:18:20,123 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-21 05:18:26,612 - ai_answer_service - INFO - 数据库表创建成功。
+2025-09-21 05:18:26,613 - ai_answer_service - INFO - 输入验证: 禁用
+2025-09-21 05:18:26,613 - ai_answer_service - INFO - 速率限制: 禁用
+2025-09-21 05:18:26,613 - ai_answer_service - INFO - 外部题库: 启用
+2025-09-21 05:18:28,649 - ai_answer_service - WARNING - Redis连接失败，使用内存缓存
+2025-09-21 05:18:28,649 - ai_answer_service - INFO - 速率限制已禁用
+2025-09-21 05:18:28,650 - ai_answer_service - INFO - AI 提供商设置为: Gemini (模型: gemini-2.5-flash)
+2025-09-21 05:18:28,948 - ai_answer_service - INFO - 接收到问题: '东南亚国家在南海采取的共同行动有()。...' (类型: multiple)
+2025-09-21 05:18:28,950 - ai_answer_service - INFO - 外部题库查询已启用
+2025-09-21 05:18:28,950 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-21 05:18:29,328 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-21 05:18:29,329 - ai_answer_service - INFO - 外部题库答案 '积极推动南海问题的“国际化”，企图借助大国的力量与中国抗衡，给解决南海问题制造了障碍 # 企图使南海问题“长期化”，以最大限度的在南海地区获取石油等利益 # 企图在南海进行“合法化”，为他们控制南沙寻找法理依据 # 在共同利益的驱使下，开始联合起来对付中国' 与题目类型 'multiple' 或选项不匹配，将使用AI搜索
+2025-09-21 05:18:29,329 - ai_answer_service - INFO - 策略: 单阶段标准 (multiple)
+2025-09-21 05:18:49,283 - ai_answer_service - INFO - 问题处理完成 (耗时: 20.33秒)
+2025-09-21 05:18:49,292 - ai_answer_service - INFO - 问答记录已保存 (ID: 326)
+2025-09-21 05:18:52,401 - ai_answer_service - INFO - 接收到问题: '南海及其南海诸岛主权,历来是属于我们中国的,这在20世纪70年代以前从来没有争议。...' (类型: judgement)
+2025-09-21 05:18:52,402 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-21 05:18:52,637 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-21 05:18:52,637 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.24秒)
+2025-09-21 05:18:52,641 - ai_answer_service - INFO - 问答记录已保存 (ID: 327)
+2025-09-21 05:18:56,254 - ai_answer_service - INFO - 接收到问题: '中方对南沙部分驻守岛礁的有关建设,是中方主权范围内的事情,合情、合理、合法,不影响也不针对任何国家,...' (类型: judgement)
+2025-09-21 05:18:56,254 - ai_answer_service - INFO - 正在查询外部题库...
+2025-09-21 05:18:56,520 - ai_answer_service - INFO - 从外部题库 '言溪题库' 找到有效答案
+2025-09-21 05:18:56,520 - ai_answer_service - INFO - 外部题库查询成功 (耗时: 0.27秒)
+2025-09-21 05:18:56,523 - ai_answer_service - INFO - 问答记录已保存 (ID: 328)
