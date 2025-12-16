@@ -9,9 +9,9 @@
         />
         <meta name="keywords" content="API文档, 接口文档, 智能题库, REST API" />
         <title>API文档 - EduBrain AI</title>
-        <link rel="stylesheet" href="/static/style.css" />
+        <link rel="stylesheet" href="/static/style.css?v=3" />
         <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            href="https://cdn.staticfile.net/font-awesome/6.5.1/css/all.min.css"
             rel="stylesheet"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,15 +20,575 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <style>
+            /* 重置 body 样式 */
+            body {
+                display: block !important;
+                flex-direction: unset !important;
+            }
+            
+            /* API文档页面专属样式 */
+            .docs-container {
+                min-height: 100vh;
+                width: 100%;
+                background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 20px;
+                position: relative;
+                overflow-x: hidden;
+            }
+            
+            .docs-container::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: 
+                    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 50%);
+                pointer-events: none;
+            }
+            
+            .docs-header {
+                text-align: center;
+                margin-bottom: 40px;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .docs-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                margin-bottom: 16px;
+            }
+            
+            .docs-logo i {
+                font-size: 2.5rem;
+                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+            }
+            
+            .docs-logo h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                background: linear-gradient(135deg, #f1f5f9, #94a3b8);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin: 0;
+            }
+            
+            .docs-subtitle {
+                font-size: 1.1rem;
+                color: #94a3b8;
+                margin: 0 0 24px 0;
+            }
+            
+            .quick-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+                margin-top: 20px;
+            }
+            
+            .nav-item {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 20px;
+                background: rgba(30, 41, 59, 0.8);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 12px;
+                color: #94a3b8;
+                text-decoration: none;
+                font-size: 0.95rem;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(10px);
+            }
+            
+            .nav-item:hover {
+                background: rgba(59, 130, 246, 0.2);
+                border-color: rgba(59, 130, 246, 0.4);
+                color: #f1f5f9;
+                transform: translateY(-2px);
+            }
+            
+            .nav-item i {
+                font-size: 1rem;
+                color: #3b82f6;
+            }
+            
+            .docs-main {
+                max-width: 900px;
+                margin: 0 auto;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .docs-card {
+                background: rgba(30, 41, 59, 0.75);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 20px;
+                padding: 32px;
+                margin-bottom: 28px;
+                backdrop-filter: blur(12px);
+                transition: all 0.3s ease;
+            }
+            
+            .docs-card:hover {
+                border-color: rgba(59, 130, 246, 0.3);
+                box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+            }
+            
+            .card-header {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 24px;
+                padding-bottom: 16px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+            
+            .card-header i {
+                font-size: 1.5rem;
+                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .card-header h2 {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #f1f5f9;
+                margin: 0;
+            }
+            
+            .api-content h3 {
+                font-size: 1.15rem;
+                color: #f1f5f9;
+                margin: 24px 0 16px 0;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            .api-content p {
+                color: #94a3b8;
+                line-height: 1.7;
+                margin: 0 0 12px 0;
+            }
+            
+            .api-content ul {
+                color: #94a3b8;
+                padding-left: 20px;
+                margin: 12px 0;
+            }
+            
+            .api-content li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+            }
+            
+            /* 步骤样式 */
+            .integration-steps {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+            
+            .step {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: 700;
+                font-size: 1.1rem;
+                box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            }
+            
+            .step-content {
+                flex: 1;
+            }
+            
+            .step-content h4 {
+                font-size: 1.1rem;
+                color: #f1f5f9;
+                margin: 0 0 10px 0;
+            }
+            
+            .step-content p {
+                color: #94a3b8;
+                margin: 0 0 12px 0;
+            }
+            
+            /* 代码块 */
+            .code-block {
+                background: rgba(15, 23, 42, 0.9);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                border-radius: 12px;
+                padding: 16px 20px;
+                margin: 12px 0;
+                overflow-x: auto;
+            }
+            
+            .code-block pre {
+                margin: 0;
+            }
+            
+            .code-block code {
+                font-family: 'JetBrains Mono', 'Fira Code', monospace;
+                font-size: 0.9rem;
+                color: #10b981;
+            }
+            
+            /* 配置表格 */
+            .config-table {
+                background: rgba(15, 23, 42, 0.6);
+                border-radius: 12px;
+                overflow: hidden;
+                margin: 12px 0;
+            }
+            
+            .config-row {
+                display: flex;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .config-row:last-child {
+                border-bottom: none;
+            }
+            
+            .config-label {
+                width: 140px;
+                min-width: 140px;
+                padding: 14px 16px;
+                background: rgba(59, 130, 246, 0.1);
+                color: #94a3b8;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+            
+            .config-value {
+                flex: 1;
+                padding: 14px 16px;
+                color: #f1f5f9;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.9rem;
+                word-break: break-all;
+            }
+            
+            /* 参数映射 */
+            .param-mapping {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 12px 0;
+            }
+            
+            .mapping-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 12px 16px;
+                background: rgba(15, 23, 42, 0.6);
+                border-radius: 10px;
+            }
+            
+            .mapping-item i {
+                color: #3b82f6;
+                font-size: 0.85rem;
+            }
+            
+            .ocs-param {
+                color: #f59e0b;
+                font-weight: 500;
+            }
+            
+            .api-param {
+                color: #10b981;
+                font-family: 'JetBrains Mono', monospace;
+            }
+            
+            /* 测试示例 */
+            .test-example {
+                background: rgba(16, 185, 129, 0.1);
+                border: 1px solid rgba(16, 185, 129, 0.2);
+                border-radius: 12px;
+                padding: 16px 20px;
+                margin: 12px 0;
+            }
+            
+            .test-example p {
+                margin: 6px 0;
+            }
+            
+            .test-example strong {
+                color: #10b981;
+            }
+            
+            /* 注意事项 */
+            .integration-notes {
+                margin-top: 28px;
+                padding: 20px;
+                background: rgba(245, 158, 11, 0.1);
+                border: 1px solid rgba(245, 158, 11, 0.2);
+                border-radius: 12px;
+            }
+            
+            .integration-notes h4 {
+                color: #f59e0b;
+                margin: 0 0 12px 0;
+                font-size: 1.05rem;
+            }
+            
+            .integration-notes ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            
+            .integration-notes li {
+                color: #94a3b8;
+            }
+            
+            /* Endpoint样式 */
+            .endpoint-info {
+                margin-bottom: 20px;
+            }
+            
+            .endpoint {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-bottom: 12px;
+            }
+            
+            .method {
+                padding: 6px 14px;
+                border-radius: 8px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            
+            .method.get {
+                background: rgba(16, 185, 129, 0.2);
+                color: #10b981;
+            }
+            
+            .method.post {
+                background: rgba(59, 130, 246, 0.2);
+                color: #3b82f6;
+            }
+            
+            .endpoint code {
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 1rem;
+                color: #f1f5f9;
+                background: rgba(15, 23, 42, 0.6);
+                padding: 8px 16px;
+                border-radius: 8px;
+            }
+            
+            .endpoint-description {
+                color: #94a3b8;
+                margin: 0;
+            }
+            
+            /* 参数表格 - 使用 div 结构 */
+            .params-table {
+                width: 100%;
+                margin: 16px 0;
+                background: rgba(15, 23, 42, 0.6);
+                border-radius: 12px;
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .param-row {
+                display: grid;
+                grid-template-columns: 120px 80px 60px 1fr;
+                gap: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .param-row:last-child {
+                border-bottom: none;
+            }
+            
+            .param-row.param-header {
+                background: rgba(59, 130, 246, 0.15);
+            }
+            
+            .param-row.param-header > div {
+                color: #94a3b8;
+                font-weight: 600;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            
+            .param-row > div {
+                padding: 14px 16px;
+                color: #f1f5f9;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: center;
+            }
+            
+            .param-row .param-name {
+                font-family: 'JetBrains Mono', monospace;
+                color: #3b82f6;
+                font-weight: 500;
+            }
+            
+            .param-row .param-type {
+                color: #8b5cf6;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.85rem;
+            }
+            
+            .param-row .param-required.required {
+                color: #ef4444;
+                font-weight: 600;
+            }
+            
+            .param-row .param-required.optional {
+                color: #64748b;
+            }
+            
+            .param-row .param-description {
+                color: #94a3b8;
+            }
+            
+            .params-table code {
+                background: rgba(59, 130, 246, 0.15);
+                color: #3b82f6;
+                padding: 3px 8px;
+                border-radius: 5px;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.85rem;
+            }
+            
+            /* Footer */
+            .docs-footer {
+                text-align: center;
+                margin-top: 40px;
+                padding-top: 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+                position: relative;
+                z-index: 1;
+            }
+            
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+                margin-bottom: 16px;
+            }
+            
+            .footer-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: #94a3b8;
+                text-decoration: none;
+                font-size: 0.95rem;
+                transition: all 0.3s ease;
+            }
+            
+            .footer-link:hover {
+                color: #3b82f6;
+            }
+            
+            .footer-text {
+                color: #64748b;
+                font-size: 0.9rem;
+                margin: 0;
+            }
+            
+            /* 响应式 */
+            @media (max-width: 768px) {
+                .docs-container {
+                    padding: 24px 16px;
+                }
+                
+                .docs-logo h1 {
+                    font-size: 1.8rem;
+                }
+                
+                .quick-nav {
+                    gap: 8px;
+                }
+                
+                .nav-item {
+                    padding: 10px 14px;
+                    font-size: 0.85rem;
+                }
+                
+                .docs-card {
+                    padding: 24px 20px;
+                }
+                
+                .step {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+                
+                .config-row {
+                    flex-direction: column;
+                }
+                
+                .config-label {
+                    width: 100%;
+                }
+                
+                .params-table {
+                    overflow-x: auto;
+                }
+                
+                .param-row {
+                    grid-template-columns: 100px 70px 50px 1fr;
+                    font-size: 0.85rem;
+                }
+                
+                .param-row > div {
+                    padding: 10px 12px;
+                }
+            }
+        </style>
     </head>
     <body>
-        <div class="container">
-            <header class="header">
-                <div class="logo">
+        <div class="docs-container">
+            <header class="docs-header">
+                <div class="docs-logo">
                     <i class="fas fa-book"></i>
                     <h1>API文档</h1>
                 </div>
-                <p class="subtitle">EduBrain AI 智能题库系统的API接口文档</p>
+                <p class="docs-subtitle">EduBrain AI 智能题库系统的API接口文档</p>
                 <div class="quick-nav">
                     <a href="#integration" class="nav-item">
                         <i class="fas fa-plug"></i>
@@ -49,7 +609,7 @@
                 </div>
             </header>
 
-            <main class="main-content">
+            <main class="docs-main">
                 <div class="docs-card" id="integration">
                     <div class="card-header">
                         <i class="fas fa-plug"></i>
@@ -69,7 +629,7 @@
                                         </p>
                                         <div class="code-block">
                                             <pre><code># 启动服务
-python app.py</code></pre>
+python main.py</code></pre>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +670,7 @@ python app.py</code></pre>
                                                     接口地址
                                                 </div>
                                                 <div class="config-value">
-                                                    http://localhost:5000/api/search
+                                                    http://localhost:8000/api/search
                                                 </div>
                                             </div>
                                             <div class="config-row">
@@ -213,7 +773,7 @@ python app.py</code></pre>
                                 <ul>
                                     <li>
                                         确保EduBrain
-                                        AI服务运行在正确的端口（默认5000）
+                                        AI服务运行在正确的端口（默认8000）
                                     </li>
                                     <li>
                                         如果使用外部题库，请确保external_databases.json配置正确
@@ -346,14 +906,14 @@ python app.py</code></pre>
                                 <div class="command-group">
                                     <h4>1. 启动服务</h4>
                                     <div class="code-block">
-                                        <pre><code>python app.py</code></pre>
+                                        <pre><code>python main.py</code></pre>
                                     </div>
                                 </div>
 
                                 <div class="command-group">
                                     <h4>2. 测试搜索接口</h4>
                                     <div class="code-block">
-                                        <pre><code>curl -X POST "http://localhost:5000/api/search" \
+                                        <pre><code>curl -X POST "http://localhost:8000/api/search" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "title=中国的首都是哪里？&type=single"</code></pre>
                                     </div>
@@ -362,7 +922,7 @@ python app.py</code></pre>
                                 <div class="command-group">
                                     <h4>3. 测试健康检查</h4>
                                     <div class="code-block">
-                                        <pre><code>curl "http://localhost:5000/api/health"</code></pre>
+                                        <pre><code>curl "http://localhost:8000/api/health"</code></pre>
                                     </div>
                                 </div>
                             </div>
@@ -382,7 +942,7 @@ python app.py</code></pre>
                                     </li>
                                     <li>
                                         <a
-                                            href="https://github.com/Ivelisya/ocsjs-ai-answer-service"
+                                            href="https://github.com/LynnGuo666/ocsjs-ai-answer-service"
                                             target="_blank"
                                             >📂 GitHub仓库</a
                                         >
@@ -399,7 +959,7 @@ python app.py</code></pre>
                 </div>
             </main>
 
-            <footer class="footer">
+            <footer class="docs-footer">
                 <div class="footer-links">
                     <a href="/" class="footer-link">
                         <i class="fas fa-home"></i>

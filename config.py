@@ -14,20 +14,26 @@ load_dotenv()
 class Config:
     # 服务配置
     HOST = os.getenv("HOST", "0.0.0.0")
-    PORT = int(os.getenv("PORT", 5000))
+    PORT = int(os.getenv("PORT", 8000))
     DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 
     # OpenAI配置
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+    OPENAI_MODEL = os.getenv("OPENAI_MODEL", "chatgpt5.2-chat")
     # OpenAI API Base URL，如果不设置则使用默认值
     OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1")
 
-    # AI 提供商配置 (openai 或 gemini)
-    AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").lower()
+    # Azure OpenAI 配置
+    AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "")
+    AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT", "")
+    AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2025-04-01-preview")
+    AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o")  # 部署名称
+
+    # AI 提供商配置 (openai, azure_openai 或 gemini)
+    AI_PROVIDER = os.getenv("AI_PROVIDER", "azure_openai").lower()
 
     # 验证 AI 提供商
-    SUPPORTED_AI_PROVIDERS = ["openai", "gemini"]
+    SUPPORTED_AI_PROVIDERS = ["openai", "azure_openai", "gemini"]
     if AI_PROVIDER not in SUPPORTED_AI_PROVIDERS:
         raise ValueError(f"不支持的 AI 提供商: '{AI_PROVIDER}'. 支持的提供商包括: {SUPPORTED_AI_PROVIDERS}")
 
@@ -48,6 +54,11 @@ class Config:
         # 检查API密钥配置
         if cls.AI_PROVIDER == "openai" and not cls.OPENAI_API_KEY:
             errors.append("使用OpenAI时必须设置OPENAI_API_KEY环境变量")
+        elif cls.AI_PROVIDER == "azure_openai":
+            if not cls.AZURE_OPENAI_API_KEY:
+                errors.append("使用Azure OpenAI时必须设置AZURE_OPENAI_API_KEY环境变量")
+            if not cls.AZURE_OPENAI_ENDPOINT:
+                errors.append("使用Azure OpenAI时必须设置AZURE_OPENAI_ENDPOINT环境变量")
         elif cls.AI_PROVIDER == "gemini" and not cls.GEMINI_API_KEY:
             errors.append("使用Gemini时必须设置GEMINI_API_KEY环境变量")
 
@@ -89,7 +100,6 @@ class Config:
     # 缓存配置
     ENABLE_CACHE = os.getenv("ENABLE_CACHE", "True").lower() == "true"
     CACHE_EXPIRATION = int(os.getenv("CACHE_EXPIRATION", 86400))  # 默认缓存24小时
-    REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 
     # 数据库配置
     DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///db/dev.db")  # 默认使用SQLite方便开发

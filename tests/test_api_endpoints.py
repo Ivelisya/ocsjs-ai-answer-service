@@ -6,7 +6,7 @@ def test_apis():
 
     # 测试统计API
     try:
-        response = requests.get('http://localhost:5000/api/stats', headers={'X-Access-Token': 'your_access_token_here'})
+        response = requests.get('http://localhost:8000/api/stats', headers={'X-Access-Token': 'your_access_token_here'})
         print(f'统计API状态码: {response.status_code}')
         if response.status_code == 200:
             stats = response.json()
@@ -24,7 +24,7 @@ def test_apis():
 
     # 测试缓存统计API
     try:
-        response = requests.get('http://localhost:5000/api/cache/stats', headers={'X-Access-Token': 'your_access_token_here'})
+        response = requests.get('http://localhost:8000/api/cache/stats', headers={'X-Access-Token': 'your_access_token_here'})
         print(f'缓存统计API状态码: {response.status_code}')
         if response.status_code == 200:
             result = response.json()
@@ -46,7 +46,7 @@ def test_apis():
 
     # 测试问答记录API
     try:
-        response = requests.get('http://localhost:5000/api/qa-records?page=1&per_page=10', headers={'X-Access-Token': 'your_access_token_here'})
+        response = requests.get('http://localhost:8000/api/qa-records?page=1&per_page=10', headers={'X-Access-Token': 'your_access_token_here'})
         print(f'问答记录API状态码: {response.status_code}')
         if response.status_code == 200:
             result = response.json()

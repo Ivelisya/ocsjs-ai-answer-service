@@ -1,617 +1,710 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="EduBrain AI 管理面板 - 系统状态监控与管理"
-        />
-        <meta name="keywords" content="管理面板, 系统监控, 缓存管理, AI系统" />
-        <title>管理面板 - EduBrain AI</title>
-        <link rel="stylesheet" href="/static/style.css" />
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <div class="container">
-            <header class="header">
-                <div class="logo">
-                    <i class="fas fa-tachometer-alt"></i>
-                    <h1>管理面板</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBrain AI Hub - 智能控制中心</title>
+    <!-- Libraries -->
+    <script src="https://cdn.staticfile.net/Chart.js/4.4.1/chart.umd.js"></script>
+    <script src="https://cdn.staticfile.net/marked/9.1.5/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.net/font-awesome/6.5.1/css/all.min.css">
+    <!-- Local Styles (Critical) -->
+    <link rel="stylesheet" href="/static/style.css?v=3">
+    <style>
+        /* Dashboard专属增强样式 */
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #10b981, 0 0 20px rgba(16, 185, 129, 0.5);
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes statusPulse {
+            0%, 100% { box-shadow: 0 0 10px #10b981, 0 0 20px rgba(16, 185, 129, 0.5); }
+            50% { box-shadow: 0 0 15px #10b981, 0 0 30px rgba(16, 185, 129, 0.7); }
+        }
+        
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+            transform: translateX(-100%);
+            animation: cardShimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes cardShimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+        
+        .stat-icon.blue { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+        .stat-icon.purple { background: rgba(139, 92, 246, 0.15); color: #8b5cf6; }
+        .stat-icon.green { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+        .stat-icon.amber { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+        
+        .quick-actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .quick-action-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 20px;
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-action-btn:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: #3b82f6;
+            transform: translateY(-2px);
+        }
+        
+        .quick-action-btn.danger:hover {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+        
+        .version-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(139, 92, 246, 0.15);
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #a78bfa;
+            margin-left: 8px;
+        }
+        
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            color: #10b981;
+        }
+        
+        .live-indicator::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: liveBlink 1s ease-in-out infinite;
+        }
+        
+        @keyframes liveBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        .enhanced-log-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 12px;
+            margin-bottom: 4px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.2);
+            font-size: 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .enhanced-log-item .log-time {
+            color: #64748b;
+            flex-shrink: 0;
+        }
+        
+        .enhanced-log-item .log-level {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .enhanced-log-item .log-level.info { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+        .enhanced-log-item .log-level.error { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .enhanced-log-item .log-level.warn { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+        
+        .enhanced-log-item .log-msg {
+            color: #cbd5e1;
+            word-break: break-all;
+        }
+        
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: #64748b;
+            text-align: center;
+        }
+        
+        .empty-state i {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        
+        .chat-typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 12px;
+        }
+        
+        .chat-typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: typingBounce 1.4s ease-in-out infinite;
+        }
+        
+        .chat-typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .chat-typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes typingBounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="brand-area">
+                <div class="brand-icon"><i class="fas fa-brain text-white"></i></div>
+                <div>
+                    <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">
+                        EduBrain
+                        <span class="version-badge">
+                            <i class="fas fa-rocket"></i> v2.3
+                        </span>
+                    </div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; letter-spacing: 1px;">AI COMMAND CENTER</div>
                 </div>
-                <p class="subtitle">系统状态监控与管理</p>
+            </div>
+
+            <nav class="nav-menu">
+                <div class="nav-item active" id="nav-dashboard" onclick="switchTab('dashboard')">
+                    <i class="fas fa-chart-pie"></i> 监控概览
+                </div>
+                <div class="nav-item" id="nav-chat" onclick="switchTab('chat')">
+                    <i class="fas fa-comment-dots"></i> 智能问答
+                </div>
+                <div class="nav-item" onclick="window.location.href='/'">
+                    <i class="fas fa-home"></i> 返回首页
+                </div>
+                <div class="nav-item" onclick="window.open('/api/docs', '_blank')">
+                    <i class="fas fa-book"></i> API 文档
+                </div>
+            </nav>
+
+            <div style="padding: 24px; margin-top: auto;">
+                <div class="glass-panel" style="padding: 16px; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <span style="font-size: 0.75rem; color: #64748b;">系统状态</span>
+                        <span class="status-dot"></span>
+                    </div>
+                    <div id="current-time" style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: #f1f5f9; font-weight: 600;">--:--:--</div>
+                    <div id="current-date" style="font-size: 0.75rem; color: #64748b; margin-top: 4px;">----/--/--</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <header class="content-header">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <h2 id="page-title" style="font-size: 1.25rem; font-weight: 600; color: #fff; margin: 0;">系统监控面板</h2>
+                    <div class="live-indicator">实时更新中</div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <button class="quick-action-btn" onclick="refreshStats()" style="flex: none; padding: 10px 16px;">
+                        <i class="fas fa-sync-alt"></i> 刷新
+                    </button>
+                    <button class="quick-action-btn danger" onclick="clearCache()" style="flex: none; padding: 10px 16px;">
+                        <i class="fas fa-trash-alt"></i> 清缓存
+                    </button>
+                </div>
             </header>
 
-            <main class="main-content">
-                <div class="stats-card">
-                    <div class="card-header">
-                        <i class="fas fa-chart-line"></i>
-                        <h2>系统状态</h2>
+            <!-- DASHBOARD VIEW -->
+            <div id="view-dashboard" class="dashboard-view active-view">
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="card">
+                        <div class="stat-icon blue"><i class="fas fa-bolt"></i></div>
+                        <div class="card-label">总请求数</div>
+                        <div class="card-value" id="stat-request-count">--</div>
+                        <div class="card-unit">requests</div>
                     </div>
-
-                    <div class="config-hint">
-                        <i class="fas fa-cog"></i>
-                        <div class="hint-content">
-                            <strong>配置提示：</strong> 可在
-                            <code>config.py</code> 中修改AI提供商设置，在
-                            <code>external_databases.json</code> 中添加外部题库
-                        </div>
+                    <div class="card">
+                        <div class="stat-icon purple"><i class="fas fa-clock"></i></div>
+                        <div class="card-label">平均延迟</div>
+                        <div class="card-value" id="stat-latency">--</div>
+                        <div class="card-unit">毫秒</div>
                     </div>
-
-                    <div id="statsContent" class="stats-content">
-                        <div class="loading-spinner">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            <p>正在加载统计信息...</p>
-                        </div>
+                    <div class="card">
+                        <div class="stat-icon green"><i class="fas fa-bullseye"></i></div>
+                        <div class="card-label">缓存命中率</div>
+                        <div class="card-value" id="stat-cache-hit">--</div>
+                        <div class="card-unit">%</div>
                     </div>
-                </div>
-
-                <div class="cache-card">
-                    <div class="card-header">
-                        <i class="fas fa-database"></i>
-                        <h2>缓存管理</h2>
-                    </div>
-                    <div class="cache-content">
-                        <div id="cacheStatsContent" class="cache-stats">
-                            <div class="loading-spinner">
-                                <i class="fas fa-spinner fa-spin"></i>
-                                <p>正在加载缓存统计...</p>
-                            </div>
-                        </div>
-                        <p class="cache-description">
-                            清除系统缓存可以释放内存并确保获取最新数据。
-                        </p>
-                        <button id="clearCacheBtn" class="btn btn-secondary">
-                            <i class="fas fa-trash"></i>
-                            <span>清除缓存</span>
-                        </button>
-                        <div
-                            id="cacheResult"
-                            class="result-message"
-                            style="display: none"
-                        ></div>
+                    <div class="card">
+                        <div class="stat-icon amber"><i class="fas fa-microchip"></i></div>
+                        <div class="card-label">AI 模型</div>
+                        <div class="card-value" style="font-size: 1.1rem; margin-top: 8px;" id="stat-model-bot">--</div>
                     </div>
                 </div>
 
-                <div class="qa-records-card">
-                    <div class="card-header">
-                        <i class="fas fa-history"></i>
-                        <h2>问答记录</h2>
-                    </div>
-                    <div class="qa-records-content">
-                        <div id="qaRecordsContent" class="qa-records-list">
-                            <div class="loading-spinner">
-                                <i class="fas fa-spinner fa-spin"></i>
-                                <p>正在加载问答记录...</p>
-                            </div>
+                <!-- Charts & Logs -->
+                <div class="chart-section">
+                    <div class="glass-panel">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="margin: 0; font-size: 1rem; color: #e2e8f0;">
+                                <i class="fas fa-chart-line" style="margin-right: 8px; color: #3b82f6;"></i>
+                                响应延迟趋势
+                            </h3>
+                            <span style="font-size: 0.75rem; color: #64748b;">最近12次请求</span>
                         </div>
-                        <div class="qa-records-controls">
-                            <div class="qa-records-actions">
-                                <button
-                                    id="refreshRecordsBtn"
-                                    class="btn btn-secondary"
-                                >
-                                    <i class="fas fa-sync"></i>
-                                    <span>刷新记录</span>
-                                </button>
-                                <button
-                                    id="clearRecordsBtn"
-                                    class="btn btn-danger"
-                                >
-                                    <i class="fas fa-trash-alt"></i>
-                                    <span>清除记录</span>
-                                </button>
-                            </div>
-                            <div class="pagination-controls">
-                                <button
-                                    id="prevPageBtn"
-                                    class="btn btn-secondary"
-                                    disabled
-                                >
-                                    <i class="fas fa-chevron-left"></i>
-                                    <span>上一页</span>
-                                </button>
-                                <span id="pageInfo" class="page-info"
-                                    >第 1 页</span
-                                >
-                                <button
-                                    id="nextPageBtn"
-                                    class="btn btn-secondary"
-                                    disabled
-                                >
-                                    <i class="fas fa-chevron-right"></i>
-                                    <span>下一页</span>
-                                </button>
-                            </div>
-                            <div
-                                id="clearRecordsResult"
-                                class="result-message"
-                                style="display: none"
-                            ></div>
+                        <div style="flex: 1; position: relative;">
+                            <canvas id="trafficChart"></canvas>
                         </div>
                     </div>
-                </div>
-            </main>
-
-            <footer class="footer">
-                <div class="footer-links">
-                    <a href="/" class="footer-link">
-                        <i class="fas fa-home"></i>
-                        首页
-                    </a>
-                    <a href="/docs" class="footer-link">
-                        <i class="fas fa-book"></i>
-                        API文档
-                    </a>
-                </div>
-                <p class="footer-text">© 2024 EduBrain AI - 智能题库系统</p>
-            </footer>
-        </div>
-
-        <script>
-            // 加载统计信息
-            async function loadStats() {
-                try {
-                    const response = await fetch('/api/stats')
-                    const stats = await response.json()
-                    const statsDiv = document.getElementById('statsContent')
-
-                    statsDiv.innerHTML = `
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-code-branch"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${
-                                        stats.version
-                                    }</div>
-                                    <div class="stat-label">版本</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${Math.floor(
-                                        stats.uptime / 3600
-                                    )}h ${Math.floor(
-                        (stats.uptime % 3600) / 60
-                    )}m</div>
-                                    <div class="stat-label">运行时间</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-robot"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${
-                                        stats.ai_provider
-                                    }</div>
-                                    <div class="stat-label">AI提供商</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${stats.model}</div>
-                                    <div class="stat-label">模型</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-memory"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${
-                                        stats.cache_enabled ? '启用' : '禁用'
-                                    }</div>
-                                    <div class="stat-label">缓存状态</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${
-                                        stats.cache_size
-                                    }</div>
-                                    <div class="stat-label">缓存大小</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-question-circle"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${
-                                        stats.qa_records_count
-                                    }</div>
-                                    <div class="stat-label">问答记录</div>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </div>
-                                <div class="stat-info">
-                                    <div class="stat-value">${
-                                        stats.external_database_enabled
-                                            ? '启用'
-                                            : '禁用'
-                                    }</div>
-                                    <div class="stat-label">外部题库</div>
-                                </div>
-                            </div>
+                    <div class="glass-panel" style="overflow: hidden;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                            <h3 style="margin: 0; font-size: 1rem; color: #e2e8f0;">
+                                <i class="fas fa-terminal" style="margin-right: 8px; color: #8b5cf6;"></i>
+                                实时日志
+                            </h3>
+                            <div class="live-indicator">LIVE</div>
                         </div>
-                    `
-                } catch (error) {
-                    console.error('Error loading stats:', error)
-                    document.getElementById('statsContent').innerHTML = `
-                        <div class="error-result">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <p>加载统计信息失败</p>
-                        </div>
-                    `
-                }
-            }
-
-            // 加载缓存统计信息
-            async function loadCacheStats() {
-                try {
-                    const response = await fetch('/api/cache/stats')
-                    const result = await response.json()
-                    const statsDiv =
-                        document.getElementById('cacheStatsContent')
-
-                    if (result.success) {
-                        const stats = result.stats
-                        statsDiv.innerHTML = `
-                            <div class="cache-stats-grid">
-                                <div class="cache-stat-item">
-                                    <div class="cache-stat-icon">
-                                        <i class="fas fa-server"></i>
-                                    </div>
-                                    <div class="cache-stat-info">
-                                        <div class="cache-stat-value">${
-                                            stats.cache_type
-                                        }</div>
-                                        <div class="cache-stat-label">缓存类型</div>
-                                    </div>
-                                </div>
-                                <div class="cache-stat-item">
-                                    <div class="cache-stat-icon">
-                                        <i class="fas fa-database"></i>
-                                    </div>
-                                    <div class="cache-stat-info">
-                                        <div class="cache-stat-value">${
-                                            stats.size
-                                        }</div>
-                                        <div class="cache-stat-label">缓存大小</div>
-                                    </div>
-                                </div>
-                                <div class="cache-stat-item">
-                                    <div class="cache-stat-icon">
-                                        <i class="fas fa-bullseye"></i>
-                                    </div>
-                                    <div class="cache-stat-info">
-                                        <div class="cache-stat-value">${stats.hit_rate.toFixed(
-                                            1
-                                        )}%</div>
-                                        <div class="cache-stat-label">命中率</div>
-                                    </div>
-                                </div>
-                                <div class="cache-stat-item">
-                                    <div class="cache-stat-icon">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                    <div class="cache-stat-info">
-                                        <div class="cache-stat-value">${
-                                            stats.hits
-                                        }</div>
-                                        <div class="cache-stat-label">命中次数</div>
-                                    </div>
-                                </div>
-                                <div class="cache-stat-item">
-                                    <div class="cache-stat-icon">
-                                        <i class="fas fa-times-circle"></i>
-                                    </div>
-                                    <div class="cache-stat-info">
-                                        <div class="cache-stat-value">${
-                                            stats.misses
-                                        }</div>
-                                        <div class="cache-stat-label">未命中次数</div>
-                                    </div>
-                                </div>
-                                <div class="cache-stat-item">
-                                    <div class="cache-stat-icon">
-                                        <i class="fas fa-save"></i>
-                                    </div>
-                                    <div class="cache-stat-info">
-                                        <div class="cache-stat-value">${
-                                            stats.sets
-                                        }</div>
-                                        <div class="cache-stat-label">存储次数</div>
-                                    </div>
-                                </div>
-                            </div>
-                        `
-                    } else {
-                        statsDiv.innerHTML = `
-                            <div class="cache-disabled">
-                                <i class="fas fa-ban"></i>
-                                <p>缓存未启用或统计信息不可用</p>
-                            </div>
-                        `
-                    }
-                } catch (error) {
-                    console.error('Error loading cache stats:', error)
-                    document.getElementById('cacheStatsContent').innerHTML = `
-                        <div class="error-result">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <p>加载缓存统计失败</p>
-                        </div>
-                    `
-                }
-            }
-
-            // 清除缓存
-            document
-                .getElementById('clearCacheBtn')
-                .addEventListener('click', async function () {
-                    const resultDiv = document.getElementById('cacheResult')
-                    const button = this
-
-                    // 显示加载状态
-                    button.disabled = true
-                    button.innerHTML =
-                        '<i class="fas fa-spinner fa-spin"></i><span>清除中...</span>'
-
-                    try {
-                        const response = await fetch('/api/cache/clear', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                        })
-
-                        const result = await response.json()
-
-                        if (result.success) {
-                            resultDiv.innerHTML = `
-                                <div class="success-message">
-                                    <i class="fas fa-check-circle"></i>
-                                    ${result.message}
-                                </div>
-                            `
-                            resultDiv.className = 'result-message success'
-                            // 重新加载统计信息和缓存统计
-                            loadStats()
-                            loadCacheStats()
-                        } else {
-                            resultDiv.innerHTML = `
-                                <div class="error-message">
-                                    <i class="fas fa-times-circle"></i>
-                                    ${result.message}
-                                </div>
-                            `
-                            resultDiv.className = 'result-message error'
-                        }
-                    } catch (error) {
-                        console.error('Error clearing cache:', error)
-                        resultDiv.innerHTML = `
-                            <div class="error-message">
-                                <i class="fas fa-times-circle"></i>
-                                清除缓存失败
-                            </div>
-                        `
-                        resultDiv.className = 'result-message error'
-                    } finally {
-                        button.disabled = false
-                        button.innerHTML =
-                            '<i class="fas fa-trash"></i><span>清除缓存</span>'
-                        resultDiv.style.display = 'block'
-                    }
-                })
-
-            // 页面加载时获取统计信息
-            loadStats()
-            loadCacheStats()
-
-            // 问答记录相关变量
-            let currentPage = 1
-            const recordsPerPage = 10
-
-            // 加载问答记录
-            async function loadQARecords(page = 1) {
-                const recordsContent =
-                    document.getElementById('qaRecordsContent')
-                const prevBtn = document.getElementById('prevPageBtn')
-                const nextBtn = document.getElementById('nextPageBtn')
-                const pageInfo = document.getElementById('pageInfo')
-
-                try {
-                    const response = await fetch(
-                        `/api/qa-records?page=${page}&per_page=${recordsPerPage}`
-                    )
-                    const result = await response.json()
-
-                    if (result.success && result.records.length > 0) {
-                        const recordsHtml = result.records
-                            .map(
-                                (record) => `
-                            <div class="qa-record-item">
-                                <div class="qa-record-question">
-                                    <strong>问题：</strong>${record.question}
-                                </div>
-                                <div class="qa-record-answer">
-                                    <strong>答案：</strong>${record.answer}
-                                </div>
-                                <div class="qa-record-meta">
-                                    <span class="qa-record-timestamp">
-                                        ${new Date(
-                                            record.timestamp
-                                        ).toLocaleString('zh-CN')}
-                                    </span>
-                                    <span class="qa-record-type">${
-                                        record.question_type || '未知类型'
-                                    }</span>
-                                </div>
-                            </div>
-                        `
-                            )
-                            .join('')
-
-                        recordsContent.innerHTML = recordsHtml
-
-                        // 更新分页信息
-                        currentPage = page
-                        pageInfo.textContent = `第 ${page} 页`
-
-                        // 更新分页按钮状态
-                        prevBtn.disabled = page <= 1
-                        nextBtn.disabled =
-                            result.records.length < recordsPerPage
-                    } else {
-                        recordsContent.innerHTML = `
-                            <div class="no-records">
+                        <div id="log-container" class="log-terminal" style="flex: 1; overflow-y: auto; max-height: 280px;">
+                            <div class="empty-state" id="log-empty">
                                 <i class="fas fa-inbox"></i>
-                                <p>暂无问答记录</p>
+                                <span>等待日志...</span>
                             </div>
-                        `
-                        prevBtn.disabled = true
-                        nextBtn.disabled = true
-                    }
-                } catch (error) {
-                    console.error('Error loading QA records:', error)
-                    recordsContent.innerHTML = `
-                        <div class="error-result">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <p>加载问答记录失败</p>
                         </div>
-                    `
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="table-container">
+                    <div style="padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.05); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+                        <span><i class="fas fa-history" style="margin-right: 8px; color: #10b981;"></i>最近问答记录</span>
+                        <span style="font-size: 0.75rem; color: #64748b;">最近5条</span>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>问题内容</th>
+                                <th style="width: 100px;">题型</th>
+                                <th style="width: 100px;">来源</th>
+                                <th style="width: 140px;">时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="records-tbody">
+                            <tr>
+                                <td colspan="4" style="text-align: center; color: #64748b; padding: 40px;">
+                                    <i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>加载中...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CHAT VIEW -->
+            <div id="view-chat" class="chat-view hidden-view">
+                <div class="chat-wrapper">
+                    <!-- History -->
+                    <div class="chat-history" id="chat-scroller">
+                        <div class="message ai">
+                            <div class="avatar bot"><i class="fas fa-robot"></i></div>
+                            <div class="bubble">
+                                <div style="margin-bottom: 8px;">👋 您好！我是 <strong>EduBrain</strong> 智能助手。</div>
+                                <div style="color: #94a3b8; font-size: 0.9em;">
+                                    直接输入题目内容，我将为您实时解答。支持单选、多选、判断、填空等多种题型。
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chat-messages-container"></div>
+                    </div>
+                    
+                    <!-- Input -->
+                    <div class="input-area">
+                        <textarea id="chat-input" class="chat-input" rows="1" placeholder="输入题目内容，按 Enter 发送..."></textarea>
+                        <button class="send-btn" onclick="sendMessage()" title="发送消息">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div style="text-align: center; font-size: 0.75rem; color: #64748b; margin-top: 12px;">
+                        <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">Shift + Enter</kbd> 换行 · 
+                        <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">Enter</kbd> 发送
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // --- Navigation ---
+        function switchTab(tabId) {
+            document.querySelectorAll('.dashboard-view, .chat-view').forEach(el => {
+                el.classList.remove('active-view');
+                el.classList.add('hidden-view');
+            });
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+
+            document.getElementById(`view-${tabId}`).classList.remove('hidden-view');
+            document.getElementById(`view-${tabId}`).classList.add('active-view');
+            document.getElementById(`nav-${tabId}`).classList.add('active');
+
+            const titles = {'dashboard': '系统监控面板', 'chat': 'AI 智能问答助手'};
+            document.getElementById('page-title').innerText = titles[tabId];
+
+            if(tabId === 'chat') setTimeout(() => document.getElementById('chat-input').focus(), 100);
+        }
+
+        // --- Chat Logic ---
+        const chatInput = document.getElementById('chat-input');
+        const chatContainer = document.getElementById('chat-messages-container');
+        const scroller = document.getElementById('chat-scroller');
+
+        chatInput.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+        });
+        chatInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 150) + 'px';
+        });
+
+        async function sendMessage() {
+            const text = chatInput.value.trim();
+            if(!text) return;
+            
+            appendMsg('user', text);
+            chatInput.value = '';
+            chatInput.style.height = 'auto';
+
+            const loaderId = appendLoader();
+            
+            try {
+                const res = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ 
+                        title: text, 
+                        type: 'single' 
+                    })
+                });
+                const data = await res.json();
+                removeLoader(loaderId);
+
+                if(data.code === 1) {
+                    const source = data.source === 'external_db' ? '📚 题库' : '🤖 AI';
+                    appendMsg('ai', `**答案**: ${data.answer}\n\n<small style="color:#64748b">来源: ${source} · 耗时: ${data.processing_time || 'N/A'}</small>`);
+                } else {
+                    appendMsg('ai', `❌ **错误**: ${data.msg}`);
+                }
+            } catch(e) {
+                removeLoader(loaderId);
+                appendMsg('ai', `❌ **网络错误**: ${e.message}\n\n请检查网络连接后重试。`);
+            }
+        }
+
+        function appendMsg(role, text) {
+            const div = document.createElement('div');
+            div.className = `message ${role}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = `avatar ${role === 'ai' ? 'bot' : 'human'}`;
+            avatar.innerHTML = role === 'ai' ? '<i class="fas fa-robot"></i>' : '<i class="fas fa-user"></i>';
+
+            const bub = document.createElement('div');
+            bub.className = 'bubble prose-content';
+            bub.innerHTML = role === 'ai' ? marked.parse(text) : text.replace(/\n/g, '<br>');
+
+            div.appendChild(avatar);
+            div.appendChild(bub);
+
+            chatContainer.appendChild(div);
+            scroller.scrollTo({ top: scroller.scrollHeight, behavior: 'smooth' });
+        }
+
+        function appendLoader() {
+            const id = 'l-' + Date.now();
+            const div = document.createElement('div');
+            div.id = id;
+            div.className = 'message ai';
+            div.innerHTML = `
+                <div class="avatar bot"><i class="fas fa-robot"></i></div>
+                <div class="bubble">
+                    <div class="chat-typing-indicator">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>`;
+            chatContainer.appendChild(div);
+            scroller.scrollTo({ top: scroller.scrollHeight, behavior: 'smooth' });
+            return id;
+        }
+        
+        function removeLoader(id) {
+            const el = document.getElementById(id);
+            if(el) el.remove();
+        }
+
+        // --- Time Display ---
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').innerText = now.toLocaleTimeString('zh-CN', {hour12: false});
+            document.getElementById('current-date').innerText = now.toLocaleDateString('zh-CN', {year: 'numeric', month: '2-digit', day: '2-digit'});
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // --- Chart Setup ---
+        const ctx = document.getElementById('trafficChart').getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(59,130,246,0.4)');
+        gradient.addColorStop(1, 'rgba(59,130,246,0)');
+        
+        const chart = new Chart(ctx, {
+            type: 'line', 
+            data: { 
+                labels: Array(12).fill(''), 
+                datasets: [{ 
+                    data: Array(12).fill(0), 
+                    borderColor: '#3b82f6', 
+                    backgroundColor: gradient,
+                    borderWidth: 2.5, 
+                    fill: true, 
+                    pointRadius: 3,
+                    pointBackgroundColor: '#3b82f6',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 1,
+                    tension: 0.4
+                }] 
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                plugins: {
+                    legend: {display: false},
+                    tooltip: {
+                        backgroundColor: 'rgba(30, 41, 59, 0.9)',
+                        titleColor: '#f1f5f9',
+                        bodyColor: '#94a3b8',
+                        borderColor: 'rgba(255,255,255,0.1)',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                        callbacks: {
+                            label: (ctx) => `延迟: ${ctx.raw.toFixed(0)}ms`
+                        }
+                    }
+                }, 
+                scales: {
+                    x: {display: false}, 
+                    y: {
+                        grid: {color: 'rgba(255,255,255,0.05)'},
+                        ticks: {color: '#64748b', font: {size: 10}}
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
                 }
             }
+        });
 
-            // 刷新记录按钮事件
-            document
-                .getElementById('refreshRecordsBtn')
-                .addEventListener('click', function () {
-                    loadQARecords(currentPage)
-                })
+        // --- Stats Update ---
+        async function updateStats() {
+            try {
+                const res = await fetch('/api/stats');
+                const d = await res.json();
+                
+                // Animate number changes
+                animateValue('stat-request-count', d.request_count);
+                animateValue('stat-latency', Math.round(d.avg_latency_ms));
+                animateValue('stat-cache-hit', d.cache_hit_rate.toFixed(1));
+                document.getElementById('stat-model-bot').innerText = d.model || 'GPT-3.5';
 
-            // 清除记录按钮事件
-            document
-                .getElementById('clearRecordsBtn')
-                .addEventListener('click', async function () {
-                    const resultDiv =
-                        document.getElementById('clearRecordsResult')
-                    const button = this
+                // Update chart
+                chart.data.datasets[0].data.push(d.avg_latency_ms);
+                chart.data.datasets[0].data.shift();
+                chart.update('none');
 
-                    // 显示详细的确认对话框
-                    const confirmed = confirm(
-                        '⚠️ 警告：清除问答记录\n\n' +
-                            '您即将删除所有问答记录，此操作将：\n' +
-                            '• 删除所有历史问答数据\n' +
-                            '• 无法恢复已删除的记录\n' +
-                            '• 影响系统统计信息\n\n' +
-                            '确定要继续吗？'
-                    )
+                // Update records table
+                const rRes = await fetch('/api/qa-records?page=1&per_page=5');
+                const rD = await rRes.json();
+                if(rD.success && rD.records.length > 0) {
+                    const tb = document.getElementById('records-tbody');
+                    tb.innerHTML = '';
+                    rD.records.forEach(r => {
+                        const tr = document.createElement('tr');
+                        const typeLabels = {
+                            'single': '单选题',
+                            'multiple': '多选题', 
+                            'judgement': '判断题',
+                            'completion': '填空题'
+                        };
+                        const sourceLabels = {
+                            'external_db': '<span style="color:#10b981">题库</span>',
+                            'ai': '<span style="color:#3b82f6">AI</span>',
+                            'cache': '<span style="color:#f59e0b">缓存</span>'
+                        };
+                        tr.innerHTML = `
+                            <td title="${r.question}">${r.question.substring(0,35)}${r.question.length > 35 ? '...' : ''}</td>
+                            <td>${typeLabels[r.question_type] || r.question_type}</td>
+                            <td>${sourceLabels[r.source] || r.source || '--'}</td>
+                            <td>${new Date(r.timestamp).toLocaleTimeString('zh-CN')}</td>
+                        `;
+                        tb.appendChild(tr);
+                    });
+                }
+            } catch(e) {
+                console.error('Stats update failed:', e);
+            }
+        }
 
-                    if (!confirmed) {
-                        return
-                    }
+        function animateValue(elementId, newValue) {
+            const el = document.getElementById(elementId);
+            const current = parseFloat(el.innerText) || 0;
+            const target = parseFloat(newValue);
+            if (current !== target) {
+                el.innerText = newValue;
+                el.style.transform = 'scale(1.05)';
+                el.style.color = '#3b82f6';
+                setTimeout(() => {
+                    el.style.transform = 'scale(1)';
+                    el.style.color = '';
+                }, 200);
+            }
+        }
 
-                    // 再次确认
-                    const doubleConfirmed =
-                        confirm('最后确认：真的要清除所有问答记录吗？')
-                    if (!doubleConfirmed) {
-                        return
-                    }
+        async function refreshStats() {
+            const btn = event.target.closest('button');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> 刷新中';
+            await updateStats();
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-sync-alt"></i> 刷新';
+        }
 
-                    // 显示加载状态
-                    button.disabled = true
-                    button.innerHTML =
-                        '<i class="fas fa-spinner fa-spin"></i><span>清除中...</span>'
+        async function clearCache() {
+            if(confirm("确定要清除所有缓存吗？此操作不可恢复。")) {
+                try {
+                    await fetch('/api/cache/clear', {method: 'POST'});
+                    alert('缓存已清除！');
+                    updateStats();
+                } catch(e) {
+                    alert('清除失败: ' + e.message);
+                }
+            }
+        }
 
-                    try {
-                        const response = await fetch('/api/qa-records/clear', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                        })
+        // --- Log Stream ---
+        let logCount = 0;
+        let logConnected = false;
+        const es = new EventSource("/api/logs/stream");
+        
+        es.onmessage = e => {
+            const c = document.getElementById('log-container');
+            const empty = document.getElementById('log-empty');
+            if(empty) empty.remove();
+            
+            // 更新连接状态
+            if(!logConnected) {
+                logConnected = true;
+                const indicator = document.querySelector('.live-indicator');
+                if(indicator) indicator.style.opacity = '1';
+            }
+            
+            // Parse log
+            const logText = e.data;
+            const isError = logText.includes('ERROR') || logText.includes('error');
+            const isWarn = logText.includes('WARN') || logText.includes('warning');
+            const level = isError ? 'error' : (isWarn ? 'warn' : 'info');
+            const time = new Date().toLocaleTimeString('zh-CN');
+            
+            const d = document.createElement('div');
+            d.className = 'enhanced-log-item';
+            d.innerHTML = `
+                <span class="log-time">${time}</span>
+                <span class="log-level ${level}">${level.toUpperCase()}</span>
+                <span class="log-msg">${logText}</span>
+            `;
+            c.appendChild(d);
+            
+            // Keep only last 50 logs
+            logCount++;
+            if(logCount > 50) {
+                c.removeChild(c.children[0]);
+            }
+            
+            c.scrollTop = c.scrollHeight;
+        };
 
-                        const result = await response.json()
+        es.onopen = () => {
+            console.log('Log stream connected');
+            logConnected = true;
+            const indicator = document.querySelector('.live-indicator');
+            if(indicator) indicator.style.opacity = '1';
+        };
 
-                        if (result.success) {
-                            resultDiv.innerHTML = `
-                                <div class="success-message">
-                                    <i class="fas fa-check-circle"></i>
-                                    ${result.message}
-                                </div>
-                            `
-                            resultDiv.className = 'result-message success'
-                            // 重新加载统计信息和问答记录
-                            loadStats()
-                            loadQARecords(1)
-                        } else {
-                            resultDiv.innerHTML = `
-                                <div class="error-message">
-                                    <i class="fas fa-times-circle"></i>
-                                    ${result.message}
-                                </div>
-                            `
-                            resultDiv.className = 'result-message error'
-                        }
-                    } catch (error) {
-                        console.error('Error clearing QA records:', error)
-                        resultDiv.innerHTML = `
-                            <div class="error-message">
-                                <i class="fas fa-times-circle"></i>
-                                清除问答记录失败
-                            </div>
-                        `
-                        resultDiv.className = 'result-message error'
-                    } finally {
-                        button.disabled = false
-                        button.innerHTML =
-                            '<i class="fas fa-trash-alt"></i><span>清除记录</span>'
-                        resultDiv.style.display = 'block'
-                    }
-                })
+        es.onerror = () => {
+            console.log('Log stream disconnected, reconnecting...');
+            logConnected = false;
+            const indicator = document.querySelector('.live-indicator');
+            if(indicator) indicator.style.opacity = '0.5';
+        };
 
-            // 分页按钮事件
-            document
-                .getElementById('prevPageBtn')
-                .addEventListener('click', function () {
-                    if (currentPage > 1) {
-                        loadQARecords(currentPage - 1)
-                    }
-                })
-
-            document
-                .getElementById('nextPageBtn')
-                .addEventListener('click', function () {
-                    loadQARecords(currentPage + 1)
-                })
-
-            // 页面加载时获取问答记录
-            loadQARecords()
-        </script>
-    </body>
+        // Initial load
+        updateStats();
+        setInterval(updateStats, 5000);
+    </script>
+</body>
 </html>

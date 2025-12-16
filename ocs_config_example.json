@@ -1,15 +1,19 @@
 [
-  {
-    "name": "AI智能题库",
-    "homepage": "https://github.com/LynnGuo666/ocsjs-ai-answer-service",
-    "url": "http://localhost:5000/api/search",
-    "method": "get",
-    "contentType": "json",
-    "data": {
-      "title": "${title}",
-      "type": "${type}",
-      "options": "${options}"
-    },
-    "handler": "return (res)=> res.code === 1 ? [res.question, res.answer] : [res.msg, undefined]"
-  }
+    {
+        "name": "🤖 本地AI题库 (强制优先)",
+        "homepage": "http://localhost:8000/docs",
+        "url": "http://localhost:8000/api/search",
+        "method": "get",
+        "type": "GM_xmlhttpRequest",
+        "contentType": "json",
+        "headers": {},
+        "data": {
+            "title": "${title}",
+            "options": "${options}",
+            "type": "${type}",
+            "context": "${context}",
+            "url": "${url}"
+        },
+        "handler": "return (res) => { console.log('[OCS-AI] 收到响应:', res); if (!res) return []; if (res.code === 1 && res.answer) { return [[res.question || res.data || '', res.answer]]; } if (res.code === 0) { console.warn('[OCS-AI] 查询失败:', res.msg); return []; } if (res.answer) { return [[res.question || '', res.answer]]; } return []; }"
+    }
 ]

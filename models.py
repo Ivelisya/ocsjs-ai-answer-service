@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
 """
 数据模型定义模块
-使用 SQLAlchemy ORM 定义数据库表结构
+使用 SQLAlchemy 2.0 ORM 定义数据库表结构
+支持同步和异步数据库操作
 """
 import datetime
+from typing import AsyncGenerator, Generator
 
 from sqlalchemy import Column, DateTime, Integer, String, Text, create_engine
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from sqlalchemy.orm import DeclarativeBase, sessionmaker, Session
 
 from config import Config
 
-# 1. 声明基类
-Base = declarative_base()
+
+# 1. 声明基类 (SQLAlchemy 2.0 style)
+class Base(DeclarativeBase):
+    pass
 
 
 # 2. 定义 QA 记录的数据模型
@@ -33,13 +38,53 @@ class QARecord(Base):
         return f"<QARecord(id={self.id}, question='{self.question[:30]}...')>"
 
 
-# 3. 数据库初始化和会话管理
-# 默认使用 SQLite，方便快速部署
+# 3. 数据库配置
 DATABASE_URL = Config.DATABASE_URL if hasattr(Config, "DATABASE_URL") else "sqlite:///db/dev.db"
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {})
+
+# 同步引擎（用于向后兼容的同步操作）
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {}
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+# 异步引擎（用于 FastAPI）
+ASYNC_DATABASE_URL = DATABASE_URL.replace("sqlite:///", "sqlite+aiosqlite:///")
+async_engine = create_async_engine(
+    ASYNC_DATABASE_URL,
+    echo=False
+)
+AsyncSessionLocal = async_sessionmaker(
+    async_engine,
+    class_=AsyncSession,
+    expire_on_commit=False
+)
 
 
 def init_db():
-    """初始化数据库，创建所有表"""
+    """初始化数据库，创建所有表（同步）"""
     Base.metadata.create_all(bind=engine)
+
+
+async def init_db_async():
+    """初始化数据库，创建所有表（异步）"""
+    async with async_engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+
+
+def get_db() -> Generator[Session, None, None]:
+    """同步数据库会话依赖（向后兼容）"""
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+async def get_async_db() -> AsyncGenerator[AsyncSession, None]:
+    """异步数据库会话依赖（FastAPI）"""
+    async with AsyncSessionLocal() as session:
+        try:
+            yield session
+        finally:
+            await session.close()

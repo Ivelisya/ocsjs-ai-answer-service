@@ -13,7 +13,6 @@ extend-exclude = '''
   | \.venv
   | build
   | dist
-  | alembic
 )/
 '''
 

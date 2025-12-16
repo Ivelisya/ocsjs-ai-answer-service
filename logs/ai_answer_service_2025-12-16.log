@@ -1,0 +1,4 @@
+2025-12-16 21:34:52,604 - ai_answer_service - INFO - AI 提供商: Azure OpenAI (部署: gpt-5.2-chat)
+2025-12-16 21:34:52,620 - ai_answer_service - INFO - 数据库表(异步)初始化完成
+2025-12-16 21:43:41,734 - ai_answer_service - INFO - AI 提供商: Azure OpenAI (部署: gpt-5.2-chat)
+2025-12-16 21:43:41,737 - ai_answer_service - INFO - 数据库表(异步)初始化完成

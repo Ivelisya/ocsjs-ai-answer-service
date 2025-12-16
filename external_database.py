@@ -184,6 +184,69 @@ class ExternalDatabase:
                 data[key] = value
         return data
     
+    def _extract_actual_answer(self, answer: str, question: str = "") -> str:
+        """
+        从答案文本中提取实际答案
+        处理答案中包含题目文本的情况
+        
+        Args:
+            answer: 原始答案
+            question: 题目文本（用于排除）
+            
+        Returns:
+            提取的实际答案，如果答案无效返回空字符串
+        """
+        if not answer:
+            return answer
+        
+        answer = answer.strip()
+        
+        # 如果答案很短（可能是字母或简短答案），直接返回
+        if len(answer) <= 10:
+            return answer
+        
+        # 检查答案是否是题目的开头部分（常见的错误返回）
+        # 如果答案以题目的开头词开始，认为是无效答案
+        invalid_answer_starts = [
+            "请阅读", "阅读下", "下面一段", "下列", "以下", "根据", 
+            "关于", "对于", "在Pandas", "import ", "执行", "运行"
+        ]
+        for start in invalid_answer_starts:
+            if answer.startswith(start):
+                logger.warning(f"答案以题目开头词开始，视为无效: {answer[:30]}...")
+                return ""
+        
+        # 如果答案和题目的前20个字符相同，认为是无效答案
+        if question and len(question) > 20 and len(answer) > 15:
+            question_start = question[:20].strip()
+            answer_start = answer[:20].strip()
+            if question_start == answer_start:
+                logger.warning(f"答案与题目开头相同，视为无效: {answer[:30]}...")
+                return ""
+        
+        import re
+        
+        # 尝试从文本中提取答案部分
+        # 常见格式: "题目...答案：xxx" 或 "题目...选择B" 等
+        answer_patterns = [
+            r'答案[：:]\s*(.+?)(?:\s*$|\n)',
+            r'正确答案[是为：:]\s*(.+?)(?:\s*$|\n)',
+            r'选\s*([A-D])\s*(?:$|\n|[。.])',
+            r'应选\s*([A-D])\s*(?:$|\n|[。.])',
+            r'故选\s*([A-D])\s*(?:$|\n|[。.])',
+            r'答案为\s*(.+?)(?:\s*$|\n|[。.])',
+            r'正确的是\s*(.+?)(?:\s*$|\n|[。.])',
+        ]
+        
+        for pattern in answer_patterns:
+            match = re.search(pattern, answer, re.IGNORECASE | re.DOTALL)
+            if match:
+                extracted = match.group(1).strip()
+                if extracted:
+                    return extracted
+        
+        return answer
+    
     def _parse_response(self, db_config: Dict, response_text: str) -> Tuple[bool, Optional[str], Optional[str]]:
         """
         解析响应数据
@@ -207,19 +270,27 @@ class ExternalDatabase:
                 if response_data.get("code") == 0:
                     answer = response_data.get("data", {}).get("answer")
                     if answer:
-                        return True, None, answer
+                        answer = self._extract_actual_answer(answer)
+                        if answer:  # 只有提取成功才返回
+                            return True, None, answer
                 else:
                     question = response_data.get("data", {}).get("question")
                     answer = response_data.get("data", {}).get("answer")
                     if answer:
-                        return True, question, answer
+                        answer = self._extract_actual_answer(answer, question)
+                        if answer:  # 只有提取成功才返回
+                            return True, question, answer
+                # 如果答案无效，返回未找到
+                return False, None, None
             
             elif "网课小工具题库" in db_config.get("name", "") or "GO题" in db_config.get("name", ""):
                 # GO题库逻辑: res.code === 1 ? [undefined, res.data] : [res.msg, undefined]
                 if response_data.get("code") == 1:
                     answer = response_data.get("data")
                     if answer:
-                        return True, None, answer
+                        answer = self._extract_actual_answer(answer)
+                        if answer:  # 只有提取成功才返回
+                            return True, None, answer
                 else:
                     # 返回错误信息，但不算找到答案
                     return False, response_data.get("msg"), None

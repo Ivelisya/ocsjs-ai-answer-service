@@ -109,7 +109,7 @@ def test_cache_improvements():
 
     except requests.exceptions.ConnectionError:
         print("❌ 无法连接到服务，请确保服务正在运行")
-        print("   尝试运行: python app.py")
+        print("   尝试运行: python main.py")
     except Exception as e:
         print(f"❌ 测试过程中发生错误: {e}")
 

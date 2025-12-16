@@ -120,7 +120,7 @@ import requests
 import json
 import time
 
-def test_api_endpoint(base_url: str = "http://localhost:5000"):
+def test_api_endpoint(base_url: str = "http://localhost:8000"):
     """测试API端点"""
 
     test_questions = [
@@ -207,7 +207,7 @@ def main():
     create_api_test_script()
 
     print("\n📖 使用说明:")
-    print("1. 确保 Flask 应用正在运行 (python app.py)")
+    print("1. 确保服务正在运行 (python main.py)")
     print("2. 运行测试脚本: python test_api_manual.py")
     print("3. 检查网络连接和 API 配置")
     print("4. 如果仍有问题，请检查防火墙和代理设置")
